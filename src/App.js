@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import './App.scss';
 import Header from './header.js'
-
+import Projects from './projects.js'
 import logo from './images/younglogo.svg'
-
+import './projects.scss'
 import logpos from './images/logpos2.jpg'
 import dotenote from './images/dotenote.png'
 import reporter from './images/lights.jpg'
@@ -26,10 +26,14 @@ class App extends Component {
     }
     
   }
-
+  renderPageView(){
+    if(this.state.page === 1){
+      return <Projects idnum={this.state.curid}/>
+    }
+  }
   addActive(e){
     let itemlist={
-      "log":['ideation','video'],
+      "logpos":['ideation','video'],
       "dote":['uiux','ideation','video'],
       "reporter":['uiux','illustration'],
       "even":['uiux'],
@@ -44,8 +48,9 @@ class App extends Component {
       if(classlist[1]) { 
 
           e.target.classList.remove("workactive");
-          this.setState({deactivelist: this.state.deactivelist.push(thisDiv)});
-          this.setState({deactivelist: this.state.activelist.splice(this.state.activelist.indexOf(thisDiv),1)});
+          this.state.deactivelist.push(thisDiv);
+
+          this.state.activelist.splice(this.state.activelist.indexOf(thisDiv),1);
           for (let i=0;i<keylist.length;i++){
             exist=1;
             for(let j=0;j<itemlist[keylist[i]].length;j++){
@@ -58,28 +63,44 @@ class App extends Component {
           }
       }
      } else {
+      this.state.activelist.push(thisDiv);
+    
+      this.state.deactivelist.splice(this.state.deactivelist.indexOf(thisDiv),1);
+     
           e.target.classList.add("workactive");
           for(let i=0;i<keylist.length;i++){
             if(itemlist[keylist[i]].includes(thisDiv)){
-              //reopaq(keylist[i]);
+              this.reopac(keylist[i]);
             }
           };
 
      }
   }
 wraphide(item){
+  let hidestyle={
+    opacity:0,
+    width:0,
+    overflow:'hidden'
+  }
   let tohide=document.getElementById(item).childNodes[0];
-    tohide.style.opacity=0;
-    //document.getElementById(item).style.width=0;
-    tohide.style.width=0;
-    tohide.style.height=0;
-    tohide.style.transform ='translateX(100%) translateY(-100%)';
-    tohide.style.overflow='hidden';
+    tohide.style=hidestyle;
+    document.getElementById(item).style.width=0;
     setTimeout(function() {tohide.style.display='none'; 
     document.getElementById(item).style.display='none'}, 300);
 	
   	
 
+}
+reopac(item){
+  let opacstyle={
+    opacity:1,
+    width:'100%',
+  }
+  let toreopac=document.getElementById(item).childNodes[0];
+  document.getElementById(item).style.display='inline-block';
+  toreopac.style=opacstyle;
+  document.getElementById(item).style.width='31%';
+  
 }
 
 headertype(){
@@ -127,12 +148,12 @@ headertype(){
   projects(){
     let element=[];
     let worklist=[
-      { "id":"log",
+      { "id":"logpos",
         "href":".js",
         "image":logpos,
         "class":"ideation video",
         "types": "Ideation | Video",
-        "title": "LOG+POS",
+        "title": "LOG + POS",
       },
       { "id":"dote",
         "href":".js",
@@ -179,7 +200,7 @@ headertype(){
     ];
     for(let i=0;i<worklist.length;i++){
     element.push(
-      <a id={worklist[i].id} href="#">
+      <a id={worklist[i].id} href="#" onClick = {(ev) => this.setState({page : 1, curid:worklist[i].id})}  >
         <div className={"portwrap " + worklist[i].class} >
           <img className="longim" src={worklist[i].image} />
           <div className="discrip">
@@ -232,7 +253,7 @@ headertype(){
         </div>
         </div>
         <div className="cprg">This website is designed and developed by Young.<br />ⓒ 2017. YOUNG</div>
-
+        {this.renderPageView()}
       </div>
     );
   }
