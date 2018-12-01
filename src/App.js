@@ -18,6 +18,7 @@ class App extends Component {
     super(props);
     this.addActive=this.addActive.bind(this);
     this.state = {
+      menu:0,
       page: 0,
       curid:null,
       active:true,
@@ -28,9 +29,14 @@ class App extends Component {
   }
   renderPageView(){
     if(this.state.page === 1){
-      return <Projects idnum={this.state.curid}/>
+      return <Projects idnum={this.state.curid} closehandle={this.closehandler.bind(this)}/>
     }
   }
+  closehandler(){
+    setTimeout(this.setState({page:0}), 300);
+    
+  }
+ 
   addActive(e){
     let itemlist={
       "logpos":['ideation','video'],
@@ -104,7 +110,7 @@ reopac(item){
 }
 
 headertype(){
-      return <Header pagenum={this.state.page} />
+      return <Header pagenum={this.state.menu} />
   }
   stargenerator(){
     let element=[];
@@ -176,7 +182,7 @@ headertype(){
         "types": "UI/UX",
         "title": "Even",
       },
-      { "id":"momoko",
+      { "id":"momo",
         "href":".js",
         "image":momoko,
         "class":"animation",

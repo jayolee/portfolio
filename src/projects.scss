@@ -6,6 +6,12 @@ $logpos: #f59120;
 $even: #25CB45;
 $reporter: #f3cb52;
 
+@mixin transform($transform) {
+    -webkit-transform: $transform;
+    -ms-transform: $transform;
+    transform: $transform;
+}
+
 @mixin textcolors{
 	&.dote{
 		color: $dote;
@@ -20,7 +26,7 @@ $reporter: #f3cb52;
 			color: $reporter;
 		}
 		&.gssh{
-			color:#fff;
+			color:rgba(0,0,0,0.8);
 		}
 		&.momo{
 			color:#ff594d;
@@ -63,8 +69,12 @@ $reporter: #f3cb52;
 	height: 100%;
 	background: rgba(0,0,0,0.3);
 	z-index: 1;
+	transition:.4s;
+	opacity:0;
 }
 .contentbox{
+	@include transform(translateY(40%));
+	opacity:0;
 	width:100%; 
 	background:#fff; 
 	margin:86px 0 0; 
@@ -77,6 +87,7 @@ $reporter: #f3cb52;
 	&.gssh{
 		background:#000;
 	}
+	transition:.5s;
 }
 .maincontent{
 	width:100%; 
@@ -119,7 +130,24 @@ $reporter: #f3cb52;
 		margin:0 auto;
 	}
 }
+.xmark{
+	position:absolute;
+	font: {
+		size:40px;
+		family:"roboto";
+	}
+	right:5%;
+	top:20px;
+	svg{
+		path{
+			stroke:rgba(0,0,0,0.4);
+			stroke-width: 2px;
+		}
+	}
+	cursor: pointer;
+}
 .enttitle {
+	position:relative;
 	font: {
 		size: 24px;
 		weight:300;
@@ -141,6 +169,9 @@ $reporter: #f3cb52;
 	}
 	&.gssh{
 		border-bottom:2px dashed #eee;
+	}
+	&.momo{
+		border-bottom:2px dashed #ff594d;
 	}
 }
 .sectitle {
@@ -505,11 +536,15 @@ $imgshadow: 0 0 14px rgba(0,0,0,0.2);
 	z-index:999;
 	width:200px;
 	transform:rotate(-35deg);
-	left:100%;
+	left:98%;
 	visibility: hidden;
 }
-.animation_wrap:hover #pointers{
+.animation_wrap {
+	position:relative;
+
+	&:hover #pointers{
 	@include animation('pointersani 3s 1 forwards');
+}
 }
 
 

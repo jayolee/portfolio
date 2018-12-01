@@ -189,7 +189,7 @@ class Projects extends Component {
       "reporter":{
         "projectTitle":"I am a Reporter",
         "quote":"How to make the UI of a visual novel easy enough for novice users?",
-        "topimg":reporter0,
+        "topimg":<img id={this.props.idnum} class="topimg" src={reporter0}/>,
         "exlpla":{
           "Time":"Aug 2016 ~ Dec 2016",
           "Team":"1 developer, 1 writer, 1 designer (Ja Young Lee)",
@@ -297,7 +297,7 @@ class Projects extends Component {
               <p>Finally, I replaced the place option checkboxes to icons. The location types are distinctly different, so using icons is more intuitive and gives more spaces between the icons, which allows easier access.</p> 
         </div>
       },
-      "momoko":{
+      "momo":{
         "projectTitle":"Happy Momoko",
         "quote":"24 Animation Emojis for iOS and Line Messengers",
         "topimg":<div className="screens center">  
@@ -329,9 +329,39 @@ class Projects extends Component {
                   {this.anigenerator()}
                     </div>
                     </div>
+      },
+      "gssh":{
+        "projectTitle":"GSSH - Class of 2011",
+        "quote":"GSSH - Class of 2011, from 2008 to 2017",
+        "topimg":"",
+        "exlpla":{
+                 },
+        "Video":
+        <div>
+        <p>This is a video I created for the 10th anniversary of my high school, Gyeongsan Science High School (G.S.S.H.). The music in the beginning is my classmate's recent piano play. It shows our school year memories and how we have grown up. The background music was the school's morning alarm music: Heal the World.</p>
+                    </div>
       }
     }
   }
+  rollup(){
+      let contentdiv=document.getElementsByClassName("contentbox")[0];
+      let greydiv=document.getElementsByClassName("greybox")[0];
+      contentdiv.style.opacity="1";
+      greydiv.style.opacity="1";
+      setTimeout(function(){  contentdiv.style.transform="translateY(0)";},50)
+    
+     
+  }
+  rolldown(){
+		let contentdiv=document.getElementsByClassName("contentbox")[0];
+    let greydiv=document.getElementsByClassName("greybox")[0];
+    contentdiv.style.opacity="0";
+    contentdiv.style.transform="translateY(40%)";
+    greydiv.style.opacity="0";
+		setTimeout(function(){this.props.closehandle();}.bind(this),500)
+  }
+  
+
   anigenerator(){
     let element=[];
     let momothumblist=[momo4_1,momo5_1,momo6_1,momo7_1,momo8_1,momo9_1,momo10_1,momo11_1,momo12_1,momo13_1,momo14_1,momo15_1,momo16_1,momo17_1,momo18_1,momo19_1,momo20_1,momo21_1,momo22_1,momo23_1,momo24_1];
@@ -373,9 +403,15 @@ class Projects extends Component {
     
   
       element.push(<div class="contentbox" >
-         <div className={"enttitle "+this.props.idnum} >{this.contents[item].projectTitle}</div>
+         <div className={"enttitle "+this.props.idnum} >{this.contents[item].projectTitle}
+          <div className="xmark" onClick={this.rolldown.bind(this)}>
+              <svg width="50" height="50">
+               <path d="M10 10 L40 40 M40 10 L10 40" />
+              </svg>
+          </div>
+        </div>
          <div className="maincontent">
-            <img id={this.props.idnum} class="topimg" src={this.contents[item].topimg}/>
+            {this.contents[item].topimg}
           <div className="toptitle ">
             <div className={"qtmark "+this.props.idnum} > <q></q> </div>
             {this.contents[item].quote}
@@ -391,13 +427,16 @@ class Projects extends Component {
          )
       return element
   }
-  
+  componentDidMount(){
+    setTimeout(this.rollup(),100);
+  }
   render() {
     return (
       <div style={{position:"absolute", top:"0",left:"0",width:"100%",height:"100%"}}>
       <div className="greybox" />
         {this.contentgenerator()}
       </div>
+
     );
   }
 }
