@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.scss';
 import Header from './header.js'
 import Projects from './projects.js'
+import Workings from './working.js'
 import logo from './images/younglogo.svg'
 import './projects.scss'
 import logpos from './images/logpos2.jpg'
@@ -31,6 +32,13 @@ class App extends Component {
     if(this.state.page === 1){
       return <Projects idnum={this.state.curid} closehandle={this.closehandler.bind(this)}/>
     }
+    if(this.state.page === 3){
+      return <Workings closehandle={this.closehandler.bind(this)}/>
+    }
+  }
+  menustatus = (menunumber) => {
+    this.setState({page:menunumber});
+
   }
   closehandler(){
     setTimeout(this.setState({page:0}), 300);
@@ -43,7 +51,7 @@ class App extends Component {
       "dote":['uiux','ideation','video'],
       "reporter":['uiux','illustration'],
       "even":['uiux'],
-      "momoko":['animation'],
+      "momo":['animation'],
       "gssh":['video'],
       "naoshima":['code','uiux','illustration'],
     }
@@ -83,34 +91,31 @@ class App extends Component {
      }
   }
 wraphide(item){
-  let hidestyle={
-    opacity:0,
-    width:0,
-    overflow:'hidden'
-  }
   let tohide=document.getElementById(item).childNodes[0];
-    tohide.style=hidestyle;
+  if(tohide){
+    tohide.style.opacity=0;
+    tohide.style.width=0;
+    tohide.style.overflow="hidden";
     document.getElementById(item).style.width=0;
     setTimeout(function() {tohide.style.display='none'; 
     document.getElementById(item).style.display='none'}, 300);
-	
+	}
   	
 
 }
 reopac(item){
-  let opacstyle={
-    opacity:1,
-    width:'100%',
-  }
+
   let toreopac=document.getElementById(item).childNodes[0];
+  if(toreopac){
   document.getElementById(item).style.display='inline-block';
-  toreopac.style=opacstyle;
-  document.getElementById(item).style.width='31%';
+  toreopac.style.display="inline-block";
   
+  setTimeout(function(){document.getElementById(item).style.width='31%'; toreopac.style.width="100%"; toreopac.style.opacity='1'},10)
+}
 }
 
 headertype(){
-      return <Header pagenum={this.state.menu} />
+      return <Header pagenum={this.state.menu} menustatus={this.menustatus} />
   }
   stargenerator(){
     let element=[];

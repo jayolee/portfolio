@@ -5,7 +5,12 @@ $dote: #f98e75;
 $logpos: #f59120;
 $even: #25CB45;
 $reporter: #f3cb52;
-
+$momo : #ff594d;
+$naoshima: #e5b354;
+@font-face {
+	font-family:"lucida grande";
+	src:url(LucidaGrandeBold.ttf);
+}
 @mixin transform($transform) {
     -webkit-transform: $transform;
     -ms-transform: $transform;
@@ -29,7 +34,10 @@ $reporter: #f3cb52;
 			color:rgba(0,0,0,0.8);
 		}
 		&.momo{
-			color:#ff594d;
+			color:$momo;
+		}
+		&.naoshima{
+			color: $naoshima;
 		}
 }
 @mixin bgcolors{
@@ -46,7 +54,10 @@ $reporter: #f3cb52;
 			background: $reporter;
 		}
 		&.momo{
-			background: #ff594d;
+			background: $momo;
+		}
+		&.naoshima{
+			background: $naoshima;
 		}
 }
 #player {
@@ -73,7 +84,7 @@ $reporter: #f3cb52;
 	opacity:0;
 }
 .contentbox{
-	@include transform(translateY(40%));
+	@include transform(translateY(700px));
 	opacity:0;
 	width:100%; 
 	background:#fff; 
@@ -88,6 +99,19 @@ $reporter: #f3cb52;
 		background:#000;
 	}
 	transition:.5s;
+}
+.working{
+	width:400px;
+	height:300px;
+	top:50%;
+	left:50%;
+	@include transform(translateX(-50%) translateY(calc(-50% - 50px)));
+	transition:.3s;
+}
+.workingalert{
+	font-family:'lucida grande'; 
+	font-size:42px;
+	color: $momo;
 }
 .maincontent{
 	width:100%; 
@@ -171,7 +195,10 @@ $reporter: #f3cb52;
 		border-bottom:2px dashed #eee;
 	}
 	&.momo{
-		border-bottom:2px dashed #ff594d;
+		border-bottom:2px dashed $momo;
+	}
+	&.naoshima{
+		border-bottom: 2px dashed $naoshima;
 	}
 }
 .sectitle {
@@ -251,6 +278,7 @@ $reporter: #f3cb52;
 	background: #e2b631;
 	opacity: 1;
 	}
+
 }
 
 .control{

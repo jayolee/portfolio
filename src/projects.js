@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
+import YouTube from 'react-youtube';
 import './App.scss';
 import './projects.scss'
-import Header from './header.js'
 
 import logpos1 from './Logpos/IMG_0658.jpg'
 import logpos2 from './Logpos/interview.jpg'
@@ -99,6 +99,8 @@ import momo26_2 from './momoko/ani/23.gif'
 import momo27_1 from './momoko/thumb/24.png'
 import momo27_2 from './momoko/ani/24.gif'
 
+import naoshima from './images/naoshima2.png'
+
 class Projects extends Component {
 
   constructor(props) {
@@ -107,12 +109,19 @@ class Projects extends Component {
       page: 1,
       active:true,
     }
-
+    this.vidid={
+      "log":"5Q6vJg-OufI",
+      "dote":"zlp8SnxFN3I",
+      "gssh":"lUaJy9qo6qA",
+    }
     this.contents={
       "logpos":{
         "projectTitle":"LOG + POS",
         "quote":"How can we improve the communication at rescue operations using audio AR?",
-        "topimg":"",
+        "topimg":<YouTube
+        videoId={this.vidid.log}                  // defaults -> null
+        id="player"                       // defaults -> null
+      />,
         "exlpla":{
           "Time":"Oct 19th ~ Nov 1st (Bose Challenge at CMU)",
           "Team":"Aniruddih Iyer, Hyun Woo Paik, Ja Young Lee, Se One Park, Won-woo Chung",
@@ -132,7 +141,10 @@ class Projects extends Component {
       "dote":{
         "projectTitle":"DoteNote",
         "quote":"What if we can leave a virtual message at a specific location?",
-        "topimg":"",
+        "topimg":<YouTube
+        videoId={this.vidid.dote}                  // defaults -> null
+        id="player"                       // defaults -> null
+      />,
         "exlpla":{
           "Time":"Sep 21st ~ 22nd (HackCMU 2018)",
           "Team":"DoteNote (Aniruddih Iyer, Hyun Woo Paik, Ja Young Lee, Won-woo Chung)",
@@ -333,14 +345,34 @@ class Projects extends Component {
       "gssh":{
         "projectTitle":"GSSH - Class of 2011",
         "quote":"GSSH - Class of 2011, from 2008 to 2017",
-        "topimg":"",
+        "topimg":<YouTube
+        videoId={this.vidid.gssh}                  // defaults -> null
+        id="player"                       // defaults -> null
+      />,
         "exlpla":{
                  },
         "Video":
         <div>
         <p>This is a video I created for the 10th anniversary of my high school, Gyeongsan Science High School (G.S.S.H.). The music in the beginning is my classmate's recent piano play. It shows our school year memories and how we have grown up. The background music was the school's morning alarm music: Heal the World.</p>
                     </div>
-      }
+      },
+      "naoshima":{
+        "projectTitle":"Art of Naoshima",
+        "quote":"How can I convey the information of travel location?",
+        "topimg":<img id='reporter' class="topimg" src={naoshima}/>,
+        "exlpla":{
+          "Time":"Sep 2018",
+          "Team":"Ja Young Lee",
+          "Role":"illustration, UI/UX design, coding",
+          "Tool":"Sketch (iPad), React, Adobe Photoshop",
+                 },
+        "Process":
+        <div>
+        <p>Currently working on the process journal.</p>
+        <a href="https://jayolee.github.io/Travel-app/" target="_blank">
+        <div class="button naoshima">Go to the Website</div></a>
+                    </div>
+      },
     }
   }
   rollup(){
@@ -356,7 +388,7 @@ class Projects extends Component {
 		let contentdiv=document.getElementsByClassName("contentbox")[0];
     let greydiv=document.getElementsByClassName("greybox")[0];
     contentdiv.style.opacity="0";
-    contentdiv.style.transform="translateY(40%)";
+    contentdiv.style.transform="translateY(700px)";
     greydiv.style.opacity="0";
 		setTimeout(function(){this.props.closehandle();}.bind(this),500)
   }
@@ -364,8 +396,8 @@ class Projects extends Component {
 
   anigenerator(){
     let element=[];
-    let momothumblist=[momo4_1,momo5_1,momo6_1,momo7_1,momo8_1,momo9_1,momo10_1,momo11_1,momo12_1,momo13_1,momo14_1,momo15_1,momo16_1,momo17_1,momo18_1,momo19_1,momo20_1,momo21_1,momo22_1,momo23_1,momo24_1];
-    let momoanilist=[momo4_2,momo5_2,momo6_2,momo7_2,momo8_2,momo9_2,momo10_2,momo11_2,momo12_2,momo13_2,momo14_2,momo15_2,momo16_2,momo17_2,momo18_2,momo19_2,momo20_2,momo21_2,momo22_2,momo23_2,momo24_2];
+    let momothumblist=[momo4_1,momo5_1,momo6_1,momo7_1,momo8_1,momo9_1,momo10_1,momo11_1,momo12_1,momo13_1,momo14_1,momo15_1,momo16_1,momo17_1,momo18_1,momo19_1,momo20_1,momo21_1,momo22_1,momo23_1,momo24_1,momo25_1,momo26_1,momo27_1];
+    let momoanilist=[momo4_2,momo5_2,momo6_2,momo7_2,momo8_2,momo9_2,momo10_2,momo11_2,momo12_2,momo13_2,momo14_2,momo15_2,momo16_2,momo17_2,momo18_2,momo19_2,momo20_2,momo21_2,momo22_2,momo23_2,momo24_2,momo25_2,momo26_2,momo27_2];
     
     for(let i=0;i<momothumblist.length;i++){
       element.push(
@@ -431,6 +463,9 @@ class Projects extends Component {
     setTimeout(this.rollup(),100);
   }
   render() {
+
+    
+
     return (
       <div style={{position:"absolute", top:"0",left:"0",width:"100%",height:"100%"}}>
       <div className="greybox" />

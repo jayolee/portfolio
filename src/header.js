@@ -11,7 +11,9 @@ class Header extends Component {
     this.state = {
     }
   }
-
+senddata(){
+    this.props.menustatus(3);
+}
   headergenerator(){
     let element=[];
     let menulist={
@@ -19,6 +21,7 @@ class Header extends Component {
         "Fine Art":"FA",
         "About/Contact":"contact",
     };
+
     let keylist=["Work","Fine Art","About/Contact"];
     let currentlist="";
     let pagenum = this.props.pagenum;
@@ -27,14 +30,14 @@ class Header extends Component {
       element.push( 
       <li id={menulist[keylist[i]]}> 
         <div className="menudot active" />
-        <a className="activemenu" href="">{keylist[i]}</a>
+        <a className="activemenu">{keylist[i]}</a>
                     </li>
       );
       }
       else{ element.push( 
         <li id={menulist[keylist[i]]}> 
           <div className="menudot" />
-          <a href="">{keylist[i]}</a>
+          <a onClick={this.senddata.bind(this)}>{keylist[i]}</a>
                       </li>
         );
     }
@@ -53,13 +56,6 @@ class Header extends Component {
             <a className="title" href="index.html">
                 <div className="logo"></div>
             </a>
-    
-            <div id="nav-icon">
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
             <div className="menu-wrap">
                 <nav className="menu">
                 <ul className="clearfix">
