@@ -12,6 +12,7 @@ import even from './images/even2.png'
 import momoko from './images/momo.png'
 import gssh from './images/gssh.png'
 import naoshima from './images/naoshima.png'
+import FAs from './FA.js'
 
 class App extends Component {
 
@@ -26,18 +27,18 @@ class App extends Component {
       activelist:['uiux', 'code', 'ideation','illustration','animation','video'],
       deactivelist:[],
     }
-    
+  
   }
   renderPageView(){
-    if(this.state.page === 1){
+    if(this.state.page === 3){
       return <Projects idnum={this.state.curid} closehandle={this.closehandler.bind(this)}/>
     }
-    if(this.state.page === 3){
+    if(this.state.page === 2){
       return <Workings closehandle={this.closehandler.bind(this)}/>
     }
   }
   menustatus = (menunumber) => {
-    this.setState({page:menunumber});
+    this.setState({page: (menunumber)*1});
 
   }
   closehandler(){
@@ -157,6 +158,10 @@ headertype(){
     return element;
   }
   projects(){
+    if(this.state.page === 1){
+      return <FAs closehandle={this.closehandler.bind(this)}/>
+    }
+    else{
     let element=[];
     let worklist=[
       { "id":"logpos",
@@ -211,7 +216,7 @@ headertype(){
     ];
     for(let i=0;i<worklist.length;i++){
     element.push(
-      <a id={worklist[i].id} href="#" onClick = {(ev) => this.setState({page : 1, curid:worklist[i].id})}  >
+      <a id={worklist[i].id} href="#" onClick = {(ev) => this.setState({page : 3, curid:worklist[i].id})}  >
         <div className={"portwrap " + worklist[i].class} >
           <img className="longim" src={worklist[i].image} />
           <div className="discrip">
@@ -228,7 +233,10 @@ headertype(){
       </a>
     )
     }
-    return element
+    element=<div><div className="worktypes">{this.worktypebar()}</div>{element}</div>;
+    return element  
+  }
+    
   }
   
 
@@ -254,16 +262,13 @@ headertype(){
         
 
         <div className="workbox">
-          <div className="worktypes">
-            {this.worktypebar()}
-            
-          </div>
+          
 
               {this.projects()}
 
         </div>
         </div>
-        <div className="cprg">This website is designed and developed by Young.<br />ⓒ 2017. YOUNG</div>
+        <div className="cprg">This website is designed and developed by Young.<br />ⓒ 2018. YOUNG</div>
         {this.renderPageView()}
       </div>
     );

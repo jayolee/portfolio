@@ -9,10 +9,19 @@ class Header extends Component {
   constructor(props) {
     super(props);
     this.state = {
+        pagenumber: 0,
     }
   }
-senddata(){
-    this.props.menustatus(3);
+senddata(e){
+    this.props.menustatus(e.target.id);
+    this.addactive(e);
+}
+addactive(e){
+    let activemenu=document.getElementsByClassName("activemenu")[0];
+    activemenu.classList.remove("activemenu");
+    activemenu.parentNode.classList.remove("active");
+    e.target.classList.add("activemenu");
+    e.target.parentNode.classList.add('active');
 }
   headergenerator(){
     let element=[];
@@ -28,16 +37,17 @@ senddata(){
     for(let i=0;i<3;i++){
         if(pagenum == i){
       element.push( 
-      <li id={menulist[keylist[i]]}> 
+      <li id={menulist[keylist[i]]} className = "active"> 
         <div className="menudot active" />
-        <a className="activemenu">{keylist[i]}</a>
+        <a className="activemenu" id={i} onClick={this.senddata.bind(this)}>{keylist[i]}</a>
                     </li>
       );
       }
-      else{ element.push( 
+      else{
+          element.push( 
         <li id={menulist[keylist[i]]}> 
           <div className="menudot" />
-          <a onClick={this.senddata.bind(this)}>{keylist[i]}</a>
+          <a onClick={this.senddata.bind(this)} id={i} >{keylist[i]}</a>
                       </li>
         );
     }

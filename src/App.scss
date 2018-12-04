@@ -71,7 +71,7 @@ img {
     left:10px; 
     overflow:hidden;
   @include transform(rotate(-6deg)); 
-    border-bottom-left-radius:200px;
+    border-bottom-left-radius:50px;
 }
 .stars{
     background:#C1DCEA; 
@@ -126,6 +126,11 @@ img {
   top: 14px;
   z-index: 1;
 }
+.active{
+    .menudot{
+        opacity:.3;
+    }
+}
 .menudot{
     width:28px;
     height:28px;
@@ -139,9 +144,6 @@ img {
     z-index:-1;
     opacity:0;
     transition:.3s;
-    &.active{
-        opacity:.3;
-    }
 }
 
 .menu {
@@ -441,6 +443,9 @@ width:102px;
     &:hover {
         text-transform: none;
       }
+      &.fa{
+          width:23%;
+      }
   }
 
 }
@@ -471,8 +476,40 @@ width:102px;
     @include transform(translateX(-50%) translateY(-50%));
 
   }
+  &.fa{
+      max-width:250px;
+        max-height:250px;
+    .longim{
+        object-fit: cover;
+        max-height:150%;
+    }
+  }
+  .discrip {
+    text-align: center;
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    @include transform( translateX(-50%) translateY(-50%));
+    font: {
+        size: 24px;
+        weight: bold;
+    }
+    letter-spacing: .5px;
+    line-height: 1.5;
+    color: #fff;
+    opacity: 0;
+  }
+  &:hover{
+       .discrip {
+    opacity: 1;
+  }
+  img {
+    opacity: .3;
+  }
 }
-
+}
 .hiim {
   max-width: 100%;
 }
@@ -498,33 +535,6 @@ width:102px;
   border-radius: 8px;
 }
 
-.portwrap {
-    .discrip {
-        text-align: center;
-        width: 100%;
-        height: auto;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        @include transform( translateX(-50%) translateY(-50%));
-        font: {
-            size: 24px;
-            weight: bold;
-        }
-        letter-spacing: .5px;
-        line-height: 1.5;
-        color: #fff;
-        opacity: 0;
-      }
-      &:hover{
-           .discrip {
-        opacity: 1;
-      }
-      img {
-        opacity: .3;
-      }
-    }
-}
 
 
 .discrip {.types {

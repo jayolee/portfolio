@@ -124,13 +124,13 @@ class Projects extends Component {
       />,
         "exlpla":{
           "Time":"Oct 19th ~ Nov 1st (Bose Challenge at CMU)",
-          "Team":"Aniruddih Iyer, Hyun Woo Paik, Ja Young Lee, Se One Park, Won-woo Chung",
+          "Team":<span>Aniruddih Iyer, <a className="member" href="http://www.hyunwoopaik.com/" target="_blank">Hyun Woo Paik,</a> Ja Young Lee, Se One Park, <a className="member" href="https://wwchung.github.io/SSUI-Portfolio/index.html" target="_blank">Won-Woo Chung</a></span>,
           "Role":"ideation, video directing/editing",
           "Tool":"Maya, After Effects, Illustrator",
           " ":<i>This is a project for a Bose Challenge at CMU.</i>,
                  },
         "Ideation":<div>
-        <p> The prompt of Bose Challenge was <i><b>“How might we use sound-based augmented reality to improve our lives?”</b></i> Among the idea we had, we decided to focus on improving cooperation situations which require team members’ communications about their locations and status. More specifically, we narrowed down our target as firefighters, about their rescue operations in extreme situations</p> <p>Our assumption here is that under the urgent circumstances of limited vision and hearing, it is difficult to communicate accurate location information via speaking. Therefore, we designed a way to communicate each other with minimum hand control and automatically generated location data based on their GPS. </p><img src={dote1} /><div class='imgdes'>Ideation Meeting</div> </div>,
+        <p> The prompt of Bose Challenge was <i><b>“How might we use sound-based augmented reality to improve our lives?”</b></i> Among the idea we had, we decided to focus on improving cooperation situations which require team members’ communications about their locations and status. More specifically, we narrowed down our target as firefighters, about their rescue operations in extreme situations</p> <p>Our assumption here is that under the urgent circumstances of limited vision and hearing, it is difficult to communicate accurate location information via speaking. Therefore, we designed a way to communicate each other with minimum hand control and automatically generated location data based on their GPS. </p><img src={logpos1} /><div class='imgdes'>Ideation Meeting</div> </div>,
         "User Research":<div>
         <p> With our basic ideation, we conducted a phone interview with a firefighter. He confirmed that our idea will be helpful, and gave use some challenges our idea has.</p><img src={logpos2} /><p>According to the firefighter, there is a system providing location information using sound and blinking lights after a firefighter being motionless for 30 seconds (Watch the video for additional information). However, the issue is that the location information verbally communicated, therefore, the information rescue team has might not be the latest information. Also, the light and sound signals can be hindered by the fire and the smoke. Our solution solves this problem by providing real-time information directly to the firefighters through the device.</p></div>,
 
@@ -147,7 +147,7 @@ class Projects extends Component {
       />,
         "exlpla":{
           "Time":"Sep 21st ~ 22nd (HackCMU 2018)",
-          "Team":"DoteNote (Aniruddih Iyer, Hyun Woo Paik, Ja Young Lee, Won-woo Chung)",
+          "Team":<span>DoteNote (Aniruddih Iyer, <a className="member" href="http://www.hyunwoopaik.com/" target="_blank">Hyun Woo Paik,</a> Ja Young Lee, <a className="member" href="https://wwchung.github.io/SSUI-Portfolio/index.html" target="_blank">Won-Woo Chung</a>)</span>,
           "Role":"ideation, UI/UX design, video directing/editing",
           "Tool":"Adobe XD, After EFfects, Illustrator",
           " ":<i>This is a project for a hackathon held at CMU (HackCMU 2018) which got <b>3rd Place.</b></i>,
