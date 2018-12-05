@@ -13,6 +13,7 @@ import momoko from './images/momo.png'
 import gssh from './images/gssh.png'
 import naoshima from './images/naoshima.png'
 import FAs from './FA.js'
+import About from './About.js'
 
 class App extends Component {
 
@@ -33,9 +34,7 @@ class App extends Component {
     if(this.state.page === 3){
       return <Projects idnum={this.state.curid} closehandle={this.closehandler.bind(this)}/>
     }
-    if(this.state.page === 2){
-      return <Workings closehandle={this.closehandler.bind(this)}/>
-    }
+    
   }
   menustatus = (menunumber) => {
     this.setState({page: (menunumber)*1});
@@ -118,6 +117,7 @@ reopac(item){
 headertype(){
       return <Header pagenum={this.state.menu} menustatus={this.menustatus} />
   }
+
   stargenerator(){
     let element=[];
     let leftv=0;
@@ -160,6 +160,9 @@ headertype(){
   projects(){
     if(this.state.page === 1){
       return <FAs closehandle={this.closehandler.bind(this)}/>
+    }
+    if(this.state.page === 2){
+      return <About closehandle={this.closehandler.bind(this)}/>
     }
     else{
     let element=[];
