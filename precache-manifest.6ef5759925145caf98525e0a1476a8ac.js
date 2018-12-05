@@ -1,15 +1,15 @@
 self.__precacheManifest = [
   {
-    "revision": "a57e253dfb1cda1d83f256cce84cba33",
-    "url": "/portfolio/static/media/10.a57e253d.gif"
+    "revision": "bfa58f1112e86bd832b557f9dd8750b3",
+    "url": "/portfolio/static/media/12.bfa58f11.png"
   },
   {
-    "revision": "17405edc070c39957677",
-    "url": "/portfolio/static/css/main.a16f448f.chunk.css"
+    "revision": "ae8b60d4a0ca72d4cec0",
+    "url": "/portfolio/static/css/main.5e3c8cef.chunk.css"
   },
   {
-    "revision": "e6a2a0281d32c4d1cbe2",
-    "url": "/portfolio/static/js/1.e6a2a028.chunk.js"
+    "revision": "9d9a527916397672d9e8",
+    "url": "/portfolio/static/js/1.9d9a5279.chunk.js"
   },
   {
     "revision": "ee2a100325fd284f0097",
@@ -20,20 +20,20 @@ self.__precacheManifest = [
     "url": "/portfolio/static/media/younglogo.552db415.svg"
   },
   {
-    "revision": "8824f724782801f0ad50bb5178bed7d0",
-    "url": "/portfolio/static/media/even1.8824f724.png"
-  },
-  {
-    "revision": "52877fe12ab04b185421f225d3e9ce1d",
-    "url": "/portfolio/static/media/even2.52877fe1.png"
-  },
-  {
     "revision": "4dacabda65930685b68591f097311829",
     "url": "/portfolio/static/media/LucidaGrandeBold.4dacabda.ttf"
   },
   {
     "revision": "819b60c7426c5e6f3bd9e27c7ea6bd6f",
     "url": "/portfolio/static/media/cursor.819b60c7.svg"
+  },
+  {
+    "revision": "8824f724782801f0ad50bb5178bed7d0",
+    "url": "/portfolio/static/media/even1.8824f724.png"
+  },
+  {
+    "revision": "52877fe12ab04b185421f225d3e9ce1d",
+    "url": "/portfolio/static/media/even2.52877fe1.png"
   },
   {
     "revision": "0ef833a292ef1e6b96114fc72420aa29",
@@ -272,8 +272,8 @@ self.__precacheManifest = [
     "url": "/portfolio/static/media/10.ff80dca3.png"
   },
   {
-    "revision": "17405edc070c39957677",
-    "url": "/portfolio/static/js/main.17405edc.chunk.js"
+    "revision": "a57e253dfb1cda1d83f256cce84cba33",
+    "url": "/portfolio/static/media/10.a57e253d.gif"
   },
   {
     "revision": "11c32bc8d210d626e8ad5b8d4e99ee0c",
@@ -284,8 +284,8 @@ self.__precacheManifest = [
     "url": "/portfolio/static/media/11.055e63ba.gif"
   },
   {
-    "revision": "bfa58f1112e86bd832b557f9dd8750b3",
-    "url": "/portfolio/static/media/12.bfa58f11.png"
+    "revision": "ae8b60d4a0ca72d4cec0",
+    "url": "/portfolio/static/js/main.ae8b60d4.chunk.js"
   },
   {
     "revision": "893acce2e3cf34a63bc5b4a187a53486",
@@ -540,7 +540,35 @@ self.__precacheManifest = [
     "url": "/portfolio/static/media/oth6.76206628.jpg"
   },
   {
-    "revision": "91f9104b64b4858bfd493f69965c1855",
+    "revision": "5d2e801e07118a0025ac84e0af745e14",
+    "url": "/portfolio/static/media/photo_me.5d2e801e.png"
+  },
+  {
+    "revision": "f8046ceddc004573d96260950135c675",
+    "url": "/portfolio/static/media/res_grey.f8046ced.svg"
+  },
+  {
+    "revision": "7a49368fe519f925df7f39cf440fd1fe",
+    "url": "/portfolio/static/media/res_blk.7a49368f.svg"
+  },
+  {
+    "revision": "5d2b661bdde81b0ce62559f78ccb6b20",
+    "url": "/portfolio/static/media/hub_grey.5d2b661b.svg"
+  },
+  {
+    "revision": "51354dea52fa014a5cbb6c3ce5686b95",
+    "url": "/portfolio/static/media/hub_blk.51354dea.svg"
+  },
+  {
+    "revision": "e9ccdd776871a1ff6b95be7b4a4adf1a",
+    "url": "/portfolio/static/media/in_grey.e9ccdd77.svg"
+  },
+  {
+    "revision": "5ee23c102a48ed3d8112361e242d56d3",
+    "url": "/portfolio/static/media/in_blue.5ee23c10.svg"
+  },
+  {
+    "revision": "c4f753cdbf787b7dee3be00e1ea8bb33",
     "url": "/portfolio/index.html"
   }
 ];
