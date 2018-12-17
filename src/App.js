@@ -2,16 +2,10 @@ import React, { Component } from 'react';
 import './App.scss';
 import Header from './header.js'
 import Projects from './projects.js'
-import Workings from './working.js'
+import Fun from './fun.js'
 import logo from './images/younglogo.svg'
 import './projects.scss'
-import logpos from './images/logpos2.jpg'
-import dotenote from './images/dotenote.png'
-import reporter from './images/lights.jpg'
-import even from './images/even2.png'
-import momoko from './images/momo.png'
-import gssh from './images/gssh.png'
-import naoshima from './images/naoshima.png'
+import MainProject from './mainProject.js'
 import FAs from './FA.js'
 import About from './About.js'
 
@@ -31,21 +25,28 @@ class App extends Component {
     this.star_position=this.star_position_generator();
     this.star_twinkle=this.star_twinkle_generator();
   }
+
+  //display works
   renderPageView(){
-    if(this.state.page === 3){
+    if(this.state.page === 4){
       return <Projects idnum={this.state.curid} closehandle={this.closehandler.bind(this)}/>
-    }
-    
+    };
   }
+  //Function will be sent as props for header
   menustatus = (menunumber) => {
     this.setState({page: (menunumber)*1});
+  }
 
+  projectdisplay = (menunumber, pagenum) => {
+    this.setState({page: (menunumber)*1, curid: pagenum});
   }
+
+  //Func to close the project detail boxes
   closehandler(){
-    setTimeout(this.setState({page:0}), 300);
-    
+    setTimeout(this.setState({page:0}), 300); 
   }
- 
+
+  //Func for filter 
   addActive(e){
     let itemlist={
       "logpos":['ideation','video'],
@@ -58,8 +59,9 @@ class App extends Component {
     }
    let keylist=Object.keys(itemlist);
    let exist=0;
-  let thisDiv=e.target.id;
-  let classlist=e.target.classList;
+    let thisDiv=e.target.id;
+    let classlist=e.target.classList;
+
       if(classlist[1]) { 
 
           e.target.classList.remove("workactive");
@@ -91,6 +93,8 @@ class App extends Component {
 
      }
   }
+
+  //Func to hide projects 
 wraphide(item){
   let tohide=document.getElementById(item).childNodes[0];
   if(tohide){
@@ -100,10 +104,10 @@ wraphide(item){
     document.getElementById(item).style.width=0;
     setTimeout(function() {tohide.style.display='none'; 
     document.getElementById(item).style.display='none'}, 300);
-	}
-  	
-
+	};
 }
+
+//Func to remake the projects opaque
 reopac(item){
 
   let toreopac=document.getElementById(item).childNodes[0];
@@ -115,9 +119,12 @@ reopac(item){
 }
 }
 
+//Create header navbar
 headertype(){
       return <Header pagenum={this.state.menu} menustatus={this.menustatus} />
   }
+
+//Funcs for stars 
 star_twinkle_generator(){
   let duration=[];
   let starstyle={};
@@ -162,6 +169,8 @@ star_twinkle_generator(){
     </div>)
     return element;
   }
+
+  //Func for filter bar 
   worktypebar(){
     let element=[];
     let typelist=['uiux', 'code', 'ideation','illustration','animation','video'];
@@ -180,93 +189,23 @@ star_twinkle_generator(){
     }
     return element;
   }
+
+  //Main project section
   projects(){
+    if(this.state.page === 0){
+      return <MainProject closehandle={this.closehandler.bind(this)} projectdisplay={this.projectdisplay}/>
+    }
     if(this.state.page === 1){
-      return <FAs closehandle={this.closehandler.bind(this)}/>
+      return <Fun closehandle={this.closehandler.bind(this)} projectdisplay={this.projectdisplay}/>
     }
     if(this.state.page === 2){
+      return <FAs closehandle={this.closehandler.bind(this)}/>
+    }
+    if(this.state.page === 3){
       return <About closehandle={this.closehandler.bind(this)}/>
     }
-    else{
-    let element=[];
-    let worklist=[
-      { "id":"logpos",
-        "href":".js",
-        "image":logpos,
-        "class":"ideation video",
-        "types": "Ideation | Video",
-        "title": "LOG + POS",
-      },
-      { "id":"dote",
-        "href":".js",
-        "image":dotenote,
-        "class":"ideation video uiux",
-        "types": "UI/UX | Ideation | Video",
-        "title": "DoteNote",
-      },
-      { "id":"reporter",
-        "href":".js",
-        "image":reporter,
-        "class":"illustration uiux",
-        "types": "UI/UX | Illustration",
-        "title": "I Am a Reporter",
-      },
-      { "id":"even",
-        "href":".js",
-        "image":even,
-        "class":"uiux",
-        "types": "UI/UX",
-        "title": "Even",
-      },
-      { "id":"momo",
-        "href":".js",
-        "image":momoko,
-        "class":"animation",
-        "types": "Animation (Emoji Stickers)",
-        "title": "Happy Momoko",
-      },
-      { "id":"gssh",
-        "href":".js",
-        "image":gssh,
-        "class":"video",
-        "types": "Video",
-        "title": "GSSH - Class of 2011",
-      },
-      { "id":"naoshima",
-        "href":".js",
-        "image":naoshima,
-        "class":"code uiux illustartion",
-        "types": "UI/UX | Code | Illustration",
-        "title": "Artwork of NAOSHIMA",
-      },
-    ];
-    for(let i=0;i<worklist.length;i++){
-    element.push(
-      <a id={worklist[i].id} href="#" onClick = {(ev) => this.setState({page : 3, curid:worklist[i].id})}  >
-        <div className={"portwrap " + worklist[i].class} >
-          <img className="longim" src={worklist[i].image} />
-          <div className="discrip">
-          {worklist[i].title}<br />
-          <span className="types">
-          {worklist[i].types}
-          </span>
-          </div>
-        </div>
-        <div className="discripsmaller">
-        {worklist[i].title}<br />
-        <span class="types">{worklist[i].types}</span>
-        </div>
-      </a>
-    )
-    }
-    element=<div><div className="worktypes">{this.worktypebar()}</div>{element}</div>;
-    return element  
-  }
-    
   }
   
-
-
   render() {
     return (
       <div>
@@ -284,18 +223,12 @@ star_twinkle_generator(){
                 <img src={logo} id="ylogo" />
               </a>
             </div>
-          </div>
-        
-
-        <div className="workbox">
-          
+          </div> 
 
               {this.projects()}
-
-        </div>
         </div>
         <div className="cprg">This website is designed and developed by Young.<br />ⓒ 2018. YOUNG</div>
-        {this.renderPageView()}
+       
       </div>
     );
   }

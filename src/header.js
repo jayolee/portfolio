@@ -27,14 +27,15 @@ addactive(e){
     let element=[];
     let menulist={
         "Work":"work",
+        "Fun":"fun",
         "Fine Art":"FA",
         "About/Contact":"contact",
     };
 
-    let keylist=["Work","Fine Art","About/Contact"];
+    let keylist=["Work","Fun", "Fine Art","About/Contact"];
     let currentlist="";
     let pagenum = this.props.pagenum;
-    for(let i=0;i<3;i++){
+    for(let i=0;i<4;i++){
         if(pagenum == i){
       element.push( 
       <li id={menulist[keylist[i]]} className = "active"> 

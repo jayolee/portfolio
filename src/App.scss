@@ -472,6 +472,7 @@ width:102px;
 .workbox {
   min-height: 440px;
   a {
+
     display: inline-block;
     width: 31%;
     margin: 3% 1%;
@@ -481,6 +482,15 @@ width:102px;
       }
       &.fa{
           width:23%;
+      }
+
+      &.main_work{
+        width:46%;
+        margin: 3% 2%;
+        .portwrap{
+          max-width:500px;
+          max-height:500px;
+        }
       }
   }
 
@@ -520,7 +530,15 @@ width:102px;
         object-fit: cover;
         max-height:120%;
     }
+    img{
+      opacity:1;
+    }
+    &:hover{
+    img {
+      opacity: 1;
+    }
   }
+}
   .discrip {
     text-align: center;
     width: 100%;
@@ -536,17 +554,22 @@ width:102px;
     letter-spacing: .5px;
     line-height: 1.5;
     color: #fff;
-    opacity: 0;
+    opacity: 1;
+    text-shadow: 0 0 6px rgba(0,0,0,0.6);
+  }
+  img{
+    opacity:.4;
   }
   &:hover{
        .discrip {
-    opacity: 1;
+    opacity: 0;
   }
   img {
-    opacity: .3;
+    opacity: 1;
   }
 }
 }
+
 .hiim {
   max-width: 100%;
 }

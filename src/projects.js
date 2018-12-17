@@ -366,7 +366,7 @@ class Projects extends Component {
       },
       "naoshima":{
         "projectTitle":"Art of Naoshima",
-        "quote":"How can I convey the information of travel location?",
+        "quote":"How can I convey the information of a travel location?",
         "topimg":<img id='reporter' class="topimg" src={naoshima}/>,
         "exlpla":{
           "Time":"Sep 2018",

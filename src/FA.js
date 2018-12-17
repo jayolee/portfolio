@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.scss';
 import './projects.scss'
 import './FA.scss'
+import FAdetail from './FAdetail.js'
 
 import paint1 from './FA/images/image1-1.jpg'
 import paint2 from './FA/images/image1-2.jpg'
@@ -43,8 +44,12 @@ class FAs extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      page: 3,
-      active:true,
+	  page: 3,
+	  order: 0, 
+	  orderinArray:0,
+	  imglist:{},
+	  active:true,
+	  
     }
 
    
@@ -52,6 +57,7 @@ class FAs extends Component {
 			name : "Summer Shadows (2016)",
 			info: '24"x30", Oil on canvas',
 			image:paint5,
+			order:"first",
 					   
 			},
 			{
@@ -154,12 +160,14 @@ class FAs extends Component {
 			name : "Summer Night (2013)",
 			info: '14"x11", Oil on canvas',
 			image:paint6,
+			order:"last",   
 			}	
 			 ];
 this.gallery_draw=[
 			{name : "The Way Home ",
 			info: '7.5"x7" Collage',
-			image:draw1,  
+			image:draw1, 
+			order:"first", 
 			},
 			{
 			name : "Demarcation",
@@ -194,13 +202,15 @@ this.gallery_draw=[
 			{
 			name : "The Edge of Winter (2013)",
 			info: '8"x6" Mezzotint',
-			image:draw6,	   
+			image:draw6,
+			order:"last",   	   
 			}
 				];
 this.gallery_others=[
 			{name : "Solitude (2013)",
 			info: '7"x8"x4" Plaster',
-			image:other1,  
+			image:other1, 
+			order:"first", 
 			},
 			{
 			name : "Pottery (2016)",
@@ -229,17 +239,22 @@ this.gallery_others=[
 			{
 			name : "Pottery (2016)",
 			info: '5.7"x5.7"x2.7"',
-			image:other6,	    
+			image:other6,	
+			order:"last",     
 			},
 				];
     }
 
-  
+	closehandler(){
+		setTimeout(this.setState({page:0}), 300);
+		
+	  }
+
   listgenerator(imagelist) {
     let element=[];
     for(let i=0;i<imagelist.length;i++){
         element.push(
-          <a href="#" className="fa" curid={imagelist[i]}  curlist={imagelist}>
+          <a href="#" className="fa" onClick={(ev) => this.setState({page : 5,  orderinArray: i, order: imagelist[i].order, imglist: imagelist})}>
             <div className="portwrap fa" >
               <img className="longim" src={imagelist[i].image} />
               <div className="titlebox">
@@ -255,14 +270,20 @@ this.gallery_others=[
   
   return element
 }
+detailviewgenerator(){
+	if(this.state.page === 5){
+		return <FAdetail imglist = {this.state.imglist } orderinArray = {this.state.orderinArray} closehandle={this.closehandler.bind(this)} />
+	}
+}
 
   render(){
 
     return (
-      <div>
+      <div className="workbox">
 		{this.listgenerator(this.gallery_paint)}
 		{this.listgenerator(this.gallery_draw)}
 		{this.listgenerator(this.gallery_others)}
+		{this.detailviewgenerator()}
       </div>
 
     );

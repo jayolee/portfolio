@@ -7,63 +7,72 @@ class FAdetail extends Component {
   constructor(props) {
     super(props);
     this.state = {
-
+      currentOrder: this.props.orderinArray,
     }
   }
   
   listgenerator(imagelist) {
     let element=[];
-
   return element
 }
 
-
+renderImg(){
+  let element =[];
+  element.push(
+    <div>
+    <img className="detailImg" src={this.props.imglist[this.state.currentOrder].image} />
+    <div className="title">{this.props.imglist[this.state.currentOrder].name}</div>
+    <div className="descrip">{this.props.imglist[this.state.currentOrder].info}</div>
+    </div>
+  )
+  return element
+}
 
 renderArrows(){
-    var id= this.props.idnum[this.props.iddata];
+    var curnum= this.props.imglist[this.state.currentOrder].order;
     var element=[];
-    var idorder=this.state.currentNum;
 
-    if (idorder == 0){
+
+    if (curnum == "first"){
       element.push(
       <div className="detail_wrapper" >
       <svg className="icon" height="60" width="26" >
-        <path d="M26 5 L12 30 L26 60" fill="none" opacity="0" stroke-width="3"/>
+        <path d="M26 5 L12 30 L26 60" fill="none" opacity="0" strokeWidth="3"/>
       </svg>
     
     {this.renderImg()}
       
-      <svg className="icon right" height="60" width="26" onClick = {(ev) => {this.setState({currentNum: this.state.currentNum+1}); }}>
-        <path d="M26 5 L12 30 L26 60" fill="none" stroke-width="3"/>
+      <svg className="icon right" height="60" width="26" onClick = {(ev) => {this.setState({currentOrder: this.state.currentOrder+1}); }}>
+        <path d="M26 5 L12 30 L26 60" stroke="rgba(0, 0, 0, 0.4)" fill="none" strokeWidth="3"/>
       </svg>
     </div>
     )
     }
-    else if(idorder == this.infolist[id].length-1){
+    else if(curnum == "last"){
       element.push(
       <div className="detail_wrapper" >
-      <svg className="icon" height="60" width="26" onClick = {(ev) => this.setState({currentNum: this.state.currentNum-1})}>
-        <path d="M26 5 L12 30 L26 60" fill="none" stroke-width="3"/>
+      <svg className="icon" height="60" width="26" onClick = {(ev) => this.setState({currentOrder: this.state.currentOrder-1})}>
+        <path d="M26 5 L12 30 L26 60" stroke="rgba(0, 0, 0, 0.4)" fill="none" strokeWidth="3"/>
       </svg>
     
     {this.renderImg()}
       
       <svg className="icon right" height="60" width="26" >
-        <path d="M26 5 L12 30 L26 60" fill="none" opacity="0" stroke-width="3"/>
+        <path d="M26 5 L12 30 L26 60" fill="none" opacity="0" strokeWidth="3"/>
       </svg>
     </div>
     )}
     else{
       element.push(
       <div className="detail_wrapper" >
-      <svg className="icon" height="60" width="26" onClick = {(ev) => this.setState({currentNum: this.state.currentNum-1})}>
-        <path d="M26 5 L12 30 L26 60" fill="none" stroke-width="3"/>
+      <svg className="icon" height="60" width="26" onClick = {(ev) => this.setState({currentOrder: this.state.currentOrder-1})}>
+        <path d="M26 5 L12 30 L26 60" stroke="rgba(0, 0, 0, 0.4)" fill="none" strokeWidth="3"/>
       </svg>
     
         {this.renderImg()}
       
-      <svg className="icon right" height="60" width="26" onClick = {(ev) => this.setState({currentNum: this.state.currentNum+1})}>
-        <path d="M26 5 L12 30 L26 60" fill="none"  stroke-width="3"/>
+      <svg className="icon right" height="60" width="26" onClick = {(ev) => this.setState({currentOrder: this.state.currentOrder+1})}>
+        <path d="M26 5 L12 30 L26 60" stroke="rgba(0, 0, 0, 0.4)" fill="none"  strokeWidth="3"/>
       </svg>
     </div>
     )
@@ -75,36 +84,18 @@ renderArrows(){
   render(){
 
     return (
-        <div className="vis" >
-        <div ClassName="blackbox" >
-            <div class="blackbox-xmark">
-                <img src= "xmark.svg"/>
-            </div>
-            <div class="blackbox-content">
-                <div class="arrowwrapper">
-                <svg className="icon" height="60" width="26" >
-        <path d="M26 5 L12 30 L26 60" fill="none" opacity="0" stroke-width="3"/>
-      </svg>
-                </div>
-    
-                <div class="iteminfo" >
-                    <div class="imglg" >
-                        <img id="largeimg" src="#"/><br />
-                        <span id="title">Summer Shadows(2016)</span><br />
-                        <span id="ptinfo"> 24"x30" Oil on canvas</span>
-                    </div>
-                </div>
-    
-                <div  class="arrowwrapper">	
-                <svg className="icon right" height="60" width="26" onClick = {(ev) => {this.setState({currentNum: this.state.currentNum+1}); }}>
-        <path d="M26 5 L12 30 L26 60" fill="none" stroke-width="3"/>
-      </svg>
-                </div>
-            </div>
-            </div>
+        <div>
+        <div className="greybox" />
+          <div className="FAdetail">
+          <div className="xmark" onClick={this.props.closehandle} >
+              <svg width="50" height="50">
+               <path d="M10 10 L40 40 M40 10 L10 40" />
+              </svg>
+          </div>
+              {this.renderArrows()}
+              </div>
         </div>
-    </div>
-    </div>
+
 
     );
   }

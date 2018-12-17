@@ -76,21 +76,24 @@ $naoshima: #e5b354;
 }
 .greybox {
 	position: fixed;
-	width: 100%;
-	height: 100%;
+	width: 100vw;
+	height: 100vh;
+	top:0;
+	left:0;
 	background: rgba(0,0,0,0.3);
 	z-index: 1;
 	transition:.4s;
-	opacity:0;
 }
 .contentbox{
 	@include transform(translateY(700px));
 	opacity:0;
-	width:100%; 
+	width:100vw; 
 	background:#fff; 
 	margin:86px 0 0; 
 	position:absolute; 
-	z-index: 1000;  
+	z-index: 1000; 
+	top:-130px; 
+	left:calc(-50vw + 50%);
 	padding: {
 		top:0;
 		bottom:160px;
@@ -517,7 +520,40 @@ $imgshadow: 0 0 14px rgba(0,0,0,0.2);
 		text-align:center;
 	}
 }
+//FA Page
 
+.FAdetail{
+	width:100%;
+	background:#fff;
+	position:absolute;
+	top:0;
+	z-index:999;
+	height:auto;
+	text-align:center;
+}
+.detail_wrapper{
+	display:flex;
+	height:calc(60vh + 200px);
+	justify-content: space-around;
+	align-items:center;
+	padding:60px 0 60px;
+}
+.icon{
+	cursor: pointer;
+	&.right{
+		@include transform(rotate(180deg));
+	}
+}
+
+.detailImg{
+	max-width:500px;
+	max-height:60vh;
+	object-fit: cover;
+	margin:10px auto 20px;
+}
+.icon{
+	fill:#999;
+}
 @mixin keyframes( $animationName )
 {
     @-webkit-keyframes #{$animationName} {
@@ -584,11 +620,14 @@ $imgshadow: 0 0 14px rgba(0,0,0,0.2);
 }
 }
 #appstore{
-	margin-right:20px;
 	width:130px !important;
 }
 .storebtn{
 	margin-bottom:26px;
+	
+}
+#linestore{
+	max-width:100% !important;
 }
 @media screen and (min-width:420px){
 	.mobileonly{
