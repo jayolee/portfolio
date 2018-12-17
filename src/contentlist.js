@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
 import YouTube from 'react-youtube';
-import './App.scss';
-import './projects.scss'
 
 import logpos1 from './Logpos/IMG_0658.jpg'
 import logpos2 from './Logpos/interview.jpg'
@@ -50,6 +48,7 @@ import even4 from './even/prototype-even.PNG'
 import momo1 from './momoko/momo.gif'
 import momo2 from './momoko/momol.gif'
 import momo3 from './momoko/pointer.svg'
+
 import momo4_1 from './momoko/thumb/1.png'
 import momo4_2 from './momoko/ani/1.gif'
 import momo5_1 from './momoko/thumb/2.png'
@@ -98,25 +97,14 @@ import momo26_1 from './momoko/thumb/23.png'
 import momo26_2 from './momoko/ani/23.gif'
 import momo27_1 from './momoko/thumb/24.png'
 import momo27_2 from './momoko/ani/24.gif'
+
 import momo_btn1 from './momoko/avaliable_line.png'
 import momo_btn2 from './momoko/appstore.svg'
 
 import naoshima from './images/naoshima2.png'
 
-class Projects extends Component {
-
-  constructor(props) {
-    super(props);
-    this.state = {
-      page: 1,
-      active:true,
-    }
-    this.vidid={
-      "log":"5Q6vJg-OufI",
-      "dote":"zlp8SnxFN3I",
-      "gssh":"lUaJy9qo6qA",
-    }
-    this.contents={
+module.exports ={
+    contents:{
       "logpos":{
         "projectTitle":"LOG + POS",
         "quote":"How can we improve the communication at rescue operations using audio AR?",
@@ -382,106 +370,4 @@ class Projects extends Component {
                     </div>
       },
     }
-  }
-  rollup(){
-      let contentdiv=document.getElementsByClassName("contentbox")[0];
-      let greydiv=document.getElementsByClassName("greybox")[0];
-      contentdiv.style.opacity="1";
-      greydiv.style.opacity="1";
-      setTimeout(function(){  contentdiv.style.transform="translateY(0)";},50)
-    
-     
-  }
-  rolldown(){
-		let contentdiv=document.getElementsByClassName("contentbox")[0];
-    let greydiv=document.getElementsByClassName("greybox")[0];
-    contentdiv.style.opacity="0";
-    contentdiv.style.transform="translateY(700px)";
-    greydiv.style.opacity="0";
-		setTimeout(function(){this.props.closehandle();}.bind(this),500)
-  }
-  
-
-  anigenerator(){
-    let element=[];
-    let momothumblist=[momo4_1,momo5_1,momo6_1,momo7_1,momo8_1,momo9_1,momo10_1,momo11_1,momo12_1,momo13_1,momo14_1,momo15_1,momo16_1,momo17_1,momo18_1,momo19_1,momo20_1,momo21_1,momo22_1,momo23_1,momo24_1,momo25_1,momo26_1,momo27_1];
-    let momoanilist=[momo4_2,momo5_2,momo6_2,momo7_2,momo8_2,momo9_2,momo10_2,momo11_2,momo12_2,momo13_2,momo14_2,momo15_2,momo16_2,momo17_2,momo18_2,momo19_2,momo20_2,momo21_2,momo22_2,momo23_2,momo24_2,momo25_2,momo26_2,momo27_2];
-    
-    for(let i=0;i<momothumblist.length;i++){
-      element.push(
-            <div className="aniwrap">
-                    <img className="thumb" src={momothumblist[i]} />
-                    <img className="ani" src={momoanilist[i]} />
-                  </div>
-      )
     }
-    return element;
-  }
-  contentgenerator(){
-    let item=this.props.idnum;
-    let element=[];
-    let topelement=[];
-    let contentelement=[];
-    let explalist=Object.keys(this.contents[item].exlpla);
-    for(let i =0;i<explalist.length;i++){
-      topelement.push(
-        <div>
-        <span className={"title "+this.props.idnum} >{explalist[i]}: </span>{this.contents[item].exlpla[explalist[i]]}<br />
-        </div>
-      )
-    }
-    let contentlist=Object.keys(this.contents[item]);
-    for(let i=4;i<contentlist.length;i++){
-      contentelement.push(
-        <div>
-          <div className={"sectitle "+this.props.idnum} >{contentlist[i]}</div>
-          <div className={"bar "+this.props.idnum} />
-          {this.contents[item][contentlist[i]]}
-        </div>
-      )
-    }
-    
-  
-      element.push(<div className="contentbox" >
-         <div className={"enttitle "+this.props.idnum} >{this.contents[item].projectTitle}
-          <div className="xmark" onClick={this.rolldown.bind(this)}>
-              <svg width="50" height="50">
-               <path d="M10 10 L40 40 M40 10 L10 40" />
-              </svg>
-          </div>
-        </div>
-         <div className="maincontent">
-            {this.contents[item].topimg}
-          <div className="toptitle ">
-            <div className={"qtmark "+this.props.idnum} > <q></q> </div>
-            {this.contents[item].quote}
-          </div>
-          <div className="expla"> 
-            {topelement}
-            </div>
-          <div className="expla">
-            {contentelement}
-          </div>
-         </div>
-         </div>
-         )
-      return element
-  }
-  componentDidMount(){
-    setTimeout(this.rollup(),100);
-  }
-  render() {
-
-    
-
-    return (
-      <div style={{position:"absolute", top:"0",left:"0",width:"100%",height:"100%"}}>
-      <div className="greybox" />
-        {this.contentgenerator()}
-      </div>
-
-    );
-  }
-}
-
-export default Projects;

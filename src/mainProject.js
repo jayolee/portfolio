@@ -15,7 +15,7 @@ class MainProject extends Component {
       page: 0,
       curid:null,
       active:true,
-      activelist:['uiux', 'code', 'ideation','illustration','animation','video'],
+      activelist:['uiux', 'code', 'ideation'],
       deactivelist:[],
     }
 
@@ -27,11 +27,9 @@ class MainProject extends Component {
  
   addActive(e){
     let itemlist={
-      "reporter":['uiux','illustration'],
-      "even":['uiux'],
-      "momo":['animation'],
-      "gssh":['video'],
-      "naoshima":['code','uiux','illustration'],
+      "logpos":['ideation'],
+      "dote":['uiux','ideation'],
+     
     }
    let keylist=Object.keys(itemlist);
    let exist=0;
@@ -67,6 +65,7 @@ class MainProject extends Component {
 
      }
   }
+
 wraphide(item){
   let tohide=document.getElementById(item).childNodes[0];
   if(tohide){
@@ -90,9 +89,10 @@ reopac(item){
   setTimeout(function(){document.getElementById(item).style.width='31%'; toreopac.style.width="100%"; toreopac.style.opacity='1'},10)
 }
 }
+//filter
   worktypebar(){
     let element=[];
-    let typelist=['uiux', 'code', 'ideation','illustration','animation','video'];
+    let typelist=['uiux', 'code', 'ideation'];
     let typenames={
       'ideation':'Ideation',
       'video':'Video',
@@ -109,22 +109,22 @@ reopac(item){
     return element;
   }
 
+  //create boxes
   projects(){
-    
     let element=[];
     let worklist=[
         { "id":"logpos",
         "href":".js",
         "image":logpos,
         "class":"ideation video",
-        "types": "Ideation | Video",
+        "types": "Ideation",
         "title": "LOG + POS",
       },
       { "id":"dote",
         "href":".js",
         "image":dotenote,
         "class":"ideation video uiux",
-        "types": "UI/UX | Ideation | Video",
+        "types": "UI/UX | Ideation",
         "title": "DoteNote",
       },
     ];
@@ -150,6 +150,7 @@ reopac(item){
     element=<div><div className="worktypes">{this.worktypebar()}</div>{element}</div>;
     return element  
   }
+  //open details
   renderPageView(){
     if(this.state.page === 4){
       return <Projects idnum={this.state.curid} closehandle={this.closehandler.bind(this)}/>

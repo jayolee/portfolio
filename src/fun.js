@@ -172,7 +172,7 @@ reopac(item){
           </div>
           <div className="discripsmaller">
           {worklist[i].title}<br />
-          <span class="types">{worklist[i].types}</span>
+          <span className="types">{worklist[i].types}</span>
           </div>
         </a>
       )
