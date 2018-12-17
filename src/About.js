@@ -26,7 +26,7 @@ class About extends Component {
             <img className="myphoto" src={myphoto} />
             <div className="iconwrap">
             <span class="title">YOUNG</span><br />
-            Experience Designer<br />
+            Experience Designer<br /><br />
             <a href="http://goo.gl/j91z25" target="_blank">
             <div className="icons" id="resu"><img src={res_blk} /><img src={res_grey} /></div>
             </a>

@@ -278,7 +278,7 @@ width:102px;
         position: absolute;
         height: 6px;
         width: 100%;
-        background: #C1DCEA;
+        background: #9aaeb9;
         border-radius: 3px;
         opacity: 1;
         right: 0;
@@ -297,7 +297,9 @@ width:102px;
         }
         &.open{
              span{
-                 &:nth-child(1) {
+               background:#06070f;
+
+              &:nth-child(1) {
             top: 18px;
             width: 0%;
             right: 50%;
@@ -317,50 +319,48 @@ width:102px;
         }
     }
   }
+  .menudot{
+    background:#091d4e;
+    border:4px solid #000;
+  }
   .menu-wrap {
     width: 100%;
     height: 0;
+    right:0;
+    text-align:center;
     overflow: hidden;
-    background: rgba(232, 244, 247, .9);
+    background: rgba(154, 174, 185, .85);
     transition: .5s ease-in-out;
     &.open {
+
         height: 300px;
       }
     
   }
   .menu {
     margin: 0 auto;
-  }
-  .menu > ul {
-    margin: 56px 0 0;
-    -webkit-padding-start: 0;
-    width: 100%;
-  }
-  .menu > ul > li {
-    width: 100%;
+    ul{
+      margin: 56px 0 0;
+      -webkit-padding-start: 0;
+      width: 100%;
+      li{
+        width: 100%;
     display: block;
     height: 46px;
     text-align: center;
+
+    a{
+      width: 90%;
+      color:#06070f;
+      font-weight:500;
+      text-shadow: 0 0 6px rgba(255,255,255,.6);
+    }
+      }
+    }
   }
-  .menu > ul > li > a {
-    width: 90%;
+  #work,#fun,#FA,#contact{
+    width:100%;
   }
-	
-  #contact {
-    margin-top: 72px;
-  }
-		 #FAportalv {
-    display: none;
-  }
-	.FAportaln{
-		 cursor: default;
-	}
-  #FA {
-    cursor: pointer;
-  }
-	#contact{
-		margin-top:86px;
-	}
 }
 
 
@@ -698,6 +698,19 @@ width:102px;
   body {
     font-size: 16px;
   }
+
+
+.starwrap_in{position: relative; 
+  width:calc(150%); 
+  background:linear-gradient(#000,#10162B); 
+  height:550px; 
+  top:-130px; 
+  left:-25%; 
+  overflow:hidden;
+  @include transform(rotate(-5deg)); 
+  border-bottom-left-radius:20px;
+ 
+}
 	.logowrap{
 		margin-bottom:38px;
 	}
@@ -709,7 +722,7 @@ width:102px;
     box-sizing: border-box;
     margin:0 auto;
     width: 100%;
-    height: 40vw;
+    height: 100%;
     .discrip {
         font-size: 18px;
         .types {
@@ -717,7 +730,21 @@ width:102px;
           }
       }
   }
-
+    .workbox{
+    a{
+    &.main_work{
+      width:95%;
+      height:95vw;
+      display:block;
+      margin:0 auto;
+      margin-bottom:50px;
+      .portwrap{
+        max-height:300px;
+      }
+    }
+    
+  }
+    }
   .onlysmaller {
     display: block;
     font-size: 8px;

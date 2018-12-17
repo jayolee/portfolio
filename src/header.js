@@ -10,11 +10,13 @@ class Header extends Component {
     super(props);
     this.state = {
         pagenumber: 0,
+        togglestat: 0,
     }
   }
 senddata(e){
     this.props.menustatus(e.target.id);
     this.addactive(e);
+    this.setState({togglestat :0});
 }
 addactive(e){
     let activemenu=document.getElementsByClassName("activemenu")[0];
@@ -57,9 +59,36 @@ addactive(e){
   }
 
 
+navicon_render(){
 
-
+    let element=[];
+        element.push(
+        <div id="nav-icon" className={this.state.togglestat == 0 ? ' ' : 'open'} onClick={(ev) =>  this.setState({ togglestat: !(this.state.togglestat)})}>
+        <span />
+        <span />
+        <span />
+        <span />
+          </div>
+        );
+   
+    return element;
+}
   render() {
+    console.log('　　　　　　　∩'+'\n'+
+    '　　　　　　　||'+'\n'+
+    '　　　　　　　||'+'\n'+
+    '　　　　　　　||'+'\n'+
+    '　　　　　 ／￣￣＼'+'\n'+
+    '　　　　　｜　　　 ヽ'+'\n'+
+    '　　　　　/　　　　 |'+'\n'+
+    '　 |＼　／　／ヽ / ノ'+'\n'+
+    '　 |／￣￣￣＼ |/ /'+'\n'+
+    '　 /　　　　　Ｖ＿)'+'\n'+
+    '　｜(● ●)　 ｜'+'\n'+
+    '　王(_人_) 三 /'+'\n'+
+    '　 ＼＿＿＿_／'+'\n'+
+    '　 _/ /_/ /'+'\n'+
+    '　(＿ﾉ(＿ﾉ'+'\n'+' WELCOME!');
     return (
         <div className="header-wrap">
             <div className="header">
@@ -68,13 +97,8 @@ addactive(e){
                 <div className="logo"></div>
             </a>
 
-            <div id="nav-icon">
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-            </div>
-            <div className="menu-wrap">
+           {this.navicon_render()}
+            <div className={this.state.togglestat == 0 ? 'menu-wrap' : 'menu-wrap open'}>
                 <nav className="menu">
                 <ul className="clearfix">
                     {this.headergenerator()}
