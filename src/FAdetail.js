@@ -13,24 +13,65 @@ class FAdetail extends Component {
   
   listgenerator(imagelist) {
     let element=[];
-    for(let i=0;i<imagelist.length;i++){
-        element.push(
-          <a href="#" className="fa" curid={imagelist[i]}  >
-            <div className="portwrap fa" >
-              <img className="longim" src={imagelist[i].image} />
-              <div className="titlebox">
-              {imagelist[i].name}<br />
-              <span className="types">
-              {imagelist[i].info}
-              </span>
-              </div>
-            </div>
-          </a>
-        )
-  }
+
   return element
 }
 
+
+
+renderArrows(){
+    var id= this.props.idnum[this.props.iddata];
+    var element=[];
+    var idorder=this.state.currentNum;
+
+    if (idorder == 0){
+      element.push(
+      <div className="detail_wrapper" >
+      <svg className="icon" height="60" width="26" >
+        <path d="M26 5 L12 30 L26 60" fill="none" opacity="0" stroke-width="3"/>
+      </svg>
+    
+    {this.renderImg()}
+      
+      <svg className="icon right" height="60" width="26" onClick = {(ev) => {this.setState({currentNum: this.state.currentNum+1}); }}>
+        <path d="M26 5 L12 30 L26 60" fill="none" stroke-width="3"/>
+      </svg>
+    </div>
+    )
+    }
+    else if(idorder == this.infolist[id].length-1){
+      element.push(
+      <div className="detail_wrapper" >
+      <svg className="icon" height="60" width="26" onClick = {(ev) => this.setState({currentNum: this.state.currentNum-1})}>
+        <path d="M26 5 L12 30 L26 60" fill="none" stroke-width="3"/>
+      </svg>
+    
+    {this.renderImg()}
+      
+      <svg className="icon right" height="60" width="26" >
+        <path d="M26 5 L12 30 L26 60" fill="none" opacity="0" stroke-width="3"/>
+      </svg>
+    </div>
+    )}
+    else{
+      element.push(
+      <div className="detail_wrapper" >
+      <svg className="icon" height="60" width="26" onClick = {(ev) => this.setState({currentNum: this.state.currentNum-1})}>
+        <path d="M26 5 L12 30 L26 60" fill="none" stroke-width="3"/>
+      </svg>
+    
+        {this.renderImg()}
+      
+      <svg className="icon right" height="60" width="26" onClick = {(ev) => this.setState({currentNum: this.state.currentNum+1})}>
+        <path d="M26 5 L12 30 L26 60" fill="none"  stroke-width="3"/>
+      </svg>
+    </div>
+    )
+    }
+    return element;
+  }
+
+  
   render(){
 
     return (
@@ -41,7 +82,9 @@ class FAdetail extends Component {
             </div>
             <div class="blackbox-content">
                 <div class="arrowwrapper">
-                    <img id="toprev"  src="arrowpre.png" />
+                <svg className="icon" height="60" width="26" >
+        <path d="M26 5 L12 30 L26 60" fill="none" opacity="0" stroke-width="3"/>
+      </svg>
                 </div>
     
                 <div class="iteminfo" >
@@ -53,7 +96,9 @@ class FAdetail extends Component {
                 </div>
     
                 <div  class="arrowwrapper">	
-                    <img id="tonext" src="arrow.png" />
+                <svg className="icon right" height="60" width="26" onClick = {(ev) => {this.setState({currentNum: this.state.currentNum+1}); }}>
+        <path d="M26 5 L12 30 L26 60" fill="none" stroke-width="3"/>
+      </svg>
                 </div>
             </div>
             </div>

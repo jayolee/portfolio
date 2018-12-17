@@ -66,6 +66,13 @@ addactive(e){
             <a className="title" href="index.html">
                 <div className="logo"></div>
             </a>
+
+            <div id="nav-icon">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+            </div>
             <div className="menu-wrap">
                 <nav className="menu">
                 <ul className="clearfix">

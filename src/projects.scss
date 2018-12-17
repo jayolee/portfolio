@@ -335,12 +335,17 @@ $naoshima: #e5b354;
 	width:350px !important;
 	max-width:90%;
 }
-.screens img{
-	width:200px !important;
-	max-width:45%;
-	display:inline-block;
+.screens{
+	img{
+		width:200px !important;
+		max-width:45%;
+		display:inline-block;
+	}
+} 
+.momoscreen{
+	margin:10px;
+	margin-bottom:20px;
 }
-
 /*even*/
 .evensc{
 	display:inline-block;
@@ -578,8 +583,13 @@ $imgshadow: 0 0 14px rgba(0,0,0,0.2);
 	@include animation('pointersani 3s 1 forwards');
 }
 }
-
-
+#appstore{
+	margin-right:20px;
+	width:130px !important;
+}
+.storebtn{
+	margin-bottom:26px;
+}
 @media screen and (min-width:420px){
 	.mobileonly{
 		display:none;

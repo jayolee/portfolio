@@ -98,6 +98,8 @@ import momo26_1 from './momoko/thumb/23.png'
 import momo26_2 from './momoko/ani/23.gif'
 import momo27_1 from './momoko/thumb/24.png'
 import momo27_2 from './momoko/ani/24.gif'
+import momo_btn1 from './momoko/avaliable_line.png'
+import momo_btn2 from './momoko/appstore.svg'
 
 import naoshima from './images/naoshima2.png'
 
@@ -119,8 +121,8 @@ class Projects extends Component {
         "projectTitle":"LOG + POS",
         "quote":"How can we improve the communication at rescue operations using audio AR?",
         "topimg":<YouTube
-        videoId={this.vidid.log}                  // defaults -> null
-        id="player"                       // defaults -> null
+        videoId={this.vidid.log}                  
+        id="player"                       
       />,
         "exlpla":{
           "Time":"Oct 19th ~ Nov 1st (Bose Challenge at CMU)",
@@ -130,20 +132,20 @@ class Projects extends Component {
           " ":<i>This is a project for a Bose Challenge at CMU.</i>,
                  },
         "Ideation":<div>
-        <p> The prompt of Bose Challenge was <i><b>“How might we use sound-based augmented reality to improve our lives?”</b></i> Among the idea we had, we decided to focus on improving cooperation situations which require team members’ communications about their locations and status. More specifically, we narrowed down our target as firefighters, about their rescue operations in extreme situations</p> <p>Our assumption here is that under the urgent circumstances of limited vision and hearing, it is difficult to communicate accurate location information via speaking. Therefore, we designed a way to communicate each other with minimum hand control and automatically generated location data based on their GPS. </p><img src={logpos1} /><div class='imgdes'>Ideation Meeting</div> </div>,
+        <p> The prompt of Bose Challenge was <i><b>“How might we use sound-based augmented reality to improve our lives?”</b></i> Among the idea we had, we decided to focus on improving cooperation situations which require team members’ communications about their locations and status. More specifically, we narrowed down our target as firefighters, about their rescue operations in extreme situations.</p> <p>Our assumption here is that under the urgent circumstances of limited vision and hearing, it is difficult to communicate accurate location information via speaking. Therefore, we designed a way to communicate each other automatically generated location data based on their GPS with minimum hand control. </p><img src={logpos1} /><div class='imgdes'>Ideation Meeting</div> </div>,
         "User Research":<div>
-        <p> With our basic ideation, we conducted a phone interview with a firefighter. He confirmed that our idea will be helpful, and gave use some challenges our idea has.</p><img src={logpos2} /><p>According to the firefighter, there is a system providing location information using sound and blinking lights after a firefighter being motionless for 30 seconds (Watch the video for additional information). However, the issue is that the location information verbally communicated, therefore, the information rescue team has might not be the latest information. Also, the light and sound signals can be hindered by the fire and the smoke. Our solution solves this problem by providing real-time information directly to the firefighters through the device.</p></div>,
+        <p> With our basic ideation, we conducted a phone interview with a firefighter. He confirmed that our idea will be helpful, and gave us the problems about the current system has.</p><img src={logpos2} /><p>According to the firefighter, there is a system providing location information using sound and blinking lights after a firefighter being motionless for 30 seconds (Watch the video for additional information). However, the issue is that the location information is verbally communicated, so the information rescue team has might not be the latest information. Also, the light and sound signals can be hindered by the fire and the smoke. Our solution solves this problem by providing real-time information directly to the firefighters through the device.</p></div>,
 
-        "Challenges":<div><div class='title logpos' >Technical Challenge:</div>How can we get the accurate indoor location data?<div class='solution'><li>To get accurate location data, we designed our device to use the bluetooth devices for better location accuracy.</li></div><div class='title logpos'>Social Constraints:</div>According to the interview, there are two social constraints:<br />Firefighters sometimes rely on their ears to determine the temprature. Therefore, there should not be thing cover their ears.<br /> Fire fighters resist change, especially if it is going to be hard to put on. <div class='solution'> <li>We designed the AR device satisfying these challenges. </li></div><img src={logpos3} /><div class='imgdes'>Device Desiged by <a href='http://www.hyunwoopaik.com' target='_blank'>Hyun Woo Paik</a></div></div>,
+        "Challenges":<div><div class='title logpos' >Technical Challenge:</div>How can we get the accurate indoor location data?<div class='solution'><li>To get accurate location data, we designed our device to use the bluetooth devices for better location accuracy.</li></div><div class='title logpos'>Social Constraints:</div>According to the interview, there are two social constraints:<br />Firefighters sometimes rely on their ears to determine the temprature. Therefore, there should not be a thing cover their ears.<br /> Firefighters resist change, especially if it is going to be hard to put on. <div class='solution'> <li>We designed an audio AR device satisfying these challenges. </li></div><img src={logpos3} /><div class='imgdes'>Device Desiged by <a href='http://www.hyunwoopaik.com' target='_blank'>Hyun Woo Paik</a></div></div>,
 
-        "Final Design":<div><p>To created a video explining our idea, We made a scenario conveying how our design can be applied to our target situations.</p> <img class="half" src={logposstory1} /> <img class="half" src={logposstory2} /><div class="imgdes">Video Storyboard by Ja Young Lee</div><p>The device can be controlled with verbal and head motions.</p><div class="control"><img id="connected" src={logposrun1} /></div><li class="animdes">Team members connect the devices before getting into the operation.</li><div class="control"><img class="anim continuImg" src={logposrun2} /><img class="continuImg" src={logposrun3} /></div><div class="imgdes">Hover on the image</div><li class="animdes">Users will continuously get the messages from others such as walkie-talkie</li><div class="control"><img class="anim" src={logposrun4} /><img src={logposrun5} /></div><div class="imgdes">Hover on the image</div><li class="animdes">With a verbal control of <b><i>"Locate All,"</i></b> a user will continuously get the location information of everyone based on his or her head direction. </li><div class="control"><img class="anim" src={logposrun6} /> <img src={logposrun7} /></div><div class="imgdes">Hover on the image</div><li class="animdes">With a verbal control of <b><i>"Locate [Name],"</i></b> a user will get a specific person's location based on his or her head direction.</li> <div class="control"><img class="anim" src={logposrun8}/><img src={logposrun9} /></div><div class="imgdes">Hover on the image</div><li class="animdes">When a user wants to communicate with other people, he or she will push the button on the side, and will speak. This message will go to everyone as walkie-talkie.</li><div class="control"><img id="deactivate" src={logposrun10}/> </div><li class="animdes">When a user wants to stop getting the location information, he or she can speak <b><i>"Deactivate"</i></b> to stop the function.</li></div>
+        "Final Design":<div><p>To create a video explining our idea, we made a scenario conveying how our design can be applied to the target situations.</p> <img class="half" src={logposstory1} /> <img class="half" src={logposstory2} /><div class="imgdes">Video Storyboard by Ja Young Lee</div><p>The device can be controlled with verbal and head motions.</p><div class="control"><img id="connected" src={logposrun1} /></div><li class="animdes">Team members connect the devices before getting into the operation.</li><div class="control"><img class="anim continuImg" src={logposrun2} /><img class="continuImg" src={logposrun3} /></div><div class="imgdes">Hover on the image</div><li class="animdes">Users will continuously get the messages from others as walkie-talkie</li><div class="control"><img class="anim" src={logposrun4} /><img src={logposrun5} /></div><div class="imgdes">Hover on the image</div><li class="animdes">With a verbal control of <b><i>"Locate All,"</i></b> a user will continuously get the location information of everyone based on his or her head direction. </li><div class="control"><img class="anim" src={logposrun6} /> <img src={logposrun7} /></div><div class="imgdes">Hover on the image</div><li class="animdes">With a verbal control of <b><i>"Locate [Name],"</i></b> a user will get a specific person's location based on his or her head direction.</li> <div class="control"><img class="anim" src={logposrun8}/><img src={logposrun9} /></div><div class="imgdes">Hover on the image</div><li class="animdes">When a user wants to communicate with other people, he or she will push the button on the side, and will speak. This message will go to everyone as walkie-talkie.</li><div class="control"><img id="deactivate" src={logposrun10}/> </div><li class="animdes">When a user wants to stop getting the location information, he or she can speak <b><i>"Deactivate"</i></b> to stop the function.</li></div>
       },
       "dote":{
         "projectTitle":"DoteNote",
         "quote":"What if we can leave a virtual message at a specific location?",
         "topimg":<YouTube
-        videoId={this.vidid.dote}                  // defaults -> null
-        id="player"                       // defaults -> null
+        videoId={this.vidid.dote}                 
+        id="player"                       
       />,
         "exlpla":{
           "Time":"Sep 21st ~ 22nd (HackCMU 2018)",
@@ -154,7 +156,7 @@ class Projects extends Component {
                  },
         "Ideation":<div>
                   <p> Our idea started from a thought: what if we can leave our lovers a virtual message at a specific location ?
-                  Using AR technology, we focused on passing..? location related emotions. 
+                  Using AR technology, we focused on messaging emotions related to locations. 
                   With DoteNote, users can leave 3D messages at specific locations.</p><img class="half" src={dote1} />
                   <img class="half" src={dote2}/>
                   <div class="imgdes">Ideation Meeting</div> </div>,
@@ -163,16 +165,16 @@ class Projects extends Component {
                         <div class="imgdes">AR Testing</div>
                         <div class="title dote">Technical Challenge:</div>
                         Due to the accuracy of GPS, we faced following challenges:
-                          Can we leave messages towards a certain angle, position?
+                          Can we leave messages towards a certain angle and position?
                           In what range do users get notifications?
-                        <div class="solution"><li>To get accurate location data, we decided to use the bluetooth devices for better location accuracy.</li></div>
+                       
 
                         <div class="title dote">UX Challenges:</div>
                         <p>Also, because we wanted to keep the factor of surprise, we had another challenges:
                         In what distance do we want to push the notifications?<br />
                         From the point they get notifications, how can we direct them to the message?<br /><br />
                                 
-                        We decided to push the notification approximately within a block. </p>
+                        To solve these issues we decided to push the notification approximately within a block. </p>
 
 
                         <img class="solu_dote" src={dote4} />
@@ -181,7 +183,7 @@ class Projects extends Component {
                         <img class="solu_dote" src={dote5} />
                         <li class="animdes">If a user is around the corner, because the notification comes up when they enter the range of one block, they can know which direction the message is located. If they are from the side where the message is located, they get the notification before they enter the street.</li></div>,
 
-        "Final Design":<div>
+        "Final Design": <div>
         <div class="screens">
                         <img class="screens" src={dote6} />
                         <img class="screens" src={dote7} />
@@ -313,8 +315,14 @@ class Projects extends Component {
         "projectTitle":"Happy Momoko",
         "quote":"24 Animation Emojis for iOS and Line Messengers",
         "topimg":<div className="screens center">  
-                <img src={momo1} /> 
-                  <img src={momo2} /> 
+                <img src={momo1} className="momoscreen"/> 
+                  <img src={momo2}  className="momoscreen"/> <br />
+                  <a href="https://itunes.apple.com/ca/app/happy-momoko/id1207545553?mt=8" target="_blank">
+			<img src={momo_btn2} className="storebtn" id="appstore"/>
+		</a>
+		<a href="https://store.line.me/stickershop/product/1387989/en" target="_blank">
+			<img src={momo_btn1} className="storebtn" id="linestore" />
+		</a>
         </div>,
         "exlpla":{
           "Time":"Jan 2017",

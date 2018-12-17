@@ -28,7 +28,8 @@ class App extends Component {
       activelist:['uiux', 'code', 'ideation','illustration','animation','video'],
       deactivelist:[],
     }
-  
+    this.star_position=this.star_position_generator();
+    this.star_twinkle=this.star_twinkle_generator();
   }
   renderPageView(){
     if(this.state.page === 3){
@@ -117,14 +118,27 @@ reopac(item){
 headertype(){
       return <Header pagenum={this.state.menu} menustatus={this.menustatus} />
   }
-
-  stargenerator(){
+star_twinkle_generator(){
+  let duration=[];
+  let starstyle={};
+  let temp_duration=0;
+  for(let i=0;i<80;i++){
+    temp_duration=Math.random();
+    if(temp_duration<.4){
+      temp_duration += .4;
+    }
+    starstyle={animationDuration: temp_duration+'s'};
+    duration.push(starstyle);
+  }
+  return duration;
+}
+  star_position_generator(){
     let element=[];
     let leftv=0;
     let topv=0;
     let position=0;
     let starstyle={};
-    for(let i=0;i<60;i++){
+    for(let i=0;i<80;i++){
       position=parseInt(Math.random() * 100);
       leftv=position+"%";
       position=parseInt(Math.random() * 100);
@@ -135,9 +149,18 @@ headertype(){
         bottom:topv,
         opacity:position,
       }
-      element.push(<div className="stars" style={starstyle} ></div>)
+      element.push(starstyle)
     }
     return(element);
+  }
+  star_generator(){
+    let element=[];
+
+    for(let i=0; i<this.star_position.length;i++)
+    element.push(<div className="star_opac_wrap" style={this.star_twinkle[i]}>
+    <div className="stars" style={this.star_position[i]} />
+    </div>)
+    return element;
   }
   worktypebar(){
     let element=[];
@@ -248,8 +271,8 @@ headertype(){
     return (
       <div>
       <div className="starwrap_out">
-        <div className="starwrap_in">
-              {this.stargenerator()}
+        <div className="starwrap_in">     
+              {this.star_generator()}
           </div>
       </div>
          {this.headertype()}

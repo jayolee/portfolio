@@ -239,7 +239,7 @@ this.gallery_others=[
     let element=[];
     for(let i=0;i<imagelist.length;i++){
         element.push(
-          <a href="#" className="fa" curid={imagelist[i]}  >
+          <a href="#" className="fa" curid={imagelist[i]}  curlist={imagelist}>
             <div className="portwrap fa" >
               <img className="longim" src={imagelist[i].image} />
               <div className="titlebox">
@@ -252,6 +252,7 @@ this.gallery_others=[
           </a>
         )
   }
+  
   return element
 }
 
@@ -259,7 +260,9 @@ this.gallery_others=[
 
     return (
       <div>
-        {this.listgenerator(this.gallery_paint)}
+		{this.listgenerator(this.gallery_paint)}
+		{this.listgenerator(this.gallery_draw)}
+		{this.listgenerator(this.gallery_others)}
       </div>
 
     );
