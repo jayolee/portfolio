@@ -254,8 +254,8 @@ this.gallery_others=[
     let element=[];
     for(let i=0;i<imagelist.length;i++){
         element.push(
-          <a href="#" className="fa" onClick={(ev) => this.setState({page : 5,  orderinArray: i, order: imagelist[i].order, imglist: imagelist})}>
-            <div className="portwrap fa" >
+          <div className="fa" onClick={(ev) => this.setState({page : 5,  orderinArray: i, order: imagelist[i].order, imglist: imagelist})}>
+            <div className="portwrap" >
               <img className="longim" src={imagelist[i].image} />
               <div className="titlebox">
               {imagelist[i].name}<br />
@@ -264,7 +264,7 @@ this.gallery_others=[
               </span>
               </div>
             </div>
-          </a>
+          </div>
         )
   }
   

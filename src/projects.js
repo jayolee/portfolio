@@ -34,6 +34,14 @@ import dote12 from './Dotenote/screen6.png'
 import dote13 from './Dotenote/screen7.png'
 import dote14 from './Dotenote/screen8.png'
 
+import getcuisine1 from './getcuisine/top.gif'
+import getcuisine2 from './getcuisine/hi_proto.gif'
+import getcuisine3 from './getcuisine/icons.png'
+import getcuisine4 from './getcuisine/hi_1.jpg'
+import getcuisine5 from './getcuisine/hi_2.jpg'
+import getcuisine6 from './getcuisine/final_1.jpg'
+import getcuisine7 from './getcuisine/final_2.jpg'
+
 import reporter0 from './reporter/int1.jpg'
 import reporter1 from './reporter/garage.jpg'
 import reporter2 from './reporter/lightssmall.jpg'
@@ -117,6 +125,43 @@ class Projects extends Component {
       "gssh":"lUaJy9qo6qA",
     }
     this.contents={
+      "getcuisine":{
+        "projectTitle":"Get Cuisine",
+        "quote":"How can machine learning help people clean out the fridge?",
+        "topimg":<img id={this.props.idnum} alt="Get Cuisine Screen" className="topimg" src={getcuisine1} />,
+        
+        "exlpla":{
+          "Time":"Dec 2018 ~ Jan 2019",
+          "Team":"Ja Young Lee",
+          "Role":"UI/UX, development",
+          "Tool":"Python Flask, jQuery, HTML, CSS, Adobe Illustrator",
+                 },
+          "button": <a href="http://getcuisine.herokuapp.com" target="_blank">
+          <div className="button getcuisine">Go to the Website</div></a>,
+        "Ideation":<div>
+        <p>As a final project for <a href="http://humanaiclass.org" target="_blank">Human-Ai Interaction class at CMU in Fall 2018,</a> I decided to create a system with a Machine Learning (ML) model providing foods to cook based on the ingredients provided from users.<br />
+I got inspired by my experience having small amounts of ingredients which are leftovers after cooking. It’s often challenging to deal with these leftovers. Therefore, when I found the <a href="https://www.kaggle.com/c/whats-cooking" target="_blank">cuisines and ingredients dataset</a> from Kaggle, I decided to create a model can help people clean out their fridges.</p></div>,
+        "Research":<div>
+        <p> In the beginning, I planned to create an Amazon Alexa Skill. However although 41.4 percent of people place their smart speakers in the kitchen, only 26.5% of people use the speakers to look for recipes monthly, and only 5.1% people use it daily. This is a comparably low percentage comparing to some other popular functions such as listening music (76.2% of monthly use, 41.9% of daily use) or checking the weather (69.1% of monthly use, 41.4% of daily use). <a href=" (https://voicebot.ai/download-smart-speaker-consumer-adoption-report-2018/)">(Source)</a> Therefore, I decided to create a website which also has visual interaction with users.</p></div>,
+
+        "Challenges":<div><p>-Lack of the open source recipe dataset<br />
+        I could not find an open source recipe dataset; however, I found the <a href="https://www.kaggle.com/c/whats-cooking" target="_blank">cuisines and ingredients dataset from Kaggle</a>. With this dataset, I decided to limit the functionality of the model as providing the appropriate cuisine to look for based on the given ingredients. Because providing cuisine requires additional efforts for users to look for a specific food to cook, I also created a function sending users to Google Search searching recipes with the predicted cuisine and given ingredients.</p></div>,
+
+        "Process":<div>
+          <img src={getcuisine2} class="imgBorder" alt="Hi-fi prototype" /><div class='imgdes'>Hi-fi Prototype made of HTML, CSS, jQuery, and Flask</div>
+
+          <img class="half imgBorder addmargin" src={getcuisine4} alt="Hi-fi prototype"/><img class="half addmargin" src={getcuisine5} alt="Hi-fi prototype"/>
+          <p class="addmargin">Because I trained the model with certain ingredients, I wanted people to type ingredients in a format that can be processed. Therefore, I implemented an autocomplete function on the search bar using jQuery Autocomplete API. At first, I got the list of the ingredients from the train data; however, because the train data file is too large which caused long loading time, so I created shorter JS file with the list and imported it.<br /><br /></p> 
+
+          <img src={getcuisine3} alt="Cuisine Icons"/><div class='imgdes'>Cuisine Icons</div>
+          <p>
+          One of the concerns about this project is that the data this website provides can easily be obtained, and even more data can be obtained by searching on websites providing recipes. Also, the data people need is recipes, not a cuisine type to look for. However, I got feedback that this website not only provides information but also fun, I focused on providing interesting interactions as fun factors. I added graphics for visual pleasure.<br /><br /></p>
+          <img class="half imgBorder addmargin" src={getcuisine6} alt="Final Design"/><img class="half addmargin" src={getcuisine7} alt="Final Design"/>
+          <p>
+          Also, to provide more helpful information, I created a function sending users to Google Search searching recipes with the predicted cuisine and given ingredients.</p></div>,
+          
+         
+      },
       "logpos":{
         "projectTitle":"LOG + POS",
         "quote":"How can we improve the communication at rescue operations using audio AR?",
@@ -164,9 +209,9 @@ class Projects extends Component {
                         <img src={dote3} />
                         <div className="imgdes">AR Testing</div>
                         <div className="title dote">Technical Challenge:</div>
-                        Due to the accuracy of GPS, we faced following challenges:
+                        <p>Due to the accuracy of GPS, we faced following challenges:
                           Can we leave messages towards a certain angle and position?
-                          In what range do users get notifications?
+                          In what range do users get notifications?</p>
                        
 
                         <div className="title dote">UX Challenges:</div>
@@ -431,7 +476,12 @@ class Projects extends Component {
       )
     }
     let contentlist=Object.keys(this.contents[item]);
+
+
     for(let i=4;i<contentlist.length;i++){
+      if(this.contents[item].button && i==4){
+        i += 1;
+      }
       contentelement.push(
         <div>
           <div className={"sectitle "+this.props.idnum} >{contentlist[i]}</div>
@@ -440,8 +490,35 @@ class Projects extends Component {
         </div>
       )
     }
-    
-  
+      if(this.contents[item].button){
+        element.push(<div className="contentbox" >
+        <div className={"enttitle "+this.props.idnum} >{this.contents[item].projectTitle}
+         <div className="xmark" onClick={this.rolldown.bind(this)}>
+             <svg width="50" height="50">
+              <path d="M10 10 L40 40 M40 10 L10 40" />
+             </svg>
+         </div>
+       </div>
+        <div className="maincontent">
+           {this.contents[item].topimg}
+         <div className="toptitle ">
+           <div className={"qtmark "+this.props.idnum} > <q></q> </div>
+           {this.contents[item].quote}
+           
+         </div>
+         <div class="center">
+         {this.contents[item].button}</div>
+         <div className="expla"> 
+           {topelement}
+           </div>
+         <div className="expla">
+           {contentelement}
+         </div>
+        </div>
+        </div>
+        )
+      }
+      else{
       element.push(<div className="contentbox" >
          <div className={"enttitle "+this.props.idnum} >{this.contents[item].projectTitle}
           <div className="xmark" onClick={this.rolldown.bind(this)}>
@@ -465,6 +542,7 @@ class Projects extends Component {
          </div>
          </div>
          )
+         }
       return element
   }
   componentDidMount(){

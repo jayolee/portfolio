@@ -3,6 +3,7 @@ import './App.scss';
 import './projects.scss'
 import logpos from './images/logpos2.jpg'
 import dotenote from './images/dotenote.png'
+import getcuisine from './images/getcuisine.png'
 import Projects from './projects.js'
 
 class MainProject extends Component {
@@ -15,7 +16,7 @@ class MainProject extends Component {
       page: 0,
       curid:null,
       active:true,
-      activelist:['uiux', 'code', 'ideation'],
+      activelist:['uiux', 'development', 'ideation'],
       deactivelist:[],
     }
 
@@ -29,6 +30,7 @@ class MainProject extends Component {
     let itemlist={
       "logpos":['ideation'],
       "dote":['uiux','ideation'],
+      "getcuisine":['uiux','development']
      
     }
    let keylist=Object.keys(itemlist);
@@ -48,7 +50,7 @@ class MainProject extends Component {
                }
           }
           if(exist){
-            this.wraphide(keylist[i]);
+            this.props.wraphide(keylist[i]);
           }
       }
      } else {
@@ -59,47 +61,24 @@ class MainProject extends Component {
           e.target.classList.add("workactive");
           for(let i=0;i<keylist.length;i++){
             if(itemlist[keylist[i]].includes(thisDiv)){
-              this.reopac(keylist[i]);
+              this.props.reopac(keylist[i]);
             }
           };
 
      }
   }
 
-wraphide(item){
-  let tohide=document.getElementById(item).childNodes[0];
-  if(tohide){
-    tohide.style.opacity=0;
-    tohide.style.width=0;
-    tohide.style.overflow="hidden";
-    document.getElementById(item).style.width=0;
-    setTimeout(function() {tohide.style.display='none'; 
-    document.getElementById(item).style.display='none'}, 300);
-	}
-  	
-
-}
-reopac(item){
-
-  let toreopac=document.getElementById(item).childNodes[0];
-  if(toreopac){
-  document.getElementById(item).style.display='inline-block';
-  toreopac.style.display="inline-block";
-  
-  setTimeout(function(){document.getElementById(item).style.width='31%'; toreopac.style.width="100%"; toreopac.style.opacity='1'},10)
-}
-}
 //filter
   worktypebar(){
     let element=[];
-    let typelist=['uiux', 'code', 'ideation'];
+    let typelist=['uiux', 'development', 'ideation'];
     let typenames={
       'ideation':'Ideation',
       'video':'Video',
       'uiux':'UI/UX',
       'illustration':'Illustration',
       'animation':'Animation',
-      'code':'Code',
+      'development':'Development',
     }
     for(let i=0;i<typelist.length;i++){
       element.push(
@@ -113,26 +92,30 @@ reopac(item){
   projects(){
     let element=[];
     let worklist=[
-        { "id":"logpos",
-        "href":".js",
-        "image":logpos,
-        "class":"ideation video",
-        "types": "Ideation",
-        "title": "LOG + POS",
-      },
+        
       { "id":"dote",
-        "href":".js",
         "image":dotenote,
-        "class":"ideation video uiux",
+        "class":"ideation uiux",
         "types": "UI/UX | Ideation",
         "title": "DoteNote",
       },
+      { "id":"getcuisine",
+      "image":getcuisine,
+      "class":"uiux development",
+      "types": "UI/UX / Development",
+      "title": "Get Cuisine",
+    },{ "id":"logpos",
+    "image":logpos,
+    "class":"ideation",
+    "types": "Ideation",
+    "title": "LOG + POS",
+  },
     ];
     for(let i=0;i<worklist.length;i++){
         element.push(
-          <a id={worklist[i].id} className = "main_work" href="#" onClick = {(ev) => this.setState({page : 4, curid:worklist[i].id})}  >
-            <div className={"portwrap " + worklist[i].class} >
-              <img className="longim" src={worklist[i].image} />
+          <div id={worklist[i].id} key={worklist[i].id} className = "main_work" onClick = {(ev) => this.setState({page : 4, curid:worklist[i].id})}  >
+            <div className={"portwrap " + worklist[i].class} key={worklist[i].id+"wrapper"}>
+              <img className="longim" alt={worklist[i].title} src={worklist[i].image} />
               <div className="discrip">
               {worklist[i].title}<br />
               <span className="types">
@@ -144,7 +127,7 @@ reopac(item){
             {worklist[i].title}<br />
             <span class="types">{worklist[i].types}</span>
             </div>
-          </a>
+          </div>
         )
     }
     element=<div><div className="worktypes">{this.worktypebar()}</div>{element}</div>;

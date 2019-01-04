@@ -7,6 +7,7 @@ $even: #25CB45;
 $reporter: #f3cb52;
 $momo : #ff594d;
 $naoshima: #e5b354;
+$getcuisine: #617D31;
 @font-face {
 	font-family:"lucida grande";
 	src:url(LucidaGrandeBold.ttf);
@@ -39,6 +40,9 @@ $naoshima: #e5b354;
 		&.naoshima{
 			color: $naoshima;
 		}
+		&.getcuisine{
+			color: $getcuisine;
+		}
 }
 @mixin bgcolors{
 	&.dote{
@@ -58,6 +62,9 @@ $naoshima: #e5b354;
 		}
 		&.naoshima{
 			background: $naoshima;
+		}
+		&.getcuisine{
+			background: $getcuisine;
 		}
 }
 #player {
@@ -135,15 +142,36 @@ $naoshima: #e5b354;
 	opacity:.5;
 }
 .topimg{
-	&#reporter{
+	margin-bottom:150px;
+
+	&#reporter, &#getcuisine{
 		width:700px; 
 		max-width:90%; 
-		margin:0 auto; 
+		margin:0 auto 150px; 
 		display:block;
 	}
+	
 }
 .expla {
 	margin: 60px 0;
+
+	img {
+	width: 90%;
+	margin: 30px auto 0;
+	display: block;
+		
+	}
+	.half {
+		width: 47%;
+		margin: 30px 1% 0;
+		display: inline-block;
+		vertical-align: top;
+	}
+	a{
+		text-decoration: underline;
+		color:rgba(0,0,0,0.8);
+	}
+	
 	font: {
 		family: 'roboto';
 		size: 16px;
@@ -155,6 +183,12 @@ $naoshima: #e5b354;
 		color:#fff;
 		width:560px;
 		margin:0 auto;
+	}
+	.imgBorder{
+		border:1px solid rgba(0,0,0,0.5);
+	}
+	.addmargin{
+		margin-bottom:20px;
 	}
 }
 .xmark{
@@ -217,6 +251,9 @@ a.member{
 	&.naoshima{
 		border-bottom: 2px dashed $naoshima;
 	}
+	&.getcuisine{
+		border-bottom: 2px dashed $getcuisine;
+	}
 }
 .sectitle {
 	font: {
@@ -237,19 +274,7 @@ a.member{
 	margin: 10px 0 12px;
 	@include bgcolors;
 }
-.expla {
-	img {
-	width: 90%;
-	margin: 30px auto 0;
-	display: block;
-}
-.half {
-	width: 47%;
-	margin: 30px 1% 0;
-	display: inline-block;
-	vertical-align: top;
-}
-}
+
 .solution {
 	margin: 10px 0 10px 10px;
 	list-style: initial;
@@ -268,7 +293,8 @@ a.member{
 	a{
 		color:rgba(0,0,0,0.5);
 		text-decoration: underline;
-	}	
+	}
+	
 }
 
 
@@ -294,6 +320,35 @@ a.member{
 	transform: translateY(2px);
 	background: #e2b631;
 	opacity: 1;
+	}
+
+	&.outline{
+		background:#fff;
+		&.dote{
+			border:2px solid $dote;
+		}
+		&.logpos{
+			border:2px solid $logpos;
+		}
+		&.even{
+			border:2px solid $even;
+		}
+		&.reporter{
+			border:2px solid $reporter;
+		}
+		&.gssh{
+			border:2px solid #eee;
+		}
+		&.momo{
+			border:2px solid $momo;
+		}
+		&.naoshima{
+			border: 2px solid $naoshima;
+		}
+		&.getcuisine{
+			border: 2px solid $getcuisine;
+		}
+		@include textcolors;
 	}
 
 }

@@ -58,7 +58,7 @@ class Fun extends Component {
                }
           }
           if(exist){
-            this.wraphide(keylist[i]);
+            this.props.wraphide(keylist[i]);
           }
       }
      } else {
@@ -69,45 +69,22 @@ class Fun extends Component {
           e.target.classList.add("workactive");
           for(let i=0;i<keylist.length;i++){
             if(itemlist[keylist[i]].includes(thisDiv)){
-              this.reopac(keylist[i]);
+              this.props.reopac(keylist[i]);
             }
           };
 
      }
   }
-wraphide(item){
-  let tohide=document.getElementById(item).childNodes[0];
-  if(tohide){
-    tohide.style.opacity=0;
-    tohide.style.width=0;
-    tohide.style.overflow="hidden";
-    document.getElementById(item).style.width=0;
-    setTimeout(function() {tohide.style.display='none'; 
-    document.getElementById(item).style.display='none'}, 300);
-	}
-  	
-
-}
-reopac(item){
-
-  let toreopac=document.getElementById(item).childNodes[0];
-  if(toreopac){
-  document.getElementById(item).style.display='inline-block';
-  toreopac.style.display="inline-block";
-  
-  setTimeout(function(){document.getElementById(item).style.width='31%'; toreopac.style.width="100%"; toreopac.style.opacity='1'},10)
-}
-}
   worktypebar(){
     let element=[];
-    let typelist=['uiux', 'code', 'ideation','illustration','animation','video'];
+    let typelist=['uiux', 'development', 'ideation','illustration','animation','video'];
     let typenames={
       'ideation':'Ideation',
       'video':'Video',
       'uiux':'UI/UX',
       'illustration':'Illustration',
       'animation':'Animation',
-      'code':'Code',
+      'development':'development',
     }
     for(let i=0;i<typelist.length;i++){
       element.push(
@@ -124,8 +101,8 @@ reopac(item){
       { "id":"naoshima",
       "href":".js",
       "image":naoshima,
-      "class":"code uiux illustartion",
-      "types": "UI/UX | Code | Illustration",
+      "class":"development uiux illustartion",
+      "types": "UI/UX | Development | Illustration",
       "title": "Artwork of NAOSHIMA",
     },
       { "id":"reporter",
@@ -160,7 +137,7 @@ reopac(item){
     ];
     for(let i=0;i<worklist.length;i++){
       element.push(
-        <a id={worklist[i].id} href="#" onClick = {(ev) => this.setState({page : 4, curid:worklist[i].id})}  >
+        <div id={worklist[i].id} className="funwork" key={worklist[i].id} onClick = {(ev) => this.setState({page : 4, curid:worklist[i].id})}  >
           <div className={"portwrap " + worklist[i].class} >
             <img className="longim" src={worklist[i].image} />
             <div className="discrip">
@@ -174,7 +151,7 @@ reopac(item){
           {worklist[i].title}<br />
           <span className="types">{worklist[i].types}</span>
           </div>
-        </a>
+        </div>
       )
     }
     element=<div><div className="worktypes">{this.worktypebar()}</div>{element}</div>;
@@ -189,8 +166,6 @@ reopac(item){
     return (
 
         <div className="workbox">
-          
-
               {this.projects()}
               {this.renderPageView()}
         </div>

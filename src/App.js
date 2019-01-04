@@ -95,33 +95,31 @@ class App extends Component {
   }
 
   //Func to hide projects 
-wraphide(item){
-  let tohide=document.getElementById(item).childNodes[0];
-  if(tohide){
-    tohide.style.opacity=0;
-    tohide.style.width=0;
-    tohide.style.overflow="hidden";
-    document.getElementById(item).style.width=0;
-    setTimeout(function() {tohide.style.display='none'; 
-    document.getElementById(item).style.display='none'}, 300);
-	};
-}
-
-//Func to remake the projects opaque
-reopac(item){
-
-  let toreopac=document.getElementById(item).childNodes[0];
-  if(toreopac){
-  document.getElementById(item).style.display='inline-block';
-  toreopac.style.display="inline-block";
+  wraphide(item){
+    let tohide=document.getElementById(item).childNodes[0];
+    if(tohide){
+      tohide.classList.add("hidden");
+      document.getElementById(item).classList.add("hidden");
+      setTimeout(function() {tohide.classList.add("displayNone"); 
+      document.getElementById(item).classList.add("displayNone")}, 300);
+    }
+      
   
-  setTimeout(function(){document.getElementById(item).style.width='31%'; toreopac.style.width="100%"; toreopac.style.opacity='1'},10)
-}
-}
+  }
+  reopac(item){
+    let toreopac=document.getElementById(item).childNodes[0];
+    if(toreopac){
+    document.getElementById(item).classList.remove("displayNone");
+    toreopac.classList.remove("displayNone");
+    setTimeout(function(){
+      document.getElementById(item).classList.remove("hidden"); 
+      toreopac.classList.remove("hidden")},10)
+  }
+  }
 
 //Create header navbar
 headertype(){
-      return <Header pagenum={this.state.menu} menustatus={this.menustatus} />
+      return <Header key="header" pagenum={this.state.menu} menustatus={this.menustatus} />
   }
 
 //Funcs for stars 
@@ -165,7 +163,7 @@ star_twinkle_generator(){
 
     for(let i=0; i<this.star_position.length;i++)
     element.push(<div className="star_opac_wrap" style={this.star_twinkle[i]}>
-    <div className="stars" style={this.star_position[i]} />
+    <div className="stars" key={"star"+i} style={this.star_position[i]} />
     </div>)
     return element;
   }
@@ -184,7 +182,7 @@ star_twinkle_generator(){
     }
     for(let i=0;i<typelist.length;i++){
       element.push(
-        <div className="worksbutton workactive" onClick={this.addActive} id={typelist[i]}>{typenames[typelist[i]]}</div>
+        <div className="worksbutton workactive" key={typenames[typelist[i]]} onClick={this.addActive} id={typelist[i]}>{typenames[typelist[i]]}</div>
       )
     }
     return element;
@@ -193,16 +191,16 @@ star_twinkle_generator(){
   //Main project section
   projects(){
     if(this.state.page === 0){
-      return <MainProject closehandle={this.closehandler.bind(this)} projectdisplay={this.projectdisplay}/>
+      return <MainProject key="mainProject" closehandle={this.closehandler.bind(this)} projectdisplay={this.projectdisplay} wraphide={this.wraphide} reopac={this.reopac}/>
     }
     if(this.state.page === 1){
-      return <Fun closehandle={this.closehandler.bind(this)} projectdisplay={this.projectdisplay}/>
+      return <Fun key="fun" closehandle={this.closehandler.bind(this)} projectdisplay={this.projectdisplay} wraphide={this.wraphide} reopac={this.reopac}/>
     }
     if(this.state.page === 2){
-      return <FAs closehandle={this.closehandler.bind(this)}/>
+      return <FAs key="FAs" closehandle={this.closehandler.bind(this)}/>
     }
     if(this.state.page === 3){
-      return <About closehandle={this.closehandler.bind(this)}/>
+      return <About key="about" closehandle={this.closehandler.bind(this)}/>
     }
   }
   
