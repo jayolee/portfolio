@@ -256,10 +256,10 @@ this.gallery_others=[
         element.push(
           <div className="fa" onClick={(ev) => this.setState({page : 5,  orderinArray: i, order: imagelist[i].order, imglist: imagelist})}>
             <div className="portwrap" >
-              <img className="longim" src={imagelist[i].image} />
-              <div className="titlebox">
+              <img className="longim" src={imagelist[i].image} key= {imagelist[i].name+"img"}/>
+              <div className="titlebox" key= {imagelist[i].name}>
               {imagelist[i].name}<br />
-              <span className="types">
+              <span className="types" key= {imagelist[i].name+"info"}>
               {imagelist[i].info}
               </span>
               </div>

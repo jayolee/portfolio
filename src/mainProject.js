@@ -4,6 +4,7 @@ import './projects.scss'
 import logpos from './images/logpos2.jpg'
 import dotenote from './images/dotenote.png'
 import getcuisine from './images/getcuisine.png'
+import up_main from './up/top.png'
 import Projects from './projects.js'
 
 class MainProject extends Component {
@@ -82,7 +83,7 @@ class MainProject extends Component {
     }
     for(let i=0;i<typelist.length;i++){
       element.push(
-        <div className="worksbutton workactive" onClick={this.addActive} id={typelist[i]}>{typenames[typelist[i]]}</div>
+        <div className="worksbutton workactive" key={typelist[i]} onClick={this.addActive} id={typelist[i]}>{typenames[typelist[i]]}</div>
       )
     }
     return element;
@@ -92,7 +93,12 @@ class MainProject extends Component {
   projects(){
     let element=[];
     let worklist=[
-        
+      { "id":"up",
+      "image":up_main,
+      "class":"uiux development",
+      "types": "UI/UX | Development",
+      "title": "Up",
+    },
       { "id":"dote",
         "image":dotenote,
         "class":"ideation uiux",
@@ -102,7 +108,7 @@ class MainProject extends Component {
       { "id":"getcuisine",
       "image":getcuisine,
       "class":"uiux development",
-      "types": "UI/UX / Development",
+      "types": "UI/UX | Development",
       "title": "Get Cuisine",
     },{ "id":"logpos",
     "image":logpos,
@@ -115,7 +121,7 @@ class MainProject extends Component {
         element.push(
           <div id={worklist[i].id} key={worklist[i].id} className = "main_work" onClick = {(ev) => this.setState({page : 4, curid:worklist[i].id})}  >
             <div className={"portwrap " + worklist[i].class} key={worklist[i].id+"wrapper"}>
-              <img className="longim" alt={worklist[i].title} src={worklist[i].image} />
+              <img className="longim" alt={worklist[i].title} src={worklist[i].image} key={worklist[i].title+"image"} />
               <div className="discrip">
               {worklist[i].title}<br />
               <span className="types">
@@ -125,7 +131,7 @@ class MainProject extends Component {
             </div>
             <div className="discripsmaller">
             {worklist[i].title}<br />
-            <span class="types">{worklist[i].types}</span>
+            <span className="types">{worklist[i].types}</span>
             </div>
           </div>
         )
@@ -136,12 +142,11 @@ class MainProject extends Component {
   //open details
   renderPageView(){
     if(this.state.page === 4){
-      return <Projects idnum={this.state.curid} closehandle={this.closehandler.bind(this)}/>
+      return <Projects key="Projects" idnum={this.state.curid} closehandle={this.closehandler.bind(this)}/>
     };
   }  
   render() {
     return (
-
         <div className="workbox">
               {this.projects()}
               {this.renderPageView()}
