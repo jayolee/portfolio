@@ -145,7 +145,7 @@ const vidid = {
 export const projectList = {
     "up":{
         "projectTitle": "Up",
-        "quote": "How can an app promotes productivity, combates ego-depletion and stress?",
+        "quote": "How can an app promote productivity, combate ego-depletion and stress?",
         "topimg": <img id="up" alt="Up Top Screen" className="topimg" src={up_main} />,
 
         "exlpla": {
