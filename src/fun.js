@@ -84,7 +84,7 @@ class Fun extends Component {
       'uiux':'UI/UX',
       'illustration':'Illustration',
       'animation':'Animation',
-      'development':'development',
+      'development':'Development',
     }
     for(let i=0;i<typelist.length;i++){
       element.push(

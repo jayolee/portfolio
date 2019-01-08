@@ -29,6 +29,7 @@ class MainProject extends Component {
  
   addActive(e){
     let itemlist={
+      "up":['uiux','development'],
       "logpos":['ideation'],
       "dote":['uiux','ideation'],
       "getcuisine":['uiux','development']
