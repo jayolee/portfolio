@@ -11,21 +11,17 @@ class FAdetail extends Component {
     }
   }
   
-  listgenerator(imagelist) {
-    let element=[];
-  return element
-}
-
+  componentDidMount() {
+    window.scrollTo(0, 0)
+  }
 renderImg(){
-  let element =[];
-  element.push(
+  return (
     <div>
-    <img className="detailImg" src={this.props.imglist[this.state.currentOrder].image} />
+    <img className="detailImg" alt={this.props.imglist[this.state.currentOrder].name} src={this.props.imglist[this.state.currentOrder].image} />
     <div className="title">{this.props.imglist[this.state.currentOrder].name}</div>
     <div className="descrip">{this.props.imglist[this.state.currentOrder].info}</div>
     </div>
   )
-  return element
 }
 
 renderArrows(){
@@ -33,9 +29,9 @@ renderArrows(){
     var element=[];
 
 
-    if (curnum == "first"){
+    if (curnum === "first"){
       element.push(
-      <div className="detail_wrapper" >
+      <div className="detail_wrapper" key="detail_wrapper">
       <svg className="icon" height="60" width="26" >
         <path d="M26 5 L12 30 L26 60" fill="none" opacity="0" strokeWidth="3"/>
       </svg>
@@ -48,9 +44,9 @@ renderArrows(){
     </div>
     )
     }
-    else if(curnum == "last"){
+    else if(curnum === "last"){
       element.push(
-      <div className="detail_wrapper" >
+      <div className="detail_wrapper" key="detail_wrapper">
       <svg className="icon" height="60" width="26" onClick = {(ev) => this.setState({currentOrder: this.state.currentOrder-1})}>
         <path d="M26 5 L12 30 L26 60" stroke="rgba(0, 0, 0, 0.4)" fill="none" strokeWidth="3"/>
       </svg>
@@ -64,7 +60,7 @@ renderArrows(){
     )}
     else{
       element.push(
-      <div className="detail_wrapper" >
+      <div className="detail_wrapper" key="detail_wrapper">
       <svg className="icon" height="60" width="26" onClick = {(ev) => this.setState({currentOrder: this.state.currentOrder-1})}>
         <path d="M26 5 L12 30 L26 60" stroke="rgba(0, 0, 0, 0.4)" fill="none" strokeWidth="3"/>
       </svg>

@@ -13,7 +13,6 @@ class App extends Component {
 
   constructor(props) {
     super(props);
-    this.addActive=this.addActive.bind(this);
     this.state = {
       menu:0,
       page: 0,
@@ -24,6 +23,15 @@ class App extends Component {
     }
     this.star_position=this.star_position_generator();
     this.star_twinkle=this.star_twinkle_generator();
+    this.typelist=['uiux', 'code', 'ideation','illustration','animation','video'];
+    this.typenames={
+      'ideation':'Ideation',
+      'video':'Video',
+      'uiux':'UI/UX',
+      'illustration':'Illustration',
+      'animation':'Animation',
+      'code':'Code',
+    }
   }
 
   //display works
@@ -32,7 +40,7 @@ class App extends Component {
       return <Projects idnum={this.state.curid} closehandle={this.closehandler.bind(this)}/>
     };
   }
-  //Function will be sent as props for header
+  //Function updating current page on state
   menustatus = (menunumber) => {
     this.setState({page: (menunumber)*1});
   }
@@ -44,54 +52,6 @@ class App extends Component {
   //Func to close the project detail boxes
   closehandler(){
     setTimeout(this.setState({page:0}), 300); 
-  }
-
-  //Func for filter 
-  addActive(e){
-    let itemlist={
-      "logpos":['ideation','video'],
-      "dote":['uiux','ideation','video'],
-      "reporter":['uiux','illustration'],
-      "even":['uiux'],
-      "momo":['animation'],
-      "gssh":['video'],
-      "naoshima":['code','uiux','illustration'],
-    }
-   let keylist=Object.keys(itemlist);
-   let exist=0;
-    let thisDiv=e.target.id;
-    let classlist=e.target.classList;
-
-      if(classlist[1]) { 
-
-          e.target.classList.remove("workactive");
-          this.state.deactivelist.push(thisDiv);
-
-          this.state.activelist.splice(this.state.activelist.indexOf(thisDiv),1);
-          for (let i=0;i<keylist.length;i++){
-            exist=1;
-            for(let j=0;j<itemlist[keylist[i]].length;j++){
-               if(this.state.activelist.includes(itemlist[keylist[i]][j])){
-                 exist=0;
-               }
-          }
-          if(exist){
-            this.wraphide(keylist[i]);
-          }
-      }
-     } else {
-      this.state.activelist.push(thisDiv);
-    
-      this.state.deactivelist.splice(this.state.deactivelist.indexOf(thisDiv),1);
-     
-          e.target.classList.add("workactive");
-          for(let i=0;i<keylist.length;i++){
-            if(itemlist[keylist[i]].includes(thisDiv)){
-              this.reopac(keylist[i]);
-            }
-          };
-
-     }
   }
 
   //Func to hide projects 
@@ -117,12 +77,9 @@ class App extends Component {
   }
   }
 
-//Create header navbar
-headertype(){
-      return <Header key="header" pagenum={this.state.menu} menustatus={this.menustatus} />
-  }
 
 //Funcs for stars 
+//function to generate star animation durations
 star_twinkle_generator(){
   let duration=[];
   let starstyle={};
@@ -137,6 +94,8 @@ star_twinkle_generator(){
   }
   return duration;
 }
+
+//function to randomly generate star positions
   star_position_generator(){
     let element=[];
     let leftv=0;
@@ -158,33 +117,16 @@ star_twinkle_generator(){
     }
     return(element);
   }
+  //function to create stars
   star_generator(){
+    let welcommsg='　　　　　　　∩\n　　　　　　　||\n　　　　　　　||\n　　　　　　　||\n　　　　　 ／￣￣＼\n　　　　　｜　　　 ヽ\n　　　　　/　　　　 |\n　 |＼　／　／ヽ / ノ\n　 |／￣￣￣＼ |/ /\n　 /　　　　　Ｖ＿)\n　｜(● ●)　 ｜\n　王(_人_) 三 /\n　 ＼＿＿＿_／\n　 _/ /_/ /\n　(＿ﾉ(＿ﾉ\n WELCOME!'
+    console.log(welcommsg);
     let element=[];
 
     for(let i=0; i<this.star_position.length;i++)
-    element.push(<div className="star_opac_wrap" style={this.star_twinkle[i]}>
+    element.push(<div className="star_opac_wrap" key={"starwrap"+i} style={this.star_twinkle[i]}>
     <div className="stars" key={"star"+i} style={this.star_position[i]} />
     </div>)
-    return element;
-  }
-
-  //Func for filter bar 
-  worktypebar(){
-    let element=[];
-    let typelist=['uiux', 'code', 'ideation','illustration','animation','video'];
-    let typenames={
-      'ideation':'Ideation',
-      'video':'Video',
-      'uiux':'UI/UX',
-      'illustration':'Illustration',
-      'animation':'Animation',
-      'code':'Code',
-    }
-    for(let i=0;i<typelist.length;i++){
-      element.push(
-        <div className="worksbutton workactive" key={typenames[typelist[i]]} onClick={this.addActive} id={typelist[i]}>{typenames[typelist[i]]}</div>
-      )
-    }
     return element;
   }
 
@@ -205,21 +147,21 @@ star_twinkle_generator(){
   }
   
   render() {
-    
+ 
     return (
       <div>
       <div className="starwrap_out">
-        <div className="starwrap_in">     
+        <div className="starwrap_in" key="starwrap">     
               {this.star_generator()}
           </div>
       </div>
-         {this.headertype()}
+      <Header key="header" pagenum={this.state.menu} menustatus={this.menustatus}/>
          <div className="sectopwrapper" />
          <div className="works">
           <div className="logobox">
             <div className="logowrap">
               <a href="index.html">
-                <img src={logo} id="ylogo" />
+                <img src={logo} id="ylogo" alt="logo" />
               </a>
             </div>
           </div> 

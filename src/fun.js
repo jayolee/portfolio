@@ -1,16 +1,12 @@
 import React, { Component } from 'react';
 import './App.scss';
-import Header from './header.js'
 import Projects from './projects.js'
-import logo from './images/younglogo.svg'
 import './projects.scss'
 import reporter from './images/lights.jpg'
 import even from './images/even2.png'
 import momoko from './images/momo.png'
 import gssh from './images/gssh.png'
 import naoshima from './images/naoshima.png'
-import FAs from './FA.js'
-import About from './About.js'
 
 class Fun extends Component {
 
@@ -25,60 +21,8 @@ class Fun extends Component {
       activelist:['uiux', 'code', 'ideation','illustration','animation','video'],
       deactivelist:[],
     }
-
-  }
-  closehandler(){
-    setTimeout(this.setState({page:0}), 300);
-    
-  }
- 
-  addActive(e){
-    let itemlist={
-      "naoshima":['code','uiux','illustration'],
-      "reporter":['uiux','illustration'],
-      "even":['uiux'],
-      "momo":['animation'],
-      "gssh":['video'],
-      
-    }
-   let keylist=Object.keys(itemlist);
-   let exist=0;
-    let thisDiv=e.target.id;
-    let classlist=e.target.classList;
-      if(classlist[1]) { 
-          e.target.classList.remove("workactive");
-          this.state.deactivelist.push(thisDiv);
-
-          this.state.activelist.splice(this.state.activelist.indexOf(thisDiv),1);
-          for (let i=0;i<keylist.length;i++){
-            exist=1;
-            for(let j=0;j<itemlist[keylist[i]].length;j++){
-               if(this.state.activelist.includes(itemlist[keylist[i]][j])){
-                 exist=0;
-               }
-          }
-          if(exist){
-            this.props.wraphide(keylist[i]);
-          }
-      }
-     } else {
-      this.state.activelist.push(thisDiv);
-    
-      this.state.deactivelist.splice(this.state.deactivelist.indexOf(thisDiv),1);
-     
-          e.target.classList.add("workactive");
-          for(let i=0;i<keylist.length;i++){
-            if(itemlist[keylist[i]].includes(thisDiv)){
-              this.props.reopac(keylist[i]);
-            }
-          };
-
-     }
-  }
-  worktypebar(){
-    let element=[];
-    let typelist=['uiux', 'development', 'ideation','illustration','animation','video'];
-    let typenames={
+    this.typelist=['uiux', 'development', 'ideation','illustration','animation','video'];
+    this.typenames={
       'ideation':'Ideation',
       'video':'Video',
       'uiux':'UI/UX',
@@ -86,18 +30,15 @@ class Fun extends Component {
       'animation':'Animation',
       'development':'Development',
     }
-    for(let i=0;i<typelist.length;i++){
-      element.push(
-        <div className="worksbutton workactive" onClick={this.addActive} id={typelist[i]}>{typenames[typelist[i]]}</div>
-      )
+    this.itemlist={
+      "naoshima":['code','uiux','illustration'],
+      "reporter":['uiux','illustration'],
+      "even":['uiux'],
+      "momo":['animation'],
+      "gssh":['video'],
+      
     }
-    return element;
-  }
-
-  projects(){
-    
-    let element=[];
-    let worklist=[
+    this.worklist=[
       { "id":"naoshima",
       "href":".js",
       "image":naoshima,
@@ -135,21 +76,76 @@ class Fun extends Component {
       },
      
     ];
-    for(let i=0;i<worklist.length;i++){
+  }
+  closehandler(){
+    setTimeout(this.setState({page:0}), 300);
+    
+  }
+ 
+  addActive(e){
+
+   let keylist=Object.keys(this.itemlist);
+   let exist=0;
+    let thisDiv=e.target.id;
+    let classlist=e.target.classList;
+      if(classlist[1]) { 
+          e.target.classList.remove("workactive");
+          this.state.deactivelist.push(thisDiv);
+
+          this.state.activelist.splice(this.state.activelist.indexOf(thisDiv),1);
+          for (let i=0;i<keylist.length;i++){
+            exist=1;
+            for(let j=0;j<this.itemlist[keylist[i]].length;j++){
+               if(this.state.activelist.includes(this.itemlist[keylist[i]][j])){
+                 exist=0;
+               }
+          }
+          if(exist){
+            this.props.wraphide(keylist[i]);
+          }
+      }
+     } else {
+      this.state.activelist.push(thisDiv);
+    
+      this.state.deactivelist.splice(this.state.deactivelist.indexOf(thisDiv),1);
+     
+          e.target.classList.add("workactive");
+          for(let i=0;i<keylist.length;i++){
+            if(this.itemlist[keylist[i]].includes(thisDiv)){
+              this.props.reopac(keylist[i]);
+            }
+          };
+
+     }
+  }
+  worktypebar(){
+    let element=[];
+    for(let i=0;i<this.typelist.length;i++){
       element.push(
-        <div id={worklist[i].id} className="funwork" key={worklist[i].id} onClick = {(ev) => this.setState({page : 4, curid:worklist[i].id})}  >
-          <div className={"portwrap " + worklist[i].class} >
-            <img className="longim" src={worklist[i].image} />
+        <div className="worksbutton workactive" key={this.typelist[i]} onClick={this.addActive} id={this.typelist[i]}>{this.typenames[this.typelist[i]]}</div>
+      )
+    }
+    return element;
+  }
+
+  projects(){
+    
+    let element=[];
+    for(let i=0;i<this.worklist.length;i++){
+      element.push(
+        <div id={this.worklist[i].id} className="funwork" key={this.worklist[i].id} onClick = {(ev) => this.setState({page : 4, curid:this.worklist[i].id})}  >
+          <div className={"portwrap " + this.worklist[i].class} >
+            <img className="longim" alt={this.worklist[i].title} src={this.worklist[i].image} />
             <div className="discrip">
-            {worklist[i].title}<br />
+            {this.worklist[i].title}<br />
             <span className="types">
-            {worklist[i].types}
+            {this.worklist[i].types}
             </span>
             </div>
           </div>
           <div className="discripsmaller">
-          {worklist[i].title}<br />
-          <span className="types">{worklist[i].types}</span>
+          {this.worklist[i].title}<br />
+          <span className="types">{this.worklist[i].types}</span>
           </div>
         </div>
       )
