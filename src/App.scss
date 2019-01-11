@@ -510,15 +510,15 @@ width:102px;
       .portwrap{
         max-width:500px;
         max-height:500px;
+        transition:.4s;
       }
       
   }
   .hidden{
     opacity:0;
-    width:0;
-  }
-  .displayNone{
-    display:none;
+    width:0 !important;
+    margin:0 !important;
+    overflow:hidden;
   }
 }
 

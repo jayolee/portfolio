@@ -11,148 +11,158 @@ class MainProject extends Component {
 
   constructor(props) {
     super(props);
-    this.addActive=this.addActive.bind(this);
+    this.addActive = this.addActive.bind(this);
     this.state = {
-      menu:0,
+      menu: 0,
       page: 0,
-      curid:null,
-      active:true,
-      activelist:['uiux', 'development', 'ideation'],
-      deactivelist:[],
+      curid: null,
+      active: true,
+      activelist: ['uiux', 'development', 'ideation'],
+      typenames: {
+        'ideation': ['Ideation', "worksbutton workactive"],
+        'uiux': ['UI/UX', "worksbutton workactive"],
+        'development': ['Development', "worksbutton workactive"]
+      },
+      worklist: [
+        {
+          "id": "up",
+          "image": up_main,
+          "class": "uiux development portwrap",
+          "mainClass": "main_work",
+          "types": "UI/UX | Development",
+          "title": "Up",
+        },
+        {
+          "id": "dote",
+          "image": dotenote,
+          "class": "ideation uiux portwrap",
+          "mainClass": "main_work",
+          "types": "UI/UX | Ideation",
+          "title": "DoteNote",
+        },
+        {
+          "id": "getcuisine",
+          "image": getcuisine,
+          "class": "uiux development portwrap",
+          "mainClass": "main_work",
+          "types": "UI/UX | Development",
+          "title": "Get Cuisine",
+        }, {
+          "id": "logpos",
+          "image": logpos,
+          "class": "ideation portwrap",
+          "mainClass": "main_work",
+          "types": "Ideation",
+          "title": "LOG + POS",
+        },
+      ],
     }
+    this.typelist = ['uiux', 'development', 'ideation'];
+  }
+  closehandler() {
+    setTimeout(this.setState({ page: 0 }), 300);
 
   }
-  closehandler(){
-    setTimeout(this.setState({page:0}), 300);
-    
-  }
- 
-  addActive(e){
-    let itemlist={
-      "up":['uiux','development'],
-      "logpos":['ideation'],
-      "dote":['uiux','ideation'],
-      "getcuisine":['uiux','development']
-     
-    }
-   let keylist=Object.keys(itemlist);
-   let exist=0;
-    let thisDiv=e.target.id;
-    let classlist=e.target.classList;
-      if(classlist[1]) { 
-          e.target.classList.remove("workactive");
-          this.state.deactivelist.push(thisDiv);
 
-          this.state.activelist.splice(this.state.activelist.indexOf(thisDiv),1);
-          for (let i=0;i<keylist.length;i++){
-            exist=1;
-            for(let j=0;j<itemlist[keylist[i]].length;j++){
-               if(this.state.activelist.includes(itemlist[keylist[i]][j])){
-                 exist=0;
-               }
+  addActive(e) {
+    let exist = 0;
+    let thisDiv = e.target.id;
+    let typenames = this.state.typenames;
+    let worklist = this.state.worklist;
+    let classes = [];
+    //if the filter is already active
+    if (typenames[thisDiv][1] === "worksbutton workactive") {
+      //get rid of Active class  
+      typenames[thisDiv][1] = "worksbutton";
+      //remove from the activelist
+      this.state.activelist.splice(this.state.activelist.indexOf(thisDiv), 1);
+
+      //hide the boxes
+      for (let i = 0; i < worklist.length; i++) {
+        //create an array of class lists(types of works)
+        classes = worklist[i].class.split(' ');
+        if(!(classes.includes("hidden"))){classes.pop();
+        exist = 1;
+        for (let j = 0; j < classes.length; j++) {
+          if (this.state.activelist.includes(classes[j])) {
+            exist = 0;
+            break;
           }
-          if(exist){
-            this.props.wraphide(keylist[i]);
-          }
+        }
+        //if any of classes are not in activelist
+        if (exist) {
+          worklist[i].class += " hidden"
+          worklist[i].mainClass += " hidden"
+        }}
       }
-     } else {
+    } else {
+      //add the type to the activelist 
       this.state.activelist.push(thisDiv);
-    
-      this.state.deactivelist.splice(this.state.deactivelist.indexOf(thisDiv),1);
-     
-          e.target.classList.add("workactive");
-          for(let i=0;i<keylist.length;i++){
-            if(itemlist[keylist[i]].includes(thisDiv)){
-              this.props.reopac(keylist[i]);
-            }
-          };
+      typenames[thisDiv][1] = "worksbutton workactive";
 
-     }
+      for (let i = 0; i < worklist.length; i++) {
+        classes = worklist[i].class.split(' ');
+        //if it's hidden div and includes new active type
+        if (classes.includes("hidden") && classes.includes(thisDiv)) {
+          classes.pop(); // get rid of "hidden" from the class
+          worklist[i].class = classes.join(' ');
+          worklist[i].mainClass = "main_work"
+        }
+      };
+     
+    }
+    this.setState({ typenames: typenames, worklist: worklist });
   }
 
-//filter
-  worktypebar(){
-    let element=[];
-    let typelist=['uiux', 'development', 'ideation'];
-    let typenames={
-      'ideation':'Ideation',
-      'video':'Video',
-      'uiux':'UI/UX',
-      'illustration':'Illustration',
-      'animation':'Animation',
-      'development':'Development',
-    }
-    for(let i=0;i<typelist.length;i++){
+  //filter
+  worktypebar() {
+    let element = [];
+    for (let i = 0; i < this.typelist.length; i++) {
       element.push(
-        <div className="worksbutton workactive" key={typelist[i]} onClick={this.addActive} id={typelist[i]}>{typenames[typelist[i]]}</div>
+        <div className={this.state.typenames[this.typelist[i]][1]} key={this.typelist[i]} onClick={this.addActive} id={this.typelist[i]}>{this.state.typenames[this.typelist[i]][0]}</div>
       )
     }
     return element;
   }
 
   //create boxes
-  projects(){
-    let element=[];
-    let worklist=[
-      { "id":"up",
-      "image":up_main,
-      "class":"uiux development",
-      "types": "UI/UX | Development",
-      "title": "Up",
-    },
-      { "id":"dote",
-        "image":dotenote,
-        "class":"ideation uiux",
-        "types": "UI/UX | Ideation",
-        "title": "DoteNote",
-      },
-      { "id":"getcuisine",
-      "image":getcuisine,
-      "class":"uiux development",
-      "types": "UI/UX | Development",
-      "title": "Get Cuisine",
-    },{ "id":"logpos",
-    "image":logpos,
-    "class":"ideation",
-    "types": "Ideation",
-    "title": "LOG + POS",
-  },
-    ];
-    for(let i=0;i<worklist.length;i++){
-        element.push(
-          <div id={worklist[i].id} key={worklist[i].id} className = "main_work" onClick = {(ev) => this.setState({page : 4, curid:worklist[i].id})}  >
-            <div className={"portwrap " + worklist[i].class} key={worklist[i].id+"wrapper"}>
-              <img className="longim" alt={worklist[i].title} src={worklist[i].image} key={worklist[i].title+"image"} />
-              <div className="discrip">
-              {worklist[i].title}<br />
+  projects() {
+    let element = [];
+    for (let i = 0; i < this.state.worklist.length; i++) {
+      element.push(
+        <div id={this.state.worklist[i].id} key={this.state.worklist[i].id} className={this.state.worklist[i].mainClass} onClick={(ev) => this.setState({ page: 4, curid: this.state.worklist[i].id })}  >
+          <div className={this.state.worklist[i].class} key={this.state.worklist[i].id + "wrapper"}>
+            <img className="longim" alt={this.state.worklist[i].title} src={this.state.worklist[i].image} key={this.state.worklist[i].title + "image"} />
+            <div className="discrip">
+              {this.state.worklist[i].title}<br />
               <span className="types">
-              {worklist[i].types}
+                {this.state.worklist[i].types}
               </span>
-              </div>
-            </div>
-            <div className="discripsmaller">
-            {worklist[i].title}<br />
-            <span className="types">{worklist[i].types}</span>
             </div>
           </div>
-        )
+          <div className="discripsmaller">
+            {this.state.worklist[i].title}<br />
+            <span className="types">{this.state.worklist[i].types}</span>
+          </div>
+        </div>
+      )
     }
-    element=<div><div className="worktypes">{this.worktypebar()}</div>{element}</div>;
-    return element  
+    element = <div><div className="worktypes">{this.worktypebar()}</div>{element}</div>;
+    return element
   }
   //open details
-  renderPageView(){
-    if(this.state.page === 4){
-      return <Projects key="Projects" idnum={this.state.curid} closehandle={this.closehandler.bind(this)}/>
+  renderPageView() {
+    if (this.state.page === 4) {
+      return <Projects key="Projects" idnum={this.state.curid} closehandle={this.closehandler.bind(this)} />
     };
-  }  
+  }
   render() {
     return (
-        <div className="workbox">
-              {this.projects()}
-              {this.renderPageView()}
-        </div>
-       
+      <div className="workbox">
+        {this.projects()}
+        {this.renderPageView()}
+      </div>
+
     );
   }
 }

@@ -1,5 +1,6 @@
 import React from 'react';
 import YouTube from 'react-youtube';
+import Dote from './dote.js'
 import logpos1 from './Logpos/IMG_0658.jpg'
 import logpos2 from './Logpos/interview.jpg'
 import logpos3 from './Logpos/final_design.png'
@@ -21,15 +22,6 @@ import dote2 from './Dotenote/meeting2.jpg'
 import dote3 from './Dotenote/testing.jpg'
 import dote4 from './Dotenote/notify1.svg'
 import dote5 from './Dotenote/notify2.svg'
-import dote6 from './Dotenote/screen1.png'
-import dote7 from './Dotenote/screen2.png'
-import dote8 from './Dotenote/screen5.png'
-import dote9 from './Dotenote/screen9.png'
-import dote10 from './Dotenote/screen3.png'
-import dote11 from './Dotenote/screen4.png'
-import dote12 from './Dotenote/screen6.png'
-import dote13 from './Dotenote/screen7.png'
-import dote14 from './Dotenote/screen8.png'
 
 import getcuisine1 from './getcuisine/top.gif'
 import getcuisine2 from './getcuisine/hi_proto.gif'
@@ -325,18 +317,7 @@ export const projectList = {
 
         "Final Design": <div>
             <div className="screens">
-                <img className="screens" src={dote6} alt="Screen1"/>
-                <img className="screens" src={dote7} alt="Screen2"/>
-                <img className="screens" src={dote8} alt="Screen3"/>
-                <img className="screens" src={dote9} alt="Screen4"/>
-            </div>
-            <div className="screens">
-                <img className="screens" src={dote10} alt="Screen5"/>
-                <img className="screens" src={dote11} alt="Screen6"/>
-                <img className="screens" src={dote12} alt="Screen7"/>
-                <img className="screens" src={dote13} alt="Screen8"/>
-                <img className="screens" src={dote14} alt="Screen9"/>
-            </div></div>,
+                <Dote /></div></div>,
 
         "Further Question": "How can we deal with the indoor messages on different floors? ",
     },

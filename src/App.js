@@ -54,29 +54,6 @@ class App extends Component {
     setTimeout(this.setState({page:0}), 300); 
   }
 
-  //Func to hide projects 
-  wraphide(item){
-    let tohide=document.getElementById(item).childNodes[0];
-    if(tohide){
-      tohide.classList.add("hidden");
-      document.getElementById(item).classList.add("hidden");
-      setTimeout(function() {tohide.classList.add("displayNone"); 
-      document.getElementById(item).classList.add("displayNone")}, 300);
-    }
-      
-  
-  }
-  reopac(item){
-    let toreopac=document.getElementById(item).childNodes[0];
-    if(toreopac){
-    document.getElementById(item).classList.remove("displayNone");
-    toreopac.classList.remove("displayNone");
-    setTimeout(function(){
-      document.getElementById(item).classList.remove("hidden"); 
-      toreopac.classList.remove("hidden")},10)
-  }
-  }
-
 
 //Funcs for stars 
 //function to generate star animation durations
@@ -133,10 +110,10 @@ star_twinkle_generator(){
   //Main project section
   projects(){
     if(this.state.page === 0){
-      return <MainProject key="mainProject" closehandle={this.closehandler.bind(this)} projectdisplay={this.projectdisplay} wraphide={this.wraphide} reopac={this.reopac}/>
+      return <MainProject key="mainProject" closehandle={this.closehandler.bind(this)} projectdisplay={this.projectdisplay}/>
     }
     if(this.state.page === 1){
-      return <Fun key="fun" closehandle={this.closehandler.bind(this)} projectdisplay={this.projectdisplay} wraphide={this.wraphide} reopac={this.reopac}/>
+      return <Fun key="fun" closehandle={this.closehandler.bind(this)} projectdisplay={this.projectdisplay} />
     }
     if(this.state.page === 2){
       return <FAs key="FAs" closehandle={this.closehandler.bind(this)}/>

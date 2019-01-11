@@ -18,64 +18,54 @@ class Fun extends Component {
       page: 0,
       curid:null,
       active:true,
-      activelist:['uiux', 'code', 'ideation','illustration','animation','video'],
-      deactivelist:[],
+      activelist:['uiux', 'development', 'illustration','animation','video'],
+      typenames:{
+        'video':['Video', "worksbutton workactive"],
+        'uiux':['UI/UX', "worksbutton workactive"],
+        'illustration':['Illustration', "worksbutton workactive"],
+        'animation':['Animation', "worksbutton workactive"],
+        'development':['Development', "worksbutton workactive"]
+      },
+      worklist:[
+        { "id":"naoshima",
+        "image":naoshima,
+        "class":"development uiux illustartion portwrap",
+        "mainClass":"funwork",
+        "types": "UI/UX | Development | Illustration",
+        "title": "Artwork of NAOSHIMA",
+      },
+        { "id":"reporter",
+          "image":reporter,
+          "class":"illustration uiux portwrap",
+          "mainClass":"funwork",
+          "types": "UI/UX | Illustration",
+          "title": "I Am a Reporter",
+        },
+        { "id":"even",
+          "image":even,
+          "class":"uiux portwrap",
+          "mainClass":"funwork",
+          "types": "UI/UX",
+          "title": "Even",
+        },
+        { "id":"momo",
+          "image":momoko,
+          "class":"animation portwrap",
+          "mainClass":"funwork",
+          "types": "Animation (Emoji Stickers)",
+          "title": "Happy Momoko",
+        },
+        { "id":"gssh",
+          "image":gssh,
+          "class":"video portwrap",
+          "mainClass":"funwork",
+          "types": "Video",
+          "title": "GSSH - Class of 2011",
+        },
+       
+      ]
     }
-    this.typelist=['uiux', 'development', 'ideation','illustration','animation','video'];
-    this.typenames={
-      'ideation':'Ideation',
-      'video':'Video',
-      'uiux':'UI/UX',
-      'illustration':'Illustration',
-      'animation':'Animation',
-      'development':'Development',
-    }
-    this.itemlist={
-      "naoshima":['code','uiux','illustration'],
-      "reporter":['uiux','illustration'],
-      "even":['uiux'],
-      "momo":['animation'],
-      "gssh":['video'],
-      
-    }
-    this.worklist=[
-      { "id":"naoshima",
-      "href":".js",
-      "image":naoshima,
-      "class":"development uiux illustartion",
-      "types": "UI/UX | Development | Illustration",
-      "title": "Artwork of NAOSHIMA",
-    },
-      { "id":"reporter",
-        "href":".js",
-        "image":reporter,
-        "class":"illustration uiux",
-        "types": "UI/UX | Illustration",
-        "title": "I Am a Reporter",
-      },
-      { "id":"even",
-        "href":".js",
-        "image":even,
-        "class":"uiux",
-        "types": "UI/UX",
-        "title": "Even",
-      },
-      { "id":"momo",
-        "href":".js",
-        "image":momoko,
-        "class":"animation",
-        "types": "Animation (Emoji Stickers)",
-        "title": "Happy Momoko",
-      },
-      { "id":"gssh",
-        "href":".js",
-        "image":gssh,
-        "class":"video",
-        "types": "Video",
-        "title": "GSSH - Class of 2011",
-      },
-     
-    ];
+    this.typelist=['uiux', 'development', 'illustration','animation','video'];
   }
   closehandler(){
     setTimeout(this.setState({page:0}), 300);
@@ -83,69 +73,81 @@ class Fun extends Component {
   }
  
   addActive(e){
+    let exist = 0;
+    let thisDiv = e.target.id;
+    let typenames = this.state.typenames;
+    let worklist = this.state.worklist;
+    let classes = [];
+    //if the filter is already active
+    if (typenames[thisDiv][1] === "worksbutton workactive") {
+      //get rid of Active class  
+      typenames[thisDiv][1] = "worksbutton";
+      //remove from the activelist
+      this.state.activelist.splice(this.state.activelist.indexOf(thisDiv), 1);
 
-   let keylist=Object.keys(this.itemlist);
-   let exist=0;
-    let thisDiv=e.target.id;
-    let classlist=e.target.classList;
-      if(classlist[1]) { 
-          e.target.classList.remove("workactive");
-          this.state.deactivelist.push(thisDiv);
-
-          this.state.activelist.splice(this.state.activelist.indexOf(thisDiv),1);
-          for (let i=0;i<keylist.length;i++){
-            exist=1;
-            for(let j=0;j<this.itemlist[keylist[i]].length;j++){
-               if(this.state.activelist.includes(this.itemlist[keylist[i]][j])){
-                 exist=0;
-               }
+      //hide the boxes
+      for (let i = 0; i < worklist.length; i++) {
+        //create an array of class lists(types of works)
+        classes = worklist[i].class.split(' ');
+        if(!(classes.includes("hidden"))){classes.pop();
+        exist = 1;
+        for (let j = 0; j < classes.length; j++) {
+          if (this.state.activelist.includes(classes[j])) {
+            exist = 0;
+            break;
           }
-          if(exist){
-            this.props.wraphide(keylist[i]);
-          }
+        }
+        //if any of classes are not in activelist
+        if (exist) {
+          worklist[i].class += " hidden"
+          worklist[i].mainClass += " hidden"
+        }}
       }
-     } else {
+    } else {
+      //add the type to the activelist 
       this.state.activelist.push(thisDiv);
-    
-      this.state.deactivelist.splice(this.state.deactivelist.indexOf(thisDiv),1);
-     
-          e.target.classList.add("workactive");
-          for(let i=0;i<keylist.length;i++){
-            if(this.itemlist[keylist[i]].includes(thisDiv)){
-              this.props.reopac(keylist[i]);
-            }
-          };
+      typenames[thisDiv][1] = "worksbutton workactive";
 
-     }
+      for (let i = 0; i < worklist.length; i++) {
+        classes = worklist[i].class.split(' ');
+        //if it's hidden div and includes new active type
+        if (classes.includes("hidden") && classes.includes(thisDiv)) {
+          classes.pop(); // get rid of "hidden" from the class
+          worklist[i].class = classes.join(' ');
+          worklist[i].mainClass = "funwork"
+        }
+      };
+     
+    }
+    this.setState({ typenames: typenames, worklist: worklist });
   }
+
   worktypebar(){
     let element=[];
     for(let i=0;i<this.typelist.length;i++){
       element.push(
-        <div className="worksbutton workactive" key={this.typelist[i]} onClick={this.addActive} id={this.typelist[i]}>{this.typenames[this.typelist[i]]}</div>
-      )
+        <div className={this.state.typenames[this.typelist[i]][1]} key={this.typelist[i]} onClick={this.addActive} id={this.typelist[i]}>{this.state.typenames[this.typelist[i]][0]}</div>)
     }
     return element;
   }
 
   projects(){
-    
-    let element=[];
-    for(let i=0;i<this.worklist.length;i++){
+    let element = [];
+    for (let i = 0; i < this.state.worklist.length; i++) {
       element.push(
-        <div id={this.worklist[i].id} className="funwork" key={this.worklist[i].id} onClick = {(ev) => this.setState({page : 4, curid:this.worklist[i].id})}  >
-          <div className={"portwrap " + this.worklist[i].class} >
-            <img className="longim" alt={this.worklist[i].title} src={this.worklist[i].image} />
+        <div id={this.state.worklist[i].id} key={this.state.worklist[i].id} className={this.state.worklist[i].mainClass} onClick={(ev) => this.setState({ page: 4, curid: this.state.worklist[i].id })}  >
+          <div className={this.state.worklist[i].class} key={this.state.worklist[i].id + "wrapper"}>
+            <img className="longim" alt={this.state.worklist[i].title} src={this.state.worklist[i].image} key={this.state.worklist[i].title + "image"} />
             <div className="discrip">
-            {this.worklist[i].title}<br />
-            <span className="types">
-            {this.worklist[i].types}
-            </span>
+              {this.state.worklist[i].title}<br />
+              <span className="types">
+                {this.state.worklist[i].types}
+              </span>
             </div>
           </div>
           <div className="discripsmaller">
-          {this.worklist[i].title}<br />
-          <span className="types">{this.worklist[i].types}</span>
+            {this.state.worklist[i].title}<br />
+            <span className="types">{this.state.worklist[i].types}</span>
           </div>
         </div>
       )

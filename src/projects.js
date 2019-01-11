@@ -20,7 +20,7 @@ class Projects extends Component {
   }
   
   rollup() {
-    let contentdiv = document.getElementsByClassName("contentbox")[0];
+        let contentdiv = document.getElementsByClassName("contentbox")[0];
     let greydiv = document.getElementsByClassName("greybox")[0];
     contentdiv.style.opacity = "1";
     greydiv.style.opacity = "1";

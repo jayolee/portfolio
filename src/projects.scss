@@ -18,7 +18,21 @@ $up: #E9974C;
     -ms-transform: $transform;
     transform: $transform;
 }
-
+@mixin keyframes( $animationName )
+{
+    @-webkit-keyframes #{$animationName} {
+        @content;
+    }
+    @-moz-keyframes #{$animationName} {
+        @content;
+    }
+    @keyframes #{$animationName} {
+        @content;
+    }
+}
+@mixin animation($str) {
+	animation: #{$str};
+  }
 @mixin textcolors{
 	&.dote{
 		color: $dote;
@@ -169,6 +183,14 @@ $up: #E9974C;
 .imgBorder{
 	border:1px solid rgba(0,0,0,0.5);
 }
+@include keyframes(screenbtn){
+	from{
+		background:rgba(255,255,255,.5);
+	}
+	to{
+		background:rgba(255,255,255,0);
+	}
+}
 .expla {
 	margin: 60px 0;
 	
@@ -182,7 +204,96 @@ $up: #E9974C;
 		&#e_animals{
 			max-width:500px;
 		}
+		&.screen{
+			width:264px;
+		}
 	}
+
+	.phone{
+		left:50%;
+		@include transform(translateX(-50%));
+		width:300px;
+		height:610px;
+		text-align:center;
+		position:relative;
+		margin:0;
+		margin-bottom:90px;
+		&:hover{
+			.scbtn{
+				opacity:0;
+			}
+		}
+		img{
+			width:100%;
+			position:absolute;
+			left:0;
+			top:0;
+		}
+		#andPhone{
+			@include transform(translateY(-26px));
+		}
+		.phonesc{
+			position:absolute;
+			top:17px;
+			left:18px;
+			width:88.2%;
+		}
+		.scbtn{
+			width:46px;
+			height:46px;
+			border-radius:26px;
+			box-shadow:0 0 12px rgba(0,0,0,0.6);
+			border:3px solid $dote;
+			position:absolute;
+			cursor:pointer;
+			transition:.3s;
+			@include animation(screenbtn);
+			animation: {
+                duration: .8s;
+                iteration-count: infinite;
+                timing-function:linear;
+                fill-mode:forwards;
+            }
+		}
+		#mapbtn{
+			right:12px;
+			top:84px;
+		}
+		#plusbtn{
+			bottom:60px;
+			left:127px;
+		}
+		#mapback, #selectback{
+			left:12px;
+			top:40px;
+		}
+		#item{
+			top:137px;
+			left:29px;
+			width:110px;
+			height:110px;
+			border-radius:60px;
+		}
+		#write{
+			right:50px;
+			top:324px;
+		}
+		#writeOkay{
+			bottom:38px;
+			right:18px;
+		}
+		#send, #confirm{
+			bottom:117px;
+			left:35px;
+			width:230px;
+		}
+		#preview{
+			left:35px;
+			bottom:71px;
+			width:230px;
+		}
+	}
+
 	.half {
 		width: 47%;
 		margin: 30px 1% 0;
@@ -430,13 +541,13 @@ a.member{
 	width:350px !important;
 	max-width:90%;
 }
-.screens{
-	img{
-		width:200px !important;
-		max-width:45%;
-		display:inline-block;
-	}
-} 
+// .screens{
+// 	img{
+// 		width:200px;
+// 		max-width:45%;
+// 		display:inline-block;
+// 	}
+// } 
 .momoscreen{
 	margin:10px;
 	margin-bottom:20px;
