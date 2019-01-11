@@ -87,7 +87,6 @@ class Dote extends Component {
                     <div className="phone" key="phone">
                         <img src={dote14} className="phonesc" alt="Item Menu" />
                         <img src={phone} alt="Phone"  id="andPhone"/>
-                        <div className="scbtn" id="selectback" onClick={(ev) => this.setState({ screen: 2 })} />
                         <div className="scbtn" id="confirm" onClick={(ev) => this.setState({ screen: 0 })} />
                     </div>
                 );
