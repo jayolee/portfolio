@@ -99,7 +99,14 @@ import momo26_1 from './momoko/thumb/23.png'
 import momo26_2 from './momoko/ani/23.gif'
 import momo27_1 from './momoko/thumb/24.png'
 import momo27_2 from './momoko/ani/24.gif'
-import naoshima from './images/naoshima2.png'
+
+import naoshima from './images/naoshima2.jpg'
+import nao_lofi from './naoshima/lo3.jpg'
+import nao_midfi from './naoshima/midfi.jpg'
+import nao_drawing from './naoshima/draw.jpg'
+import nao_sketches from './naoshima/sketches.gif'
+import nao_about from './naoshima/about.gif'
+import nao_detail from './naoshima/detail.jpg'
 
 import up_main from './up/top.png'
 import up_animals from './up/animals.jpg'
@@ -119,9 +126,9 @@ function anigenerator() {
 
     for (let i = 0; i < momothumblist.length; i++) {
         element.push(
-            <div className="aniwrap" key={"momoAniWrap"+i}>
-                <img className="thumb" src={momothumblist[i]} key={"MomoThumb"+i} alt={"Momoko Thumbnail "+i}/>
-                <img className="ani" src={momoanilist[i]} key={"MomoAni"+i} alt={"Momoko Animation "+i}/>
+            <div className="aniwrap" key={"momoAniWrap" + i}>
+                <img className="thumb" src={momothumblist[i]} key={"MomoThumb" + i} alt={"Momoko Thumbnail " + i} />
+                <img className="ani" src={momoanilist[i]} key={"MomoAni" + i} alt={"Momoko Animation " + i} />
             </div>
         )
     }
@@ -135,7 +142,7 @@ const vidid = {
 }
 
 export const projectList = {
-    "up":{
+    "up": {
         "projectTitle": "Up",
         "quote": "How can an app promote productivity, combate ego-depletion and stress?",
         "topimg": <img id="up" alt="Up Top Screen" className="topimg" src={up_main} />,
@@ -152,44 +159,44 @@ export const projectList = {
             <p>In Malcolm Gladwell’s book ​<i>The Outliers​,</i> it is stated that one requires over 10,000 hours of practice to become an expert of some sort. Such number of hours is extremely difficult of practice for young adults in college or workplace. 10,000 hours equals to roughly 417 days of full practice without a break, which is undoubtedly a difficult task. But what if we base this idea to encourage users to build a focusing habit? Instead of emphasizing how many hours are left until 10,000 hours, why not focus more on the actual time a user has dedicated to his work?</p>
             <img src={up_protos} alt="Initial Paper Prototypes" /><div className="imgdes">Initial Paper Prototypes</div>
             <p>
-            With the approach above, our team has created ​Up based on several psychological concepts including self control, ego-depletion, stress-reduction, intrinsic motivation as related to goal pursuit, and embodied cognition. The application encourages users to form a habitual focus timing of 90 minutes. Users are encouraged to perform a short guided breathing exercise immediately after a focus session concludes to regather
-            brain resources. For each break session, users will have the opportunity to blow a balloon that can be used towards saving an endangered animal 
+                With the approach above, our team has created ​Up based on several psychological concepts including self control, ego-depletion, stress-reduction, intrinsic motivation as related to goal pursuit, and embodied cognition. The application encourages users to form a habitual focus timing of 90 minutes. Users are encouraged to perform a short guided breathing exercise immediately after a focus session concludes to regather
+                brain resources. For each break session, users will have the opportunity to blow a balloon that can be used towards saving an endangered animal
             which will then be transported to user’s “island” of the application.</p></div>,
         "Research": <div>
-            <img src={up_session} className = "phonesc" alt="Concentration Session" /><div className="imgdes">Concentration Session</div>
+            <img src={up_session} className="phonesc" alt="Concentration Session" /><div className="imgdes">Concentration Session</div>
             <p> The main and first part of our application is the concentration timer. Users have the ability to set a time ranging from a minimum of 15 minutes to a maximum of 90 minutes to work on a task of their choice. Our goal is to improve users’ productivity by having them devote a set block of time to working on a specific task, and also prevent them from working on a task too long that they run out of mental energy. The concentration timer is modeled off the Pomodoro technique, which was designed for people to overcome procrastination by committing fully to completing a certain task during a time period of 25 minutes and then having a break of 5 minutes.
             </p>
-            <img src={up_breathing} className = "phonesc" alt="Breathing Session" /><div className="imgdes">Breathing Session</div>
+            <img src={up_breathing} className="phonesc" alt="Breathing Session" /><div className="imgdes">Breathing Session</div>
             <p>
-            The next part of our application is the “break” portion which encourages users to follow a guided deep-breathing exercise. As users breathe out, they will watch a balloon being blown up. We included stealth interventions to help users relieve stress and counteract ego-depletion. This would be beneficial for users’ performance as they enter the next productivity phase. The intervention to counteract ego-depletion was imperative in the design because the ability for users to replenish mental resource contributes to them forming the habit of working productively, 
+                The next part of our application is the “break” portion which encourages users to follow a guided deep-breathing exercise. As users breathe out, they will watch a balloon being blown up. We included stealth interventions to help users relieve stress and counteract ego-depletion. This would be beneficial for users’ performance as they enter the next productivity phase. The intervention to counteract ego-depletion was imperative in the design because the ability for users to replenish mental resource contributes to them forming the habit of working productively,
             taking breaks, and ultimately returning to our application. We included guided deep-breathing - which in experiments show significant effect on improvement of the hemodynamic changes following stressful tasks.</p><p>
-            Also, to make this a true stealth intervention, we took an embedded-design approach by incorporating the visual element of blowing up a balloon as one engages in the guided deep-breathing activity. Blowing up a balloon utilizes the technique of obfuscation via distancing, as the “story” of blowing up a balloon is metaphorical for blowing away one’s stress. 
+                Also, to make this a true stealth intervention, we took an embedded-design approach by incorporating the visual element of blowing up a balloon as one engages in the guided deep-breathing activity. Blowing up a balloon utilizes the technique of obfuscation via distancing, as the “story” of blowing up a balloon is metaphorical for blowing away one’s stress.
             Additionally, obfuscation via misdirection is used because gamified elements such as the colorful graphics of the balloon, would serve as red herrings to detract from the our actual stealth interventions.</p>
-            <img src={up_report} className = "phonesc" alt="Report" /><div className="imgdes">Report</div>
+            <img src={up_report} className="phonesc" alt="Report" /><div className="imgdes">Report</div>
             <p>
-            Our final major design implementation gives users the ability to save virtual endangered animals by obtaining a certain amount of balloons. 
-            Balloons can only be obtained through the completing a concentration session. Different sized balloons will be given based off length of focus time. We believe this feature incentives users to participate in our guided-breathing exercise. We decided not to give out incentives because it might make users to concentrate just to earn rewards, which would undermine intrinsic motivation. Moreover, we incorporate a report on user’s focus time as evidence of progress, which would increase intrinsic motivation to continue 
-            using our application 
+                Our final major design implementation gives users the ability to save virtual endangered animals by obtaining a certain amount of balloons.
+                Balloons can only be obtained through the completing a concentration session. Different sized balloons will be given based off length of focus time. We believe this feature incentives users to participate in our guided-breathing exercise. We decided not to give out incentives because it might make users to concentrate just to earn rewards, which would undermine intrinsic motivation. Moreover, we incorporate a report on user’s focus time as evidence of progress, which would increase intrinsic motivation to continue
+                using our application
 </p></div>,
 
         "Design Challenges": <div>
             <img src={up_proto_blow} alt="Playing with Breathing Sensor" /><div className='imgdes'>Breathing Sensor Detecting the Breathing Activity</div>
 
             <p className="addmargin">- How to reduce demoralizing factors?<br />
-            We conceded about users setting the very short sessions and not actually performing the breathing sessions to get the rewards. To avoid this, we decided to reward users by giving out balloons to save endangered animals. Also, we believe that users would already be motivated to practice on their tasks. Moreover, we decided to use the breathing sensor on the iPhone to not only track the activity, but also strengthen the metaphor of blowing away one’s stress.</p>
+                We conceded about users setting the very short sessions and not actually performing the breathing sessions to get the rewards. To avoid this, we decided to reward users by giving out balloons to save endangered animals. Also, we believe that users would already be motivated to practice on their tasks. Moreover, we decided to use the breathing sensor on the iPhone to not only track the activity, but also strengthen the metaphor of blowing away one’s stress.</p>
             <img src={up_meeting} alt="Early Prototype" className="half" />
             <img src={up_knob} className="half" alt="Early Prototype" /> <div className='imgdes'>Development Process</div>
             <p>
-            - Creating Prototypes<br />
+                - Creating Prototypes<br />
                 After doing user testing with less interactive prototypes, We decided to create a working prototype by coding to give realistic experience to our testers.</p>
-            </div>,
+        </div>,
 
         "Next Steps": <div>
-        <img src={up_animals} id="e_animals" alt="Playing with Breathing Sensor" /><div className='imgdes'>Endangered Animal Illustrations By Ja Young Lee and Judith Leng </div>
+            <img src={up_animals} id="e_animals" alt="Playing with Breathing Sensor" /><div className='imgdes'>Endangered Animal Illustrations By Ja Young Lee and Judith Leng </div>
 
-        <p className="addmargin">While Up is a productivity mobile application that serves as a concentration tool, the overall message Up is delivering to users is importance of constant effort and taking efficient breaks. Up aims to reduce the demoralizing factor occurring outside of the application by constantly rewarding users with animals and acts as a companion that travels with users to keep track of every effort that can count.</p>
+            <p className="addmargin">While Up is a productivity mobile application that serves as a concentration tool, the overall message Up is delivering to users is importance of constant effort and taking efficient breaks. Up aims to reduce the demoralizing factor occurring outside of the application by constantly rewarding users with animals and acts as a companion that travels with users to keep track of every effort that can count.</p>
             <p>
-        At current stage of design, user are limited to saving virtual animals, which may not be as rewarding as contributing to saving animals in the real world. For future implementations, we look forward to having a sponsorship partner with wildlife organizations such as the World WildLife Fund (WWF).</p>
+                At current stage of design, user are limited to saving virtual animals, which may not be as rewarding as contributing to saving animals in the real world. For future implementations, we look forward to having a sponsorship partner with wildlife organizations such as the World WildLife Fund (WWF).</p>
         </div>,
     },
     "getcuisine": {
@@ -246,29 +253,29 @@ export const projectList = {
         "Ideation": <div>
             <p> The prompt of Bose Challenge was <i><b>“How might we use sound-based augmented reality to improve our lives?”</b></i> Among the idea we had, we decided to focus on improving cooperation situations which require team members’ communications about their locations and status. More specifically, we narrowed down our target as firefighters, about their rescue operations in extreme situations.</p> <p>Our assumption here is that under the urgent circumstances of limited vision and hearing, it is difficult to communicate accurate location information via speaking. Therefore, we designed a way to communicate each other automatically generated location data based on their GPS with minimum hand control. </p><img src={logpos1} alt="Ideation Meeting" /><div className='imgdes'>Ideation Meeting</div> </div>,
         "User Research": <div>
-            <p> With our basic ideation, we conducted a phone interview with a firefighter. He confirmed that our idea will be helpful, and gave us the problems about the current system has.</p><img src={logpos2} alt="Phone Interview"/><div className='imgdes'>Phone Interview</div><p>According to the firefighter, there is a system providing location information using sound and blinking lights after a firefighter being motionless for 30 seconds (Watch the video for additional information). However, the issue is that the location information is verbally communicated, so the information rescue team has might not be the latest information. Also, the light and sound signals can be hindered by the fire and the smoke. Our solution solves this problem by providing real-time information directly to the firefighters through the device.</p></div>,
+            <p> With our basic ideation, we conducted a phone interview with a firefighter. He confirmed that our idea will be helpful, and gave us the problems about the current system has.</p><img src={logpos2} alt="Phone Interview" /><div className='imgdes'>Phone Interview</div><p>According to the firefighter, there is a system providing location information using sound and blinking lights after a firefighter being motionless for 30 seconds (Watch the video for additional information). However, the issue is that the location information is verbally communicated, so the information rescue team has might not be the latest information. Also, the light and sound signals can be hindered by the fire and the smoke. Our solution solves this problem by providing real-time information directly to the firefighters through the device.</p></div>,
 
         "Challenges": <div><div className='title logpos' >Technical Challenge:</div>How can we get the accurate indoor location data?<div className='solution'><li>To get accurate location data, we designed our device to use the bluetooth devices for better location accuracy.</li></div><div className='title logpos'>Social Constraints:</div>According to the interview, there are two social constraints:<br />Firefighters sometimes rely on their ears to determine the temprature. Therefore, there should not be a thing cover their ears.<br /> Firefighters resist change, especially if it is going to be hard to put on. <div className='solution'> <li>We designed an audio AR device satisfying these challenges. </li></div><img src={logpos3} alt="Device Design" /><div className='imgdes'>Device Desiged by <a href='http://www.hyunwoopaik.com' target='_blank' rel="noopener noreferrer">Hyun Woo Paik</a></div></div>,
 
         "Final Design": <div><p>To create a video explining our idea, we made a scenario conveying how our design can be applied to the target situations.</p>
-        <img className="half" src={logposstory1} alt="Storyboard 1"/> <img className="half" src={logposstory2} alt="Storyboard 2" /><div className="imgdes">Video Storyboard by Ja Young Lee</div>
-        <p>The device can be controlled with verbal and head motions.</p>
-        <div className="control">
-        <img id="connected" src={logposrun1} alt="Control: Connect" /></div>
-        <li className="animdes">Team members connect the devices before getting into the operation.</li>
-        <div className="control"><img className="anim continuImg" alt="Control: Getting Messages 1" src={logposrun2} />
-        <img className="continuImg" src={logposrun3} alt="Control: Getting Messages 2" /></div><div className="imgdes">Hover on the image</div>
-        <li className="animdes">Users will continuously get the messages from others as walkie-talkie</li>
-        <div className="control"><img className="anim" src={logposrun4}  alt="Control: Locate All 1"/><img src={logposrun5} alt="Control: Locate All 2"/></div>
-        <div className="imgdes">Hover on the image</div>
-        <li className="animdes">With a verbal control of <b><i>"Locate All,"</i></b> a user will continuously get the location information of everyone based on his or her head direction. </li>
-        <div className="control"><img className="anim" src={logposrun6} alt="Control: Locate ['name'] 1"/> <img src={logposrun7} alt="Control: Locate ['name'] 2"/></div>
-        <div className="imgdes">Hover on the image</div>
-        <li className="animdes">With a verbal control of <b><i>"Locate [Name],"</i></b> a user will get a specific person's location based on his or her head direction.</li> 
-        <div className="control"><img className="anim" src={logposrun8} alt="Communication 1"/><img src={logposrun9} alt="Communication 2"/></div>
-        <div className="imgdes">Hover on the image</div>
-        <li className="animdes">When a user wants to communicate with other people, he or she will push the button on the side, and will speak. This message will go to everyone as walkie-talkie.</li>
-        <div className="control"><img id="deactivate" alt="Deactivate" src={logposrun10} /> </div><li className="animdes">When a user wants to stop getting the location information, he or she can speak <b><i>"Deactivate"</i></b> to stop the function.</li></div>
+            <img className="half" src={logposstory1} alt="Storyboard 1" /> <img className="half" src={logposstory2} alt="Storyboard 2" /><div className="imgdes">Video Storyboard by Ja Young Lee</div>
+            <p>The device can be controlled with verbal and head motions.</p>
+            <div className="control">
+                <img id="connected" src={logposrun1} alt="Control: Connect" /></div>
+            <li className="animdes">Team members connect the devices before getting into the operation.</li>
+            <div className="control"><img className="anim continuImg" alt="Control: Getting Messages 1" src={logposrun2} />
+                <img className="continuImg" src={logposrun3} alt="Control: Getting Messages 2" /></div><div className="imgdes">Hover on the image</div>
+            <li className="animdes">Users will continuously get the messages from others as walkie-talkie</li>
+            <div className="control"><img className="anim" src={logposrun4} alt="Control: Locate All 1" /><img src={logposrun5} alt="Control: Locate All 2" /></div>
+            <div className="imgdes">Hover on the image</div>
+            <li className="animdes">With a verbal control of <b><i>"Locate All,"</i></b> a user will continuously get the location information of everyone based on his or her head direction. </li>
+            <div className="control"><img className="anim" src={logposrun6} alt="Control: Locate ['name'] 1" /> <img src={logposrun7} alt="Control: Locate ['name'] 2" /></div>
+            <div className="imgdes">Hover on the image</div>
+            <li className="animdes">With a verbal control of <b><i>"Locate [Name],"</i></b> a user will get a specific person's location based on his or her head direction.</li>
+            <div className="control"><img className="anim" src={logposrun8} alt="Communication 1" /><img src={logposrun9} alt="Communication 2" /></div>
+            <div className="imgdes">Hover on the image</div>
+            <li className="animdes">When a user wants to communicate with other people, he or she will push the button on the side, and will speak. This message will go to everyone as walkie-talkie.</li>
+            <div className="control"><img id="deactivate" alt="Deactivate" src={logposrun10} /> </div><li className="animdes">When a user wants to stop getting the location information, he or she can speak <b><i>"Deactivate"</i></b> to stop the function.</li></div>
     },
     "dote": {
         "projectTitle": "DoteNote",
@@ -287,8 +294,8 @@ export const projectList = {
         "Ideation": <div>
             <p> Our idea started from a thought: what if we can leave our lovers a virtual message at a specific location ?
             Using AR technology, we focused on messaging emotions related to locations.
-                With DoteNote, users can leave 3D messages at specific locations.</p><img className="half" src={dote1} alt="Ideation Meeting 1"/>
-            <img className="half" src={dote2} alt="Ideation Meeting 2"/>
+                With DoteNote, users can leave 3D messages at specific locations.</p><img className="half" src={dote1} alt="Ideation Meeting 1" />
+            <img className="half" src={dote2} alt="Ideation Meeting 2" />
             <div className="imgdes">Ideation Meeting</div> </div>,
         "Challenges": <div>
             <img src={dote3} alt="AR Testting" />
@@ -307,12 +314,12 @@ export const projectList = {
                 To solve these issues we decided to push the notification approximately within a block. </p>
 
             <div>
-            <img className="solu_dote" src={dote4} alt="Solution 1"/>
-            <div className="imgdes">If a user is on the same side of the street, they can see the message by looking around.</div></div>
-            
+                <img className="solu_dote" src={dote4} alt="Solution 1" />
+                <div className="imgdes">If a user is on the same side of the street, they can see the message by looking around.</div></div>
+
             <div>
-            <img className="solu_dote" src={dote5} alt="Solution 2"/>
-            <div className="imgdes">If a user is around the corner, because the notification comes up when they enter the range of one block, they can know which direction the message is located. If they are from the side where the message is located, they get the notification before they enter the street.</div>
+                <img className="solu_dote" src={dote5} alt="Solution 2" />
+                <div className="imgdes">If a user is around the corner, because the notification comes up when they enter the range of one block, they can know which direction the message is located. If they are from the side where the message is located, they get the notification before they enter the street.</div>
             </div></div>,
 
         "Final Design": <div>
@@ -325,9 +332,9 @@ export const projectList = {
         "projectTitle": "I am a Reporter",
         "quote": "How to make the UI of a visual novel easy enough for novice users?",
         "topimg": <img id="reporter" className="topimg" alt="Game Main Screen" src={reporter0} />,
-        "button":<a href="https://goo.gl/B7sXrV" target="_blank" rel="noopener noreferrer">
-        <div className="button reporter">Go to Invision Prototype</div>
-    </a>,
+        "button": <a href="https://goo.gl/B7sXrV" target="_blank" rel="noopener noreferrer">
+            <div className="button reporter">Go to Invision Prototype</div>
+        </a>,
         "exlpla": {
             "Time": "Aug 2016 ~ Dec 2016",
             "Team": "1 developer, 1 writer, 1 designer (Ja Young Lee)",
@@ -342,9 +349,9 @@ export const projectList = {
             <p>How can we design the overall concept to be accepted by wide range of people? Many visual novel games use drawing style of cell-animation, which some people feel childish. </p>
             <div className="solution"><li>As a solution, we chose realistic illustration style.</li></div>
             <div className="onethird">
-                <img src={reporter1} alt="Illustration 1"/>
-                <img src={reporter2} alt="Illustration 2"/>
-                <img src={reporter3} alt="Illustration 3"/>
+                <img src={reporter1} alt="Illustration 1" />
+                <img src={reporter2} alt="Illustration 2" />
+                <img src={reporter3} alt="Illustration 3" />
             </div>
             <div className="title reporter">UI Challenge:</div>
             <p>How can we make the interface intuitive enough for people who have not played visual novel game can easily play?</p>
@@ -358,9 +365,9 @@ export const projectList = {
         </div>,
 
         "Interface": <div className="onethird">
-            <img src={reporter4} alt="Screen 1"/>
-            <img src={reporter5} alt="Screen 2"/>
-            <img src={reporter6} alt="Screen 3"/>
+            <img src={reporter4} alt="Screen 1" />
+            <img src={reporter5} alt="Screen 2" />
+            <img src={reporter6} alt="Screen 3" />
             <a href="https://goo.gl/B7sXrV" target="_blank" rel="noopener noreferrer">
                 <div className="button reporter">Go to Invision Prototype</div>
             </a>
@@ -385,21 +392,21 @@ export const projectList = {
             <div className="evensc before"> <img src={even1} alt="Screen Before" />
                 <div className="ori">Original</div>
             </div>
-            <div className="evensc after"> <img src={even2} alt="Screen After 1"/> <img src={even3} alt="Screen After 2"/>
+            <div className="evensc after"> <img src={even2} alt="Screen After 1" /> <img src={even3} alt="Screen After 2" />
                 <div className="impro">Improved</div>
             </div>
 
         </div>,
 
         "Prototype": <div>
-            <img className="half" src={even4} alt="Prototype"/>
+            <img className="half" src={even4} alt="Prototype" />
         </div>,
         "Process": <div>
             <div className="center">
                 <div className="evenwrapper inpfld"> <img src={even1} alt="Screen Before - Input Field" />
                     <div className="spot blu" />
                 </div>
-                <div className="evenwrapper inpfld"> <img src={even2} alt="Screen After - Input Field"/>
+                <div className="evenwrapper inpfld"> <img src={even2} alt="Screen After - Input Field" />
                     <div className="spot red" />
                 </div>
             </div>
@@ -411,10 +418,10 @@ export const projectList = {
             <p> Initially, the boxes were next to each other because they had the same priority level. However, from the user's perspective, the function can also be considered as finding a middle point from Spot A to B. Additionally, the boxes were too small to type in an address. Thus, I stacked two boxes on top of each other to gain more space which also makes the addresses easier to read.</p>
             <p> In addition, I changed the toggle buttons to simple icons, because a toggle button is more efficient for the ON/OFF option. By making different transportation options default, users will know that there are different types to choose from.</p>
             <div className="center">
-                <div className="evenwrapper maparea"> <img src={even1} alt="Screen Before - Map"/>
+                <div className="evenwrapper maparea"> <img src={even1} alt="Screen Before - Map" />
                     <div className="spot blu" />
                 </div>
-                <div className="evenwrapper maparea"> <img src={even2} alt="Screen After - Map"/>
+                <div className="evenwrapper maparea"> <img src={even2} alt="Screen After - Map" />
                     <div className="spot red" />
                 </div>
             </div>
@@ -423,10 +430,10 @@ export const projectList = {
             <li className="animdes">Differentiated the action types</li>
             <p>Next, I expanded the map area: the white space around the map area was decreased, which makes the area seem unlimited. This also works well with the zoom function.</p>
             <div className="center">
-                <div className="evenwrapper bicons"> <img src={even1} alt="Screen Before - Checkbox"/>
+                <div className="evenwrapper bicons"> <img src={even1} alt="Screen Before - Checkbox" />
                     <div className="spot blu" />
                 </div>
-                <div className="evenwrapper bicons"> <img src={even2} alt="Screen After - Checkbox"/>
+                <div className="evenwrapper bicons"> <img src={even2} alt="Screen After - Checkbox" />
                     <div className="spot red" />
                 </div>
             </div>
@@ -442,10 +449,10 @@ export const projectList = {
             <img src={momo1} className="momoscreen" alt="Momoko - iOS" />
             <img src={momo2} className="momoscreen" alt="Momoko - LINE" /> <br />
             <a href="https://itunes.apple.com/ca/app/happy-momoko/id1207545553?mt=8" target="_blank" rel="noopener noreferrer">
-                <img src={momo_btn2} className="storebtn" id="appstore" alt="App Store Button"/>
+                <img src={momo_btn2} className="storebtn" id="appstore" alt="App Store Button" />
             </a>
             <a href="https://store.line.me/stickershop/product/1387989/en" target="_blank" rel="noopener noreferrer">
-                <img src={momo_btn1} className="storebtn" id="linestore" alt="Line Store Button"/>
+                <img src={momo_btn1} className="storebtn" id="linestore" alt="Line Store Button" />
             </a>
         </div>,
         "exlpla": {
@@ -460,16 +467,7 @@ export const projectList = {
                     <span className="mobileonly">Click</span><span className="forall">Hover mouse on</span> thumbnails below to see the animations.
               </div>
                 <div className="animation_wrap">
-                    <img src={momo3} id="pointers" alt="Pointer Animation"/>
-
-                    <div className="aniwrap">
-                        <img className="thumb" src={momo4_1} alt="Momoko Thumbnail 1"/>
-                        <img className="ani" src={momo4_2} alt="Momoko Animation 1"/>
-                    </div>
-                    <div className="aniwrap">
-                        <img className="thumb" src={momo5_1} alt="Momoko Thumbnail 2"/>
-                        <img className="ani" src={momo5_2} alt="Momoko Animation 1"/>
-                    </div>
+                    <img src={momo3} id="pointers" alt="Pointer Animation" />
                     {anigenerator()}
                 </div>
             </div>
@@ -483,26 +481,45 @@ export const projectList = {
         />,
         "exlpla": {
         },
-        "Video":
+        "About the video...":
             <div>
                 <p>This is a video I created for the 10th anniversary of my high school, Gyeongsan Science High School (G.S.S.H.). The music in the beginning is my classmate's recent piano play. It shows our school year memories and how we have grown up. The background music was the school's morning alarm music: Heal the World.</p>
             </div>
     },
     "naoshima": {
-        "projectTitle": "Art of Naoshima",
-        "quote": "How can I convey the information of a travel location?",
-        "topimg": <img id='naoshima' className="topimg imgBorder" src={naoshima} alt="Naoshima"/>,
+        "projectTitle": "Artwork of Naoshima",
+        "quote": "How can a web application introduce a travel location?",
+        "topimg": <img id='naoshima' className="topimg imgBorder" src={naoshima} alt="Naoshima" />,
+        "button": <a href="https://jayolee.github.io/Travel-app/" target="_blank" rel="noopener noreferrer">
+        <div className="button naoshima">Go to the Website</div>
+    </a>,
         "exlpla": {
             "Time": "Sep 2018",
             "Team": "Ja Young Lee",
-            "Role": "illustration, UI/UX design, coding",
+            "Role": "illustration, UI/UX design, development",
             "Tool": "Sketch (iPad), React, Adobe Photoshop",
         },
-        "Process":
-            <div>
-                <p>Currently working on the process journal.</p>
-                <a href="https://jayolee.github.io/Travel-app/" target="_blank" rel="noopener noreferrer">
-                    <div className="button naoshima">Go to the Website</div></a>
-            </div>
+        "Ideation": <div>
+            <p>For a React web application project for <i>Software Structures for User Interfaces</i> class at CMU in Fall 2018, I chose Naoshima, Japan as the travel location I will introduce.<br />
+                Naoshima is the place I visited in summer 2018. It is an island full of artworks.  </p></div>,
+        "Prototypes": <div>
+            <img src={nao_lofi} alt="Lo-fi Prototype" className="half" />
+            <img src={nao_midfi} alt="Mid-fi Prototype" className="half" /><div class="imgdes">Lo-fi and Mid-fi Prototypes</div>
+            <p>As a web application introducing a specific location, I wanted to give a feeling of staying on one page but looking at different aspects of the website. Therefore, I designed all pages appearing as layers above the home page.</p>
+            </div>,
+
+        "Interaction": <div>
+            <img src={nao_about} className="imgBorder" alt="About Page Interaction" />
+            <div class="imgdes">About Page Interaction</div>
+            <p>To make different layers of pages more obvious, I gave page transition animations.</p></div>,
+
+        "Illustrations": <div>
+            <img src={nao_sketches} alt="Illustrations" className="half" /> <img src={nao_drawing} alt="Drawing on iPad" className="half" /><div className='imgdes'>Hand-Drawn Digital Illustrations on iPad Sketch</div>
+            <p>Because Naoshima is the island with many famous artworks, I wanted to give the artistic feeling to the website. Therefore, I added hand-drawn digital illustrations.</p>
+           </div>,
+
+        "Image Source": <div>
+            <img src={nao_detail} alt="Image Source on Detail Page" /><div className='imgdes'>Image Source Button on the Detail Pages</div>
+            <p>Since the website is heavily relying on many images from other sites, I added Images Source buttons on each detail page of photos.</p></div>,
     },
 }

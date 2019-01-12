@@ -300,6 +300,11 @@ $up: #E9974C;
 		display: inline-block;
 		vertical-align: top;
 	}
+	@media screen and (max-width:736px) {
+		.half{
+			width:95%;
+		}
+	}
 	a{
 		text-decoration: underline;
 		color:rgba(0,0,0,0.8);
@@ -551,6 +556,7 @@ a.member{
 .momoscreen{
 	margin:10px;
 	margin-bottom:20px;
+	max-width:280px;
 }
 /*even*/
 .evensc{
@@ -844,6 +850,11 @@ $imgshadow: 0 0 14px rgba(0,0,0,0.2);
 }
 #linestore{
 	max-width:100% !important;
+	width:230px;
+	margin: {
+		right:10px;
+		left:10px;
+	}
 }
 @media screen and (min-width:420px){
 	.mobileonly{
