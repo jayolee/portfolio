@@ -262,20 +262,20 @@ export const projectList = {
             <p>The device can be controlled with verbal and head motions.</p>
             <div className="control">
                 <img id="connected" src={logposrun1} alt="Control: Connect" /></div>
-            <li className="animdes">Team members connect the devices before getting into the operation.</li>
+            <div className="imgdes solution">Team members connect the devices before getting into the operation.</div>
             <div className="control"><img className="anim continuImg" alt="Control: Getting Messages 1" src={logposrun2} />
-                <img className="continuImg" src={logposrun3} alt="Control: Getting Messages 2" /></div><div className="imgdes">Hover on the image</div>
-            <li className="animdes">Users will continuously get the messages from others as walkie-talkie</li>
+                <img className="continuImg" src={logposrun3} alt="Control: Getting Messages 2" /></div><div className="imgdes hover">Hover on the image</div>
+            <div className="imgdes solution">Users will continuously get the messages from others as walkie-talkie</div>
             <div className="control"><img className="anim" src={logposrun4} alt="Control: Locate All 1" /><img src={logposrun5} alt="Control: Locate All 2" /></div>
-            <div className="imgdes">Hover on the image</div>
-            <li className="animdes">With a verbal control of <b><i>"Locate All,"</i></b> a user will continuously get the location information of everyone based on his or her head direction. </li>
+            <div className="imgdes hover">Hover on the image</div>
+            <div className="imgdes solution">With a verbal control of <b><i>"Locate All,"</i></b> a user will continuously get the location information of everyone based on his or her head direction. </div>
             <div className="control"><img className="anim" src={logposrun6} alt="Control: Locate ['name'] 1" /> <img src={logposrun7} alt="Control: Locate ['name'] 2" /></div>
-            <div className="imgdes">Hover on the image</div>
-            <li className="animdes">With a verbal control of <b><i>"Locate [Name],"</i></b> a user will get a specific person's location based on his or her head direction.</li>
+            <div className="imgdes hover">Hover on the image</div>
+            <div className="imgdes solution">With a verbal control of <b><i>"Locate [Name],"</i></b> a user will get a specific person's location based on his or her head direction.</div>
             <div className="control"><img className="anim" src={logposrun8} alt="Communication 1" /><img src={logposrun9} alt="Communication 2" /></div>
-            <div className="imgdes">Hover on the image</div>
-            <li className="animdes">When a user wants to communicate with other people, he or she will push the button on the side, and will speak. This message will go to everyone as walkie-talkie.</li>
-            <div className="control"><img id="deactivate" alt="Deactivate" src={logposrun10} /> </div><li className="animdes">When a user wants to stop getting the location information, he or she can speak <b><i>"Deactivate"</i></b> to stop the function.</li></div>
+            <div className="imgdes hover">Hover on the image</div>
+            <div className="imgdes solution">When a user wants to communicate with other people, he or she will push the button on the side, and will speak. This message will go to everyone as walkie-talkie.</div>
+            <div className="control"><img id="deactivate" alt="Deactivate" src={logposrun10} /> </div><div className="imgdes solution">When a user wants to stop getting the location information, he or she can speak <b><i>"Deactivate"</i></b> to stop the function.</div></div>
     },
     "dote": {
         "projectTitle": "DoteNote",
@@ -315,11 +315,11 @@ export const projectList = {
 
             <div>
                 <img className="solu_dote" src={dote4} alt="Solution 1" />
-                <div className="imgdes">If a user is on the same side of the street, they can see the message by looking around.</div></div>
+                <div className="imgdes solution">If a user is on the same side of the street, they can see the message by looking around.</div></div>
 
             <div>
                 <img className="solu_dote" src={dote5} alt="Solution 2" />
-                <div className="imgdes">If a user is around the corner, because the notification comes up when they enter the range of one block, they can know which direction the message is located. If they are from the side where the message is located, they get the notification before they enter the street.</div>
+                <div className="imgdes solution">If a user is around the corner, because the notification comes up when they enter the range of one block, they can know which direction the message is located. If they are from the side where the message is located, they get the notification before they enter the street.</div>
             </div></div>,
 
         "Final Design": <div>

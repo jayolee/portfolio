@@ -10,6 +10,8 @@ class Projects extends Component {
     this.state = {
       page: 1,
       active: true,
+      opacity:0,
+      transform: "translateY(700px)",
     }
     this.vidid = {
       "log": "5Q6vJg-OufI",
@@ -20,20 +22,13 @@ class Projects extends Component {
   }
   
   rollup() {
-        let contentdiv = document.getElementsByClassName("contentbox")[0];
-    let greydiv = document.getElementsByClassName("greybox")[0];
-    contentdiv.style.opacity = "1";
-    greydiv.style.opacity = "1";
-    setTimeout(function () { contentdiv.style.transform = "translateY(0)"; }, 50)
+    this.setState({opacity:1})
+    setTimeout(function () { this.setState({transform:"translateY(0)"}) }.bind(this), 50)
 
 
   }
   rolldown() {
-    let contentdiv = document.getElementsByClassName("contentbox")[0];
-    let greydiv = document.getElementsByClassName("greybox")[0];
-    contentdiv.style.opacity = "0";
-    contentdiv.style.transform = "translateY(700px)";
-    greydiv.style.opacity = "0";
+    this.setState({opacity:0, transform:"translateY(700px)"});
     setTimeout(function () { this.props.closehandle(); }.bind(this), 500)
   }
 
@@ -66,7 +61,7 @@ class Projects extends Component {
       )
     }
     if (this.contents[item].button) {
-      element.push(<div className="contentbox" key="contentbox">
+      element.push(<div className="contentbox" key="contentbox" style={{opacity:this.state.opacity, transform:this.state.transform}}> 
         <div className={"enttitle " + this.props.idnum} >{this.contents[item].projectTitle}
           <div className="xmark" onClick={this.rolldown.bind(this)}>
             <svg width="50" height="50">
@@ -94,7 +89,7 @@ class Projects extends Component {
       )
     }
     else {
-      element.push(<div className="contentbox" key="contentbox">
+      element.push(<div className="contentbox" key="contentbox" style={{opacity:this.state.opacity, transform:this.state.transform}}>
         <div className={"enttitle " + this.props.idnum} >{this.contents[item].projectTitle}
           <div className="xmark" onClick={this.rolldown.bind(this)}>
             <svg width="50" height="50">
@@ -115,6 +110,7 @@ class Projects extends Component {
             {contentelement}
           </div>
         </div>
+        
       </div>
       )
     }
@@ -127,8 +123,15 @@ class Projects extends Component {
   render() {
     return (
       <div style={{ position: "absolute", top: "0", left: "0", width: "100%", height: "100%" }}>
-        <div className="greybox" />
+        <div className="greybox" style={{opacity:this.state.opacity}}/>
         {this.contentgenerator()}
+        <div className={"gototop "+ this.props.idnum} style={{opacity:this.state.opacity}} onClick={(ev) => window.scroll(0,0)} >
+        <svg width="30" height="30">
+              <path d="M4 15 L15 4 L26 15 M15 4 L15 26" />
+            </svg>
+            <div className={"gototop_descrip " + this.props.idnum}>Go to Top
+            </div>
+            <div className={"triangle " + this.props.idnum} /></div>
       </div>
 
     );

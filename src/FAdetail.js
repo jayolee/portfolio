@@ -8,12 +8,23 @@ class FAdetail extends Component {
     super(props);
     this.state = {
       currentOrder: this.props.orderinArray,
+      opacity:0,
+      scroll:0,
     }
   }
-  
-  componentDidMount() {
-    window.scrollTo(0, 0)
-  }
+  componentDidMount(){
+
+    let curscroll=window.scrollY
+   this.setState({scroll: curscroll});
+    setTimeout(function(){
+        this.setState({opacity:1})
+    }.bind(this),10);
+}
+closing(){
+    this.setState({opacity:0});
+    setTimeout(function(){this.props.closehandle()}.bind(this),300);;
+
+}
 renderImg(){
   return (
     <div>
@@ -80,10 +91,10 @@ renderArrows(){
   render(){
 
     return (
-        <div>
+        <div style={{opacity:this.state.opacity, transition:'.3s'}}>
         <div className="greybox" />
-          <div className="FAdetail">
-          <div className="xmark" onClick={this.props.closehandle} >
+          <div className="FAdetail" style={{ top:this.state.scroll}}>
+          <div className="xmark" onClick={this.closing.bind(this)} >
               <svg width="50" height="50">
                <path d="M10 10 L40 40 M40 10 L10 40" />
               </svg>

@@ -3,6 +3,7 @@ import './App.scss';
 import './projects.scss'
 import './FA.scss'
 import FAdetail from './FAdetail.js'
+import FaCv from './FA_CV.js'
 
 import paint1 from './FA/images/image1-1.jpg'
 import paint2 from './FA/images/image1-2.jpg'
@@ -49,7 +50,7 @@ class FAs extends Component {
 	  orderinArray:0,
 	  imglist:{},
 	  active:true,
-	  
+	  opacity:0,
     }
 
    
@@ -246,7 +247,7 @@ this.gallery_others=[
     }
 
 	closehandler(){
-		setTimeout(this.setState({page:0}), 300);
+		this.setState({page:0, opacity:0});
 		
 	  }
 
@@ -270,9 +271,14 @@ this.gallery_others=[
   
   return element
 }
+bioGenerator(){
+	if(this.state.page === 9){
+	return <FaCv key="cv" closehandle={this.closehandler.bind(this)}/>
+	}
+}
 detailviewgenerator(){
 	if(this.state.page === 5){
-		return <FAdetail imglist = {this.state.imglist } orderinArray = {this.state.orderinArray} closehandle={this.closehandler.bind(this)} />
+		return <FAdetail key="fadetail" imglist = {this.state.imglist } orderinArray = {this.state.orderinArray} closehandle={this.closehandler.bind(this)} />
 	}
 }
 
@@ -280,10 +286,18 @@ detailviewgenerator(){
 
     return (
       <div className="workbox">
+	  <div className="button fa" onClick={(ev) => this.setState({page : 9})}>Artist CV</div>
+	  <div>
 		{this.listgenerator(this.gallery_paint)}
+		</div>
+		<div>
 		{this.listgenerator(this.gallery_draw)}
+		</div>
+		<div>
 		{this.listgenerator(this.gallery_others)}
+		</div>
 		{this.detailviewgenerator()}
+		{this.bioGenerator()}
       </div>
 
     );
