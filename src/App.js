@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Link, Route, BrowserRouter as Router, Switch, Redirect} from 'react-router-dom'
+import { Route, BrowserRouter as Router, Switch, Redirect} from 'react-router-dom'
 import './App.scss';
 import Header from './header.js'
 import Fun from './fun.js'
@@ -8,7 +8,6 @@ import './projects.scss'
 import MainProject from './mainProject.js'
 import FAs from './FA.js'
 import About from './About.js'
-import Projects from './projects.js'
 
 class App extends Component {
 
