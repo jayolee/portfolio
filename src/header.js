@@ -27,7 +27,7 @@ class Header extends Component {
     getCurPage(){
         let curpagePath=this.props.location.pathname;
         curpagePath=curpagePath.toLowerCase();
-        curpagePath=curpagePath.slice(11,14);
+        curpagePath=curpagePath.slice(1, 4);
         let newpage=0;
         switch(curpagePath){
             case "pro":
