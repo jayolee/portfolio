@@ -696,6 +696,29 @@ width:102px;
     }
 }
 
+//404Page
+#momo404Wrap{
+  @include sizes(100%, 244px);
+  position:relative;
+  overflow:hidden;
+  @include transform(translateY(-110px));
+}
+#momo404{
+  @include sizes(140px);
+  position:absolute;
+  @include positions(0,null ,null ,calc(50% + 130px));
+}
+@media screen and (max-width:580px){
+  #momo404Wrap{
+    @include sizes(100%, 244px);
+    position:relative;
+    overflow:hidden;
+    @include transform(none);
+  }
+  #momo404{
+    @include positions(0, null, null, calc(50% + 40px));
+  }
+}
 @media screen and (max-width: 736px) {
   html,
   body {

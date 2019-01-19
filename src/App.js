@@ -4,10 +4,12 @@ import './App.scss';
 import Header from './header.js'
 import Fun from './fun.js'
 import logo from './images/younglogo.svg'
+import text from './images/404text.svg'
 import './projects.scss'
 import MainProject from './mainProject.js'
 import FAs from './FA.js'
 import About from './About.js'
+import Page404 from './page404.js'
 
 class App extends Component {
 
@@ -21,8 +23,11 @@ class App extends Component {
       activelist: ['uiux', 'code', 'ideation', 'illustration', 'animation', 'video'],
       deactivelist: [],
     }
-    this.star_position = this.star_position_generator();
-    this.star_twinkle = this.star_twinkle_generator();
+    this.star_position = this.starPosGenerator();
+    this.star_twinkle = this.starTwinkleGenerator();
+    this.logoList=[logo, text];
+    this.logoStyle=[{}, {width:"100%"}];
+    this.logoWrapStyle=[{}, {height:"171px"}];
     this.typelist = ['uiux', 'code', 'ideation', 'illustration', 'animation', 'video'];
     this.typenames = {
       'ideation': 'Ideation',
@@ -34,28 +39,14 @@ class App extends Component {
     }
   }
 
-  //display works
-  // renderPageView() {
-  //   if (this.state.page === 4) {
-  //     return <Projects idnum={this.state.curid} closehandle={this.closehandler.bind(this)} />
-  //   };
-  // }
-  //Function updating current page on state
-
-
-  projectdisplay = (menunumber, pagenum) => {
-    this.setState({ page: (menunumber) * 1, curid: pagenum });
+  updateLogo = (i) => {
+      this.setState({ page: i});
+    
   }
-
-  //Func to close the project detail boxes
-  closehandler() {
-    setTimeout(this.setState({ page: 0 }), 300);
-  }
-
 
   //Funcs for stars 
   //function to generate star animation durations
-  star_twinkle_generator() {
+  starTwinkleGenerator() {
     let duration = [];
     let starstyle = {};
     let temp_duration = 0;
@@ -71,7 +62,7 @@ class App extends Component {
   }
 
   //function to randomly generate star positions
-  star_position_generator() {
+  starPosGenerator() {
     let element = [];
     let leftv = 0;
     let topv = 0;
@@ -93,9 +84,9 @@ class App extends Component {
     return (element);
   }
   //function to create stars
-  star_generator() {
+  starGenerator() {
     let welcommsg = '　　　　　　　∩\n　　　　　　　||\n　　　　　　　||\n　　　　　　　||\n　　　　　 ／￣￣＼\n　　　　　｜　　　 ヽ\n　　　　　/　　　　 |\n　 |＼　／　／ヽ / ノ\n　 |／￣￣￣＼ |/ /\n　 /　　　　　Ｖ＿)\n　｜(● ●)　 ｜\n　王(_人_) 三 /\n　 ＼＿＿＿_／\n　 _/ /_/ /\n　(＿ﾉ(＿ﾉ\n WELCOME!'
-    console.log(welcommsg);
+    console.log(welcommsg); //welcome message printing
     let element = [];
 
     for (let i = 0; i < this.star_position.length; i++)
@@ -111,7 +102,7 @@ class App extends Component {
         <div>
         <div className="starwrap_out">
           <div className="starwrap_in" key="starwrap">
-            {this.star_generator()}
+            {this.starGenerator()}
           </div>
         </div>
         <Header key="header" pagenum={this.state.menu} menustatus={this.menustatus} />
@@ -119,9 +110,9 @@ class App extends Component {
         <div className="works">
         
           <div className="logobox">
-            <div className="logowrap">
+            <div className="logowrap" style={this.logoWrapStyle[this.state.page]}>
               <a href={process.env.PUBLIC_URL +"/project"} >
-                <img src={logo} id="ylogo" alt="logo" onClick={(ev)=> this.setState({menu:0})}/>
+                <img src={this.logoList[this.state.page]} id="ylogo" alt="logo" style={this.logoStyle[this.state.page]} onClick={(ev)=> this.setState({menu:0})}/>
                 </a>
             </div>
           </div>
@@ -130,7 +121,8 @@ class App extends Component {
           <Route path={process.env.PUBLIC_URL +"/fun/"} component={Fun} />
           <Route path={process.env.PUBLIC_URL +"/fineart/"} component={FAs} />
           <Route path={process.env.PUBLIC_URL +"/about/"} component={About} />
-          <Redirect to={process.env.PUBLIC_URL +"/project/" } />
+          <Route path={process.env.PUBLIC_URL +"/404/"} render={props => <Page404  updateLogo={this.updateLogo.bind(this)}/>} />
+          <Redirect to={process.env.PUBLIC_URL +"/404/" }/>
           </Switch>
           </div>
         

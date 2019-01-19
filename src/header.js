@@ -27,29 +27,18 @@ class Header extends Component {
     getCurPage(){
         let curpagePath=this.props.location.pathname;
         curpagePath=curpagePath.toLowerCase();
-        curpagePath=curpagePath.slice(1, 4);
+        
+        let urlList=['/project', '/fun', '/fineart', '/about']
         let newpage=0;
-        switch(curpagePath){
-            case "pro":
-                this.setState({pagenumber:0});
-                newpage=0;
-                break;
-            case "fun":
-                this.setState({pagenumber:1});
-                newpage=1;
-                break;
-            case "fin":
-                this.setState({pagenumber:2});
-                newpage=2;
-                break;
-            case "abo":
-                this.setState({pagenumber:3});
-                newpage=3;
-                break;
-            default:
-            this.setState({pagenumber:0});
-            newpage=0;
+        let urlRegex;
+        for(let i=0; i<urlList.length; i++){
+            urlRegex = new RegExp(urlList[i]);
+            if(urlRegex.exec(curpagePath)){
+                this.setState({pagenumber:i});
+                newpage=i;
+            }
         }
+        
         let newid=newpage;
         let menuli = ["", "", "", ""];
         let menudot = ["menudot", "menudot", "menudot", "menudot"];
@@ -75,9 +64,7 @@ class Header extends Component {
         let element = [];
         let menuUrl = '/';
         for (let i = 0; i < 4; i++) {
-            if (i > 0) {
-                menuUrl = process.env.PUBLIC_URL + '/' + this.menulist[this.keylist[i]][1];  //Set the url depends on the menu
-            }
+            menuUrl = process.env.PUBLIC_URL + '/' + this.menulist[this.keylist[i]][1];  //Set the url depends on the menu
             element.push(
                 <li id={this.menulist[this.keylist[i]][0]} key={"menuli" + i} className={this.state.menuli[i]}>
                     <div className={this.state.menudot[i]} key={"menudot" + i} />

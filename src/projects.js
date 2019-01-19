@@ -15,7 +15,7 @@ class Projects extends Component {
       transform: "translateY(700px)",
       
     }
-    this.exitLink=this.props.projecttype;
+    this.exitLink=process.env.PUBLIC_URL + this.props.projecttype;
     this.vidid = {
       "log": "5Q6vJg-OufI",
       "dote": "zlp8SnxFN3I",
@@ -32,7 +32,7 @@ class Projects extends Component {
   }
   rolldown() {
     this.setState({opacity:0, transform:"translateY(700px)"});
-
+    console.log(this.exitLink);
     setTimeout(function () {
       this.props.history.push(this.exitLink);}.bind(this), 400)
   }
