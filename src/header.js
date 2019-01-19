@@ -76,7 +76,7 @@ class Header extends Component {
         let menuUrl = '/';
         for (let i = 0; i < 4; i++) {
             if (i > 0) {
-                menuUrl = '/portfolio/' + this.menulist[this.keylist[i]][1];  //Set the url depends on the menu
+                menuUrl = process.env.PUBLIC_URL + '/' + this.menulist[this.keylist[i]][1];  //Set the url depends on the menu
             }
             element.push(
                 <li id={this.menulist[this.keylist[i]][0]} key={"menuli" + i} className={this.state.menuli[i]}>

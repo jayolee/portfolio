@@ -130,7 +130,7 @@ class Fun extends Component {
     let routelist=[];
     let projectUrl = '';
     for (let i = 0; i < this.state.worklist.length; i++) {
-      projectUrl='/portfolio/fun/'+this.state.worklist[i].id+'/';
+      projectUrl=process.env.PUBLIC_URL +'/fun/'+this.state.worklist[i].id+'/';
       element.push(
         <Link to={projectUrl} key={this.state.worklist[i].id+'_link'} >
         <div id={this.state.worklist[i].id} key={this.state.worklist[i].id} className={this.state.worklist[i].mainClass} onClick={(ev) => this.setState({ page: 4, curid: this.state.worklist[i].id })}  >

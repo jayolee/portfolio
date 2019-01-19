@@ -141,7 +141,7 @@ class MainProject extends Component {
     let routelist=[];
     let projectUrl = '';
     for (let i = 0; i < this.state.worklist.length; i++) {
-      projectUrl='/portfolio/project/'+this.state.worklist[i].id+'/';
+      projectUrl=process.env.PUBLIC_URL +'/project/'+this.state.worklist[i].id+'/';
      element.push(
         <Link to={projectUrl} key={this.state.worklist[i].id+'_link'} >
         <div id={this.state.worklist[i].id} key={this.state.worklist[i].id} className={this.state.worklist[i].mainClass}  >
