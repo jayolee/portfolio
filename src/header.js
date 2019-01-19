@@ -26,7 +26,8 @@ class Header extends Component {
     }
     getCurPage(){
         let curpagePath=this.props.location.pathname;
-        curpagePath=curpagePath.slice(1,4);
+        curpagePath=curpagePath.toLowerCase();
+        curpagePath=curpagePath.slice(11,14);
         let newpage=0;
         switch(curpagePath){
             case "pro":
@@ -34,7 +35,6 @@ class Header extends Component {
                 newpage=0;
                 break;
             case "fun":
-                console.log("work");
                 this.setState({pagenumber:1});
                 newpage=1;
                 break;
@@ -76,7 +76,7 @@ class Header extends Component {
         let menuUrl = '/';
         for (let i = 0; i < 4; i++) {
             if (i > 0) {
-                menuUrl = '/' + this.menulist[this.keylist[i]][1];  //Set the url depends on the menu
+                menuUrl = '/portfolio/' + this.menulist[this.keylist[i]][1];  //Set the url depends on the menu
             }
             element.push(
                 <li id={this.menulist[this.keylist[i]][0]} key={"menuli" + i} className={this.state.menuli[i]}>

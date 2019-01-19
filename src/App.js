@@ -121,17 +121,17 @@ class App extends Component {
         
           <div className="logobox">
             <div className="logowrap">
-              <a href="/" >
+              <a href="/portfolio/project" >
                 <img src={logo} id="ylogo" alt="logo" onClick={(ev)=> this.setState({menu:0})}/>
                 </a>
             </div>
           </div>
           <Switch>
-          <Route path="/project/" component={MainProject} />
-          <Route path="/fun/" component={Fun} />
-          <Route path="/fineart/" component={FAs} />
-          <Route path="/about/" component={About} />
-          <Redirect to="/project/"  />
+          <Route path="/portfolio/project/" component={MainProject} />
+          <Route path="/portfolio/fun/" component={Fun} />
+          <Route path="/portfolio/fineart/" component={FAs} />
+          <Route path="/portfolio/about/" component={About} />
+          <Redirect to="/portfolio/project/"  />
           </Switch>
           </div>
         
