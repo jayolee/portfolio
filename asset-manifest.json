@@ -1,15 +1,15 @@
 {
   "main.css": "/portfolio/static/css/main.56993794.chunk.css",
-  "main.js": "/portfolio/static/js/main.c5a20d4c.chunk.js",
-  "main.js.map": "/portfolio/static/js/main.c5a20d4c.chunk.js.map",
+  "main.js": "/portfolio/static/js/main.73f145a6.chunk.js",
+  "main.js.map": "/portfolio/static/js/main.73f145a6.chunk.js.map",
   "static/js/1.1921a270.chunk.js": "/portfolio/static/js/1.1921a270.chunk.js",
   "static/js/1.1921a270.chunk.js.map": "/portfolio/static/js/1.1921a270.chunk.js.map",
   "runtime~main.js": "/portfolio/static/js/runtime~main.ee2a1003.js",
   "runtime~main.js.map": "/portfolio/static/js/runtime~main.ee2a1003.js.map",
   "static/media/17.gif": "/portfolio/static/media/17.e72d5c70.gif",
   "static/media/App.module.scss": "/portfolio/static/media/younglogo.552db415.svg",
-  "static/media/FA.scss": "/portfolio/static/media/LucidaGrandeBold.4dacabda.ttf",
   "static/media/projects.scss": "/portfolio/static/media/cursor.819b60c7.svg",
+  "static/media/FA.scss": "/portfolio/static/media/LucidaGrandeBold.4dacabda.ttf",
   "static/media/even1.png": "/portfolio/static/media/even1.8824f724.png",
   "static/media/even2.png": "/portfolio/static/media/even2.52877fe1.png",
   "static/media/int1.jpg": "/portfolio/static/media/int1.0ef833a2.jpg",
@@ -173,6 +173,6 @@
   "static/media/screenmap.jpg": "/portfolio/static/media/screenmap.8d5be0fa.jpg",
   "static/css/main.56993794.chunk.css.map": "/portfolio/static/css/main.56993794.chunk.css.map",
   "index.html": "/portfolio/index.html",
-  "precache-manifest.86c69ef1fb4f033077ae8f2e3cb7863a.js": "/portfolio/precache-manifest.86c69ef1fb4f033077ae8f2e3cb7863a.js",
+  "precache-manifest.8d6c1b137aca8070f58afc8d9a69841e.js": "/portfolio/precache-manifest.8d6c1b137aca8070f58afc8d9a69841e.js",
   "service-worker.js": "/portfolio/service-worker.js"
 }
