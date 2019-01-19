@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link, withRouter } from 'react-router-dom'
 import './App.scss';
 
 class Header extends Component {
@@ -6,57 +7,90 @@ class Header extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            pagenumber: this.props.pagenum,
+            pagenumber:0,
             togglestat: 0,
             menuli: ["active", "", "", ""],
             menudot: ["menudot active", "menudot", "menudot", "menudot"],
             aclass: ["activemenu menua", "menua", "menua", "menua"]
         }
         this.menulist = {
-            "Work": "work",
-            "Fun": "fun",
-            "Fine Art": "FA",
-            "About/Contact": "contact",
+            "Project": ["project", "project"],
+            "Fun": ["fun", "fun"],
+            "Fine Art": ["FA", "fineart"],
+            "About/Contact": ["contact", "about"]
         }
-        this.keylist = ["Work", "Fun", "Fine Art", "About/Contact"]
+        this.keylist = ["Project", "Fun", "Fine Art", "About/Contact"]
     }
-
-    //update menu style(state) based on the current page
-    senddata(e) {
-        let newpage = e.target.id;
-        this.props.menustatus(newpage);
-
-        let menuli = this.state.menuli;
-        let menudot = this.state.menudot;
-        let aclass = this.state.aclass;
-        let curpage = this.state.pagenumber;
-        menuli[curpage] = ""
-        menudot[curpage] = "menudot"
-        aclass[curpage] = "menua"
-        menuli[newpage] = "active"
-        menudot[newpage] = "menudot active"
-        aclass[newpage] = "activemenu menua"
-        this.setState({ pagenumber: newpage, menuli: menuli, menudot: menudot, aclass: aclass, togglestat: 0 })
-
+    componentDidMount(){
+        this.getCurPage();
     }
-
+    getCurPage(){
+        let curpagePath=this.props.location.pathname;
+        curpagePath=curpagePath.slice(1,4);
+        let newpage=0;
+        switch(curpagePath){
+            case "pro":
+                this.setState({pagenumber:0});
+                newpage=0;
+                break;
+            case "fun":
+                console.log("work");
+                this.setState({pagenumber:1});
+                newpage=1;
+                break;
+            case "fin":
+                this.setState({pagenumber:2});
+                newpage=2;
+                break;
+            case "abo":
+                this.setState({pagenumber:3});
+                newpage=3;
+                break;
+            default:
+            this.setState({pagenumber:0});
+            newpage=0;
+        }
+        let newid=newpage;
+        let menuli = ["", "", "", ""];
+        let menudot = ["menudot", "menudot", "menudot", "menudot"];
+        let aclass = ["menua", "menua", "menua", "menua"];
+        menuli[newid] = "active"
+        menudot[newid] = "menudot active"
+        aclass[newid] = "activemenu menua"
+        this.setState({ menuli: menuli, menudot: menudot, aclass: aclass, togglestat: 0 })
+        
+    }
+    //update menu style(state) when menu is clicked
+    updateStyle(newid){
+        let menuli = ["", "", "", ""];
+        let menudot = ["menudot", "menudot", "menudot", "menudot"];
+        let aclass = ["menua", "menua", "menua", "menua"];
+        menuli[newid] = "active"
+        menudot[newid] = "menudot active"
+        aclass[newid] = "activemenu menua"
+        this.setState({ menuli: menuli, menudot: menudot, aclass: aclass, togglestat: 0 })
+    }
     //menu generator
     headergenerator() {
         let element = [];
-
+        let menuUrl = '/';
         for (let i = 0; i < 4; i++) {
+            if (i > 0) {
+                menuUrl = '/' + this.menulist[this.keylist[i]][1];  //Set the url depends on the menu
+            }
             element.push(
-                <li id={this.menulist[this.keylist[i]]} key={"menuli" + i} className={this.state.menuli[i]}>
+                <li id={this.menulist[this.keylist[i]][0]} key={"menuli" + i} className={this.state.menuli[i]}>
                     <div className={this.state.menudot[i]} key={"menudot" + i} />
-                    <a className={this.state.aclass[i]} key={"menua" + i} id={i} onClick={this.senddata.bind(this)}>{this.keylist[i]}</a>
+                    <Link to={menuUrl} className={this.state.aclass[i]} key={"menua" + i} id={i} onClick={(ev)=> {this.setState({pagenumber: i}); this.updateStyle(i)}}>{this.keylist[i]}</Link>
                 </li>
             );
         }
+
         return (element);
     }
 
     render() {
-
+        
         return (
             <div className="header-wrap">
                 <div className="header">
@@ -68,16 +102,18 @@ class Header extends Component {
                         <span />
                     </div>
                     <div className={this.state.togglestat == 0 ? 'menu-wrap' : 'menu-wrap open'} key="menu-wrap">
+
                         <nav className="menu">
                             <ul className="clearfix">
                                 {this.headergenerator()}
                             </ul>
                         </nav>
                     </div>
+
                 </div>
             </div>
         );
     }
 }
 
-export default Header;
+export default withRouter(Header);

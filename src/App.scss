@@ -121,12 +121,12 @@ img {
     z-index:-999;
 }
 .starwrap_in{position: relative; 
-  @include sizes(calc(100% + 24px), 550px); 
+  @include sizes(calc(100% + 40px), 540px); 
     background:linear-gradient(#000,#10162B); 
-    @include positions(-139px,null,null,10px);
+    @include positions(-139px,null,null,-10px);
     overflow:hidden;
-    @include transform(rotate(-5deg)); 
-    border-bottom-left-radius:20px;
+    @include transform(rotate(-4deg)); 
+    border-bottom-left-radius:10px;
    
 }
 .star_opac_wrap{
@@ -437,14 +437,14 @@ width:102px;
   display: inline-block;
   text-align: center;
   transition: .3s;
-	border: 2px solid #325F8D;
-	color:#325F8D;
+	border: 2px solid #2068b5;
+	color:#2068b5;
 	border-radius:16px;
     &:hover {
         font-weight: 500;
         color: #fff;
-          background-color:#325F8D;
-          border:1px solid #325F8D;
+          background-color:#2068b5;
+          border:1px solid #2068b5;
         opacity:.7;
           cursor:pointer;
       }
@@ -453,8 +453,8 @@ width:102px;
 .workactive {
     padding:3px 14px;
   font-weight: 500;
-	background-color:#325F8D;
-	border:1px solid #325F8D;
+	background-color:#2068b5;
+	border:1px solid #2068b5;
   color: #fff;
   &:hover{
     font-weight: 500;
@@ -489,10 +489,12 @@ width:102px;
   .fa{
     width:23%;
     .portwrap{
+      box-shadow: 0 10px 15px rgba(0, 0, 0, 0.4);
       @include sizes(null,null, 250px,250px);
       .longim{
         object-fit: cover;
-        @include sizes(null,null,null,120%);
+        min-width:100%;
+        min-height:100%;
     }
     img{
       opacity:1;
@@ -532,13 +534,13 @@ width:102px;
   display: inline-block;
   overflow: hidden;
   position: relative;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
   border-radius: 6px;
   cursor: pointer;
   transition: .3s;
   &:hover {
     color: #525461;
-    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.3);
     @include transform(translateY(-4px));
 
   }
@@ -583,7 +585,8 @@ width:102px;
 }
 
 .longim {
-  @include sizes(auto,null,null,100%);
+  max-width:100%;
+  min-height:100%;
 }
 
 .wideim {
@@ -723,7 +726,8 @@ width:102px;
     margin:0 auto;
    
     .longim{
-      @include sizes(100%, null,null, auto);
+      min-width:100%;
+        min-height:100%;
       opacity:1; 
     }
     .discrip {

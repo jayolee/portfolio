@@ -3,7 +3,7 @@ import YouTube from 'react-youtube';
 import Dote from './dote.js'
 import logpos1 from './Logpos/IMG_0658.jpg'
 import logpos2 from './Logpos/interview.jpg'
-import logpos3 from './Logpos/final_design.png'
+import logpos3 from './Logpos/final_design.jpg'
 import logposstory1 from './Logpos/story1.jpg'
 import logposstory2 from './Logpos/story2.jpg'
 import logposrun1 from './Logpos/connectedd.png'
@@ -150,8 +150,8 @@ export const projectList = {
         "exlpla": {
             "Time": "Oct 2018 ~ Jan 2019",
             "Team": "Team UP (Matthew Fang, Judith Leng, Ja Young Lee, Jerry Yang)",
-            "Role": "UI/UX, development, illustration",
-            "Tool": "React, HTML, SCSS, Adobe Illustrator",
+            "Role": "UI/UX design, development, illustration",
+            "Tool": "React, HTML, SCSS, Adobe Illustrator, Figma",
         },
         "button": <a href="https://jayolee.github.io/Team-UP-prototype_react/" target="_blank" rel="noopener noreferrer">
             <div className="button up">Play with the Prototype</div></a>,
@@ -245,7 +245,7 @@ export const projectList = {
         />,
         "exlpla": {
             "Time": "Oct 19th ~ Nov 1st (Bose Challenge at CMU)",
-            "Team": <span>Aniruddih Iyer, <a className="member" href="http://www.hyunwoopaik.com/" target="_blank" rel="noopener noreferrer">Hyun Woo Paik,</a> Ja Young Lee, Se One Park, <a className="member" href="https://wwchung.github.io/SSUI-Portfolio/index.html" target="_blank" rel="noopener noreferrer">Won-Woo Chung</a></span>,
+            "Team": <span>Aniruddh Iyer, <a className="member" href="http://www.hyunwoopaik.com/" target="_blank" rel="noopener noreferrer">Hyun Woo Paik,</a> Ja Young Lee, Se One Park, <a className="member" href="https://wwchung.github.io/SSUI-Portfolio/index.html" target="_blank" rel="noopener noreferrer">Won-Woo Chung</a></span>,
             "Role": "ideation, video directing/editing",
             "Tool": "Maya, After Effects, Illustrator",
             " ": <i>This is a project for a Bose Challenge at CMU.</i>,
@@ -286,7 +286,7 @@ export const projectList = {
         />,
         "exlpla": {
             "Time": "Sep 21st ~ 22nd (HackCMU 2018)",
-            "Team": <span>DoteNote (Aniruddih Iyer, <a className="member" href="http://www.hyunwoopaik.com/" target="_blank" rel="noopener noreferrer">Hyun Woo Paik,</a> Ja Young Lee, <a className="member" href="https://wwchung.github.io/SSUI-Portfolio/index.html" target="_blank" rel="noopener noreferrer">Won-Woo Chung</a>)</span>,
+            "Team": <span>DoteNote (Aniruddh Iyer, <a className="member" href="http://www.hyunwoopaik.com/" target="_blank" rel="noopener noreferrer">Hyun Woo Paik,</a> Ja Young Lee, <a className="member" href="https://wwchung.github.io/SSUI-Portfolio/index.html" target="_blank" rel="noopener noreferrer">Won-Woo Chung</a>)</span>,
             "Role": "ideation, UI/UX design, video directing/editing",
             "Tool": "Adobe XD, After EFfects, Illustrator",
             " ": <i>This is a project for a hackathon held at CMU (HackCMU 2018) which got <b>3rd Place.</b></i>,
@@ -504,13 +504,13 @@ export const projectList = {
                 Naoshima is the place I visited in summer 2018. It is an island full of artworks.  </p></div>,
         "Prototypes": <div>
             <img src={nao_lofi} alt="Lo-fi Prototype" className="half" />
-            <img src={nao_midfi} alt="Mid-fi Prototype" className="half" /><div class="imgdes">Lo-fi and Mid-fi Prototypes</div>
+            <img src={nao_midfi} alt="Mid-fi Prototype" className="half" /><div className="imgdes">Lo-fi and Mid-fi Prototypes</div>
             <p>As a web application introducing a specific location, I wanted to give a feeling of staying on one page but looking at different aspects of the website. Therefore, I designed all pages appearing as layers above the home page.</p>
             </div>,
 
         "Interaction": <div>
             <img src={nao_about} className="imgBorder" alt="About Page Interaction" />
-            <div class="imgdes">About Page Interaction</div>
+            <div className="imgdes">About Page Interaction</div>
             <p>To make different layers of pages more obvious, I gave page transition animations.</p></div>,
 
         "Illustrations": <div>

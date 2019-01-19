@@ -1,11 +1,12 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
+import { Link, Route } from 'react-router-dom'
 import './App.scss';
 import Projects from './projects.js'
 import './projects.scss'
 import reporter from './images/lights.jpg'
 import even from './images/even2.png'
 import momoko from './images/momo.png'
-import gssh from './images/gssh.png'
+import gssh from './images/gssh.jpg'
 import naoshima from './images/naoshima.png'
 
 class Fun extends Component {
@@ -27,13 +28,6 @@ class Fun extends Component {
         'development':['Development', "worksbutton workactive"]
       },
       worklist:[
-        { "id":"naoshima",
-        "image":naoshima,
-        "class":"development uiux illustartion portwrap",
-        "mainClass":"funwork",
-        "types": "UI/UX | Development | Illustration",
-        "title": "Artwork of NAOSHIMA",
-      },
         { "id":"reporter",
           "image":reporter,
           "class":"illustration uiux portwrap",
@@ -133,8 +127,12 @@ class Fun extends Component {
 
   projects(){
     let element = [];
+    let routelist=[];
+    let projectUrl = '';
     for (let i = 0; i < this.state.worklist.length; i++) {
+      projectUrl='/fun/'+this.state.worklist[i].id+'/';
       element.push(
+        <Link to={projectUrl} key={this.state.worklist[i].id+'_link'} >
         <div id={this.state.worklist[i].id} key={this.state.worklist[i].id} className={this.state.worklist[i].mainClass} onClick={(ev) => this.setState({ page: 4, curid: this.state.worklist[i].id })}  >
           <div className={this.state.worklist[i].class} key={this.state.worklist[i].id + "wrapper"}>
             <img className="longim" alt={this.state.worklist[i].title} src={this.state.worklist[i].image} key={this.state.worklist[i].title + "image"} />
@@ -150,23 +148,23 @@ class Fun extends Component {
             <span className="types">{this.state.worklist[i].types}</span>
           </div>
         </div>
+        </Link>
+      )
+      routelist.push(
+        <Route path={projectUrl} key={"routeto_"+this.state.worklist[i].id} render={props => <Projects key="Projects" idnum={this.state.worklist[i].id} projecttype="/fun" />} />
       )
     }
-    element=<div><div className="worktypes">{this.worktypebar()}</div>{element}</div>;
+    element=<div>{routelist} <div className="worktypes">{this.worktypebar()}</div>{element}</div>;
     return element  
   }
-  renderPageView(){
-    if(this.state.page === 4){
-      return <Projects idnum={this.state.curid} closehandle={this.closehandler.bind(this)}/>
-    };
-  }   
+   
   render() {
+
     return (
 
         <div className="workbox">
               {this.projects()}
-              {this.renderPageView()}
-        </div>
+         </div>
        
     );
   }

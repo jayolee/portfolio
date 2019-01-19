@@ -142,6 +142,7 @@ $up: #E9974C;
 	background: rgba(0,0,0,0.3);
 	z-index: 1;
 	transition:.4s;
+	cursor:url("images/xcursor.svg") 2 2, auto;
 }
 .contentbox{
 	opacity:0;
@@ -521,18 +522,19 @@ a.member{
 .button {
 	@include bgcolors;
 	color: white;
-	box-shadow: 0 0 8px rgba(0,0,0,0.3);
+	box-shadow: 0 2px 24px rgba(0,0,0,0.3);
 	border-radius: 60px;
 	padding: 12px 40px;
 	font-weight: bold;
 	@include sizes(auto);
 	transition: .3s;
 	display:inline-block;
-	margin: 30px auto;
+	margin: 55px auto;
 	cursor: pointer;
 	
 	&:hover {
 	transform: translateY(-4px);
+	box-shadow: 0 6px 30px rgba(0,0,0,0.3);
 	opacity: .8;
 	 }
 
@@ -544,8 +546,9 @@ a.member{
 		text-align:center;
 		display:block;
 		margin:0 auto 40px;
+		background:#2068b5;
 	&:hover{
-		background:#4478ad;
+		background:#3285de;
 		opacity:1;
 	}
 	}
@@ -579,7 +582,13 @@ a.member{
 	}
 
 }
-
+@media screen and (max-width:736px){
+	.button{
+		&.fa{
+			height:45px;
+		}
+	}
+}
 .control{
 	position:relative;
 	padding:0;

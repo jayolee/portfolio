@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { withRouter } from 'react-router-dom'
 import './App.scss';
 import './projects.scss'
 import { projectList } from './project_list'
@@ -12,7 +13,9 @@ class Projects extends Component {
       active: true,
       opacity:0,
       transform: "translateY(700px)",
+      
     }
+    this.exitLink=this.props.projecttype;
     this.vidid = {
       "log": "5Q6vJg-OufI",
       "dote": "zlp8SnxFN3I",
@@ -29,10 +32,13 @@ class Projects extends Component {
   }
   rolldown() {
     this.setState({opacity:0, transform:"translateY(700px)"});
-    setTimeout(function () { this.props.closehandle(); }.bind(this), 500)
+
+    setTimeout(function () {
+      this.props.history.push(this.exitLink);}.bind(this), 400)
   }
 
   contentgenerator() {
+
     let item = this.props.idnum;
     let element = [];
     let topelement = [];
@@ -63,11 +69,13 @@ class Projects extends Component {
     if (this.contents[item].button) {
       element.push(<div className="contentbox" key="contentbox" style={{opacity:this.state.opacity, transform:this.state.transform}}> 
         <div className={"enttitle " + this.props.idnum} >{this.contents[item].projectTitle}
+
           <div className="xmark" onClick={this.rolldown.bind(this)}>
             <svg width="50" height="50">
               <path d="M10 10 L40 40 M40 10 L10 40" />
             </svg>
           </div>
+
         </div>
         <div className="maincontent">
           {this.contents[item].topimg}
@@ -91,7 +99,7 @@ class Projects extends Component {
     else {
       element.push(<div className="contentbox" key="contentbox" style={{opacity:this.state.opacity, transform:this.state.transform}}>
         <div className={"enttitle " + this.props.idnum} >{this.contents[item].projectTitle}
-          <div className="xmark" onClick={this.rolldown.bind(this)}>
+          <div className="xmark"  onClick={this.rolldown.bind(this)}>
             <svg width="50" height="50">
               <path d="M10 10 L40 40 M40 10 L10 40" />
             </svg>
@@ -123,7 +131,7 @@ class Projects extends Component {
   render() {
     return (
       <div style={{ position: "absolute", top: "0", left: "0", width: "100%", height: "100%" }}>
-        <div className="greybox" style={{opacity:this.state.opacity}}/>
+        <div className="greybox" style={{opacity:this.state.opacity}} onClick={this.rolldown.bind(this)}/>
         {this.contentgenerator()}
         <div className={"gototop "+ this.props.idnum} style={{opacity:this.state.opacity}} onClick={(ev) => window.scroll(0,0)} >
         <svg width="30" height="30">
@@ -131,11 +139,12 @@ class Projects extends Component {
             </svg>
             <div className={"gototop_descrip " + this.props.idnum}>Go to Top
             </div>
-            <div className={"triangle " + this.props.idnum} /></div>
+            <div className={"triangle " + this.props.idnum} />
+            </div>
       </div>
 
     );
   }
 }
 
-export default Projects;
+export default withRouter(Projects);

@@ -92,7 +92,7 @@ renderArrows(){
 
     return (
         <div style={{opacity:this.state.opacity, transition:'.3s'}}>
-        <div className="greybox" />
+        <div className="greybox" onClick={this.closing.bind(this)} />
           <div className="FAdetail" style={{ top:this.state.scroll}}>
           <div className="xmark" onClick={this.closing.bind(this)} >
               <svg width="50" height="50">

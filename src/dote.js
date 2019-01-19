@@ -90,6 +90,7 @@ class Dote extends Component {
                         <div className="scbtn" id="confirm" onClick={(ev) => this.setState({ screen: 0 })} />
                     </div>
                 );
+            default:;
 
         }
     }

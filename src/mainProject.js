@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
+import { Link, Route } from 'react-router-dom'
 import './App.scss';
 import './projects.scss'
 import logpos from './images/logpos2.jpg'
-import dotenote from './images/dotenote.png'
+import dotenote from './images/dotenote.jpg'
 import getcuisine from './images/getcuisine.png'
-import up_main from './up/top.png'
+import up_main from './up/blowmain.jpg'
+import naoshima from './images/naoshima.png'
 import Projects from './projects.js'
 
 class MainProject extends Component {
@@ -33,6 +35,14 @@ class MainProject extends Component {
           "title": "Up",
         },
         {
+          "id": "getcuisine",
+          "image": getcuisine,
+          "class": "uiux development portwrap",
+          "mainClass": "main_work",
+          "types": "UI/UX | Development",
+          "title": "Get Cuisine",
+        },
+        {
           "id": "dote",
           "image": dotenote,
           "class": "ideation uiux portwrap",
@@ -40,14 +50,7 @@ class MainProject extends Component {
           "types": "UI/UX | Ideation",
           "title": "DoteNote",
         },
-        {
-          "id": "getcuisine",
-          "image": getcuisine,
-          "class": "uiux development portwrap",
-          "mainClass": "main_work",
-          "types": "UI/UX | Development",
-          "title": "Get Cuisine",
-        }, {
+         {
           "id": "logpos",
           "image": logpos,
           "class": "ideation portwrap",
@@ -55,6 +58,13 @@ class MainProject extends Component {
           "types": "Ideation",
           "title": "LOG + POS",
         },
+        { "id":"naoshima",
+        "image":naoshima,
+        "class":"development uiux portwrap",
+        "mainClass":"main_work",
+        "types": "UI/UX | Development",
+        "title": "Artwork of NAOSHIMA",
+      },
       ],
     }
     this.typelist = ['uiux', 'development', 'ideation'];
@@ -128,16 +138,21 @@ class MainProject extends Component {
   //create boxes
   projects() {
     let element = [];
+    let routelist=[];
+    let projectUrl = '';
     for (let i = 0; i < this.state.worklist.length; i++) {
-      element.push(
-        <div id={this.state.worklist[i].id} key={this.state.worklist[i].id} className={this.state.worklist[i].mainClass} onClick={(ev) => this.setState({ page: 4, curid: this.state.worklist[i].id })}  >
+      projectUrl='/project/'+this.state.worklist[i].id+'/';
+     element.push(
+        <Link to={projectUrl} key={this.state.worklist[i].id+'_link'} >
+        <div id={this.state.worklist[i].id} key={this.state.worklist[i].id} className={this.state.worklist[i].mainClass}  >
           <div className={this.state.worklist[i].class} key={this.state.worklist[i].id + "wrapper"}>
             <img className="longim" alt={this.state.worklist[i].title} src={this.state.worklist[i].image} key={this.state.worklist[i].title + "image"} />
             <div className="discrip">
-              {this.state.worklist[i].title}<br />
-              <span className="types">
+            <div>
+              {this.state.worklist[i].title}</div>
+              <div className="types">
                 {this.state.worklist[i].types}
-              </span>
+              </div>
             </div>
           </div>
           <div className="discripsmaller">
@@ -145,24 +160,21 @@ class MainProject extends Component {
             <span className="types">{this.state.worklist[i].types}</span>
           </div>
         </div>
+        </Link>
+      );
+      routelist.push(
+        <Route path={projectUrl} key={"routeto_"+this.state.worklist[i].id} render={props => <Projects key="Projects" idnum={this.state.worklist[i].id}  projecttype="/project" />}  />
       )
     }
-    element = <div><div className="worktypes">{this.worktypebar()}</div>{element}</div>;
+    element = <div>{routelist}<div className="worktypes">{this.worktypebar()}</div>{element}</div>;
     return element
   }
-  //open details
-  renderPageView() {
-    if (this.state.page === 4) {
-      return <Projects key="Projects" idnum={this.state.curid} closehandle={this.closehandler.bind(this)} />
-    };
-  }
+ 
   render() {
     return (
       <div className="workbox">
         {this.projects()}
-        {this.renderPageView()}
-      </div>
-
+         </div>
     );
   }
 }

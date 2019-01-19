@@ -27,7 +27,7 @@ class FaCv extends Component {
 
         return (
             <div style={{opacity:this.state.opacity, transition:'.3s'}} >
-            <div className="greybox" />
+            <div className="greybox" onClick={this.closing.bind(this)}/>
                 
                 <div className="FAdetail Facv">
                 <div className="xmark" onClick={this.closing.bind(this)} >
