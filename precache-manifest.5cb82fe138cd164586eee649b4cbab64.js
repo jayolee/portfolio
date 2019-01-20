@@ -4,8 +4,8 @@ self.__precacheManifest = [
     "url": "/portfolio/static/media/16.5668a4cd.gif"
   },
   {
-    "revision": "1d5ea54ca02038f93ad0",
-    "url": "/portfolio/static/css/main.83eb954d.chunk.css"
+    "revision": "98c1d0d717fc68919940",
+    "url": "/portfolio/static/css/main.c50a79b3.chunk.css"
   },
   {
     "revision": "a2083eb93bb5e88176fa",
@@ -24,12 +24,12 @@ self.__precacheManifest = [
     "url": "/portfolio/static/media/phone.2fc87b81.png"
   },
   {
-    "revision": "4dacabda65930685b68591f097311829",
-    "url": "/portfolio/static/media/LucidaGrandeBold.4dacabda.ttf"
-  },
-  {
     "revision": "d33a94b67929866311cfe8521fed2ffe",
     "url": "/portfolio/static/media/xcursor.d33a94b6.svg"
+  },
+  {
+    "revision": "4dacabda65930685b68591f097311829",
+    "url": "/portfolio/static/media/LucidaGrandeBold.4dacabda.ttf"
   },
   {
     "revision": "819b60c7426c5e6f3bd9e27c7ea6bd6f",
@@ -360,8 +360,8 @@ self.__precacheManifest = [
     "url": "/portfolio/static/media/16.9f0f1369.png"
   },
   {
-    "revision": "1d5ea54ca02038f93ad0",
-    "url": "/portfolio/static/js/main.1d5ea54c.chunk.js"
+    "revision": "98c1d0d717fc68919940",
+    "url": "/portfolio/static/js/main.98c1d0d7.chunk.js"
   },
   {
     "revision": "7966679abe41768fdf69f8c3adb123e8",
@@ -432,8 +432,8 @@ self.__precacheManifest = [
     "url": "/portfolio/static/media/naoshima2.cc6110eb.jpg"
   },
   {
-    "revision": "b2d0a7866a0dd93d371d8826dc0bace3",
-    "url": "/portfolio/static/media/lo3.b2d0a786.jpg"
+    "revision": "08d3777a330430e96a96af20999ba138",
+    "url": "/portfolio/static/media/lo3.08d3777a.jpg"
   },
   {
     "revision": "92243c98d20eca82f185eac9530356d9",
@@ -716,7 +716,7 @@ self.__precacheManifest = [
     "url": "/portfolio/static/media/404momo.a49b885b.svg"
   },
   {
-    "revision": "990a3085e947e6c4d7955e0e9340ab2d",
+    "revision": "349541c0162bf1b20bee21ca8c5ad31f",
     "url": "/portfolio/index.html"
   }
 ];
