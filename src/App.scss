@@ -695,6 +695,36 @@ width:102px;
         }
     }
 }
+.bio{
+
+  border: 2px solid #ccc {
+    radius:14px;
+  };
+  padding:10px;
+  @include sizes(95%,null,560px);
+  margin:50px auto;
+  div{
+    padding:40px 50px 60px;
+    border: 2px dashed #ccc {
+      radius:10px;
+    };
+  }
+  p{ text-align: left;}
+  line-height:1.5;
+  color:rgba(0,0,0,0.8);
+  font: {
+    size:16px;
+    weight:300;
+  }
+  .hello{
+    line-height:3;
+    color:#10162B;
+    font: {
+      size:18px;
+      weight:700;
+    }
+  }
+}
 
 //404Page
 #momo404Wrap{

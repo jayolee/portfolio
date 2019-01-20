@@ -111,6 +111,7 @@ import nao_detail from './naoshima/detail.jpg'
 import up_main from './up/top.png'
 import up_animals from './up/animals.jpg'
 import up_proto_blow from './up/blow.jpg'
+import up_earlyProto from './up/prototype.jpg'
 import up_meeting from './up/meeting.jpg'
 import up_session from './up/session.gif'
 import up_breathing from './up/breathing.gif'
@@ -118,6 +119,14 @@ import up_report from './up/report.gif'
 import up_screenmap from './up/screenmap.jpg'
 import up_knob from './up/knob.jpg'
 import up_protos from './up/prototypes.jpg'
+import up_lofi1 from './up/lofi1.jpg'
+import up_lofi2 from './up/lofi2.jpg'
+import up_lofi3 from './up/lofi3.jpg'
+import up_knobnot from './up/knob_not.gif'
+import up_knobcode from './up/knobcode.jpg'
+import up_workknob from './up/worknob.gif'
+
+import ImgDetail from './imgDetail.js'
 
 function anigenerator() {
     let element = [];
@@ -135,6 +144,15 @@ function anigenerator() {
     return element;
 }
 
+function zoomimg(e){
+    let classlist= e.target.classList;
+    if(classlist.contains("zoomed")){
+        e.target.classList.remove("zoomed");
+    }
+    else{
+        e.target.classList.add("zoomed");
+    }
+}
 const vidid = {
     "log": "5Q6vJg-OufI",
     "dote": "zlp8SnxFN3I",
@@ -157,42 +175,89 @@ export const projectList = {
             <div className="button up">Play with the Prototype</div></a>,
         "Ideation": <div>
             <p>In Malcolm Gladwell’s book ​<i>The Outliers​,</i> it is stated that one requires over 10,000 hours of practice to become an expert of some sort. Such number of hours is extremely difficult of practice for young adults in college or workplace. 10,000 hours equals to roughly 417 days of full practice without a break, which is undoubtedly a difficult task. But what if we base this idea to encourage users to build a focusing habit? Instead of emphasizing how many hours are left until 10,000 hours, why not focus more on the actual time a user has dedicated to his work?</p>
-            <img src={up_protos} alt="Initial Paper Prototypes" /><div className="imgdes">Initial Paper Prototypes</div>
+            <img src={up_protos} alt="Initial Paper Prototypes" className="zoomable" onClick={zoomimg} /><div className="imgdes">Initial Paper Prototypes</div>
             <p>
                 With the approach above, our team has created ​Up based on several psychological concepts including self control, ego-depletion, stress-reduction, intrinsic motivation as related to goal pursuit, and embodied cognition. The application encourages users to form a habitual focus timing of 90 minutes. Users are encouraged to perform a short guided breathing exercise immediately after a focus session concludes to regather
                 brain resources. For each break session, users will have the opportunity to blow a balloon that can be used towards saving an endangered animal
             which will then be transported to user’s “island” of the application.</p></div>,
-        "Research": <div>
-            <img src={up_session} className="phonesc" alt="Concentration Session" /><div className="imgdes">Concentration Session</div>
+        "Process": <div>
+            <div style={{ textAlign: "center" }}>
+                <div className="imgwrap_sc addmargin" >
+                    <img src={up_lofi1} className="proto" alt="Concentration Session Prototype" /><div className="imgdes">Lo-fi Prototypes of Concentration Session</div>
+                </div>
+                <div className="imgwrap_sc" >
+                    <img src={up_session} className="phonesc" alt="Concentration Session" /><div className="imgdes">Final Design of Concentration Session</div></div>
+            </div>
             <p> The main and first part of our application is the concentration timer. Users have the ability to set a time ranging from a minimum of 15 minutes to a maximum of 90 minutes to work on a task of their choice. Our goal is to improve users’ productivity by having them devote a set block of time to working on a specific task, and also prevent them from working on a task too long that they run out of mental energy. The concentration timer is modeled off the Pomodoro technique, which was designed for people to overcome procrastination by committing fully to completing a certain task during a time period of 25 minutes and then having a break of 5 minutes.
             </p>
-            <img src={up_breathing} className="phonesc" alt="Breathing Session" /><div className="imgdes">Breathing Session</div>
+            <div style={{ textAlign: "center" }}>
+                <div className="imgwrap_sc addmargin" >
+                    <img src={up_lofi2} className="proto" alt="Breathing Session Prototype" /><div className="imgdes">Lo-fi Prototypes of Breathing Session</div>
+                </div>
+                <div className="imgwrap_sc" >
+                    <img src={up_breathing} className="phonesc" alt="Breathing Session" /><div className="imgdes">Final Design of Breathing Session</div>
+                </div>
+            </div>
             <p>
                 The next part of our application is the “break” portion which encourages users to follow a guided deep-breathing exercise. As users breathe out, they will watch a balloon being blown up. We included stealth interventions to help users relieve stress and counteract ego-depletion. This would be beneficial for users’ performance as they enter the next productivity phase. The intervention to counteract ego-depletion was imperative in the design because the ability for users to replenish mental resource contributes to them forming the habit of working productively,
             taking breaks, and ultimately returning to our application. We included guided deep-breathing - which in experiments show significant effect on improvement of the hemodynamic changes following stressful tasks.</p><p>
                 Also, to make this a true stealth intervention, we took an embedded-design approach by incorporating the visual element of blowing up a balloon as one engages in the guided deep-breathing activity. Blowing up a balloon utilizes the technique of obfuscation via distancing, as the “story” of blowing up a balloon is metaphorical for blowing away one’s stress.
             Additionally, obfuscation via misdirection is used because gamified elements such as the colorful graphics of the balloon, would serve as red herrings to detract from the our actual stealth interventions.</p>
-            <img src={up_report} className="phonesc" alt="Report" /><div className="imgdes">Report</div>
+            <div style={{ textAlign: "center" }}>
+                <div className="imgwrap_sc" >
+                    <img src={up_lofi3} className="phonesc" style={{ width: "200px" }} alt="Report Prototype" /><div className="imgdes">Lo-fi Prototype of Report</div>
+                </div>
+                <div className="imgwrap_sc" >
+                    <img src={up_report} className="phonesc" alt="Report" /><div className="imgdes">Final Design of Report</div>
+                </div>
+            </div>
             <p>
                 Our final major design implementation gives users the ability to save virtual endangered animals by obtaining a certain amount of balloons.
                 Balloons can only be obtained through the completing a concentration session. Different sized balloons will be given based off length of focus time. We believe this feature incentives users to participate in our guided-breathing exercise. We decided not to give out incentives because it might make users to concentrate just to earn rewards, which would undermine intrinsic motivation. Moreover, we incorporate a report on user’s focus time as evidence of progress, which would increase intrinsic motivation to continue
                 using our application
 </p></div>,
 
-        "Design Challenges": <div>
-            <img src={up_proto_blow} alt="Playing with Breathing Sensor" /><div className='imgdes'>Breathing Sensor Detecting the Breathing Activity</div>
-
-            <p className="addmargin">- How to reduce demoralizing factors?<br />
+        "Challenges": <div>
+            <div className="title up">Design Challenge:</div>
+            <p>- How to reduce demoralizing factors?<br />
                 We conceded about users setting the very short sessions and not actually performing the breathing sessions to get the rewards. To avoid this, we decided to reward users by giving out balloons to save endangered animals. Also, we believe that users would already be motivated to practice on their tasks. Moreover, we decided to use the breathing sensor on the iPhone to not only track the activity, but also strengthen the metaphor of blowing away one’s stress.</p>
-            <img src={up_meeting} alt="Early Prototype" className="half" />
-            <img src={up_knob} className="half" alt="Early Prototype" /> <div className='imgdes'>Development Process</div>
-            <p>
-                - Creating Prototypes<br />
-                After doing user testing with less interactive prototypes, We decided to create a working prototype by coding to give realistic experience to our testers.</p>
-        </div>,
+            <img src={up_proto_blow} alt="Playing with Breathing Sensor" className="zoomable" onClick={zoomimg}/><div className='imgdes'>Breathing Sensor Detecting the Breathing Activity</div><br />
 
+            <p className="addmargin">
+                - Creating Prototypes<br />
+                After doing user testings with less interactive prototypes made of static screens, we realized that it is hard to get the usability test data due to the lack of the key interaction we designed. Therefore, we decided to create a working prototype by coding to give realistic experience to our testers. It was my role to build a realistic working prototype.</p>
+            <img src={up_meeting} alt="Early Prototype" className="half zoomable" onClick={zoomimg} />
+            <img src={up_earlyProto} className="half zoomable" alt="Early Prototype" onClick={zoomimg} /> <div className='imgdes'>Development Process and User Testing of the Early Prototype</div><br />
+
+            <div className="title up">Technical Challenge:</div>
+            <div style={{ textAlign: "center", marginBottom:0}}>
+                <div className="imgwrap_sc" >
+                    <img src={up_knobnot} alt="Knob Prototype" className="phonesc" />
+                </div>
+                <div className="imgwrap_sc" >
+                    <img src={up_knob} className="challhalf" alt="Knob Position Calculation" /> </div>
+            </div>
+            <div className='imgdes'>First Prototype of the Knob Dial</div>
+            <p>- Creating knob dials<br />
+                The biggest technical challenge I had was creating a knob dial. At first, I tried to calculate the exact X and Y position of a knob using the angle from the center of the dial. However, it was slow and didn't work correctly.</p>
+
+            <div style={{ textAlign: "center", marginBottom:0 }}>
+                <div className="imgwrap_sc" >
+                    <img src={up_workknob} className="phonesc" alt="Concentration Session" />
+                </div>
+                <div className="imgwrap_sc" >
+                    <img src={up_knobcode} className="challhalf" alt="Concentration Session Prototype" />
+                </div>
+            </div>
+            <div className="imgdes">Final Implementation of the Knob Dial</div>
+            
+            <p>Therefore, I implemented the knob dial using rotation. This way, there is no worries of the knob derailing from the path, and the calculation because much simpler.</p>
+        </div>,
+        "Final Design": <div>
+            <img src={up_screenmap} className="zoomable" onClick={zoomimg} /><div className="imgdes">Screenmap of the Final Design</div>
+        </div>,
         "Next Steps": <div>
-            <img src={up_animals} id="e_animals" alt="Playing with Breathing Sensor" /><div className='imgdes'>Endangered Animal Illustrations By Ja Young Lee and Judith Leng </div>
+            <img src={up_animals} id="e_animals" alt="Playing with Breathing Sensor" /><div className='imgdes'>Endangered Animal Illustrations By Ja Young Lee and <a href="http://judithleng.me/" target="_blank" rel="noopener noreferrer">Judith Leng</a></div>
 
             <p className="addmargin">While Up is a productivity mobile application that serves as a concentration tool, the overall message Up is delivering to users is importance of constant effort and taking efficient breaks. Up aims to reduce the demoralizing factor occurring outside of the application by constantly rewarding users with animals and acts as a companion that travels with users to keep track of every effort that can count.</p>
             <p>
@@ -491,8 +556,8 @@ export const projectList = {
         "quote": "How can a web application introduce a travel location?",
         "topimg": <img id='naoshima' className="topimg imgBorder" src={naoshima} alt="Naoshima" />,
         "button": <a href="https://jayolee.github.io/Travel-app/" target="_blank" rel="noopener noreferrer">
-        <div className="button naoshima">Go to the Website</div>
-    </a>,
+            <div className="button naoshima">Go to the Website</div>
+        </a>,
         "exlpla": {
             "Time": "Sep 2018",
             "Team": "Ja Young Lee",
@@ -506,7 +571,7 @@ export const projectList = {
             <img src={nao_lofi} alt="Lo-fi Prototype" className="half" />
             <img src={nao_midfi} alt="Mid-fi Prototype" className="half" /><div className="imgdes">Lo-fi and Mid-fi Prototypes</div>
             <p>As a web application introducing a specific location, I wanted to give a feeling of staying on one page but looking at different aspects of the website. Therefore, I designed all pages appearing as layers above the home page.</p>
-            </div>,
+        </div>,
 
         "Interaction": <div>
             <img src={nao_about} className="imgBorder" alt="About Page Interaction" />
@@ -516,7 +581,7 @@ export const projectList = {
         "Illustrations": <div>
             <img src={nao_sketches} alt="Illustrations" className="half" /> <img src={nao_drawing} alt="Drawing on iPad" className="half" /><div className='imgdes'>Hand-Drawn Digital Illustrations on iPad Sketch</div>
             <p>Because Naoshima is the island with many famous artworks, I wanted to give the artistic feeling to the website. Therefore, I added hand-drawn digital illustrations.</p>
-           </div>,
+        </div>,
 
         "Image Source": <div>
             <img src={nao_detail} alt="Image Source on Detail Page" /><div className='imgdes'>Image Source Button on the Detail Pages</div>

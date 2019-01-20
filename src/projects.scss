@@ -172,10 +172,43 @@ $up: #E9974C;
 	font-size:42px;
 	color: $momo;
 }
+.imgDetail{
+	@include sizes(95%,null,1200px);
+	margin:0 auto;
+	top:50%;
+	@include transform(translateY(-50%));
+	img{
+		@include sizes(100%);
+	}
+}
 .maincontent{
 	@include sizes(100%, null, 1000px); 
 	padding:80px 5%; 
 	margin:0 auto;
+	&.up{
+		
+		.imgwrap_sc{
+			display: inline-block; 
+			margin:0 12px;
+			&.addmargin{
+				margin-bottom:20px;
+			}
+			img{
+				width:100%;
+				margin:0;
+			}
+			.phonesc{
+				@include sizes(224px);
+			}
+			.challhalf{
+				@include sizes(500px);
+			}
+		}
+		.proto{
+			max-width:550px;
+		}
+
+	}
 }
 .qtmark {
 	quotes: '\201C'' ''\2018''\2019';
@@ -202,7 +235,7 @@ $up: #E9974C;
 		display:block;
 	}
 	&#up{
-		@include sizes(300px);
+		@include sizes(240px);
 		margin-bottom:150px;
 	}
 }
@@ -224,8 +257,11 @@ $up: #E9974C;
 		@include sizes(90%);
 	margin: 30px auto 0;
 	display: block;
+		&.zoomable{
+			cursor:zoom-in;
+		}
 		&.phonesc{
-			@include sizes(300px);
+			@include sizes(240px);
 		}
 		&#e_animals{
 			@include sizes(null,null,500px);
@@ -529,7 +565,7 @@ a.member{
 	@include sizes(auto);
 	transition: .3s;
 	display:inline-block;
-	margin: 55px auto;
+	margin: 50px auto;
 	cursor: pointer;
 	
 	&:hover {
@@ -975,4 +1011,17 @@ $imgshadow: 0 0 14px rgba(0,0,0,0.2);
 	.mobileonly{
 		display:none;
 	}
+}
+
+.zoomed{
+	@include sizes(95vw !important,null,1100px);
+		@include transform(translateX(-150px));
+	
+
+}
+@media screen and (max-width:1000px){
+.zoomed{
+	@include transform(translateX(-2.5vw));
+
+}
 }

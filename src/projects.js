@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import ReactDOM from 'react-dom'
 import { withRouter } from 'react-router-dom'
 import './App.scss';
 import './projects.scss'
@@ -13,7 +14,8 @@ class Projects extends Component {
       active: true,
       opacity:0,
       transform: "translateY(700px)",
-      
+      detail: 0,
+      imgSrc: '',
     }
     this.exitLink=process.env.PUBLIC_URL + this.props.projecttype;
     this.vidid = {
@@ -77,7 +79,7 @@ class Projects extends Component {
           </div>
 
         </div>
-        <div className="maincontent">
+        <div className={"maincontent " + this.props.idnum}>
           {this.contents[item].topimg}
           <div className="toptitle ">
             <div className={"qtmark " + this.props.idnum} > <q></q> </div>
@@ -127,6 +129,13 @@ class Projects extends Component {
   componentDidMount() {
     window.scrollTo(0, 0)
     setTimeout(this.rollup(), 100);
+    
+  }
+
+  renderDetail(){
+    if(this.state.detail === 1){
+      return <imgDetail key="detailview" src={this.state.src}/>
+    }
   }
   render() {
     return (
@@ -141,6 +150,7 @@ class Projects extends Component {
             </div>
             <div className={"triangle " + this.props.idnum} />
             </div>
+           {this.renderDetail()}
       </div>
 
     );

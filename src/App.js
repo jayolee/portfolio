@@ -117,6 +117,7 @@ class App extends Component {
             </div>
           </div>
           <Switch>
+          <Route path={process.env.PUBLIC_URL} exact component={MainProject} />
           <Route path={process.env.PUBLIC_URL + "/project/"} component={MainProject} />
           <Route path={process.env.PUBLIC_URL +"/fun/"} component={Fun} />
           <Route path={process.env.PUBLIC_URL +"/fineart/"} component={FAs} />
@@ -126,7 +127,7 @@ class App extends Component {
           </Switch>
           </div>
         
-        <div className="cprg">This website is designed and developed by Young.<br />ⓒ 2018. YOUNG</div>
+        <div className="cprg">This website is designed and developed by Young.<br />ⓒ 2019. YOUNG</div>
         </div>
         </Router> 
     );
