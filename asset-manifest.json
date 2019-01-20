@@ -1,15 +1,15 @@
 {
   "main.css": "/portfolio/static/css/main.83eb954d.chunk.css",
-  "main.js": "/portfolio/static/js/main.14e7885d.chunk.js",
-  "main.js.map": "/portfolio/static/js/main.14e7885d.chunk.js.map",
+  "main.js": "/portfolio/static/js/main.1d5ea54c.chunk.js",
+  "main.js.map": "/portfolio/static/js/main.1d5ea54c.chunk.js.map",
   "static/js/1.a2083eb9.chunk.js": "/portfolio/static/js/1.a2083eb9.chunk.js",
   "static/js/1.a2083eb9.chunk.js.map": "/portfolio/static/js/1.a2083eb9.chunk.js.map",
   "runtime~main.js": "/portfolio/static/js/runtime~main.ee2a1003.js",
   "runtime~main.js.map": "/portfolio/static/js/runtime~main.ee2a1003.js.map",
   "static/media/20.png": "/portfolio/static/media/20.7b4b14a6.png",
   "static/media/App.module.scss": "/portfolio/static/media/younglogo.552db415.svg",
-  "static/media/projects.scss": "/portfolio/static/media/cursor.819b60c7.svg",
   "static/media/FA.scss": "/portfolio/static/media/LucidaGrandeBold.4dacabda.ttf",
+  "static/media/projects.scss": "/portfolio/static/media/cursor.819b60c7.svg",
   "static/media/even1.png": "/portfolio/static/media/even1.8824f724.png",
   "static/media/even2.png": "/portfolio/static/media/even2.52877fe1.png",
   "static/media/int1.jpg": "/portfolio/static/media/int1.0ef833a2.jpg",
@@ -182,6 +182,6 @@
   "static/media/404momo.svg": "/portfolio/static/media/404momo.a49b885b.svg",
   "static/css/main.83eb954d.chunk.css.map": "/portfolio/static/css/main.83eb954d.chunk.css.map",
   "index.html": "/portfolio/index.html",
-  "precache-manifest.c64f545313df4b86d80dd13c558f1f7f.js": "/portfolio/precache-manifest.c64f545313df4b86d80dd13c558f1f7f.js",
+  "precache-manifest.f44ebcaaf7f2d1e16ecc9c7330e5b545.js": "/portfolio/precache-manifest.f44ebcaaf7f2d1e16ecc9c7330e5b545.js",
   "service-worker.js": "/portfolio/service-worker.js"
 }
