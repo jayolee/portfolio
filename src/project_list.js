@@ -126,7 +126,6 @@ import up_knobnot from './up/knob_not.gif'
 import up_knobcode from './up/knobcode.jpg'
 import up_workknob from './up/worknob.gif'
 
-import ImgDetail from './imgDetail.js'
 
 function anigenerator() {
     let element = [];
@@ -167,7 +166,7 @@ export const projectList = {
 
         "exlpla": {
             "Time": "Oct 2018 ~ Jan 2019",
-            "Team": "Team UP (Matthew Fang, Judith Leng, Ja Young Lee, Jerry Yang)",
+            "Team": <span>Team UP (Matthew Fang, <a href="http://judithleng.me/" target="_blank" rel="noopener noreferrer">Judith Leng,</a> Ja Young Lee, Jerry Yang)</span>,
             "Role": "UI/UX design, development, illustration",
             "Tool": "React, HTML, SCSS, Adobe Illustrator, Figma",
         },
@@ -214,8 +213,7 @@ export const projectList = {
             <p>
                 Our final major design implementation gives users the ability to save virtual endangered animals by obtaining a certain amount of balloons.
                 Balloons can only be obtained through the completing a concentration session. Different sized balloons will be given based off length of focus time. We believe this feature incentives users to participate in our guided-breathing exercise. We decided not to give out incentives because it might make users to concentrate just to earn rewards, which would undermine intrinsic motivation. Moreover, we incorporate a report on user’s focus time as evidence of progress, which would increase intrinsic motivation to continue
-                using our application
-</p></div>,
+                using our application</p></div>,
 
         "Challenges": <div>
             <div className="title up">Design Challenge:</div>
@@ -254,7 +252,7 @@ export const projectList = {
             <p>Therefore, I implemented the knob dial using rotation. This way, there is no worries of the knob derailing from the path, and the calculation because much simpler.</p>
         </div>,
         "Final Design": <div>
-            <img src={up_screenmap} className="zoomable" onClick={zoomimg} /><div className="imgdes">Screenmap of the Final Design</div>
+            <img src={up_screenmap} alt="Screenmap" className="zoomable" onClick={zoomimg} /><div className="imgdes">Screenmap of the Final Design</div>
         </div>,
         "Next Steps": <div>
             <img src={up_animals} id="e_animals" alt="Playing with Breathing Sensor" /><div className='imgdes'>Endangered Animal Illustrations By Ja Young Lee and <a href="http://judithleng.me/" target="_blank" rel="noopener noreferrer">Judith Leng</a></div>
@@ -353,7 +351,7 @@ export const projectList = {
             "Time": "Sep 21st ~ 22nd (HackCMU 2018)",
             "Team": <span>DoteNote (Aniruddh Iyer, <a className="member" href="http://www.hyunwoopaik.com/" target="_blank" rel="noopener noreferrer">Hyun Woo Paik,</a> Ja Young Lee, <a className="member" href="https://wwchung.github.io/SSUI-Portfolio/index.html" target="_blank" rel="noopener noreferrer">Won-Woo Chung</a>)</span>,
             "Role": "ideation, UI/UX design, video directing/editing",
-            "Tool": "Adobe XD, After EFfects, Illustrator",
+            "Tool": "Adobe XD, After Effects, Illustrator",
             " ": <i>This is a project for a hackathon held at CMU (HackCMU 2018) which got <b>3rd Place.</b></i>,
         },
         "Ideation": <div>
@@ -584,7 +582,7 @@ export const projectList = {
         </div>,
 
         "Image Source": <div>
-            <img src={nao_detail} alt="Image Source on Detail Page" /><div className='imgdes'>Image Source Button on the Detail Pages</div>
+            <img src={nao_detail} alt="Source Button on Detail Page" /><div className='imgdes'>Image Source Button on the Detail Pages</div>
             <p>Since the website is heavily relying on many images from other sites, I added Images Source buttons on each detail page of photos.</p></div>,
     },
 }

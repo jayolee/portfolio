@@ -19,7 +19,7 @@ class Page404 extends Component {
         
         return (
             <div id="momo404Wrap">
-                <img src={momo} id="momo404" />
+                <img src={momo} alt="404page" id="momo404" />
             </div>
         );
     }

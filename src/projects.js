@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom'
 import { withRouter } from 'react-router-dom'
 import './App.scss';
 import './projects.scss'
@@ -34,7 +33,6 @@ class Projects extends Component {
   }
   rolldown() {
     this.setState({opacity:0, transform:"translateY(700px)"});
-    console.log(this.exitLink);
     setTimeout(function () {
       this.props.history.push(this.exitLink);}.bind(this), 400)
   }

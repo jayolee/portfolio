@@ -201,7 +201,7 @@ $up: #E9974C;
 				@include sizes(224px);
 			}
 			.challhalf{
-				@include sizes(500px);
+				@include sizes(500px,null,95%);
 			}
 		}
 		.proto{
@@ -1015,11 +1015,14 @@ $imgshadow: 0 0 14px rgba(0,0,0,0.2);
 
 .zoomed{
 	@include sizes(95vw !important,null,1100px);
-		@include transform(translateX(-150px));
-	
+		@include transform(translateX(-100px));
+		margin: {
+			left:auto !important;
+			right:auto !important;
+		}
 
 }
-@media screen and (max-width:1000px){
+@media screen and (max-width:1100px){
 .zoomed{
 	@include transform(translateX(-2.5vw));
 
