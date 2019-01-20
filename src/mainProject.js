@@ -141,7 +141,7 @@ class MainProject extends Component {
     let routelist=[];
     let projectUrl = '';
     for (let i = 0; i < this.state.worklist.length; i++) {
-      projectUrl=process.env.PUBLIC_URL +'/project/'+this.state.worklist[i].id+'/';
+      projectUrl=process.env.PUBLIC_URL +'/projects/'+this.state.worklist[i].id+'/';
      element.push(
         <Link to={projectUrl} key={this.state.worklist[i].id+'_link'} >
         <div id={this.state.worklist[i].id} key={this.state.worklist[i].id} className={this.state.worklist[i].mainClass}  >
@@ -163,7 +163,7 @@ class MainProject extends Component {
         </Link>
       );
       routelist.push(
-        <Route path={projectUrl} key={"routeto_"+this.state.worklist[i].id} render={props => <Projects key="Projects" idnum={this.state.worklist[i].id}  projecttype="/project" />}  />
+        <Route path={projectUrl} key={"routeto_"+this.state.worklist[i].id} render={props => <Projects key="Projects" idnum={this.state.worklist[i].id}  projecttype="/projects" />}  />
       )
     }
     element = <div>{routelist}<div className="worktypes">{this.worktypebar()}</div>{element}</div>;

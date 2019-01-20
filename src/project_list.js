@@ -314,14 +314,14 @@ export const projectList = {
             " ": <i>This is a project for a Bose Challenge at CMU.</i>,
         },
         "Ideation": <div>
-            <p> The prompt of Bose Challenge was <i><b>“How might we use sound-based augmented reality to improve our lives?”</b></i> Among the idea we had, we decided to focus on improving cooperation situations which require team members’ communications about their locations and status. More specifically, we narrowed down our target as firefighters, about their rescue operations in extreme situations.</p> <p>Our assumption here is that under the urgent circumstances of limited vision and hearing, it is difficult to communicate accurate location information via speaking. Therefore, we designed a way to communicate each other automatically generated location data based on their GPS with minimum hand control. </p><img src={logpos1} alt="Ideation Meeting" /><div className='imgdes'>Ideation Meeting</div> </div>,
+            <p> The prompt of Bose Challenge was <i><b>“How might we use sound-based augmented reality to improve our lives?”</b></i> Among the idea we had, we decided to focus on improving cooperation situations which require team members’ communications about their locations and status. More specifically, we narrowed down our target as firefighters, about their rescue operations in extreme situations.</p> <p>Our assumption here is that under the urgent circumstances of limited vision and hearing, it is difficult to communicate accurate location information via speaking. Therefore, we designed a way to communicate each other automatically generated location data based on their GPS with minimum hand control. </p><img src={logpos1} alt="Ideation Meeting" className="zoomable" onClick={zoomimg}/><div className='imgdes'>Ideation Meeting</div> </div>,
         "User Research": <div>
             <p> With our basic ideation, we conducted a phone interview with a firefighter. He confirmed that our idea will be helpful, and gave us the problems about the current system has.</p><img src={logpos2} alt="Phone Interview" /><div className='imgdes'>Phone Interview</div><p>According to the firefighter, there is a system providing location information using sound and blinking lights after a firefighter being motionless for 30 seconds (Watch the video for additional information). However, the issue is that the location information is verbally communicated, so the information rescue team has might not be the latest information. Also, the light and sound signals can be hindered by the fire and the smoke. Our solution solves this problem by providing real-time information directly to the firefighters through the device.</p></div>,
 
-        "Challenges": <div><div className='title logpos' >Technical Challenge:</div>How can we get the accurate indoor location data?<div className='solution'><li>To get accurate location data, we designed our device to use the bluetooth devices for better location accuracy.</li></div><div className='title logpos'>Social Constraints:</div>According to the interview, there are two social constraints:<br />Firefighters sometimes rely on their ears to determine the temprature. Therefore, there should not be a thing cover their ears.<br /> Firefighters resist change, especially if it is going to be hard to put on. <div className='solution'> <li>We designed an audio AR device satisfying these challenges. </li></div><img src={logpos3} alt="Device Design" /><div className='imgdes'>Device Desiged by <a href='http://www.hyunwoopaik.com' target='_blank' rel="noopener noreferrer">Hyun Woo Paik</a></div></div>,
+        "Challenges": <div><div className='title logpos' >Technical Challenge:</div>How can we get the accurate indoor location data?<div className='solution'><li>To get accurate location data, we designed our device to use the bluetooth devices for better location accuracy.</li></div><div className='title logpos'>Social Constraints:</div>According to the interview, there are two social constraints:<br />Firefighters sometimes rely on their ears to determine the temprature. Therefore, there should not be a thing cover their ears.<br /> Firefighters resist change, especially if it is going to be hard to put on. <div className='solution'> <li>We designed an audio AR device satisfying these challenges. </li></div><img src={logpos3} alt="Device Design" className="zoomable" onClick={zoomimg} /><div className='imgdes'>Device Desiged by <a href='http://www.hyunwoopaik.com' target='_blank' rel="noopener noreferrer">Hyun Woo Paik</a></div></div>,
 
         "Final Design": <div><p>To create a video explining our idea, we made a scenario conveying how our design can be applied to the target situations.</p>
-            <img className="half" src={logposstory1} alt="Storyboard 1" /> <img className="half" src={logposstory2} alt="Storyboard 2" /><div className="imgdes">Video Storyboard by Ja Young Lee</div>
+            <img className="half zoomable" onClick={zoomimg} src={logposstory1} alt="Storyboard 1" /> <img className="half zoomable" onClick={zoomimg} src={logposstory2} alt="Storyboard 2" /><div className="imgdes">Video Storyboard by Ja Young Lee</div>
             <p>The device can be controlled with verbal and head motions.</p>
             <div className="control">
                 <img id="connected" src={logposrun1} alt="Control: Connect" /></div>
@@ -357,11 +357,11 @@ export const projectList = {
         "Ideation": <div>
             <p> Our idea started from a thought: what if we can leave our lovers a virtual message at a specific location ?
             Using AR technology, we focused on messaging emotions related to locations.
-                With DoteNote, users can leave 3D messages at specific locations.</p><img className="half" src={dote1} alt="Ideation Meeting 1" />
-            <img className="half" src={dote2} alt="Ideation Meeting 2" />
+                With DoteNote, users can leave 3D messages at specific locations.</p><img className="half zoomable" onClick={zoomimg} src={dote1} alt="Ideation Meeting 1" />
+            <img className="half zoomable" onClick={zoomimg} src={dote2} alt="Ideation Meeting 2" />
             <div className="imgdes">Ideation Meeting</div> </div>,
         "Challenges": <div>
-            <img src={dote3} alt="AR Testting" />
+            <img src={dote3} alt="AR Testting" className="zoomable" onClick={zoomimg} />
             <div className="imgdes">AR Testing</div>
             <div className="title dote">Technical Challenge:</div>
             <p>Due to the accuracy of GPS, we faced following challenges:
@@ -412,9 +412,9 @@ export const projectList = {
             <p>How can we design the overall concept to be accepted by wide range of people? Many visual novel games use drawing style of cell-animation, which some people feel childish. </p>
             <div className="solution"><li>As a solution, we chose realistic illustration style.</li></div>
             <div className="onethird">
-                <img src={reporter1} alt="Illustration 1" />
-                <img src={reporter2} alt="Illustration 2" />
-                <img src={reporter3} alt="Illustration 3" />
+                <img src={reporter1} alt="Illustration 1" className="zoomable" onClick={zoomimg} />
+                <img src={reporter2} alt="Illustration 2" className="zoomable" onClick={zoomimg} />
+                <img src={reporter3} alt="Illustration 3" className="zoomable" onClick={zoomimg} />
             </div>
             <div className="title reporter">UI Challenge:</div>
             <p>How can we make the interface intuitive enough for people who have not played visual novel game can easily play?</p>
@@ -428,9 +428,9 @@ export const projectList = {
         </div>,
 
         "Interface": <div className="onethird">
-            <img src={reporter4} alt="Screen 1" />
-            <img src={reporter5} alt="Screen 2" />
-            <img src={reporter6} alt="Screen 3" />
+            <img src={reporter4} alt="Screen 1" className="zoomable" onClick={zoomimg} />
+            <img src={reporter5} alt="Screen 2" className="zoomable" onClick={zoomimg} />
+            <img src={reporter6} alt="Screen 3" className="zoomable" onClick={zoomimg} />
             <a href="https://goo.gl/B7sXrV" target="_blank" rel="noopener noreferrer">
                 <div className="button reporter">Go to Invision Prototype</div>
             </a>
@@ -566,8 +566,8 @@ export const projectList = {
             <p>For a React web application project for <i>Software Structures for User Interfaces</i> class at CMU in Fall 2018, I chose Naoshima, Japan as the travel location I will introduce.<br />
                 Naoshima is the place I visited in summer 2018. It is an island full of artworks.  </p></div>,
         "Prototypes": <div>
-            <img src={nao_lofi} alt="Lo-fi Prototype" className="half" />
-            <img src={nao_midfi} alt="Mid-fi Prototype" className="half" /><div className="imgdes">Lo-fi and Mid-fi Prototypes</div>
+            <img src={nao_lofi} alt="Lo-fi Prototype" className="half zoomable" onClick={zoomimg} />
+            <img src={nao_midfi} alt="Mid-fi Prototype" className="half zoomable" onClick={zoomimg} /><div className="imgdes">Lo-fi and Mid-fi Prototypes</div>
             <p>As a web application introducing a specific location, I wanted to give a feeling of staying on one page but looking at different aspects of the website. Therefore, I designed all pages appearing as layers above the home page.</p>
         </div>,
 
@@ -577,12 +577,12 @@ export const projectList = {
             <p>To make different layers of pages more obvious, I gave page transition animations.</p></div>,
 
         "Illustrations": <div>
-            <img src={nao_sketches} alt="Illustrations" className="half" /> <img src={nao_drawing} alt="Drawing on iPad" className="half" /><div className='imgdes'>Hand-Drawn Digital Illustrations on iPad Sketch</div>
+            <img src={nao_sketches} alt="Illustrations" className="half zoomable" onClick={zoomimg} /> <img src={nao_drawing} alt="Drawing on iPad" className="half zoomable" onClick={zoomimg} /><div className='imgdes'>Hand-Drawn Digital Illustrations on iPad Sketch</div>
             <p>Because Naoshima is the island with many famous artworks, I wanted to give the artistic feeling to the website. Therefore, I added hand-drawn digital illustrations.</p>
         </div>,
 
         "Image Source": <div>
-            <img src={nao_detail} alt="Source Button on Detail Page" /><div className='imgdes'>Image Source Button on the Detail Pages</div>
+            <img src={nao_detail} alt="Source Button on Detail Page" className="zoomable" onClick={zoomimg} /><div className='imgdes'>Image Source Button on the Detail Pages</div>
             <p>Since the website is heavily relying on many images from other sites, I added Images Source buttons on each detail page of photos.</p></div>,
     },
 }

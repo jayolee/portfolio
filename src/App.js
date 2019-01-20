@@ -111,14 +111,14 @@ class App extends Component {
         
           <div className="logobox">
             <div className="logowrap" style={this.logoWrapStyle[this.state.page]}>
-              <a href={process.env.PUBLIC_URL +"/project"} >
+              <a href={process.env.PUBLIC_URL +"/projects"} >
                 <img src={this.logoList[this.state.page]} id="ylogo" alt="logo" style={this.logoStyle[this.state.page]} onClick={(ev)=> this.setState({menu:0})}/>
                 </a>
             </div>
           </div>
           <Switch>
           <Route path={process.env.PUBLIC_URL} exact component={MainProject} />
-          <Route path={process.env.PUBLIC_URL + "/project/"} component={MainProject} />
+          <Route path={process.env.PUBLIC_URL + "/projects/"} component={MainProject} />
           <Route path={process.env.PUBLIC_URL +"/fun/"} component={Fun} />
           <Route path={process.env.PUBLIC_URL +"/fineart/"} component={FAs} />
           <Route path={process.env.PUBLIC_URL +"/about/"} component={About} />
