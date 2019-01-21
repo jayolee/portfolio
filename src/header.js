@@ -14,7 +14,7 @@ class Header extends Component {
             aclass: ["activemenu menua", "menua", "menua", "menua"]
         }
         this.menulist = {
-            "Projects": ["projects", "project"],
+            "Projects": ["projects", "projects"],
             "Fun": ["fun", "fun"],
             "Fine Art": ["FA", "fineart"],
             "About/Contact": ["contact", "about"]
