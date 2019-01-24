@@ -399,14 +399,25 @@ width:102px;
   @include sizes(100%);
   position: relative;
   @include positions(0);
-  margin: 0px auto;
+  margin: 50px auto 50px;
+  text-align: center;
+  .titles{
+    color:#5ef2ff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-top:26px;
+    font: {
+      size:18px;
+      weight:300;
+    }
+  }
 }
 
 .logowrap {
   position: relative;
   @include sizes(240px, 72px);
   overflow: hidden;
-  margin: 50px auto 60px;
+  margin:0 auto;
 }
 
 #ylogo {
@@ -468,7 +479,7 @@ width:102px;
 .worktypes {
   font-size: 18px;
   color: #485968;
-  margin: 0 auto 46px;
+  margin: 0 auto 30px;
   text-align: center;
 }
 .onlysmaller {
@@ -515,7 +526,7 @@ width:102px;
         text-transform: none;
       }
       .portwrap{
-        @include sizes(null,null,500px,500px);
+        @include sizes(null,null,500px,400px);
         transition:.4s;
       }
       
@@ -557,18 +568,42 @@ width:102px;
     position: absolute;
     @include positions( 50%,null,null,50%);
     @include transform( translateX(-50%) translateY(-50%));
+    text-shadow: 0 0 16px rgba(0,0,0,0.9);
     font: {
         size: 24px;
-        weight: bold;
+        weight: 500;
     }
     letter-spacing: .5px;
-    line-height: 1.5;
+    line-height: 1.6;
     color: #fff;
     opacity: 1;
-    text-shadow: 0 0 6px rgba(0,0,0,0.6);
+  
+    .types {
+      font: {
+        weight: 300;
+        size: 18px;
+      }
+    }
+    .expla{
+      position:relative;
+      font: { 
+        size:17px;
+        weight:300;
+      }
+      line-height: 1.6;
+      color:#fff;
+      @include sizes(95%,null, 300px);
+      &.fun{
+        @include sizes(95%,null,240px);
+      }
+      margin:10px auto 20px;
+    }
+  
+  
   }
   img{
-    opacity:.4;
+    opacity:.35;
+    transition:.4s;
   }
   &:hover{
        .discrip {
@@ -605,13 +640,7 @@ width:102px;
 
 
 
-.discrip {.types {
-  font: {
-      weight: 300;
-    size: 18px;
-  }
-}
-}
+
 .discripsmaller {
   @include sizes(100%);
   margin: 10px 0 18px;

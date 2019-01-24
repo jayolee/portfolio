@@ -24,12 +24,15 @@ import dote4 from './Dotenote/notify1.svg'
 import dote5 from './Dotenote/notify2.svg'
 
 import getcuisine1 from './getcuisine/top.gif'
-import getcuisine2 from './getcuisine/hi_proto.gif'
 import getcuisine3 from './getcuisine/icons.png'
 import getcuisine4 from './getcuisine/hi_1.jpg'
 import getcuisine5 from './getcuisine/hi_2.jpg'
 import getcuisine6 from './getcuisine/final_1.jpg'
 import getcuisine7 from './getcuisine/final_2.jpg'
+import getcuisine8 from './getcuisine/report1.svg'
+import getcuisine9 from './getcuisine/report2.svg'
+import getcuision10 from './getcuisine/modelerror.gif'
+import getcuisine11 from './getcuisine/503error.jpg'
 
 import reporter0 from './reporter/int1.jpg'
 import reporter1 from './reporter/garage.jpg'
@@ -100,7 +103,7 @@ import momo26_2 from './momoko/ani/23.gif'
 import momo27_1 from './momoko/thumb/24.png'
 import momo27_2 from './momoko/ani/24.gif'
 
-import naoshima from './images/naoshima2.jpg'
+import naoshima from './naoshima/top.gif'
 import nao_lofi from './naoshima/lo3.jpg'
 import nao_midfi from './naoshima/midfi.jpg'
 import nao_drawing from './naoshima/draw.jpg'
@@ -143,12 +146,12 @@ function anigenerator() {
     return element;
 }
 
-function zoomimg(e){
-    let classlist= e.target.classList;
-    if(classlist.contains("zoomed")){
+function zoomimg(e) {
+    let classlist = e.target.classList;
+    if (classlist.contains("zoomed")) {
         e.target.classList.remove("zoomed");
     }
-    else{
+    else {
         e.target.classList.add("zoomed");
     }
 }
@@ -198,10 +201,9 @@ export const projectList = {
                 </div>
             </div>
             <p>
-                The next part of our application is the “break” portion which encourages users to follow a guided deep-breathing exercise. As users breathe out, they will watch a balloon being blown up. We included stealth interventions to help users relieve stress and counteract ego-depletion. This would be beneficial for users’ performance as they enter the next productivity phase. The intervention to counteract ego-depletion was imperative in the design because the ability for users to replenish mental resource contributes to them forming the habit of working productively,
-            taking breaks, and ultimately returning to our application. We included guided deep-breathing - which in experiments show significant effect on improvement of the hemodynamic changes following stressful tasks.</p><p>
-                Also, to make this a true stealth intervention, we took an embedded-design approach by incorporating the visual element of blowing up a balloon as one engages in the guided deep-breathing activity. Blowing up a balloon utilizes the technique of obfuscation via distancing, as the “story” of blowing up a balloon is metaphorical for blowing away one’s stress.
-            Additionally, obfuscation via misdirection is used because gamified elements such as the colorful graphics of the balloon, would serve as red herrings to detract from the our actual stealth interventions.</p>
+                The next part of our application is the “break” portion which encourages users to follow a guided deep-breathing exercise. As users breathe out, they will watch a balloon being blown up, which is a stealth intervention helping users relieve stress and counteract ego-depletion. This would be beneficial for users’ performance for the next productivity phase. The intervention was imperative in the design because the ability for users to replenish mental resource contributes to them forming the habit of working productively,
+            taking breaks, and ultimately returning to our application. The guided deep-breathing which in experiments show significant effect on improvement of the hemodynamic changes following stressful tasks.</p><p>
+                Also, to make this a true stealth intervention, we took an embedded-design approach by incorporating the visual element of blowing up a balloon as one engages in the guided deep-breathing activity. <b>Blowing up a balloon utilizes the technique of obfuscation via distancing, as the “story” of blowing up a balloon is metaphorical for blowing away one’s stress.</b> Additionally, obfuscation via misdirection is used because gamified elements such as the colorful graphics of the balloon, would serve as red herrings to detract from the our actual stealth interventions.</p>
             <div style={{ textAlign: "center" }}>
                 <div className="imgwrap_sc" >
                     <img src={up_lofi3} className="phonesc" style={{ width: "200px" }} alt="Report Prototype" /><div className="imgdes">Lo-fi Prototype of Report</div>
@@ -217,29 +219,30 @@ export const projectList = {
 
         "Challenges": <div>
             <div className="title up">Design Challenge:</div>
-            <p>- How to reduce demoralizing factors?<br />
+            <p><b>- How to reduce demoralizing factors?</b><br />
                 We conceded about users setting the very short sessions and not actually performing the breathing sessions to get the rewards. To avoid this, we decided to reward users by giving out balloons to save endangered animals. Also, we believe that users would already be motivated to practice on their tasks. Moreover, we decided to use the breathing sensor on the iPhone to not only track the activity, but also strengthen the metaphor of blowing away one’s stress.</p>
-            <img src={up_proto_blow} alt="Playing with Breathing Sensor" className="zoomable" onClick={zoomimg}/><div className='imgdes'>Breathing Sensor Detecting the Breathing Activity</div><br />
+            <img src={up_proto_blow} alt="Playing with Breathing Sensor" className="zoomable" onClick={zoomimg} /><div className='imgdes'>Breathing Sensor Detecting the Breathing Activity</div><br />
 
             <p className="addmargin">
-                - Creating Prototypes<br />
+                <b>- Creating Prototypes</b><br />
                 After doing user testings with less interactive prototypes made of static screens, we realized that it is hard to get the usability test data due to the lack of the key interaction we designed. Therefore, we decided to create a working prototype by coding to give realistic experience to our testers. It was my role to build a realistic working prototype.</p>
             <img src={up_meeting} alt="Early Prototype" className="half zoomable" onClick={zoomimg} />
             <img src={up_earlyProto} className="half zoomable" alt="Early Prototype" onClick={zoomimg} /> <div className='imgdes'>Development Process and User Testing of the Early Prototype</div><br />
 
             <div className="title up">Technical Challenge:</div>
-            <div style={{ textAlign: "center", marginBottom:0}}>
+            <p><b>- Creating knob dials</b><br />
+                The biggest technical challenge I had was creating a knob dial. At first, I tried to calculate the exact X and Y position of a knob using the angle from the center of the dial. However, it was slow and didn't work correctly.</p>
+            <div style={{ textAlign: "center"}}>
                 <div className="imgwrap_sc" >
                     <img src={up_knobnot} alt="Knob Prototype" className="phonesc" />
                 </div>
                 <div className="imgwrap_sc" >
                     <img src={up_knob} className="challhalf" alt="Knob Position Calculation" /> </div>
             </div>
-            <div className='imgdes'>First Prototype of the Knob Dial</div>
-            <p>- Creating knob dials<br />
-                The biggest technical challenge I had was creating a knob dial. At first, I tried to calculate the exact X and Y position of a knob using the angle from the center of the dial. However, it was slow and didn't work correctly.</p>
-
-            <div style={{ textAlign: "center", marginBottom:0 }}>
+            <div className='imgdes' style={{ marginBottom:"60px"}}>First Prototype of the Knob Dial</div>
+           
+            <p>Therefore, I implemented the knob dial using rotation. This way, there is no worries of the knob derailing from the path, and the calculation because much simpler.</p>
+            <div style={{ textAlign: "center" }}>
                 <div className="imgwrap_sc" >
                     <img src={up_workknob} className="phonesc" alt="Concentration Session" />
                 </div>
@@ -248,8 +251,8 @@ export const projectList = {
                 </div>
             </div>
             <div className="imgdes">Final Implementation of the Knob Dial</div>
+
             
-            <p>Therefore, I implemented the knob dial using rotation. This way, there is no worries of the knob derailing from the path, and the calculation because much simpler.</p>
         </div>,
         "Final Design": <div>
             <img src={up_screenmap} alt="Screenmap" className="zoomable" onClick={zoomimg} /><div className="imgdes">Screenmap of the Final Design</div>
@@ -265,7 +268,7 @@ export const projectList = {
     "getcuisine": {
         "projectTitle": "Get Cuisine",
         "quote": "How can machine learning help people clean out the fridge?",
-        "topimg": <img id="getcuisine" alt="Get Cuisine Screen" className="topimg imgBorder" src={getcuisine1} />,
+        "topimg": <img id="getcuisine" alt="Get Cuisine Screen" className="topimg" src={getcuisine1} />,
 
         "exlpla": {
             "Time": "Dec 2018 ~ Jan 2019",
@@ -276,24 +279,38 @@ export const projectList = {
         "button": <a href="http://getcuisine.herokuapp.com" target="_blank" rel="noopener noreferrer">
             <div className="button getcuisine">Go to the Website</div></a>,
         "Ideation": <div>
-            <p>As a final project for <a href="http://humanaiclass.org" target="_blank" rel="noopener noreferrer">Human-Ai Interaction class at CMU in Fall 2018,</a> I decided to create a system with a Machine Learning (ML) model providing foods to cook based on the ingredients provided from users.<br />
+            <p>This project is started as a final project for <a href="http://humanaiclass.org" target="_blank" rel="noopener noreferrer">Human-Ai Interaction class at CMU in Fall 2018.</a> I created a Machine Learning (ML) model providing foods to cook based on the ingredients provided from users. After then, I created a web platform to make it possible for people to use this model.<br />
                 I got inspired by my experience having small amounts of ingredients which are leftovers after cooking. It’s often challenging to deal with these leftovers. Therefore, when I found the <a href="https://www.kaggle.com/c/whats-cooking" target="_blank" rel="noopener noreferrer">cuisines and ingredients dataset</a> from Kaggle, I decided to create a model can help people clean out their fridges.</p></div>,
         "Research": <div>
-            <p> In the beginning, I planned to create an Amazon Alexa Skill. However although 41.4 percent of people place their smart speakers in the kitchen, only 26.5% of people use the speakers to look for recipes monthly, and only 5.1% people use it daily. This is a comparably low percentage comparing to some other popular functions such as listening music (76.2% of monthly use, 41.9% of daily use) or checking the weather (69.1% of monthly use, 41.4% of daily use). <a href=" (https://voicebot.ai/download-smart-speaker-consumer-adoption-report-2018/)" target="_blank" rel="noopener noreferrer">(Source)</a> Therefore, I decided to create a website which also has visual interaction with users.</p></div>,
+            <p> In the beginning, I planned to create an Amazon Alexa Skill. <b>However, although 41.4% of people place their smart speakers in the kitchen, only 26.5% of people use the speakers to look for recipes monthly, and only 5.1% people use it daily.</b> This is a comparably low percentage comparing to some other popular functions such as listening music (76.2% of monthly use, 41.9% of daily use) or checking the weather (69.1% of monthly use, 41.4% of daily use). <a href=" https://voicebot.ai/2018/03/21/data-breakdown-consumers-use-smart-speakers-today/" target="_blank" rel="noopener noreferrer">(Source)</a> Therefore, I decided to create a website which also has visual interaction with users.</p>
+            <img src={getcuisine8} alt="Where do people put their smart speakers?" style={{ maxWidth: "500px" }} />
+            <img src={getcuisine9} alt="Smart Speaker Use Case Frequency Jan 2018" /><div className="imgdes">
+                <a href=" https://voicebot.ai/2018/03/21/data-breakdown-consumers-use-smart-speakers-today/" target="_blank" rel="noopener noreferrer">(Source of the graphs above)</a>
+            </div>
+        </div>,
 
-        "Challenges": <div><p>-Lack of the open source recipe dataset<br />
-            I could not find an open source recipe dataset; however, I found the <a href="https://www.kaggle.com/c/whats-cooking" target="_blank" rel="noopener noreferrer">cuisines and ingredients dataset from Kaggle</a>. With this dataset, I decided to limit the functionality of the model as providing the appropriate cuisine to look for based on the given ingredients. Because providing cuisine requires additional efforts for users to look for a specific food to cook, I also created a function sending users to Google Search searching recipes with the predicted cuisine and given ingredients.</p></div>,
+        "Challenges": <div><p><b>- Lack of the open source recipe dataset</b><br />
+            Since there was no open source recipe dataset, I used the <a href="https://www.kaggle.com/c/whats-cooking" target="_blank" rel="noopener noreferrer">cuisines and ingredients dataset from Kaggle</a>. With this dataset, I decided to limit the functionality of the model as providing the appropriate cuisine to look for based on the given ingredients. Because providing cuisine requires additional efforts for users to look for a specific food to cook, I also created a function sending users to Google Search searching recipes with the predicted cuisine and given ingredients.</p>
+            
+            <p><b>- Debugging server error</b><br />
+            This was the first time I used Python Flask and managed the server side. I used ajax call to send and get the data to the server. It kept returning 500 error, and I could not figure out what it is. By deleting codes line by line, I figured out this happened because I passed the Null value to the server to run the model. Later, I learned that I also need to make a server return the error indicating what type of error it is for the sake of debugging.
+            <img src={getcuisine11} alt ="500 error" style={{maxWidth:"500px"}}/><div className ="imgdes">500 Error... What Does It Mean?</div>
+            </p>
+            <p><b>- Managing the data type to run the ML model</b><br />
+            The training data I used didn't have colum headers, and the data I passed from the inputs (JSON -> Pandas Dataframe) had column headers. As a result, it only returned French Cuisine. I added a line of code to get rid of the column headers.
+            <img src={getcuision10} className="imgBorder" style={{maxWidth:"500px"}} alt="Model Returning Error" /><div className="imgdes">ML Model Only Returning French Cuisine<br />(Curry Paste + Tamarind Paste + Chicken Breasts = French Food?)</div>
+            
+            </p>
+            </div>,
 
         "Process": <div>
-            <img src={getcuisine2} className="imgBorder" alt="Hi-fi prototype" /><div className='imgdes'>Hi-fi Prototype made of HTML, CSS, jQuery, and Flask</div>
+            <img className="half imgBorder addmargin zoomable" src={getcuisine4} alt="Hi-fi prototype" onClick={zoomimg}/><img className="half addmargin zoomable" src={getcuisine5} alt="Hi-fi prototype" onClick={zoomimg}/><div className='imgdes'>Hi-fi Prototype made of HTML, CSS, jQuery, and Flask</div>
+            <p className="addmargin">Because I trained the model with certain ingredients, I wanted people to type ingredients in a format that can be processed. Therefore, I implemented an autocomplete function on the search bar using jQuery Autocomplete API. The biggest issue of using ML is that it is hard to optimize the website for shorter loadings. I tried to optimize the files as much as possible; however, the initial response time is still long due to Heroku (If the app has no traffic for 30 mins, it goes to sleep due to Heroku's policy).<br /><br /></p>
 
-            <img className="half imgBorder addmargin" src={getcuisine4} alt="Hi-fi prototype" /><img className="half addmargin" src={getcuisine5} alt="Hi-fi prototype" />
-            <p className="addmargin">Because I trained the model with certain ingredients, I wanted people to type ingredients in a format that can be processed. Therefore, I implemented an autocomplete function on the search bar using jQuery Autocomplete API. The biggest issue of using ML is that it is hard to optimize the website for shorter loadings. I tried to optimize the files as much as possible; however, it is still slow in the beginning.<br /><br /></p>
-
-            <img src={getcuisine3} alt="Cuisine Icons" /><div className='imgdes'>Cuisine Icons</div>
+            <img src={getcuisine3} alt="Cuisine Icons" onClick={zoomimg} className="zoomable" /><div className='imgdes'>Cuisine Icons</div>
             <p>
-                One of the concerns about this project is that the data this website provides can easily be obtained, and even more data can be obtained by searching on websites providing recipes. Also, the data people need is recipes, not a cuisine type to look for. However, I got feedback that this website not only provides information but also fun, I focused on providing interesting interactions as fun factors. I added graphics for visual pleasure.</p>
-            <img className="half imgBorder addmargin" src={getcuisine6} alt="Final Design" /><img className="half addmargin" src={getcuisine7} alt="Final Design" />
+                One of the concerns about this project is that the data this website provides can easily be obtained, and even more data can be obtained by searching on websites providing recipes. Also, the data people need is recipes, not a cuisine type to look for. <b>However, I got feedback that this website not only provides information but also fun.</b> Therefore, I focused on providing interesting interactions. I added graphics for visual pleasure.</p>
+            <img className="half imgBorder addmargin zoomable" src={getcuisine6} alt="Final Design" onClick={zoomimg}/><img className="half addmargin zoomable" src={getcuisine7} alt="Final Design" onClick={zoomimg}/><div className='imgdes'>Final Design</div>
             <p>
                 Also, to provide more helpful information, I created a function sending users to Google Search searching recipes with the predicted cuisine and given ingredients.</p></div>,
 
@@ -314,7 +331,7 @@ export const projectList = {
             " ": <i>This is a project for a Bose Challenge at CMU.</i>,
         },
         "Ideation": <div>
-            <p> The prompt of Bose Challenge was <i><b>“How might we use sound-based augmented reality to improve our lives?”</b></i> Among the idea we had, we decided to focus on improving cooperation situations which require team members’ communications about their locations and status. More specifically, we narrowed down our target as firefighters, about their rescue operations in extreme situations.</p> <p>Our assumption here is that under the urgent circumstances of limited vision and hearing, it is difficult to communicate accurate location information via speaking. Therefore, we designed a way to communicate each other automatically generated location data based on their GPS with minimum hand control. </p><img src={logpos1} alt="Ideation Meeting" className="zoomable" onClick={zoomimg}/><div className='imgdes'>Ideation Meeting</div> </div>,
+            <p> The prompt of Bose Challenge was <i><b>“How might we use sound-based augmented reality to improve our lives?”</b></i> Among the idea we had, we decided to focus on improving cooperation situations which require team members’ communications about their locations and status. More specifically, we narrowed down our target as firefighters, about their rescue operations in extreme situations.</p> <p>Our assumption here is that under the urgent circumstances of limited vision and hearing, it is difficult to communicate accurate location information via speaking. Therefore, we designed a way to communicate each other automatically generated location data based on their GPS with minimum hand control. </p><img src={logpos1} alt="Ideation Meeting" className="zoomable" onClick={zoomimg} /><div className='imgdes'>Ideation Meeting</div> </div>,
         "User Research": <div>
             <p> With our basic ideation, we conducted a phone interview with a firefighter. He confirmed that our idea will be helpful, and gave us the problems about the current system has.</p><img src={logpos2} alt="Phone Interview" /><div className='imgdes'>Phone Interview</div><p>According to the firefighter, there is a system providing location information using sound and blinking lights after a firefighter being motionless for 30 seconds (Watch the video for additional information). However, the issue is that the location information is verbally communicated, so the information rescue team has might not be the latest information. Also, the light and sound signals can be hindered by the fire and the smoke. Our solution solves this problem by providing real-time information directly to the firefighters through the device.</p></div>,
 
@@ -552,7 +569,7 @@ export const projectList = {
     "naoshima": {
         "projectTitle": "Artwork of Naoshima",
         "quote": "How can a web application introduce a travel location?",
-        "topimg": <img id='naoshima' className="topimg imgBorder" src={naoshima} alt="Naoshima" />,
+        "topimg": <img id='naoshima' className="topimg" src={naoshima} alt="Naoshima" />,
         "button": <a href="https://jayolee.github.io/Travel-app/" target="_blank" rel="noopener noreferrer">
             <div className="button naoshima">Go to the Website</div>
         </a>,

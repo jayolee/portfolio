@@ -22,7 +22,7 @@ class MainProject extends Component {
       activelist: ['uiux', 'development', 'ideation'],
       typenames: {
         'ideation': ['Ideation', "worksbutton workactive"],
-        'uiux': ['UI/UX', "worksbutton workactive"],
+        'uiux': ['UI', "worksbutton workactive"],
         'development': ['Development', "worksbutton workactive"]
       },
       worklist: [
@@ -32,6 +32,7 @@ class MainProject extends Component {
           "class": "uiux development portwrap",
           "mainClass": "main_work",
           "types": "UI/UX | Development",
+          "expla":"A mobile app that promotes productivity and combat stress",
           "title": "Up",
         },
         {
@@ -40,6 +41,7 @@ class MainProject extends Component {
           "class": "uiux development portwrap",
           "mainClass": "main_work",
           "types": "UI/UX | Development",
+          "expla":"A website helping people clean out the fridge with ML model",
           "title": "Get Cuisine",
         },
         {
@@ -48,6 +50,7 @@ class MainProject extends Component {
           "class": "ideation uiux portwrap",
           "mainClass": "main_work",
           "types": "UI/UX | Ideation",
+          "expla":"Location specific virtual messaging mobile application",
           "title": "DoteNote",
         },
          {
@@ -56,6 +59,7 @@ class MainProject extends Component {
           "class": "ideation portwrap",
           "mainClass": "main_work",
           "types": "Ideation",
+          "expla":"Improving rescue operations communication using audio AR",
           "title": "LOG + POS",
         },
         { "id":"naoshima",
@@ -63,6 +67,7 @@ class MainProject extends Component {
         "class":"development uiux portwrap",
         "mainClass":"main_work",
         "types": "UI/UX | Development",
+        "expla":"A website about Naoshima, Japan",
         "title": "Artwork of NAOSHIMA",
       },
       ],
@@ -73,7 +78,7 @@ class MainProject extends Component {
     setTimeout(this.setState({ page: 0 }), 300);
 
   }
-
+  //filter function  
   addActive(e) {
     let exist = 0;
     let thisDiv = e.target.id;
@@ -124,16 +129,16 @@ class MainProject extends Component {
     this.setState({ typenames: typenames, worklist: worklist });
   }
 
-  //filter
-  worktypebar() {
-    let element = [];
-    for (let i = 0; i < this.typelist.length; i++) {
-      element.push(
-        <div className={this.state.typenames[this.typelist[i]][1]} key={this.typelist[i]} onClick={this.addActive} id={this.typelist[i]}>{this.state.typenames[this.typelist[i]][0]}</div>
-      )
-    }
-    return element;
-  }
+  // //filter
+  // worktypebar() {
+  //   let element = [];
+  //   for (let i = 0; i < this.typelist.length; i++) {
+  //     element.push(
+  //       <div className={this.state.typenames[this.typelist[i]][1]} key={this.typelist[i]} onClick={this.addActive} id={this.typelist[i]}>{this.state.typenames[this.typelist[i]][0]}</div>
+  //     )
+  //   }
+  //   return element;
+  // }
 
   //create boxes
   projects() {
@@ -150,8 +155,11 @@ class MainProject extends Component {
             <div className="discrip">
             <div>
               {this.state.worklist[i].title}</div>
-              <div className="types">
+              {/* <div className="types">
                 {this.state.worklist[i].types}
+              </div> */}
+              <div className="expla">
+                {this.state.worklist[i].expla}
               </div>
             </div>
           </div>
@@ -166,7 +174,7 @@ class MainProject extends Component {
         <Route path={projectUrl} key={"routeto_"+this.state.worklist[i].id} render={props => <Projects key="Projects" idnum={this.state.worklist[i].id}  projecttype="/projects" />}  />
       )
     }
-    element = <div>{routelist}<div className="worktypes">{this.worktypebar()}</div>{element}</div>;
+    element = <div>{routelist}{element}</div>;
     return element
   }
  

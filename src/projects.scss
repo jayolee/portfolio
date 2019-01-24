@@ -646,12 +646,10 @@ a.member{
 	@include positions(0,null,null,50%);
 	@include transform(translateX(-50%));
 	opacity:0;
-	cursor:url('Logpos/cursor.svg');
-	cursor:pointer;
-	
+	cursor:url('images/cursor.svg') 2 2, pointer;	
 	&:hover{
 	opacity: 1;
-	cursor:url('Logpos/cursor.svg');
+	cursor:url('images/cursor.svg') 2 2, pointer;
 	}
 }
 .continuImg{
@@ -821,6 +819,7 @@ $imgshadow: 0 0 14px rgba(0,0,0,0.2);
 	transition: .3s;
 	position:absolute;
 	@include positions(0,null,null,0);
+	cursor:url('images/cursor.svg') 2 2, pointer;
 }
 }
 .thumb{

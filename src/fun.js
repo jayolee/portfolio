@@ -33,6 +33,7 @@ class Fun extends Component {
           "class":"illustration uiux portwrap",
           "mainClass":"funwork",
           "types": "UI/UX | Illustration",
+          "expla":"A visual novel game for novice users",
           "title": "I Am a Reporter",
         },
         { "id":"even",
@@ -40,6 +41,7 @@ class Fun extends Component {
           "class":"uiux portwrap",
           "mainClass":"funwork",
           "types": "UI/UX",
+          "expla":"A mobile app that finds the best place to meet",
           "title": "Even",
         },
         { "id":"momo",
@@ -47,6 +49,7 @@ class Fun extends Component {
           "class":"animation portwrap",
           "mainClass":"funwork",
           "types": "Animation (Emoji Stickers)",
+          "expla":"Animation Emoji Stickers",
           "title": "Happy Momoko",
         },
         { "id":"gssh",
@@ -54,6 +57,7 @@ class Fun extends Component {
           "class":"video portwrap",
           "mainClass":"funwork",
           "types": "Video",
+          "expla":"Video about my high school",
           "title": "GSSH - Class of 2011",
         },
        
@@ -116,15 +120,6 @@ class Fun extends Component {
     this.setState({ typenames: typenames, worklist: worklist });
   }
 
-  worktypebar(){
-    let element=[];
-    for(let i=0;i<this.typelist.length;i++){
-      element.push(
-        <div className={this.state.typenames[this.typelist[i]][1]} key={this.typelist[i]} onClick={this.addActive} id={this.typelist[i]}>{this.state.typenames[this.typelist[i]][0]}</div>)
-    }
-    return element;
-  }
-
   projects(){
     let element = [];
     let routelist=[];
@@ -137,10 +132,10 @@ class Fun extends Component {
           <div className={this.state.worklist[i].class} key={this.state.worklist[i].id + "wrapper"}>
             <img className="longim" alt={this.state.worklist[i].title} src={this.state.worklist[i].image} key={this.state.worklist[i].title + "image"} />
             <div className="discrip">
-              {this.state.worklist[i].title}<br />
-              <span className="types">
-                {this.state.worklist[i].types}
-              </span>
+              {this.state.worklist[i].title}
+              <div className="expla fun">
+                {this.state.worklist[i].expla}
+              </div>
             </div>
           </div>
           <div className="discripsmaller">
@@ -154,7 +149,7 @@ class Fun extends Component {
         <Route path={projectUrl} key={"routeto_"+this.state.worklist[i].id} render={props => <Projects key="Projects" idnum={this.state.worklist[i].id} projecttype="/fun" />} />
       )
     }
-    element=<div>{routelist} <div className="worktypes">{this.worktypebar()}</div>{element}</div>;
+    element=<div>{routelist}{element}</div>;
     return element  
   }
    

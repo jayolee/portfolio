@@ -114,7 +114,9 @@ class App extends Component {
               <a href={process.env.PUBLIC_URL +"/projects"} >
                 <img src={this.logoList[this.state.page]} id="ylogo" alt="logo" style={this.logoStyle[this.state.page]} onClick={(ev)=> this.setState({menu:0})}/>
                 </a>
+               
             </div>
+            <div class="titles">Designer | Developer</div>
           </div>
           <Switch>
           <Route path={process.env.PUBLIC_URL} exact component={MainProject} />
