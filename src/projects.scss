@@ -381,7 +381,7 @@ $up: #E9974C;
 }
 .gototop{
 	@include sizes(50px, 50px);
-	@include positions(null, 50px, 50px);
+	@include positions(null, 4vw, 50px);
 	position:fixed;
 	z-index:1000;
 	border-radius:40px;
@@ -441,6 +441,18 @@ $up: #E9974C;
 			opacity:.6;
 		}
 	}
+}
+
+@media screen and (max-width:736px){
+	.gototop{
+		@include positions(null, 15px, 20px);
+	
+		.gototop_descrip{
+			padding: 10px 6px; 
+			width: 74px;
+		}
+	}
+	
 }
 .xmark{
 	position:absolute;

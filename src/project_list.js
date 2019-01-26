@@ -164,11 +164,11 @@ const vidid = {
 export const projectList = {
     "up": {
         "projectTitle": "Up",
-        "quote": "How can an app promote productivity, combate ego-depletion and stress?",
+        "quote": "How can an app promote productivity, combat ego-depletion and stress?",
         "topimg": <img id="up" alt="Up Top Screen" className="topimg" src={up_main} />,
 
         "exlpla": {
-            "Time": "Oct 2018 ~ Jan 2019",
+            "Duration": "4 months (Oct 2018 ~ Jan 2019)",
             "Team": <span>Team UP (Matthew Fang, <a href="http://judithleng.me/" target="_blank" rel="noopener noreferrer">Judith Leng,</a> Ja Young Lee, Jerry Yang)</span>,
             "Role": "UI/UX design, development, illustration",
             "Tool": "React, HTML, SCSS, Adobe Illustrator, Figma",
@@ -271,7 +271,7 @@ export const projectList = {
         "topimg": <img id="getcuisine" alt="Get Cuisine Screen" className="topimg" src={getcuisine1} />,
 
         "exlpla": {
-            "Time": "Dec 2018 ~ Jan 2019",
+            "Duration": "2 months (Dec 2018 ~ Jan 2019)",
             "Team": "Ja Young Lee",
             "Role": "UI/UX, development",
             "Tool": "Python Flask, jQuery, HTML, CSS, Adobe Illustrator",
@@ -324,7 +324,7 @@ export const projectList = {
             id="player"
         />,
         "exlpla": {
-            "Time": "Oct 19th ~ Nov 1st (Bose Challenge at CMU)",
+            "Duration": <span>14 days - <b>Bose Challenge at CMU</b> (Oct 19th ~ Nov 1st)</span>,
             "Team": <span>Aniruddh Iyer, <a className="member" href="http://www.hyunwoopaik.com/" target="_blank" rel="noopener noreferrer">Hyun Woo Paik,</a> Ja Young Lee, Se One Park, <a className="member" href="https://wwchung.github.io/SSUI-Portfolio/index.html" target="_blank" rel="noopener noreferrer">Won-Woo Chung</a></span>,
             "Role": "ideation, video directing/editing",
             "Tool": "Maya, After Effects, Illustrator",
@@ -365,7 +365,7 @@ export const projectList = {
             id="player"
         />,
         "exlpla": {
-            "Time": "Sep 21st ~ 22nd (HackCMU 2018)",
+            "Duration": <span>24 hours - <b>HackCMU 2018</b> (Sep 21st ~ 22nd)</span>,
             "Team": <span>DoteNote (Aniruddh Iyer, <a className="member" href="http://www.hyunwoopaik.com/" target="_blank" rel="noopener noreferrer">Hyun Woo Paik,</a> Ja Young Lee, <a className="member" href="https://wwchung.github.io/SSUI-Portfolio/index.html" target="_blank" rel="noopener noreferrer">Won-Woo Chung</a>)</span>,
             "Role": "ideation, UI/UX design, video directing/editing",
             "Tool": "Adobe XD, After Effects, Illustrator",
@@ -416,7 +416,7 @@ export const projectList = {
             <div className="button reporter">Go to Invision Prototype</div>
         </a>,
         "exlpla": {
-            "Time": "Aug 2016 ~ Dec 2016",
+            "Duration": "4 months (Aug 2016 ~ Dec 2016)",
             "Team": "1 developer, 1 writer, 1 designer (Ja Young Lee)",
             "Role": "UI/UX design, concept design, illustration",
             "Tool": "InVision, Adobe XD, Photoshop, Illustrator, HTML/CSS/Javascript",
@@ -458,7 +458,7 @@ export const projectList = {
         "quote": "Where is the best place to meet?",
         "topimg": " ",
         "exlpla": {
-            "Time": "Jan 2014",
+            "Duration": "1 months (Jan 2014)",
             "Team": "1 developer, 1 designer (Ja Young Lee)",
             "Role": "prototyping, branding, UI improvement",
             "Tool": "Adobe Illustrator",
@@ -536,7 +536,7 @@ export const projectList = {
             </a>
         </div>,
         "exlpla": {
-            "Time": "Jan 2017",
+            "Duration": "3 weeks (Jan 2017)",
             "Team": "Ja Young Lee",
             "Role": "Character Deisgn, Animation",
             "Tool": "Adobe Illustrator, Photoshop",
@@ -574,7 +574,7 @@ export const projectList = {
             <div className="button naoshima">Go to the Website</div>
         </a>,
         "exlpla": {
-            "Time": "Sep 2018",
+            "Duration": "1 month (Sep 2018)",
             "Team": "Ja Young Lee",
             "Role": "illustration, UI/UX design, development",
             "Tool": "Sketch (iPad), React, Adobe Photoshop",
