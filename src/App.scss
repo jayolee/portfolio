@@ -415,13 +415,12 @@ width:102px;
 
 .logowrap {
   position: relative;
-  @include sizes(240px, 72px);
-  overflow: hidden;
+  @include sizes(360px, 85px);
   margin:0 auto;
 }
 
 #ylogo {
-  @include sizes( 480px);
+  @include sizes(100%);
   position: absolute;
   @include positions(null,null,null ,0);
 }

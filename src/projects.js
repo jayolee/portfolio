@@ -15,6 +15,7 @@ class Projects extends Component {
       transform: "translateY(700px)",
       detail: 0,
       imgSrc: '',
+      width: 0,
     }
     this.exitLink=process.env.PUBLIC_URL + this.props.projecttype;
     this.vidid = {

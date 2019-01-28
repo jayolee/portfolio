@@ -119,7 +119,7 @@ class App extends Component {
             <div class="titles">Designer | Developer</div>
           </div>
           <Switch>
-          <Route path={process.env.PUBLIC_URL} exact component={MainProject} />
+          <Route path={process.env.PUBLIC_URL}  component={MainProject} />
           <Route path={process.env.PUBLIC_URL + "/projects/"} component={MainProject} />
           <Route path={process.env.PUBLIC_URL +"/fun/"} component={Fun} />
           <Route path={process.env.PUBLIC_URL +"/fineart/"} component={FAs} />
