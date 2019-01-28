@@ -26,7 +26,7 @@ class App extends Component {
     this.star_position = this.starPosGenerator();
     this.star_twinkle = this.starTwinkleGenerator();
     this.logoList=[logo, text];
-    this.logoStyle=[{}, {width:"100%"}];
+    this.logoStyle=[{}, {width:"90%"}];
     this.logoWrapStyle=[{}, {height:"171px"}];
     this.typelist = ['uiux', 'code', 'ideation', 'illustration', 'animation', 'video'];
     this.typenames = {

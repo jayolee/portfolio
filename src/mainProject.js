@@ -4,7 +4,7 @@ import './App.scss';
 import './projects.scss'
 import logpos from './images/logpos2.jpg'
 import dotenote from './images/dotenote.jpg'
-import getcuisine from './images/getcuisine.png'
+import getcuisine from './images/getcuisine.jpg'
 import up_main from './up/blowmain.jpg'
 import naoshima from './images/naoshima.png'
 import Projects from './projects.js'
