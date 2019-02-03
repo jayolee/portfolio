@@ -126,13 +126,18 @@ $up: #E9974C;
 	margin: 10px auto 30px;
 	display: block;
 }
+.getcuisine{
+	iframe{
+		width:100%; 
+	}
+}
 .toptitle {
 	text-align: center;
 	font: {
-		weight: 300;
+		weight: 500;
 		size: 20px;
 	}
-	opacity: .8;
+	opacity: .9;
 	line-height: 1.8;
 }
 .greybox {
@@ -160,6 +165,12 @@ $up: #E9974C;
 		background:#000;
 	}
 	transition:.5s;
+	.contentBottom{
+		position: absolute;
+		@include positions(null,null ,0 ,0 );
+		height:70vh;
+		width:100vw;
+	}
 }
 .working{
 	@include sizes(400px, 300px);
@@ -182,9 +193,11 @@ $up: #E9974C;
 	}
 }
 .maincontent{
-	@include sizes(100%, null, 1000px); 
-	padding:80px 5%; 
+	@include sizes(100%, null, 980px); 
+	padding:80px 5% 150px; 
 	margin:0 auto;
+	letter-spacing: .1px;
+	
 	&.up{
 		
 		.imgwrap_sc{
@@ -239,6 +252,92 @@ $up: #E9974C;
 		margin-bottom:150px;
 	}
 }
+.processBoxWrap{
+	display:flex;
+	flex-direction: row;
+	flex-wrap:wrap;
+	justify-content: space-around;
+	.proBoxOut{
+		text-align: center;
+		.processBox{
+			display:flex;
+			flex-direction:row;
+			align-items: center;
+			justify-content: center;
+			line-height:1.4;
+			width:120px;
+			height:40px;
+			margin:30px 14px 5px;
+			// @include bgcolors;
+			// color:white;
+			@include textcolors;
+			font-weight:bold;
+			position:relative;
+			font-size:17px;
+			&::after{
+				content: "";
+				position:absolute;
+				left:120px;
+				width:70%;
+				
+			}
+			&.dote{
+				&::after{
+					border:1px solid $dote;	
+				}
+			}
+			&.logpos{
+				&::after{
+					border:1px solid $logpos;	
+				}
+			}
+			&.even{
+				&::after{
+					border:1px solid $even;
+				}
+			}
+			&.reporter{
+				&::after{
+					border:1px solid $reporter;
+				}
+			}
+			&.momo{
+				&::after{
+					border:1px solid $momo;
+				}
+			}
+			&.naoshima{
+				&::after{
+					border:1px solid $naoshima;
+				}
+			}
+			&.getcuisine{
+				&::after{
+					border:1px solid $getcuisine;	
+				}
+			}
+			&.up{
+				&::after{
+					border:1px solid $up;	
+				}
+			}
+			&.fin{
+				&::after{
+					border:0px;	
+				}
+			}
+		}
+		.processExpla{
+			opacity:.8;
+			font: {
+				size:14px;
+				weight:400;
+			}
+			
+		}
+		
+	}
+}
 .imgBorder{
 	border:1px solid rgba(0,0,0,0.5);
 }
@@ -252,7 +351,8 @@ $up: #E9974C;
 }
 .expla {
 	margin: 60px 0;
-	
+	color: rgba(0,0,0,0.8);
+	line-height: 1.8;
 	img {
 		@include sizes(90%);
 	margin: 30px auto 0;
@@ -260,6 +360,27 @@ $up: #E9974C;
 		&.zoomable{
 			cursor:zoom-in;
 		}
+		&.zoomed{
+			@include sizes(95vw !important,null,1100px);
+				@include transform(translateX(-100px));
+				margin: {
+					left:auto !important;
+					right:auto !important;
+				}
+			cursor:zoom-out;
+		}
+		@media screen and (max-width:1140px){
+			&.zoomed{
+				@include transform(translateX(-5vw));
+			
+			}
+			}
+			@media screen and (max-width:1000px){
+				&.zoomed{
+					@include transform(translateX(-2.5vw));
+				
+				}
+				}
 		&.phonesc{
 			@include sizes(240px);
 		}
@@ -364,8 +485,7 @@ $up: #E9974C;
 		size: 16px;
 		weight: 300;
 	}
-	color: rgba(0,0,0,0.8);
-	line-height: 1.7;
+	
 	&.gssh{
 		color:#fff;
 		@include sizes(560px);
@@ -379,7 +499,22 @@ $up: #E9974C;
 		margin-bottom:60px;
 	}
 }
+
+@include keyframes(bounceBtn){
+	from{
+		@include transform(translateY(-8px));
+	}
+	50%{
+		@include transform(none);
+	}
+	to{
+		@include transform(translateY(-8px));
+	}
+}
 .gototop{
+	&#btnBounce{
+		@include animation("bounceBtn .6s ease-in-out infinite");
+	}
 	@include sizes(50px, 50px);
 	@include positions(null, 4vw, 50px);
 	position:fixed;
@@ -481,9 +616,10 @@ a.member{
 }
 .enttitle {
 	position:relative;
+	text-transform:uppercase;
 	font: {
 		size: 24px;
-		weight:300;
+		weight:500;
 	}
 	@include textcolors;
 	@include sizes(100%);
@@ -531,7 +667,7 @@ a.member{
 }
 .bar {
 	@include sizes(30px, 5px);
-	margin: 10px 0 12px;
+	margin: 4px 0 12px;
 	@include bgcolors;
 }
 
@@ -574,10 +710,13 @@ a.member{
 	border-radius: 60px;
 	padding: 12px 40px;
 	font-weight: bold;
+	font-size:15px;
+	text-transform: uppercase;
+	letter-spacing: 1px;
 	@include sizes(auto);
 	transition: .3s;
 	display:inline-block;
-	margin: 50px auto;
+	margin: 40px auto 50px;
 	cursor: pointer;
 	
 	&:hover {
@@ -1024,24 +1163,4 @@ $imgshadow: 0 0 14px rgba(0,0,0,0.2);
 	}
 }
 
-.zoomed{
-	@include sizes(95vw !important,null,1100px);
-		@include transform(translateX(-100px));
-		margin: {
-			left:auto !important;
-			right:auto !important;
-		}
 
-}
-@media screen and (max-width:1140px){
-.zoomed{
-	@include transform(translateX(-5vw));
-
-}
-}
-@media screen and (max-width:1000px){
-	.zoomed{
-		@include transform(translateX(-2.5vw));
-	
-	}
-	}

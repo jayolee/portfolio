@@ -16,6 +16,8 @@ class Projects extends Component {
       detail: 0,
       imgSrc: '',
       width: 0,
+      anistat: 1,
+      anilist:["","btnBounce"]
     }
     this.exitLink=process.env.PUBLIC_URL + this.props.projecttype;
     this.vidid = {
@@ -69,6 +71,7 @@ class Projects extends Component {
     }
     if (this.contents[item].button) {
       element.push(<div className="contentbox" key="contentbox" style={{opacity:this.state.opacity, transform:this.state.transform}}> 
+        <div className="contentBottom" onMouseLeave = {this.gotoTopNone.bind(this)} onMouseOver={this.gotoTopBounce.bind(this)}></div>
         <div className={"enttitle " + this.props.idnum} >{this.contents[item].projectTitle}
 
           <div className="xmark" onClick={this.rolldown.bind(this)}>
@@ -93,12 +96,16 @@ class Projects extends Component {
           <div className="expla">
             {contentelement}
           </div>
+          
         </div>
+        
       </div>
       )
     }
     else {
       element.push(<div className="contentbox" key="contentbox" style={{opacity:this.state.opacity, transform:this.state.transform}}>
+        <div className="contentBottom" onMouseLeave = {this.gotoTopNone.bind(this)} onMouseOver={this.gotoTopBounce.bind(this)}></div>
+        
         <div className={"enttitle " + this.props.idnum} >{this.contents[item].projectTitle}
           <div className="xmark"  onClick={this.rolldown.bind(this)}>
             <svg width="50" height="50">
@@ -118,6 +125,7 @@ class Projects extends Component {
           <div className="expla">
             {contentelement}
           </div>
+          
         </div>
         
       </div>
@@ -127,10 +135,16 @@ class Projects extends Component {
   }
   componentDidMount() {
     window.scrollTo(0, 0)
-    setTimeout(this.rollup(), 100);
+    setTimeout(this.rollup(), 10);
+    this.setState({anistat:0});
     
   }
-
+  gotoTopNone() {
+    this.setState({anistat:0})
+  }
+  gotoTopBounce() {
+    this.setState({anistat:1})
+  }
   renderDetail(){
     if(this.state.detail === 1){
       return <imgDetail key="detailview" src={this.state.src}/>
@@ -141,7 +155,7 @@ class Projects extends Component {
       <div style={{ position: "absolute", top: "0", left: "0", width: "100%", height: "100%" }}>
         <div className="greybox" style={{opacity:this.state.opacity}} onClick={this.rolldown.bind(this)}/>
         {this.contentgenerator()}
-        <div className={"gototop "+ this.props.idnum} style={{opacity:this.state.opacity}} onClick={(ev) => window.scroll(0,0)} >
+        <div className={"gototop "+ this.props.idnum} id={this.state.anilist[this.state.anistat]} key="topBtn" style={{opacity:this.state.opacity}} onClick={(ev) => window.scroll({top: 0, left: 0,  behavior: 'smooth'})} >
         <svg width="30" height="30">
               <path d="M4 15 L15 4 L26 15 M15 4 L15 26" />
             </svg>
