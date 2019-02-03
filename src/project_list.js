@@ -408,7 +408,7 @@ export const projectList = {
             "Tool": "Adobe XD, After Effects, Illustrator",
         },
         "button": <a href="#" onClick={(ev)=>{var proto = document.getElementById("doteproto"); window.scroll( {top: proto.offsetTop, left: 0,  behavior: 'smooth'})}}>
-        <div className="button dote">Go to the Website</div></a>,
+        <div className="button dote">Play with the Prototype</div></a>,
         "Process": <div className="processBoxWrap">
         <div className="proBoxOut">
             <div className="processBox dote">Ideate</div>
