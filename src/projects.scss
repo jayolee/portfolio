@@ -159,17 +159,18 @@ $up: #E9974C;
 	@include positions(-130px,null,null, calc(-50vw + 50%));
 	padding: {
 		top:0;
-		bottom:160px;
+		bottom:100px;
 	}
 	&.gssh{
 		background:#000;
 	}
 	transition:.5s;
 	.contentBottom{
+		z-index:1;
 		position: absolute;
 		@include positions(null,null ,0 ,0 );
-		height:70vh;
-		width:100vw;
+		height:100vh;
+		width:99%;
 	}
 }
 .working{
@@ -197,12 +198,13 @@ $up: #E9974C;
 	padding:80px 5% 150px; 
 	margin:0 auto;
 	letter-spacing: .1px;
-	
+	z-index:2;
+	position: relative;
 	&.up{
 		
 		.imgwrap_sc{
 			display: inline-block; 
-			margin:0 12px;
+			margin:0 10px;
 			&.addmargin{
 				margin-bottom:20px;
 			}
@@ -253,79 +255,116 @@ $up: #E9974C;
 	}
 }
 .processBoxWrap{
+	contain:content;
 	display:flex;
 	flex-direction: row;
 	flex-wrap:wrap;
-	justify-content: space-around;
+	justify-content: space-between;
+	position: relative;
+	margin-top:30px;
+	.proBoxLine{
+		z-index:0;
+		position: absolute;
+		left:14px;
+		top:20px;
+		width:calc(100% - 28px);
+		height:1px;
+		&.dote{
+					border:1px solid $dote;	
+			}
+			&.logpos{
+					border:1px solid $logpos;	
+			}
+			&.even{
+					border:1px solid $even;
+			}
+			&.reporter{
+					border:1px solid $reporter;
+			}
+			&.momo{
+					border:1px solid $momo;
+			}
+			&.naoshima{
+					border:1px solid $naoshima;
+			}
+			&.getcuisine{
+					border:1px solid $getcuisine;	
+			}
+			&.up{
+					border:1px solid $up;	
+			}
+	}
 	.proBoxOut{
 		text-align: center;
+		position: relative;
+		z-index:1;
 		.processBox{
 			display:flex;
 			flex-direction:row;
 			align-items: center;
 			justify-content: center;
-			line-height:1.4;
 			width:120px;
 			height:40px;
-			margin:30px 14px 5px;
+			margin:0 14px 5px;
 			// @include bgcolors;
 			// color:white;
 			@include textcolors;
 			font-weight:bold;
 			position:relative;
 			font-size:17px;
-			&::after{
-				content: "";
-				position:absolute;
-				left:120px;
-				width:70%;
+			background:#fff;
+			// &::after{
+			// 	content: "";
+			// 	position:absolute;
+			// 	left:120px;
+			// 	width:70%;
 				
-			}
-			&.dote{
-				&::after{
-					border:1px solid $dote;	
-				}
-			}
-			&.logpos{
-				&::after{
-					border:1px solid $logpos;	
-				}
-			}
-			&.even{
-				&::after{
-					border:1px solid $even;
-				}
-			}
-			&.reporter{
-				&::after{
-					border:1px solid $reporter;
-				}
-			}
-			&.momo{
-				&::after{
-					border:1px solid $momo;
-				}
-			}
-			&.naoshima{
-				&::after{
-					border:1px solid $naoshima;
-				}
-			}
-			&.getcuisine{
-				&::after{
-					border:1px solid $getcuisine;	
-				}
-			}
-			&.up{
-				&::after{
-					border:1px solid $up;	
-				}
-			}
-			&.fin{
-				&::after{
-					border:0px;	
-				}
-			}
+			// }
+			// &.dote{
+			// 	&::after{
+			// 		border:1px solid $dote;	
+			// 	}
+			// }
+			// &.logpos{
+			// 	&::after{
+			// 		border:1px solid $logpos;	
+			// 	}
+			// }
+			// &.even{
+			// 	&::after{
+			// 		border:1px solid $even;
+			// 	}
+			// }
+			// &.reporter{
+			// 	&::after{
+			// 		border:1px solid $reporter;
+			// 	}
+			// }
+			// &.momo{
+			// 	&::after{
+			// 		border:1px solid $momo;
+			// 	}
+			// }
+			// &.naoshima{
+			// 	&::after{
+			// 		border:1px solid $naoshima;
+			// 	}
+			// }
+			// &.getcuisine{
+			// 	&::after{
+			// 		border:1px solid $getcuisine;	
+			// 	}
+			// }
+			// &.up{
+			// 	&::after{
+			// 		border:1px solid $up;	
+			// 	}
+			// }
+			// &.fin{
+			// 	&::after{
+			// 		border:0px;	
+			// 	}
+			// }
 		}
 		.processExpla{
 			opacity:.8;
@@ -513,7 +552,7 @@ $up: #E9974C;
 }
 .gototop{
 	&#btnBounce{
-		@include animation("bounceBtn .6s ease-in-out infinite");
+		@include animation("bounceBtn .5s ease-in-out infinite");
 	}
 	@include sizes(50px, 50px);
 	@include positions(null, 4vw, 50px);
@@ -616,7 +655,6 @@ a.member{
 }
 .enttitle {
 	position:relative;
-	text-transform:uppercase;
 	font: {
 		size: 24px;
 		weight:500;

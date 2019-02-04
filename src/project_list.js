@@ -166,7 +166,7 @@ export const projectList = {
     "up": {
         "projectTitle": "Up",
         "quote": "How can an app promote productivity, combat ego-depletion and stress?",
-        "topimg": <img id="up" alt="Up Top Screen" className="topimg" src={up_main} />,
+        "topimg": <img id="up" alt="Up Top Screen" className="topimg" src={up_breathing} />,
 
         "exlpla": {
             "Duration": "4 months (Oct 2018 ~ Jan 2019)",
@@ -177,11 +177,13 @@ export const projectList = {
         "button": <a href="https://jayolee.github.io/Team-UP-prototype_react/" target="_blank" rel="noopener noreferrer">
             <div className="button up">Play with the Prototype</div></a>,
         "Process": <div className="processBoxWrap">
+            <div className="proBoxLine up" />
             <div className="proBoxOut">
                 <div className="processBox up">Ideate</div>
             </div>
             <div className="proBoxOut">
                 <div className="processBox up">Research</div>
+                <div className="processExpla">Interview</div>
                 <div className="processExpla">Literature Review</div>
             </div>
             <div className="proBoxOut">
@@ -195,11 +197,16 @@ export const projectList = {
                 <div className="processExpla">Demo</div>
             </div>
             </div>,
-        "Ideation": <div>
-            <p>In Malcolm Gladwell’s book ​<i>The Outliers​,</i> it is stated that one requires over 10,000 hours of practice to become an expert of some sort. Such number of hours is extremely difficult of practice for young adults in college or workplace. But what if we base this idea to encourage users to build a focusing habit?</p>
+        "Ideation & Research": <div>
+            <p>Our idea started from interviews with CMU students about causes of stress they get. Interestingly, they answered that students at CMU tend not to sleep even though they don't have things to do and getting so much stress. We set the goal of our project as <b>relieving students' stress and promoting productivity.</b><br />Our original idea was to prompt random tasks in random time to give students joyful moments to care of themselves. However, we realized that the rationale is weak, so we decided to focus on a specific task which is proven as effective.</p>
             <img src={up_protos} alt="Initial Paper Prototypes" className="zoomable" onClick={zoomimg} /><div className="imgdes">Initial Paper Prototypes</div>
+            
+            <p>From the literature review, we found some activities proven as effective to relieve stress or promote creativity. Among the activities, we paid attention to <a href="http://www.hsj.gr/medicine/stress-management-techniques-evidencebased-procedures-that-reduce-stress-and-promote-health.pdf" target="_blank" rel="noopener noreferrer" ><b>diaphragmatic breathing,</b> which is shown as effective to relieve stress</a> and <a href="https://behavioralandbrainfunctions.biomedcentral.com/articles/10.1186/1744-9081-10-9" target="_blank" rel="noopener noreferrer" ><b>short-term meditation</b> which can improve creativity.</a> </p>
+
+            <p>As a tool to track the productivity, we decided to use Malcolm Gladwell’s 10,000 hours rule. It is stated that one requires over 10,000 hours of practice to become an expert of some sort; however, such number of hours is extremely difficult of practice for young adults in college or workplace. But what if we base this idea to encourage users to build a focusing habit?</p>
+           
             <p>
-                <b>Our team created ​<i>Up</i> based on several psychological concepts including self control, ego-depletion, stress-reduction, intrinsic motivation, and embodied cognition.</b> <i>Up</i> encourages users to form a habitual focus timing of 90 minutes. Users are encouraged to perform a short guided breathing exercise of blowing a balloon immediately after a focus session concludes to regather
+                Based on the research we conducted, our team created ​<i>Up</i> based on several psychological concepts including self control, ego-depletion, stress-reduction, intrinsic motivation, and embodied cognition. <i>Up</i> encourages users <b>to form a habitual focus timing of 90 minutes.</b> Users are encouraged to perform a short guided breathing exercise of blowing a balloon immediately after a focus session concludes to regather
                 brain resources. </p></div>,
         "Design": <div>
             <div style={{ textAlign: "center" }}>
@@ -297,12 +304,15 @@ export const projectList = {
         "button": <a href="http://getcuisine.herokuapp.com" target="_blank" rel="noopener noreferrer">
             <div className="button getcuisine">Go to the Website</div></a>,
         "Process": <div className="processBoxWrap">
+         <div className="proBoxLine getcuisine" />
         <div className="proBoxOut">
             <div className="processBox getcuisine">Ideate</div>
+            <div className="processExpla">Matchmaking</div>
         </div>
         <div className="proBoxOut">
             <div className="processBox getcuisine">Research</div>
             <div className="processExpla">Descriptive Research</div>
+            <div className="processExpla">Survey</div>
         </div>
         <div className="proBoxOut">
             <div className="processBox getcuisine">Iterate</div>
@@ -311,6 +321,7 @@ export const projectList = {
         </div>
         <div className="proBoxOut">
             <div className="processBox getcuisine fin">Finalize</div>
+            <div className="processExpla">Deployment</div>
         </div>
         </div>,
         "Ideation": <div>
@@ -366,6 +377,27 @@ export const projectList = {
             "Role": "ideation, video directing/editing",
             "Tool": "Maya, After Effects, Illustrator",
         },
+        "Process": <div className="processBoxWrap">
+         <div className="proBoxLine logpos" />
+        <div className="proBoxOut">
+            <div className="processBox logpos">Ideate</div>
+            <div className="processExpla">Matchmaking</div>
+        </div>
+
+        <div className="proBoxOut">
+            <div className="processBox logpos">Research</div>
+            <div className="processExpla">Interview</div>
+        </div>
+        <div className="proBoxOut">
+            <div className="processBox logpos">Design</div>
+            <div className="processExpla">Device design</div>
+            <div className="processExpla">UI design</div>
+        </div>
+        <div className="proBoxOut">
+            <div className="processBox logpos">Finalize</div>
+            <div className="processExpla">Video</div>
+        </div>
+        </div>,
         "Ideation": <div>
             <p> The prompt of Bose Challenge was <i><b>“How might we use sound-based augmented reality to improve our lives?”</b></i> Among the idea we had, we decided to focus on improving cooperation situations which require team members’ communications about their locations and status. More specifically, we narrowed down our target as firefighters, about their rescue operations in extreme situations.</p> <p>Our assumption here is that under the urgent circumstances of limited vision and hearing, it is difficult to communicate accurate location information via speaking. Therefore, we designed a way to communicate each other automatically generated location data based on their GPS with minimum hand control. </p><img src={logpos1} alt="Ideation Meeting" className="zoomable" onClick={zoomimg} /><div className='imgdes'>Ideation Meeting, Sketch by Young</div> </div>,
         "User Research": <div>
@@ -410,6 +442,7 @@ export const projectList = {
         "button": <a href="#" onClick={(ev)=>{var proto = document.getElementById("doteproto"); window.scroll( {top: proto.offsetTop, left: 0,  behavior: 'smooth'})}}>
         <div className="button dote">Play with the Prototype</div></a>,
         "Process": <div className="processBoxWrap">
+         <div className="proBoxLine dote" />
         <div className="proBoxOut">
             <div className="processBox dote">Ideate</div>
         </div>

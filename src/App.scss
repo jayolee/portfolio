@@ -115,18 +115,19 @@ img {
 
 
 .starwrap_out{
-  @include sizes( 100%, 100%); 
+  @include sizes( 100%, 400px); 
     overflow:hidden; 
     position:absolute;
     z-index:-999;
-}
-.starwrap_in{position: relative; 
-  @include sizes(calc(100% + 40px), 540px); 
+    contain:content;
+
+.starwrap_in{
+  position: relative; 
+  @include sizes(100%, 400px); 
     background:linear-gradient(#000,#10162B); 
-    @include positions(-139px,null,null,-10px);
+    @include positions(0,null,null,0);
     overflow:hidden;
-    @include transform(rotate(-4deg)); 
-    border-bottom-left-radius:10px;
+    contain:content;
    
 }
 .star_opac_wrap{
@@ -144,7 +145,7 @@ img {
         height:8px;
     }
 }
-
+}
 
 /*header*/
 

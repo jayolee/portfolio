@@ -6,7 +6,7 @@ import logpos from './images/logpos2.jpg'
 import dotenote from './images/dotenote.jpg'
 import getcuisine from './images/getcuisine.jpg'
 import up_main from './up/blowmain.jpg'
-import naoshima from './images/naoshima.png'
+
 import Projects from './projects.js'
 
 class MainProject extends Component {
@@ -62,14 +62,7 @@ class MainProject extends Component {
           "expla":"Improving rescue operations communication using audio AR",
           "title": "LOG + POS",
         },
-        { "id":"naoshima",
-        "image":naoshima,
-        "class":"development uiux portwrap",
-        "mainClass":"main_work",
-        "types": "UI/UX | Development",
-        "expla":"A website about Naoshima, Japan",
-        "title": "Artwork of NAOSHIMA",
-      },
+        
       ],
     }
     this.typelist = ['uiux', 'development', 'ideation'];

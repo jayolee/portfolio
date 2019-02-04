@@ -7,6 +7,7 @@ import reporter from './images/lights.jpg'
 import even from './images/even2.png'
 import momoko from './images/momo.png'
 import gssh from './images/gssh.jpg'
+import naoshima from './images/naoshima.png'
 
 
 class Fun extends Component {
@@ -28,6 +29,14 @@ class Fun extends Component {
         'development':['Development', "worksbutton workactive"]
       },
       worklist:[
+        { "id":"naoshima",
+        "image":naoshima,
+        "class":"development uiux portwrap",
+        "mainClass":"main_work",
+        "types": "UI/UX | Development",
+        "expla":"A website about Naoshima, Japan",
+        "title": "Artwork of NAOSHIMA",
+      },
         { "id":"reporter",
           "image":reporter,
           "class":"illustration uiux portwrap",

@@ -71,7 +71,7 @@ class Projects extends Component {
     }
     if (this.contents[item].button) {
       element.push(<div className="contentbox" key="contentbox" style={{opacity:this.state.opacity, transform:this.state.transform}}> 
-        <div className="contentBottom" onMouseLeave = {this.gotoTopNone.bind(this)} onMouseOver={this.gotoTopBounce.bind(this)}></div>
+        <div className="contentBottom" onMouseOut={this.gotoTopNone.bind(this)}  onMouseOver={this.gotoTopBounce.bind(this)}></div>
         <div className={"enttitle " + this.props.idnum} >{this.contents[item].projectTitle}
 
           <div className="xmark" onClick={this.rolldown.bind(this)}>
@@ -104,7 +104,7 @@ class Projects extends Component {
     }
     else {
       element.push(<div className="contentbox" key="contentbox" style={{opacity:this.state.opacity, transform:this.state.transform}}>
-        <div className="contentBottom" onMouseLeave = {this.gotoTopNone.bind(this)} onMouseOver={this.gotoTopBounce.bind(this)}></div>
+        <div className="contentBottom" onMouseOut={this.gotoTopNone.bind(this)} onMouseOver={this.gotoTopBounce.bind(this)}></div>
         
         <div className={"enttitle " + this.props.idnum} >{this.contents[item].projectTitle}
           <div className="xmark"  onClick={this.rolldown.bind(this)}>
@@ -140,10 +140,14 @@ class Projects extends Component {
     
   }
   gotoTopNone() {
+    if(this.state.anistat === 1){
     this.setState({anistat:0})
+    }
   }
   gotoTopBounce() {
+    if(this.state.anistat === 0){
     this.setState({anistat:1})
+  }
   }
   renderDetail(){
     if(this.state.detail === 1){
