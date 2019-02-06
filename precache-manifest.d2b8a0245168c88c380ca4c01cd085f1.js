@@ -1,15 +1,15 @@
 self.__precacheManifest = [
   {
-    "revision": "ae5ccbb228b8d3aff53f147d46b0f02f",
-    "url": "/portfolio/static/media/15.ae5ccbb2.png"
+    "revision": "744dedea957371e28481fe9c339e6747",
+    "url": "/portfolio/static/media/15.744dedea.gif"
   },
   {
-    "revision": "796a1326b512a81fa17d",
-    "url": "/portfolio/static/css/main.bd23a84a.chunk.css"
+    "revision": "087b22289679ec3f09df",
+    "url": "/portfolio/static/css/main.34e9acbc.chunk.css"
   },
   {
-    "revision": "e0e24dd3d8066b2e365b",
-    "url": "/portfolio/static/js/1.e0e24dd3.chunk.js"
+    "revision": "c8b96c707b68337aa2f3",
+    "url": "/portfolio/static/js/1.c8b96c70.chunk.js"
   },
   {
     "revision": "ee2a100325fd284f0097",
@@ -28,12 +28,12 @@ self.__precacheManifest = [
     "url": "/portfolio/static/media/xcursor.d33a94b6.svg"
   },
   {
-    "revision": "83de335cb9ac6623ca3bbdf165bdaac1",
-    "url": "/portfolio/static/media/cursor.83de335c.svg"
-  },
-  {
     "revision": "4dacabda65930685b68591f097311829",
     "url": "/portfolio/static/media/LucidaGrandeBold.4dacabda.ttf"
+  },
+  {
+    "revision": "83de335cb9ac6623ca3bbdf165bdaac1",
+    "url": "/portfolio/static/media/cursor.83de335c.svg"
   },
   {
     "revision": "8824f724782801f0ad50bb5178bed7d0",
@@ -364,12 +364,12 @@ self.__precacheManifest = [
     "url": "/portfolio/static/media/14.f3f706af.gif"
   },
   {
-    "revision": "796a1326b512a81fa17d",
-    "url": "/portfolio/static/js/main.796a1326.chunk.js"
+    "revision": "ae5ccbb228b8d3aff53f147d46b0f02f",
+    "url": "/portfolio/static/media/15.ae5ccbb2.png"
   },
   {
-    "revision": "744dedea957371e28481fe9c339e6747",
-    "url": "/portfolio/static/media/15.744dedea.gif"
+    "revision": "087b22289679ec3f09df",
+    "url": "/portfolio/static/js/main.087b2228.chunk.js"
   },
   {
     "revision": "9f0f1369c58c34df2b21e32757ad76e5",
@@ -508,18 +508,6 @@ self.__precacheManifest = [
     "url": "/portfolio/static/media/prototypes.9392bde3.jpg"
   },
   {
-    "revision": "60bf7bb047c37379cde28e85b7bd8314",
-    "url": "/portfolio/static/media/lofi1.60bf7bb0.jpg"
-  },
-  {
-    "revision": "9487f7670517561a905eb28c0e530ab0",
-    "url": "/portfolio/static/media/lofi2.9487f767.jpg"
-  },
-  {
-    "revision": "0be1fdbe9c33e82e2aa6f2d84553fce6",
-    "url": "/portfolio/static/media/lofi3.0be1fdbe.jpg"
-  },
-  {
     "revision": "b013d15a329f5a3e7eea8277aa616e00",
     "url": "/portfolio/static/media/knob_not.b013d15a.gif"
   },
@@ -530,6 +518,10 @@ self.__precacheManifest = [
   {
     "revision": "860ffc27fb126a3aa763e079d6b8feb2",
     "url": "/portfolio/static/media/worknob.860ffc27.gif"
+  },
+  {
+    "revision": "a54e150dd1fa14d23cd36a64474df219",
+    "url": "/portfolio/static/media/initial_screenmap.a54e150d.jpg"
   },
   {
     "revision": "1027bc79c1df6ee247c7dba1c8152456",
@@ -728,7 +720,19 @@ self.__precacheManifest = [
     "url": "/portfolio/static/media/top.c9e50ad6.png"
   },
   {
-    "revision": "5fa2d49c36902b2328aafaa1395a5569",
+    "revision": "60bf7bb047c37379cde28e85b7bd8314",
+    "url": "/portfolio/static/media/lofi1.60bf7bb0.jpg"
+  },
+  {
+    "revision": "9487f7670517561a905eb28c0e530ab0",
+    "url": "/portfolio/static/media/lofi2.9487f767.jpg"
+  },
+  {
+    "revision": "0be1fdbe9c33e82e2aa6f2d84553fce6",
+    "url": "/portfolio/static/media/lofi3.0be1fdbe.jpg"
+  },
+  {
+    "revision": "4f5cc7847ec97bcba8c0cbcd4c1af12c",
     "url": "/portfolio/index.html"
   }
 ];
