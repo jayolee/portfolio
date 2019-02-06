@@ -12,8 +12,17 @@ $up: #E9974C;
 
 @font-face {
 	font-family:"lucida grande";
-	src:url(LucidaGrandeBold.ttf);
+	font-style: bold;
+	font-weight: 700;
+	src:url('/LucidaGrandeBold.ttf');
 }
+@font-face {
+	font-family: 'apercu';
+	font-style: bold;
+	font-weight: 700;
+	src: url('/Apercu Bold.otf');
+  }
+
 
 @mixin positions($top: null, $right: null, $bottom:null, $left:null){
 	@if ($top){

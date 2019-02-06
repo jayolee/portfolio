@@ -149,7 +149,7 @@ class Projects extends Component {
     return element
   }
   componentDidMount() {
-    window.scrollTo(0, 0)
+    window.scrollTo({top: 0, left: 0})
     setTimeout(this.rollup(), 10);
     this.setState({anistat:0});
     this.props.starOff();

@@ -786,12 +786,9 @@ width:102px;
 
 
 .starwrap_in{position: relative; 
-  @include sizes(calc(150%), 550px); 
   background:linear-gradient(#000,#10162B); 
   @include positions(-130px,null,null, -25%); 
   overflow:hidden;
-  @include transform(rotate(-5deg)); 
-  border-bottom-left-radius:20px;
  
 }
 	.logowrap{
