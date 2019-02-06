@@ -4,8 +4,8 @@ self.__precacheManifest = [
     "url": "/portfolio/static/media/15.744dedea.gif"
   },
   {
-    "revision": "087b22289679ec3f09df",
-    "url": "/portfolio/static/css/main.34e9acbc.chunk.css"
+    "revision": "7eb2da5550419a01e565",
+    "url": "/portfolio/static/css/main.5f109c72.chunk.css"
   },
   {
     "revision": "c8b96c707b68337aa2f3",
@@ -24,16 +24,12 @@ self.__precacheManifest = [
     "url": "/portfolio/static/media/phone.2fc87b81.png"
   },
   {
-    "revision": "d33a94b67929866311cfe8521fed2ffe",
-    "url": "/portfolio/static/media/xcursor.d33a94b6.svg"
-  },
-  {
-    "revision": "4dacabda65930685b68591f097311829",
-    "url": "/portfolio/static/media/LucidaGrandeBold.4dacabda.ttf"
-  },
-  {
     "revision": "83de335cb9ac6623ca3bbdf165bdaac1",
     "url": "/portfolio/static/media/cursor.83de335c.svg"
+  },
+  {
+    "revision": "d33a94b67929866311cfe8521fed2ffe",
+    "url": "/portfolio/static/media/xcursor.d33a94b6.svg"
   },
   {
     "revision": "8824f724782801f0ad50bb5178bed7d0",
@@ -50,6 +46,10 @@ self.__precacheManifest = [
   {
     "revision": "4e9b5039d191ed2a22db142d83e6eded",
     "url": "/portfolio/static/media/breathing.4e9b5039.gif"
+  },
+  {
+    "revision": "4dacabda65930685b68591f097311829",
+    "url": "/portfolio/static/media/LucidaGrandeBold.4dacabda.ttf"
   },
   {
     "revision": "3c4a20c23aa62e0584bb1b15e2a880cd",
@@ -368,8 +368,8 @@ self.__precacheManifest = [
     "url": "/portfolio/static/media/15.ae5ccbb2.png"
   },
   {
-    "revision": "087b22289679ec3f09df",
-    "url": "/portfolio/static/js/main.087b2228.chunk.js"
+    "revision": "7eb2da5550419a01e565",
+    "url": "/portfolio/static/js/main.7eb2da55.chunk.js"
   },
   {
     "revision": "9f0f1369c58c34df2b21e32757ad76e5",
@@ -732,7 +732,7 @@ self.__precacheManifest = [
     "url": "/portfolio/static/media/lofi3.0be1fdbe.jpg"
   },
   {
-    "revision": "4f5cc7847ec97bcba8c0cbcd4c1af12c",
+    "revision": "460f427c48b2d8086dc4360189613533",
     "url": "/portfolio/index.html"
   }
 ];
