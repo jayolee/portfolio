@@ -32,7 +32,7 @@ class Fun extends Component {
         { "id":"naoshima",
         "image":naoshima,
         "class":"development uiux portwrap",
-        "mainClass":"main_work",
+        "mainClass":"funwork",
         "types": "UI/UX | Development",
         "expla":"A website about Naoshima, Japan",
         "title": "Artwork of NAOSHIMA",
@@ -78,7 +78,12 @@ class Fun extends Component {
     setTimeout(this.setState({page:0}), 300);
     
   }
- 
+  starOff(){
+    this.props.starOff();
+  }
+  starOn(){
+    this.props.starOn();
+  }
   addActive(e){
     let exist = 0;
     let thisDiv = e.target.id;
@@ -155,7 +160,7 @@ class Fun extends Component {
         </Link>
       )
       routelist.push(
-        <Route path={projectUrl} key={"routeto_"+this.state.worklist[i].id} render={props => <Projects key="Projects" idnum={this.state.worklist[i].id} projecttype="/fun" />} />
+        <Route path={projectUrl} key={"routeto_"+this.state.worklist[i].id} render={props => <Projects key="Projects" idnum={this.state.worklist[i].id} projecttype="/fun" starOff={this.starOff.bind(this)} starOn = {this.starOn.bind(this)} />} />
       )
     }
     element=<div>{routelist}{element}</div>;

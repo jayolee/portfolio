@@ -47,9 +47,10 @@ class Projects extends Component {
     let topelement = [];
     let contentelement = [];
     let explalist = Object.keys(this.contents[item].exlpla);
+    //topinfo (team, name...)
     for (let i = 0; i < explalist.length; i++) {
       topelement.push(
-        <div key={"expla" + i}>
+        <div key={"expla" + i} className="topinfo">
           <span className={"title " + this.props.idnum} >{explalist[i]}: </span>{this.contents[item].exlpla[explalist[i]]}<br />
         </div>
       )
@@ -57,18 +58,32 @@ class Projects extends Component {
     let contentlist = Object.keys(this.contents[item]);
 
 
-    for (let i = 4; i < contentlist.length; i++) {
+    for (let i = 4; i < contentlist.length - 1 ; i++) {
       if (this.contents[item].button && i === 4) {
         i += 1;
       }
       contentelement.push(
         <div key={"sectitle" + i}>
-          <div className={"sectitle " + this.props.idnum} >{contentlist[i]}</div>
+          <div className={"sectitle " + this.props.idnum} >{contentlist[i]}
           <div className={"bar " + this.props.idnum} />
+          </div>
+          
           {this.contents[item][contentlist[i]]}
         </div>
       )
     }
+
+    let finalkey = contentlist.length - 1;
+    contentelement.push(
+      <div key={"sectitle" + finalkey}  onMouseOut={this.gotoTopNone.bind(this)}  onMouseOver={this.gotoTopBounce.bind(this)} >
+        <div className = {"sectitle " + this.props.idnum} >
+        {contentlist[finalkey]}
+        <div className = {"bar " + this.props.idnum} />
+        </div>
+        {this.contents[item][contentlist[finalkey]]}
+      </div>
+    )
+
     if (this.contents[item].button) {
       element.push(<div className="contentbox" key="contentbox" style={{opacity:this.state.opacity, transform:this.state.transform}}> 
         <div className="contentBottom" onMouseOut={this.gotoTopNone.bind(this)}  onMouseOver={this.gotoTopBounce.bind(this)}></div>
@@ -137,7 +152,10 @@ class Projects extends Component {
     window.scrollTo(0, 0)
     setTimeout(this.rollup(), 10);
     this.setState({anistat:0});
-    
+    this.props.starOff();
+  }
+  componentWillUnmount() {
+    this.props.starOn();
   }
   gotoTopNone() {
     if(this.state.anistat === 1){

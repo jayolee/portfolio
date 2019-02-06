@@ -129,6 +129,7 @@ import up_lofi3 from './up/lofi3.jpg'
 import up_knobnot from './up/knob_not.gif'
 import up_knobcode from './up/knobcode.jpg'
 import up_workknob from './up/worknob.gif'
+import up_iniscr from './up/initial_screenmap.jpg'
 
 function anigenerator() {
     let element = [];
@@ -208,51 +209,74 @@ export const projectList = {
             <p>
                 Based on the research we conducted, our team created ​<i>Up</i> based on several psychological concepts including self control, ego-depletion, stress-reduction, intrinsic motivation, and embodied cognition. <i>Up</i> encourages users <b>to form a habitual focus timing of 90 minutes.</b> Users are encouraged to perform a short guided breathing exercise of blowing a balloon immediately after a focus session concludes to regather
                 brain resources. </p></div>,
-        "Design": <div>
-            <div style={{ textAlign: "center" }}>
-                <div className="imgwrap_sc addmargin" >
-                    <img src={up_lofi1} className="proto" alt="Concentration Session Prototype" /><div className="imgdes">Lo-fi Prototypes of Concentration Session</div>
-                </div>
-                <div className="imgwrap_sc" >
-                    <img src={up_session} className="phonesc" alt="Concentration Session" /><div className="imgdes">Final Design of Concentration Session</div></div>
+        "Iteration": <div>
+            <img src={up_iniscr} alt="Initial Screenmap" className="zoomable" onClick={zoomimg}/> 
+            <div className="imgdes">Screenmap of Initial Prototype</div>
+            <p>Based on the idea, our team created a lo-fi prototype using Figma. We conducted Think-aloud using this prototype.</p> 
+            <div className="halfwrap">
+            <img src={up_meeting} alt="Early Prototype" className="half zoomable" onClick={zoomimg} />
+            <img src={up_earlyProto} className="half zoomable" alt="Early Prototype" onClick={zoomimg} /> <div className='imgdes'>Screen Sketches by Young and Think-aloud Using the Early Prototype</div>
             </div>
-            <p> The main part of <i>Up</i> is the concentration timer. Users have the ability to set a time ranging from a minimum of 15 to a maximum of 90 minutes to work on a task of their choice. Our goal is to <b>improve users’ productivity by having them devote a set block of time</b> to working on a specific task, and also <b>prevent them from working on a task too long</b> that they run out of mental energy. The concentration timer is modeled off the <b>Pomodoro technique,</b> which was designed for people to overcome procrastination by committing fully to completing a certain task during a time period of 25 minutes and then having a break of 5 minutes.
+                <p>From the Think-aloud, we got feedback that the connection between saving endangered animals and the concentration session is not clear. Also, most testers felt that <b>facial expressions on balloons are unnecessary and distracting,</b> which we added to create empathy to users.<br />
+                Moreover,we realized that it is <b>hard to get meaningful usability test data with static screens due to the missing key interactions.</b> Therefore, we decided to create a working prototype by code to give realistic experience to our testers. It was my role to build a working prototype.</p></div>,
+       
+       "Final Design":<div>
+            <img src={up_screenmap} alt="Screenmap" className="zoomable" onClick={zoomimg} /><div className="imgdes">Screenmap of the Final Design</div>
+           <p>After few iterations of conducting Think-alouds and making changes based on the feedback we got, we finalized our design. Below is the key features of our design. </p>
+
+            <div className="up_expla_screen">
+                
+                <div className="imgwrap_sc" >
+                    <img src={up_session} className="phonesc" alt="Concentration Session" /><div className="imgdes">Concentration Session</div></div>
+            
+            <p> <span class="title up">Concentration Timer</span><br />
+            Users can set a time ranging from a minimum of 15 to a maximum of 90 minutes to work on a task of their choice. Our goal is <br />
+            <ul>
+                <li>Improve users’ productivity by having them devote a set block of time to working on a specific task
+                </li>
+                <li>
+                Prevent them from working on a task too long that they run out of mental energy
+                </li>
+            </ul>
+            The concentration timer is modeled off the <b>Pomodoro technique,</b> which was designed for people to overcome procrastination by committing fully to completing a certain task during a time period of 25 minutes and then having a break of 5 minutes.
             </p>
-            <div style={{ textAlign: "center" }}>
-                <div className="imgwrap_sc addmargin" >
-                    <img src={up_lofi2} className="proto" alt="Breathing Session Prototype" /><div className="imgdes">Lo-fi Prototypes of Breathing Session</div>
-                </div>
-                <div className="imgwrap_sc" >
-                    <img src={up_breathing} className="phonesc" alt="Breathing Session" /><div className="imgdes">Final Design of Breathing Session</div>
-                </div>
             </div>
-            <p>
-                The next part is the “break” portion which encourages users to follow a guided deep-breathing exercise. As users breathe out, they will watch a balloon being blown up, which is a <b>stealth intervention helping users relieve stress and counteract ego-depletion.</b> The intervention was imperative because replenishing mental resource contributes to them forming the habit of working productively,
-            taking breaks, and ultimately returning to our application. The guided deep-breathing which in experiments show significant effect on improvement of the hemodynamic changes following stressful tasks.</p><p>
-                To make this a true stealth intervention, we took an embedded-design approach by incorporating the visual element of blowing up a balloon as one engages in the guided deep-breathing activity. <b>Blowing up a balloon utilizes the technique of obfuscation via distancing, as the “story” of blowing up a balloon is metaphorical for blowing away one’s stress.</b> Also, obfuscation via misdirection is used because gamified elements such as the colorful graphics of the balloon, would serve as red herrings to detract from the our actual stealth interventions.</p>
-            <div style={{ textAlign: "center" }}>
-                <div className="imgwrap_sc" >
-                    <img src={up_lofi3} className="phonesc" style={{ width: "200px" }} alt="Report Prototype" /><div className="imgdes">Lo-fi Prototype of Report</div>
+
+
+            <div className="up_expla_screen">
+            <div className="imgwrap_sc" >
+                    <img src={up_breathing} className="phonesc" alt="Breathing Session" /><div className="imgdes">Breathing Session</div>
                 </div>
-                <div className="imgwrap_sc" >
-                    <img src={up_report} className="phonesc" alt="Report" /><div className="imgdes">Final Design of Report</div>
-                </div>
+
+                <p>
+                <span class="title up">Guided Deep-breathing Exercise</span><br />
+                “Break” portion encourages users to follow a guided deep-breathing exercise. As users breathe out, they will watch a balloon being blown up, which is a <b>stealth intervention helping users relieve stress and counteract ego-depletion.</b> Replenishing mental resource contributes to them forming the habit of working productively,
+            taking breaks, and ultimately returning to our application. 
+            <b>Blowing up a balloon utilizes the technique of obfuscation via distancing, as the “story” of blowing up a balloon is metaphorical for blowing away one’s stress.</b> Also, gamified elements such as the colorful graphics of the balloon would serve as red herrings to detract from the our actual stealth interventions.</p>
             </div>
-            <p>
-                The last major design implementation is to save virtual endangered animals by obtaining a certain amount of balloons.
-                Users can obtain different sized balloons after concentration sessions based off legth of focus time. We believe this feature incentives users to participate in our guided-breathing exercise. <b>We decided not to give out incentives because it might undermine intrinsic motivation.</b> Moreover, we incorporate a report on user’s focus time as evidence of progress, which would increase intrinsic motivation to continue using our application</p></div>,
+          
+               
+            <div className="up_expla_screen">   
+                <div className="imgwrap_sc" >
+                    <img src={up_report} className="phonesc" alt="Report" />
+                    <div className="imgdes">'My Island' in Report</div>
+                </div>
+            <p><span class="title up">Saving Virtual Endangered Animals</span><br />
+                The last major feature is to save virtual endangered animals by obtaining a certain amount of balloons.
+                Users can obtain different sized balloons after concentration sessions based off legth of focus time. This feature would incentive users to participate in guided-breathing exercise. <b>We decided not to give out incentives because it might undermine intrinsic motivation.</b> We also incorporate a report on user’s focus time as evidence of progress, which would increase intrinsic motivation to continue using our application</p></div>
+                </div>,
 
         "Challenges": <div>
             <div className="title up">Design Challenge:</div>
-            <p><b>- How to reduce demoralizing factors?</b><br />
-                We conceded about users setting the very short sessions and not performing the breathing sessions to get the rewards. To avoid this, we decided not to give out incentives. Also, we decided to use the breathing sensor on the iPhone to not only track the activity, but also strengthen the metaphor of blowing away one’s stress.</p>
-            <img src={up_proto_blow} alt="Playing with Breathing Sensor" className="zoomable" onClick={zoomimg} /><div className='imgdes'>Breathing Sensor Detecting the Breathing Activity</div><br />
-
-            <p className="addmargin">
-                <b>- Creating a Prototype with Realistic Interaction</b><br />
-                After doing user testings with prototypes made of static screens, we realized that it is hard to get meaningful usability test data due to the missing key interaction we designed. Therefore, we created a working prototype by code to give realistic experience to our testers. It was my role to build a realistic working prototype.</p>
-            <img src={up_meeting} alt="Early Prototype" className="half zoomable" onClick={zoomimg} />
-            <img src={up_earlyProto} className="half zoomable" alt="Early Prototype" onClick={zoomimg} /> <div className='imgdes'>Screen Sketches by Young and User Testing with the Early Prototype</div><br />
+            <p><b>- How can we reduce demoralizing factors?</b><br />
+                We conceded about users setting the very short sessions and not performing the breathing sessions to get the rewards. To avoid this, we decided three approaches.
+                <ul>
+                    <li>Not offering incentives</li>
+                    <li>Setting 10 minutes as the minimum session duration</li>
+                    <li>Using the iPhone breathing sensor</li>
+                </ul>
+                The iPhone breathing sensor not only tracks the activity, but also strengthens the metaphor of blowing away one’s stress.</p>
+            <img src={up_proto_blow} alt="Playing with Breathing Sensor" className="zoomable" onClick={zoomimg} /><div className='imgdes'>Breathing Sensor Detecting the Breathing Activity</div><br /><br />
 
             <div className="title up">Technical Challenge:</div>
             <p><b>- Creating knob dials</b><br />
@@ -279,13 +303,10 @@ export const projectList = {
 
 
         </div>,
-        "Final Design": <div>
-            <img src={up_screenmap} alt="Screenmap" className="zoomable" onClick={zoomimg} /><div className="imgdes">Screenmap of the Final Design</div>
-        </div>,
         "Next Steps": <div>
             <img src={up_animals} id="e_animals" alt="Playing with Breathing Sensor" /><div className='imgdes'>Endangered Animal Illustrations By Young and <a href="http://judithleng.me/" target="_blank" rel="noopener noreferrer">Judith Leng</a></div>
 
-            <p className="addmargin">While <i>Up</i> is a productivity mobile application that serves as a concentration tool, <b>the overall message is importance of constant effort and taking efficient breaks.</b> <i>Up</i> aims to reduce the demoralizing factor occurring outside of the application by constantly rewarding users with animals and acts as a companion that travels with users to keep track of every effort that can count.</p>
+            <p className="addmargin">While <i>Up</i> is a productivity mobile application that serves as a concentration tool, the overall message is <b>importance of constant effort and taking efficient breaks.</b> <i>Up</i> aims to reduce the demoralizing factor occurring outside of the application by constantly rewarding users with animals and acts as a companion that travels with users to keep track of every effort that can count.</p>
             <p>
                 At current stage of design, user are limited to saving virtual animals, which may not be as rewarding as contributing to saving animals in the real world. For future implementations, we look forward to having a sponsorship partner with wildlife organizations such as the World WildLife Fund (WWF).</p>
         </div>,
@@ -350,14 +371,20 @@ export const projectList = {
         </div>,
 
         "Design": <div>
+            <div className="halfwrap fit">
             <img className="half imgBorder addmargin zoomable" src={getcuisine4} alt="Hi-fi prototype" onClick={zoomimg} /><img className="half addmargin zoomable" src={getcuisine5} alt="Hi-fi prototype" onClick={zoomimg} /><div className='imgdes'>Hi-fi Prototype made of HTML, CSS, jQuery, and Flask</div>
+            </div>
             <p className="addmargin">Because I trained the model with certain ingredients, I wanted people to type ingredients in a format that can be processed. Therefore, I implemented an autocomplete function on the search bar using jQuery Autocomplete API. The biggest issue of using ML is that it is hard to optimize the website for shorter loadings. I tried to optimize the files as much as possible; however, the initial response time is still long due to Heroku (If the app has no traffic for 30 mins, it goes to sleep due to Heroku's policy).<br /><br /></p>
 
             <img src={getcuisine3} alt="Cuisine Icons" onClick={zoomimg} className="zoomable" /><div className='imgdes'>Cuisine Icons</div>
             <p>
                 One of the concerns about this project is that the data this website provides can easily be obtained, and even more data can be obtained by searching on websites providing recipes. Also, the data people need is recipes, not a cuisine type to look for. <b>However, I got feedback that this website not only provides information but also fun.</b> Therefore, I focused on providing interesting interactions. I added graphics for visual pleasure.</p>
                 <img className="zoomable" src={getcuisine1} onClick={zoomimg}/>
-            <img className="half imgBorder addmargin zoomable" src={getcuisine6} alt="Final Design" onClick={zoomimg} /><img className="half addmargin zoomable" src={getcuisine7} alt="Final Design" onClick={zoomimg} /><div className='imgdes'>Final Design</div>
+            <div className="halfwrap fit">
+                 <img className="half imgBorder addmargin zoomable" src={getcuisine6} alt="Final Design" onClick={zoomimg} />
+                 <img className="half addmargin zoomable" src={getcuisine7} alt="Final Design" onClick={zoomimg} />
+                 <div className='imgdes'>Final Design</div>
+            </div>
             <p>
                 Also, to provide more helpful information, I created a function sending users to Google Search searching recipes with the predicted cuisine and given ingredients.</p></div>,
 
@@ -403,15 +430,24 @@ export const projectList = {
         "User Research": <div>
             <p> With our basic ideation, we conducted a phone interview with a firefighter. He confirmed that our idea will be helpful, and gave us the problems about the current system has.</p><img src={logpos2} alt="Phone Interview" /><div className='imgdes'>Phone Interview</div><p>According to the firefighter, there is a system providing location information using sound and blinking lights after a firefighter being motionless for 30 seconds (Watch the video for additional information). However, the issue is that the location information is verbally communicated, so the information rescue team has might not be the latest information. Also, the light and sound signals can be hindered by the fire and the smoke. Our solution solves this problem by providing real-time information directly to the firefighters through the device.</p></div>,
 
-        "Challenges": <div><div className='title logpos' >Technical Challenge:</div>How can we get the accurate indoor location data?<div className='solution'><li>To get accurate location data, we designed our device to use the bluetooth devices for better location accuracy.</li></div><div className='title logpos'>Social Constraints:</div>According to the interview, there are two social constraints:<br />Firefighters sometimes rely on their ears to determine the temprature. Therefore, there should not be a thing cover their ears.<br /> Firefighters resist change, especially if it is going to be hard to put on. <div className='solution'> <li>We designed an audio AR device satisfying these challenges. </li></div><img src={logpos3} alt="Device Design" className="zoomable" onClick={zoomimg} /><div className='imgdes'>Device Desiged by <a href='http://www.hyunwoopaik.com' target='_blank' rel="noopener noreferrer">Hyun Woo Paik</a></div></div>,
+        "Challenges": <div><div className='title logpos' >Technical Challenge:</div><p>How can we get the accurate indoor location data?<div className='solution'><li>To get accurate location data, we designed our device to use the bluetooth devices for better location accuracy.</li></div></p>
+        
+        <div className='title logpos'>Social Constraints:</div><p>According to the interview, there are two social constraints:<br />Firefighters sometimes rely on their ears to determine the temprature. Therefore, there should not be a thing cover their ears.<br /> Firefighters resist change, especially if it is going to be hard to put on. <div className='solution'> <li>We designed an audio AR device satisfying these challenges. </li></div>
+        </p>
+            <img src={logpos3} alt="Device Design" className="zoomable" onClick={zoomimg} /><div className='imgdes'>Device Desiged by <a href='http://www.hyunwoopaik.com' target='_blank' rel="noopener noreferrer">Hyun Woo Paik</a></div></div>,
 
         "Final Design": <div><p>To create a video explining our idea, we made a scenario conveying how our design can be applied to the target situations.</p>
-            <img className="half zoomable" onClick={zoomimg} src={logposstory1} alt="Storyboard 1" /> <img className="half zoomable" onClick={zoomimg} src={logposstory2} alt="Storyboard 2" /><div className="imgdes">Video Storyboard by Young</div>
+           <div className="halfwrap">
+                <img className="half zoomable" onClick={zoomimg} src={logposstory1} alt="Storyboard 1" /> 
+                <img className="half zoomable" onClick={zoomimg} src={logposstory2} alt="Storyboard 2" />
+                <div className="imgdes">Video Storyboard by Young</div>
+            </div>
             <p>The device can be controlled with verbal and head motions.</p>
             <div className="control">
                 <img id="connected" src={logposrun1} alt="Control: Connect" /></div>
-            <div className="imgdes solution">Team members connect the devices before getting into the operation.</div>
-            <div className="control"><img className="anim continuImg" alt="Control: Getting Messages 1" src={logposrun2} />
+             <div className="imgdes solution">Team members connect the devices before getting into the operation.</div>
+            <div className="control" style={{width:"230px"}}>
+                <img className="anim continuImg" alt="Control: Getting Messages 1" src={logposrun2} />
                 <img className="continuImg" src={logposrun3} alt="Control: Getting Messages 2" /></div><div className="imgdes hover">Hover on the image</div>
             <div className="imgdes solution">Users will continuously get the messages from others as walkie-talkie</div>
             <div className="control"><img className="anim" src={logposrun4} alt="Control: Locate All 1" /><img src={logposrun5} alt="Control: Locate All 2" /></div>
@@ -439,7 +475,7 @@ export const projectList = {
             "Role": "ideation, UI/UX design, video directing/editing",
             "Tool": "Adobe XD, After Effects, Illustrator",
         },
-        "button": <a href="#" onClick={(ev)=>{var proto = document.getElementById("doteproto"); window.scroll( {top: proto.offsetTop, left: 0,  behavior: 'smooth'})}}>
+        "button": <a onClick={(ev)=>{var proto = document.getElementById("doteproto"); window.scroll( {top: proto.offsetTop, left: 0,  behavior: 'smooth'})}}>
         <div className="button dote">Play with the Prototype</div></a>,
         "Process": <div className="processBoxWrap">
          <div className="proBoxLine dote" />
@@ -459,9 +495,13 @@ export const projectList = {
         "Ideation": <div>
             <p> Our idea started from a thought: what if we can leave our lovers a virtual message at a specific location ?
             Using AR technology, we focused on messaging emotions related to locations.
-                With DoteNote, users can leave 3D messages at specific locations.</p><img className="half zoomable" onClick={zoomimg} src={dote1} alt="Ideation Meeting 1" />
-            <img className="half zoomable" onClick={zoomimg} src={dote2} alt="Ideation Meeting 2" />
-            <div className="imgdes">Ideation Meeting</div> </div>,
+                With DoteNote, users can leave 3D messages at specific locations.</p>
+                <div className="halfwrap">
+                    <img className="half zoomable" onClick={zoomimg} src={dote1} alt="Ideation Meeting 1" />
+                    <img className="half zoomable" onClick={zoomimg} src={dote2} alt="Ideation Meeting 2" />
+                    <div className="imgdes">Ideation Meeting</div> 
+                </div>
+            </div>,
         "Challenges": <div>
             <img src={dote3} alt="AR Testting" className="zoomable" onClick={zoomimg} />
             <div className="imgdes">AR Testing</div>
@@ -491,7 +531,7 @@ export const projectList = {
             <div className="screens" id="doteproto">
                 <Dote style={{ contain: "content" }}  ref={protoRef}/></div></div>,
 
-        "Further Question": "How can we deal with the indoor messages on different floors? ",
+        "Further Question": <p>How can we deal with the indoor messages on different floors?</p>,
     },
     "reporter": {
         "projectTitle": "I am a Reporter",
@@ -512,7 +552,7 @@ export const projectList = {
         "Challenges": <div>
             <div className="title reporter">Concept Design Challenge:</div>
             <p>How can we design the overall concept to be accepted by wide range of people? Many visual novel games use drawing style of cell-animation, which some people feel childish. </p>
-            <div className="solution"><li>As a solution, we chose realistic illustration style.</li></div>
+            <div className="solution"><p><li>As a solution, we chose realistic illustration style.</li></p></div>
             <div className="onethird">
                 <img src={reporter1} alt="Illustration 1" className="zoomable" onClick={zoomimg} />
                 <img src={reporter2} alt="Illustration 2" className="zoomable" onClick={zoomimg} />
@@ -526,7 +566,7 @@ export const projectList = {
                 play visual novels, so  our biggest challenge was to make the UI intuitive to novice users of the visual novel.
                     </p>
 
-            <div className="solution"><li>As a solution, we decided to use elements commonly used in the web design.</li></div>
+            <div className="solution"><p><li>As a solution, we decided to use elements commonly used in the web design.</li></p></div>
         </div>,
 
         "Interface": <div className="onethird">
@@ -553,7 +593,7 @@ export const projectList = {
   mid point based on the time it takes for each person to get to the point. I was the lead designer who improved the interface
   of the application.
                 </p></div>,
-        "Design Changes": <div className="center">
+        "Design Changes": <div className="center" style={{maxWidth:"1100px", margin:"60px auto 0"}}>
             <div className="evensc before"> <img src={even1} alt="Screen Before" />
                 <div className="ori">Original</div>
             </div>
@@ -633,7 +673,9 @@ export const projectList = {
               </div>
                 <div className="animation_wrap">
                     <img src={momo3} id="pointers" alt="Pointer Animation" />
+                    <p>
                     {anigenerator()}
+                    </p>
                 </div>
             </div>
     },
@@ -668,8 +710,11 @@ export const projectList = {
             <p>For a React web application project for <i>Software Structures for User Interfaces</i> class at CMU in Fall 2018, I chose Naoshima, Japan as the travel location I will introduce.<br />
                 Naoshima is the place I visited in summer 2018. It is an island full of artworks.  </p></div>,
         "Prototypes": <div>
-            <img src={nao_lofi} alt="Lo-fi Prototype" className="half zoomable" onClick={zoomimg} />
-            <img src={nao_midfi} alt="Mid-fi Prototype" className="half zoomable" onClick={zoomimg} /><div className="imgdes">Lo-fi and Mid-fi Prototypes</div>
+            <div className="halfwrap">
+                <img src={nao_lofi} alt="Lo-fi Prototype" className="half zoomable" onClick={zoomimg} />
+                <img src={nao_midfi} alt="Mid-fi Prototype" className="half zoomable" onClick={zoomimg} />
+                <div className="imgdes">Lo-fi and Mid-fi Prototypes</div>
+            </div>
             <p>As a web application introducing a specific location, I wanted to give a feeling of staying on one page but looking at different aspects of the website. Therefore, I designed all pages appearing as layers above the home page.</p>
         </div>,
 
@@ -679,7 +724,11 @@ export const projectList = {
             <p>To make different layers of pages more obvious, I gave page transition animations.</p></div>,
 
         "Illustrations": <div>
-            <img src={nao_sketches} alt="Illustrations" className="half zoomable" onClick={zoomimg} /> <img src={nao_drawing} alt="Drawing on iPad" className="half zoomable" onClick={zoomimg} /><div className='imgdes'>Hand-Drawn Digital Illustrations on iPad Sketch</div>
+            <div className="halfwrap">
+                <img src={nao_sketches} alt="Illustrations" className="half zoomable" onClick={zoomimg} /> 
+                <img src={nao_drawing} alt="Drawing on iPad" className="half zoomable" onClick={zoomimg} />
+                <div className='imgdes'>Hand-Drawn Digital Illustrations on iPad Sketch</div>
+            </div>
             <p>Because Naoshima is the island with many famous artworks, I wanted to give the artistic feeling to the website. Therefore, I added hand-drawn digital illustrations.</p>
         </div>,
 

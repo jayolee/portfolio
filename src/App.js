@@ -22,6 +22,7 @@ class App extends Component {
       active: true,
       activelist: ['uiux', 'code', 'ideation', 'illustration', 'animation', 'video'],
       deactivelist: [],
+      star_opacity: 1,
     }
     this.star_position = this.starPosGenerator();
     this.star_twinkle = this.starTwinkleGenerator();
@@ -83,16 +84,27 @@ class App extends Component {
     }
     return (element);
   }
+  //functions to change star opacity
+  starOff(){
+    this.setState({star_opacity: 0});
+    console.log(this.state.star_opacity)
+  }
+  starOn(){
+    this.setState({star_opacity: 1});
+  }
   //function to create stars
   starGenerator() {
     let welcommsg = '　　　　　　　∩\n　　　　　　　||\n　　　　　　　||\n　　　　　　　||\n　　　　　 ／￣￣＼\n　　　　　｜　　　 ヽ\n　　　　　/　　　　 |\n　 |＼　／　／ヽ / ノ\n　 |／￣￣￣＼ |/ /\n　 /　　　　　Ｖ＿)\n　｜(● ●)　 ｜\n　王(_人_) 三 /\n　 ＼＿＿＿_／\n　 _/ /_/ /\n　(＿ﾉ(＿ﾉ\n WELCOME!'
     console.log(welcommsg); //welcome message printing
     let element = [];
 
-    for (let i = 0; i < this.star_position.length; i++)
-      element.push(<div className="star_opac_wrap" key={"starwrap" + i} style={this.star_twinkle[i]}>
+    for (let i = 0; i < this.star_position.length; i++){
+      element.push(
+      <div className="star_opac_wrap" key={"starwrap" + i} style={this.star_twinkle[i]}>
         <div className="stars" key={"star" + i} style={this.star_position[i]} />
-      </div>)
+      </div>
+      )
+    }
     return element;
   }
 
@@ -102,7 +114,9 @@ class App extends Component {
         <div>
         <div className="starwrap_out">
           <div className="starwrap_in" key="starwrap">
+          <div style={{opacity:this.state.star_opacity, transition:".4s"}} key={"staropacity"}>
             {this.starGenerator()}
+            </div>
           </div>
         </div>
         <Header key="header" pagenum={this.state.menu} menustatus={this.menustatus} />
@@ -119,9 +133,9 @@ class App extends Component {
             <div class="titles">Designer | Developer</div>
           </div>
           <Switch>
-          <Route path={process.env.PUBLIC_URL} exact component={MainProject} />
-          <Route path={process.env.PUBLIC_URL + "/projects/"} component={MainProject} />
-          <Route path={process.env.PUBLIC_URL +"/fun/"} component={Fun} />
+          <Route path={process.env.PUBLIC_URL} exact render = {props => <MainProject starOff={this.starOff.bind(this)} starOn = {this.starOn.bind(this)} />} />
+          <Route path={process.env.PUBLIC_URL + "/projects/"} render = {props => <MainProject starOff={this.starOff.bind(this)} starOn = {this.starOn.bind(this)} />} />
+          <Route path={process.env.PUBLIC_URL +"/fun/"} render = {props => <Fun starOff={this.starOff.bind(this)} starOn = {this.starOn.bind(this)} />} />
           <Route path={process.env.PUBLIC_URL +"/fineart/"} component={FAs} />
           <Route path={process.env.PUBLIC_URL +"/about/"} component={About} />
           <Route path={process.env.PUBLIC_URL +"/404/"} render={props => <Page404  updateLogo={this.updateLogo.bind(this)}/>} />

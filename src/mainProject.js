@@ -71,6 +71,13 @@ class MainProject extends Component {
     setTimeout(this.setState({ page: 0 }), 300);
 
   }
+
+  starOff(){
+    this.props.starOff();
+  }
+  starOn(){
+    this.props.starOn();
+  }
   //filter function  
   addActive(e) {
     let exist = 0;
@@ -164,7 +171,7 @@ class MainProject extends Component {
         </Link>
       );
       routelist.push(
-        <Route path={projectUrl} key={"routeto_"+this.state.worklist[i].id} render={props => <Projects key="Projects" idnum={this.state.worklist[i].id}  projecttype="/projects" />}  />
+        <Route path={projectUrl} key={"routeto_"+this.state.worklist[i].id} render={props => <Projects key="Projects" idnum={this.state.worklist[i].id}  projecttype="/projects" starOff={this.starOff.bind(this)} starOn = {this.starOn.bind(this)}  />}  />
       )
     }
     element = <div>{routelist}{element}</div>;
