@@ -1,14 +1,14 @@
 {
   "main.css": "/portfolio/static/css/main.d9734c04.chunk.css",
-  "main.js": "/portfolio/static/js/main.85df6fd2.chunk.js",
-  "main.js.map": "/portfolio/static/js/main.85df6fd2.chunk.js.map",
+  "main.js": "/portfolio/static/js/main.42d6d858.chunk.js",
+  "main.js.map": "/portfolio/static/js/main.42d6d858.chunk.js.map",
   "static/js/1.bcd0314a.chunk.js": "/portfolio/static/js/1.bcd0314a.chunk.js",
   "static/js/1.bcd0314a.chunk.js.map": "/portfolio/static/js/1.bcd0314a.chunk.js.map",
   "runtime~main.js": "/portfolio/static/js/runtime~main.ee2a1003.js",
   "runtime~main.js.map": "/portfolio/static/js/runtime~main.ee2a1003.js.map",
   "static/media/17.png": "/portfolio/static/media/17.7966679a.png",
   "static/media/App.module.scss": "/portfolio/static/media/younglogo.cad8b28e.svg",
-  "static/media/projects.scss": "/portfolio/static/media/cursor.83de335c.svg",
+  "static/media/projects.scss": "/portfolio/static/media/xcursor.d33a94b6.svg",
   "static/media/even1.png": "/portfolio/static/media/even1.8824f724.png",
   "static/media/even2.png": "/portfolio/static/media/even2.52877fe1.png",
   "static/media/int1.jpg": "/portfolio/static/media/int1.0ef833a2.jpg",
@@ -187,6 +187,6 @@
   "static/media/top.png": "/portfolio/static/media/top.c9e50ad6.png",
   "static/css/main.d9734c04.chunk.css.map": "/portfolio/static/css/main.d9734c04.chunk.css.map",
   "index.html": "/portfolio/index.html",
-  "precache-manifest.171fc628a6d317dbe74147e67d022614.js": "/portfolio/precache-manifest.171fc628a6d317dbe74147e67d022614.js",
+  "precache-manifest.46cd289281d1232f61c9cbb65abb8197.js": "/portfolio/precache-manifest.46cd289281d1232f61c9cbb65abb8197.js",
   "service-worker.js": "/portfolio/service-worker.js"
 }
