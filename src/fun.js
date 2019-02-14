@@ -139,7 +139,7 @@ class Fun extends Component {
     let routelist=[];
     let projectUrl = '';
     for (let i = 0; i < this.state.worklist.length; i++) {
-      projectUrl=process.env.PUBLIC_URL +'/fun/'+this.state.worklist[i].id+'/';
+      projectUrl=process.env.PUBLIC_URL +'/sideProjects/'+this.state.worklist[i].id+'/';
       element.push(
         <Link to={projectUrl} key={this.state.worklist[i].id+'_link'} >
         <div id={this.state.worklist[i].id} key={this.state.worklist[i].id} className={this.state.worklist[i].mainClass} onClick={(ev) => this.setState({ page: 4, curid: this.state.worklist[i].id })}  >
@@ -160,7 +160,7 @@ class Fun extends Component {
         </Link>
       )
       routelist.push(
-        <Route path={projectUrl} key={"routeto_"+this.state.worklist[i].id} render={props => <Projects key="Projects" idnum={this.state.worklist[i].id} projecttype="/fun" starOff={this.starOff.bind(this)} starOn = {this.starOn.bind(this)} />} />
+        <Route path={projectUrl} key={"routeto_"+this.state.worklist[i].id} render={props => <Projects key="Projects" idnum={this.state.worklist[i].id} projecttype="/sideProjects" starOff={this.starOff.bind(this)} starOn = {this.starOn.bind(this)} />} />
       )
     }
     element=<div>{routelist}{element}</div>;
