@@ -15,11 +15,11 @@ class Header extends Component {
         }
         this.menulist = {
             "Projects": ["projects", "projects"],
-            "Fun": ["fun", "fun"],
+            "Side Projects": ["sideProjects", "side projects"],
             "Fine Art": ["FA", "fineart"],
             "About/Contact": ["contact", "about"]
         }
-        this.keylist = ["Projects", "Fun", "Fine Art", "About/Contact"]
+        this.keylist = ["Projects", "Side Projects", "Fine Art", "About/Contact"]
     }
     componentDidMount(){
         this.getCurPage();
@@ -28,7 +28,7 @@ class Header extends Component {
         let curpagePath=this.props.location.pathname;
         curpagePath=curpagePath.toLowerCase();
         
-        let urlList=['/projects', '/fun', '/fineart', '/about']
+        let urlList=['/projects', '/more', '/fineart', '/about']
         let newpage=0;
         let urlRegex;
         for(let i=0; i<urlList.length; i++){

@@ -1,6 +1,5 @@
 
-@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700');
-
+@import url('https://fonts.googleapis.com/css?family=Titillium+Web:300,400,600,700');
 @mixin transform($transform) {
     -webkit-transform: $transform;
     -ms-transform: $transform;
@@ -47,7 +46,7 @@ body {
   text-rendering: optimizeLegibility;
   font: {
       size: 16px;
-    family: "roboto", "Source Sans Pro", "sans-serif" !important;
+    family: "Titillium Web", "roboto", "Source Sans Pro", "sans-serif" !important;
   }
 }
 
@@ -113,7 +112,6 @@ img {
 	}
 }
 
-
 .starwrap_out{
   @include sizes( 100%, 400px); 
     overflow:hidden; 
@@ -123,7 +121,7 @@ img {
 
 .starwrap_in{
   position: relative; 
-  @include sizes(100%, 400px); 
+  @include sizes(100%, 310px); 
     background:linear-gradient(#000,#10162B); 
     @include positions(0,null,null,0);
     overflow:hidden;
@@ -176,7 +174,7 @@ img {
   height: 60px;
   z-index: 999;
 }
-
+ 
 .menu-wrap {
   position: absolute;
   @include positions(14px,10px);
@@ -184,13 +182,13 @@ img {
 }
 .active{
     .menudot{
-        opacity:.3;
+        opacity:.8;
     }
 }
 .menudot{
   @include sizes(28px, 28px);
-    background:#fff;
-    border:4px solid rgb(187, 211, 255);
+    background:#1a104a;
+    border:4px solid #0058ff;
     border-radius:15px; 
     position:absolute; 
     @include positions(50%,null,null,50%);
@@ -202,8 +200,9 @@ img {
 
 .menu {
   @include sizes(100%);
-  font-family: "roboto", "sans-serif";
+  font-family: "Titillium Web", "sans-serif";
   letter-spacing: .2px;
+  text-align: center;
   li {
     margin: 0px;
     list-style: none;
@@ -212,7 +211,7 @@ img {
     position: relative;
     &:hover{
         .menudot{
-            opacity:.3;
+            opacity:.6;
         }
     }
     a {
@@ -224,8 +223,8 @@ img {
         transition: .3s;
         &:hover {
             text-decoration: none;
-            color:rgb(133, 245, 255);
-            font-weight:600;
+            color:#16e6ff;
+            font-weight:700;
           }
         cursor: pointer;
       }
@@ -234,11 +233,13 @@ img {
 }
 
 .activemenu {
-  color: rgb(133, 245, 255) !important;
+  color: #16e6ff !important;
 	font-weight:bold;
 	z-index:999;
 }
-
+#sideProjects{
+  width:135px;
+}
 #work{
 	width:78px;
 }
@@ -314,7 +315,6 @@ width:102px;
         }
         &.open{
              span{
-               background:#06070f;
 
               &:nth-child(1) {
                 @include positions(18px, 50%);
@@ -334,16 +334,12 @@ width:102px;
         }
     }
   }
-  .menudot{
-    background:#091d4e;
-    border:4px solid #000;
-  }
   .menu-wrap {
     @include sizes(100%, 0);
-    @include positions(null, 0);
+    @include positions(0, 0);
     text-align:center;
     overflow: hidden;
-    background: rgba(154, 174, 185, .85);
+    background: linear-gradient(to bottom, rgba(0,0,0,0.9), rgba(16,22,43,0.9));
     transition: .5s ease-in-out;
     &.open {
       @include sizes(null, 300px);
@@ -363,14 +359,11 @@ width:102px;
 
     .menua{
       @include sizes(90%);
-      color:#06070f;
-      font-weight:500;
-      text-shadow: 0 0 6px rgba(255,255,255,.6);
     }
       }
     }
   }
-  #work,#fun,#FA,#contact{
+  #work,#sideProjects,#FA,#contact{
     @include sizes(100%);
   }
 }
@@ -403,13 +396,13 @@ width:102px;
   margin: 50px auto 50px;
   text-align: center;
   .titles{
-    color:#5ef2ff;
+    color:#2de9ff;
     text-transform: uppercase;
     letter-spacing: 2px;
     margin-top:26px;
     font: {
       size:18px;
-      weight:300;
+      weight:400;
     }
   }
 }
@@ -418,6 +411,13 @@ width:102px;
   position: relative;
   @include sizes(360px, 85px);
   margin:0 auto;
+
+  &.header{
+    @include sizes(150px);
+    position:absolute;
+    @include positions(32px,null,null,30px);
+    transition: .5s;
+  }
 }
 
 #ylogo {
@@ -438,7 +438,7 @@ width:102px;
 .worksbutton {
   text-align: center;
   font: {
-      family: 'roboto';
+      family: 'Titillium Web';
         weight: 500;
         size:15px;
   }
@@ -568,13 +568,13 @@ width:102px;
     position: absolute;
     @include positions( 50%,null,null,50%);
     @include transform( translateX(-50%) translateY(-50%));
-    text-shadow: 0 0 16px rgba(0,0,0,0.9);
+    text-shadow: 0 0 14px rgba(0,0,0,1);
     font: {
         size: 24px;
-        weight: 500;
+        weight: 600;
     }
     letter-spacing: .5px;
-    line-height: 1.6;
+    line-height: 2;
     color: #fff;
     opacity: 1;
   
@@ -590,7 +590,7 @@ width:102px;
         size:17px;
         weight:300;
       }
-      line-height: 1.6;
+      line-height: 1.7;
       color:#fff;
       @include sizes(95%,null, 300px);
       &.fun{
@@ -602,7 +602,7 @@ width:102px;
   
   }
   img{
-    opacity:.35;
+    opacity:.4;
     transition:.4s;
   }
   &:hover{

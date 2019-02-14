@@ -165,7 +165,7 @@ class MainProject extends Component {
           </div>
           <div className="discripsmaller">
             {this.state.worklist[i].title}<br />
-            <span className="types">{this.state.worklist[i].types}</span>
+            <span className="types"> {this.state.worklist[i].expla}</span>
           </div>
         </div>
         </Link>

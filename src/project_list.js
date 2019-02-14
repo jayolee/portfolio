@@ -34,6 +34,11 @@ import getcuisine8 from './getcuisine/report1.svg'
 import getcuisine9 from './getcuisine/report2.svg'
 import getcuision10 from './getcuisine/modelerror.gif'
 import getcuisine11 from './getcuisine/503error.jpg'
+import getcuisinemod1 from './getcuisine/knear.svg'
+import getcuisinemod2 from './getcuisine/svm.svg'
+import getcuisinemod3 from './getcuisine/multi.svg'
+import getcuisinekfold from './getcuisine/accuracy.png'
+import getcuisineword from './getcuisine/wordbag.svg'
 
 import reporter0 from './reporter/int1.jpg'
 import reporter1 from './reporter/garage.jpg'
@@ -123,9 +128,6 @@ import up_report from './up/report.gif'
 import up_screenmap from './up/screenmap.jpg'
 import up_knob from './up/knob.jpg'
 import up_protos from './up/prototypes.jpg'
-import up_lofi1 from './up/lofi1.jpg'
-import up_lofi2 from './up/lofi2.jpg'
-import up_lofi3 from './up/lofi3.jpg'
 import up_knobnot from './up/knob_not.gif'
 import up_knobcode from './up/knobcode.jpg'
 import up_workknob from './up/worknob.gif'
@@ -166,7 +168,7 @@ const protoRef = React.createRef();
 export const projectList = {
     "up": {
         "projectTitle": "Up",
-        "quote": "How can an app promote productivity, combat ego-depletion and stress?",
+        "quote": "How might we help (CMU) students via ubiquitous devices?",
         "topimg": <img id="up" alt="Up Top Screen" className="topimg" src={up_breathing} />,
 
         "exlpla": {
@@ -199,72 +201,77 @@ export const projectList = {
             </div>
             </div>,
         "Ideation & Research": <div>
-            <p>Our idea started from interviews with CMU students about causes of stress they get. Interestingly, they answered that students at CMU tend not to sleep even though they don't have things to do and getting so much stress. We set the goal of our project as <b>relieving students' stress and promoting productivity.</b><br />Our original idea was to prompt random tasks in random time to give students joyful moments to care of themselves. However, we realized that the rationale is weak, so we decided to focus on a specific task which is proven as effective.</p>
+            <p>Our idea started from interviews with CMU students about causes of stress they get. Interestingly, they answered that students at CMU tend not to sleep even though they don't have things to do. They are worrying about if they are productive enough, and this gives them so much stress. We set the goal of our project as <b>relieving students' stress and promoting productivity.</b></p>
+            <p style={{textAlign:"center", fontWeight:"bold", color:"#000", fontSize:"20px", textDecoration:"underline wavy #E9974C"}}>
+            How can a mobile app promote productivity, combat ego-depletion and stress?</p>
+            <p><br />Our original idea was apply love languages to self-love. We planned to prompt random tasks based on their love languages every day to give students joyful moments to care of themselves. However, we realized that the rationale is weak, so we decided to focus on a specific task which is proven as effective.</p>
             <img src={up_protos} alt="Initial Paper Prototypes" className="zoomable" onClick={zoomimg} /><div className="imgdes">Initial Paper Prototypes</div>
             
-            <p>From the literature review, we found some activities proven as effective to relieve stress or promote creativity. Among the activities, we paid attention to <a href="http://www.hsj.gr/medicine/stress-management-techniques-evidencebased-procedures-that-reduce-stress-and-promote-health.pdf" target="_blank" rel="noopener noreferrer" ><b>diaphragmatic breathing,</b> which is shown as effective to relieve stress</a> and <a href="https://behavioralandbrainfunctions.biomedcentral.com/articles/10.1186/1744-9081-10-9" target="_blank" rel="noopener noreferrer" ><b>short-term meditation</b> which can improve creativity.</a> </p>
+            <p>Through literature review, we found activities proven as effective to relieve stress or promote creativity. Among the activities, we paid attention to <a href="http://www.hsj.gr/medicine/stress-management-techniques-evidencebased-procedures-that-reduce-stress-and-promote-health.pdf" target="_blank" rel="noopener noreferrer" ><b>diaphragmatic breathing,</b> which is shown as effective to relieve stress</a> and <a href="https://behavioralandbrainfunctions.biomedcentral.com/articles/10.1186/1744-9081-10-9" target="_blank" rel="noopener noreferrer" ><b>short-term meditation</b> which improves creativity.</a> </p>
 
             <p>As a tool to track the productivity, we decided to use Malcolm Gladwell’s 10,000 hours rule. It is stated that one requires over 10,000 hours of practice to become an expert of some sort; however, such number of hours is extremely difficult of practice for young adults in college or workplace. But what if we base this idea to encourage users to build a focusing habit?</p>
            
             <p>
-                Based on the research we conducted, our team created ​<i>Up</i> based on several psychological concepts including self control, ego-depletion, stress-reduction, intrinsic motivation, and embodied cognition. <i>Up</i> encourages users <b>to form a habitual focus timing of 90 minutes.</b> Users are encouraged to perform a short guided breathing exercise of blowing a balloon immediately after a focus session concludes to regather
+                Based on the research we conducted, our team created ​<i>Up</i> based on several psychological concepts including self control, ego-depletion, stress-reduction, and embodied cognition. <i>Up</i> encourages users <b>to form a habitual focus timing of 90 minutes.</b> Users are encouraged to perform a short guided breathing exercise of blowing a balloon immediately after a focus session concludes to regather
                 brain resources. </p></div>,
+                "Final Design":<div>
+                <img src={up_screenmap} alt="Screenmap" className="zoomable" onClick={zoomimg} /><div className="imgdes">Screenmap of the Final Design</div>
+               <p>After few iterations of conducting Think-alouds and making changes based on the feedback we got, we finalized our design. Below is the key features of our design. </p>
+    
+                <div className="up_expla_screen">
+                    
+                    <div className="imgwrap_sc" >
+                        <img src={up_session} className="phonesc" alt="Concentration Session" /><div className="imgdes">Concentration Session</div></div>
+                
+                <p> <span class="title up">Concentration Timer</span><br />
+                Users can set a time ranging from a minimum of 15 to a maximum of 90 minutes to work on a task of their choice. Our goal is <br />
+                <ul>
+                    <li>Improve users’ productivity by having them devote a set block of time to working on a specific task
+                    </li>
+                    <li>
+                    Prevent them from working on a task too long that they run out of mental energy
+                    </li>
+                </ul>
+                The concentration timer is modeled off the <b>Pomodoro technique,</b> which was designed for people to overcome procrastination by committing fully to completing a certain task during a time period of 25 minutes and then having a break of 5 minutes.
+                </p>
+                </div>
+    
+    
+                <div className="up_expla_screen">
+                <div className="imgwrap_sc" >
+                        <img src={up_breathing} className="phonesc" alt="Breathing Session" /><div className="imgdes">Breathing Session</div>
+                    </div>
+    
+                    <p>
+                    <span class="title up">Guided Deep-breathing Exercise</span><br />
+                    “Break” portion encourages users to follow a guided deep-breathing exercise. As users breathe out, they will watch a balloon being blown up, which is a <b>stealth intervention helping users relieve stress and counteract ego-depletion.</b> Replenishing mental resource contributes to them forming the habit of working productively,
+                taking breaks, and ultimately returning to our application. 
+                <b>Blowing up a balloon utilizes the technique of obfuscation via distancing, as the “story” of blowing up a balloon is metaphorical for blowing away one’s stress.</b> Also, gamified elements such as the colorful graphics of the balloon would serve as red herrings to detract from the our actual stealth interventions.</p>
+                </div>
+              
+                   
+                <div className="up_expla_screen">   
+                    <div className="imgwrap_sc" >
+                        <img src={up_report} className="phonesc" alt="Report" />
+                        <div className="imgdes">'My Island' in Report</div>
+                    </div>
+                <p><span class="title up">Saving Virtual Endangered Animals</span><br />
+                    The last major feature is to save virtual endangered animals by obtaining a certain amount of balloons.
+                    Users can obtain different sized balloons after concentration sessions based off legth of focus time. This feature would incentive users to participate in guided-breathing exercise. <b>We decided not to give out incentives because it might undermine intrinsic motivation.</b> We also incorporate a report on user’s focus time as evidence of progress, which would increase intrinsic motivation to continue using our application</p></div>
+                    </div>,
+
         "Iteration": <div>
             <img src={up_iniscr} alt="Initial Screenmap" className="zoomable" onClick={zoomimg}/> 
             <div className="imgdes">Screenmap of Initial Prototype</div>
-            <p>Based on the idea, our team created a lo-fi prototype using Figma. We conducted Think-aloud using this prototype.</p> 
+            <p>Based on the insights gained from the literature review, our team created a lo-fi prototype using Figma. We conducted Think-aloud using this prototype. At this point, main features were selecting an animal to save, concentration session, and breathing session.</p> 
             <div className="halfwrap">
             <img src={up_meeting} alt="Early Prototype" className="half zoomable" onClick={zoomimg} />
             <img src={up_earlyProto} className="half zoomable" alt="Early Prototype" onClick={zoomimg} /> <div className='imgdes'>Screen Sketches by Young and Think-aloud Using the Early Prototype</div>
             </div>
                 <p>From the Think-aloud, we got feedback that the connection between saving endangered animals and the concentration session is not clear. Also, most testers felt that <b>facial expressions on balloons are unnecessary and distracting,</b> which we added to create empathy to users.<br />
-                Moreover,we realized that it is <b>hard to get meaningful usability test data with static screens due to the missing key interactions.</b> Therefore, we decided to create a working prototype by code to give realistic experience to our testers. It was my role to build a working prototype.</p></div>,
+                From the testing, we realized that it is <b>hard to get meaningful usability test data with static screens due to the missing key interactions.</b> Therefore, we decided to create a working prototype by code to give realistic experience to our testers. It was my role to build a working prototype.</p></div>,
        
-       "Final Design":<div>
-            <img src={up_screenmap} alt="Screenmap" className="zoomable" onClick={zoomimg} /><div className="imgdes">Screenmap of the Final Design</div>
-           <p>After few iterations of conducting Think-alouds and making changes based on the feedback we got, we finalized our design. Below is the key features of our design. </p>
-
-            <div className="up_expla_screen">
-                
-                <div className="imgwrap_sc" >
-                    <img src={up_session} className="phonesc" alt="Concentration Session" /><div className="imgdes">Concentration Session</div></div>
-            
-            <p> <span class="title up">Concentration Timer</span><br />
-            Users can set a time ranging from a minimum of 15 to a maximum of 90 minutes to work on a task of their choice. Our goal is <br />
-            <ul>
-                <li>Improve users’ productivity by having them devote a set block of time to working on a specific task
-                </li>
-                <li>
-                Prevent them from working on a task too long that they run out of mental energy
-                </li>
-            </ul>
-            The concentration timer is modeled off the <b>Pomodoro technique,</b> which was designed for people to overcome procrastination by committing fully to completing a certain task during a time period of 25 minutes and then having a break of 5 minutes.
-            </p>
-            </div>
-
-
-            <div className="up_expla_screen">
-            <div className="imgwrap_sc" >
-                    <img src={up_breathing} className="phonesc" alt="Breathing Session" /><div className="imgdes">Breathing Session</div>
-                </div>
-
-                <p>
-                <span class="title up">Guided Deep-breathing Exercise</span><br />
-                “Break” portion encourages users to follow a guided deep-breathing exercise. As users breathe out, they will watch a balloon being blown up, which is a <b>stealth intervention helping users relieve stress and counteract ego-depletion.</b> Replenishing mental resource contributes to them forming the habit of working productively,
-            taking breaks, and ultimately returning to our application. 
-            <b>Blowing up a balloon utilizes the technique of obfuscation via distancing, as the “story” of blowing up a balloon is metaphorical for blowing away one’s stress.</b> Also, gamified elements such as the colorful graphics of the balloon would serve as red herrings to detract from the our actual stealth interventions.</p>
-            </div>
-          
-               
-            <div className="up_expla_screen">   
-                <div className="imgwrap_sc" >
-                    <img src={up_report} className="phonesc" alt="Report" />
-                    <div className="imgdes">'My Island' in Report</div>
-                </div>
-            <p><span class="title up">Saving Virtual Endangered Animals</span><br />
-                The last major feature is to save virtual endangered animals by obtaining a certain amount of balloons.
-                Users can obtain different sized balloons after concentration sessions based off legth of focus time. This feature would incentive users to participate in guided-breathing exercise. <b>We decided not to give out incentives because it might undermine intrinsic motivation.</b> We also incorporate a report on user’s focus time as evidence of progress, which would increase intrinsic motivation to continue using our application</p></div>
-                </div>,
+       
 
         "Challenges": <div>
             <div className="title up">Design Challenge:</div>
@@ -313,7 +320,7 @@ export const projectList = {
     },
     "getcuisine": {
         "projectTitle": "Get Cuisine",
-        "quote": "How can machine learning help people clean out the fridge?",
+        "quote": "How might we help human using Machine Learning?",
         "topimg": <div style={{ width: "640px", maxWidth: "100%", height: "auto", margin: "0 auto" }}><Vimeo video="315035206" /></div>,
         
         "exlpla": {
@@ -322,8 +329,10 @@ export const projectList = {
             "Role": "UI/UX, development",
             "Tool": "Python Flask, jQuery, HTML, CSS, Adobe Illustrator",
         },
-        "button": <a href="http://getcuisine.herokuapp.com" target="_blank" rel="noopener noreferrer">
-            <div className="button getcuisine">Go to the Website</div></a>,
+        "button": <div><a href="http://getcuisine.herokuapp.com" target="_blank" rel="noopener noreferrer">
+            <div className="button getcuisine">Go to the Website</div></a>
+            <div style={{transform:"translateY(-26px)"}}>*Initial loading is very slow</div>
+            </div>,
         "Process": <div className="processBoxWrap">
          <div className="proBoxLine getcuisine" />
         <div className="proBoxOut">
@@ -346,35 +355,64 @@ export const projectList = {
         </div>
         </div>,
         "Ideation": <div>
-            <p>This project started as a final project for <a href="http://humanaiclass.org" target="_blank" rel="noopener noreferrer">Human-Ai Interaction class at CMU in Fall 2018.</a> I created a Machine Learning (ML) model providing foods to cook based on the ingredients provided from users. After then, I created a web platform to make it possible for people to use this model.<br />
-                I got inspired by my experience having small amounts of ingredients which are leftovers after cooking. It’s often challenging to deal with these leftovers. When I found the <a href="https://www.kaggle.com/c/whats-cooking" target="_blank" rel="noopener noreferrer">cuisines and ingredients dataset</a> from Kaggle, the idea of creating a model can help people cleaning out their fridges came up in my mind.</p></div>,
+            <p>The ideation started from the matchmaking process. How can we help human using Machine Learning (ML)? While identifying possible activities and domains to which we can apply ML model, one of the dataset from Kaggle (<a href="https://www.kaggle.com/c/whats-cooking" target="_blank" rel="noopener noreferrer">cuisines and ingredients</a>) inspired me. It brought my experience having small amounts of ingredients which are leftovers after cooking. It’s often challenging to deal with these leftovers. The idea of creating a model can help people cleaning out their fridges came up in my mind. I created a ML model providing foods to cook based on the ingredients provided from users, and a web platform for people to use this model.
+                </p>
+                <p style={{textAlign:"center", fontWeight:"bold", color:"#000", fontSize:"20px", textDecoration:"underline wavy #617D31"}}>
+                   How might Machine Learning help people clean out the fridge?</p></div>,
         "Research": <div>
-            <p> In the beginning, I planned to create an Amazon Alexa Skill. <b>However, although 41.4% of people place their smart speakers in the kitchen, only 26.5% of people use the speakers to look for recipes monthly, and only 5.1% people use it daily.</b> This is a comparably low percentage comparing to some other popular functions such as listening music (76.2% of monthly use, 41.9% of daily use) or checking the weather (69.1% of monthly use, 41.4% of daily use). <a href=" https://voicebot.ai/2018/03/21/data-breakdown-consumers-use-smart-speakers-today/" target="_blank" rel="noopener noreferrer">(Source)</a> Therefore, I decided to create a website which also has visual interaction with users.</p>
+            <p> In the beginning, I planned to create an Amazon Alexa Skill. <b>However, although 41.4% of people place their smart speakers in the kitchen, only 26.5% of people use the speakers to look for recipes monthly, and only 5.1% people use it daily.</b> This is a comparably low percentage comparing to other popular functions such as listening music (76.2% of monthly use, 41.9% of daily use) or checking the weather (69.1% of monthly use, 41.4% of daily use). <a href=" https://voicebot.ai/2018/03/21/data-breakdown-consumers-use-smart-speakers-today/" target="_blank" rel="noopener noreferrer">(Source)</a> Therefore, I decided to create a website which can also provide visual interaction to users.</p>
             <img src={getcuisine8} alt="Where do people put their smart speakers?" style={{ maxWidth: "500px" }} />
             <img src={getcuisine9} alt="Smart Speaker Use Case Frequency Jan 2018" /><div className="imgdes">
                 <a href=" https://voicebot.ai/2018/03/21/data-breakdown-consumers-use-smart-speakers-today/" target="_blank" rel="noopener noreferrer">(Source of the graphs above)</a>
             </div>
         </div>,
+ "ML Model": <div>
+     <p>
+     I built pipelines of three algorithms: K-Nearest Neighbors (K-NN), Support Vector Machine, Multinomial Naive Bayesian from Scikit-learn with CountVectorizer and TfidfTransformer.</p>
+    <img src={getcuisineword} alt = "Pipeline Structure" />
+    <div className="imgdes">Pipeline Structure</div>
+     <p>
+     I ran K-fold Cross-validation (K = 5) on the three models. K-NN model returned the heighst accuracy, so I chose K-NN model.
+     </p>
+     <img src={getcuisinekfold} style={{ maxWidth: "400px" }} alt="K-fold Cross Validation"/>
+     <div className="imgdes">K-fold Cross Validation (k = 5) Accuracy Values</div>
+     <div className="triwrap getcuisine">
+     <div className = "triinner">
+        <img src={getcuisinemod1} alt="K-NN Model"  className="half" />
+        <div className="imgdes">K-NN Model<br />Accuracy: 0.73</div>
+     </div>
+     <div className = "triinner">
+        <img src={getcuisinemod2} alt= "SVM Model" className="half" />
+        <div className="imgdes">SVM Model<br />Accuracy: 0.06</div>
+     </div>
+     <div className = "triinner">
+        <img src={getcuisinemod3} alt = "Multinomial Naive Bayesian Model" className="half"/>
+        <div className="imgdes">Multinomial NB Model<br />Accuracy: 0.63</div>
+     </div>
+     </div>
+     </div>,
 
         "Challenges": <div><p><b>- Lack of the open source recipe dataset</b><br />
-            Since there was no open source recipe dataset, I used the <a href="https://www.kaggle.com/c/whats-cooking" target="_blank" rel="noopener noreferrer">cuisines and ingredients dataset from Kaggle</a>. With this dataset, I decided to limit the functionality of the model as providing the appropriate cuisine to look for based on the given ingredients. Because providing cuisine requires additional efforts for users to look for a specific food to cook, I also created a function sending users to Google Search searching recipes with the predicted cuisine and given ingredients.</p>
+            Since there was no open source recipe dataset, I used the <a href="https://www.kaggle.com/c/whats-cooking" target="_blank" rel="noopener noreferrer">cuisines and ingredients dataset</a>. Therefore, I decided to limit the functionality as providing the appropriate cuisine to look for based on the given ingredients. Because providing cuisine requires additional efforts for users to look for a specific food to cook, I also created a function sending users to Google Search searching recipes with the predicted cuisine and given ingredients.</p>
 
             <p><b>- Debugging server error</b><br />
-                This was the first time I used Python Flask and managed the server side. I used ajax call to send and get the data to the server. It kept returning 500 error, and I could not figure out what it is. By deleting the code line by line, I figured out this happened because I passed the Null value to the server to run the model. Later, I learned that I also need to make a server return the error indicating what type of error it is for the sake of debugging.
+                This was the first time I used Python Flask and managed the server side. I used ajax call to send and get the data to the server. It kept returning 500 error, and I could not figure out what it was. By deleting the code line by line, I figured out this happened because I passed Null value to the server to run the model. Later, I learned that I also need to make a server return the error indicating what type of error it is for the sake of debugging.
             <img src={getcuisine11} alt="500 error" style={{ maxWidth: "500px" }} /><div className="imgdes">500 Error... What Does It Mean?</div>
             </p>
             <p><b>- Managing the data type to run the ML model</b><br />
-                The training data I used didn't have colum headers, and the data I passed from the inputs (JSON -> Pandas Dataframe) had column headers. As a result, it only returned French Cuisine. I added a line of code to get rid of the column headers.
+                The training data I used didn't have colum headers, and the data I passed from the inputs (JSON -> Pandas Dataframe) had column headers. As a result, it only returned French Cuisine (error). I added a line of code to get rid of the column headers to fix the error.
             <img src={getcuision10} className="imgBorder" style={{ maxWidth: "500px" }} alt="Model Returning Error" /><div className="imgdes">ML Model Only Returning French Cuisine<br />(Curry Paste + Tamarind Paste + Chicken Breasts = French Food?)</div>
 
             </p>
         </div>,
-
+       
         "Design": <div>
             <div className="halfwrap fit">
             <img className="half imgBorder addmargin zoomable" src={getcuisine4} alt="Hi-fi prototype" onClick={zoomimg} /><img className="half addmargin zoomable" src={getcuisine5} alt="Hi-fi prototype" onClick={zoomimg} /><div className='imgdes'>Hi-fi Prototype made of HTML, CSS, jQuery, and Flask</div>
             </div>
-            <p className="addmargin">Because I trained the model with certain ingredients, I wanted people to type ingredients in a format that can be processed. Therefore, I implemented an autocomplete function on the search bar using jQuery Autocomplete API. The biggest issue of using ML is that it is hard to optimize the website for shorter loadings. I tried to optimize the files as much as possible; however, the initial response time is still long due to Heroku (If the app has no traffic for 30 mins, it goes to sleep due to Heroku's policy).<br /><br /></p>
+            <p className="addmargin">Because I trained the model with certain ingredients, I wanted people to type ingredients in a format that can be processed. Therefore, I implemented an autocomplete function on the search bar using jQuery Autocomplete API.</p>
+            <p>
+                 The biggest issue of using ML is that it is hard to optimize the website for shorter loadings. I tried to optimize the files as much as possible; however, the initial response time is still long due to Heroku (If the app has no traffic for 30 mins, it goes to sleep due to Heroku's policy).<br /><br /></p>
 
             <img src={getcuisine3} alt="Cuisine Icons" onClick={zoomimg} className="zoomable" /><div className='imgdes'>Cuisine Icons</div>
             <p>

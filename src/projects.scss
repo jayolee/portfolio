@@ -16,12 +16,6 @@ $up: #E9974C;
 	font-weight: 700;
 	src:url('/LucidaGrandeBold.ttf');
 }
-@font-face {
-	font-family: 'apercu';
-	font-style: bold;
-	font-weight: 700;
-	src: url('/Apercu Bold.otf');
-  }
 
 
 @mixin positions($top: null, $right: null, $bottom:null, $left:null){
@@ -145,8 +139,8 @@ $up: #E9974C;
 	margin:0 auto;
 	text-align: center;
 	font: {
-		weight: 500;
-		size: 20px;
+		weight: 600;
+		size: 22px;
 	}
 	opacity: .9;
 	line-height: 1.8;
@@ -225,7 +219,7 @@ $up: #E9974C;
 					@include textcolors;
 					font-weight:700;
 					line-height:3;
-					font-size:17px;
+					font-size:18px;
 				}
 				@include sizes(calc(100% - 250px), null, 500px);
 				margin: 0 10px 60px;
@@ -347,13 +341,13 @@ $up: #E9974C;
 			@include textcolors;
 			font-weight:bold;
 			position:relative;
-			font-size:17px;
+			font-size:18px;
 			background:#fff;
 		}
 		.processExpla{
 			opacity:.8;
 			font: {
-				size:14px;
+				size:15px;
 				weight:400;
 			}
 			
@@ -374,9 +368,7 @@ $up: #E9974C;
 }
 
 .expla {
-	margin: 60px auto;
-	color: rgba(0,0,0,0.8);
-	line-height: 1.8;
+
 	p{
 		@include sizes(95%,null,750px);
 		margin:0 auto;
@@ -384,6 +376,20 @@ $up: #E9974C;
 	.topinfo{
 		@include sizes(95%,null,750px);
 		margin:0 auto;
+	}
+	.triwrap{
+		@include sizes(100%,null,1100px);
+		display: flex;
+		justify-content: center;
+		text-align: center;
+		margin:0 auto;
+		.triinner{
+			@include sizes(30%);
+			img{
+				@include sizes(90%);
+				padding: 0 5%;
+			}
+		}
 	}
 	.halfwrap{
 		@include sizes(100%,null,1100px);
@@ -509,16 +515,18 @@ $up: #E9974C;
 		}
 	}
 
-	
+	margin: 60px auto;
+	color: rgba(0,0,0,0.7);
+	line-height: 1.9;
 	a{
 		text-decoration: underline;
 		color:rgba(0,0,0,0.8);
 	}
 	
 	font: {
-		family: 'roboto';
-		size: 16px;
-		weight: 300;
+		family: 'Titillium Web';
+		size: 17px;
+		weight: 400;
 	}
 	
 	&.gssh{
@@ -687,7 +695,6 @@ a.member{
 	}
 }
 .sectitle {
-	font-family: 'apercu';
 	@include sizes(95%,null,750px);
 	@include transform(translateX(-20px));
 	font: {
@@ -704,8 +711,9 @@ a.member{
 	@include sizes(95%,null,750px);
 	font: {
 		size:17px;
-		weight: 500;
+		weight: bold;
 	}
+	letter-spacing: .5px;
 	margin: 0 auto 5px;
 
 }
@@ -728,8 +736,8 @@ a.member{
 }
 .imgdes {
 	font: {
-		size: 13px;
-		weight: 500;
+		size: 15px;
+		weight: bold;
 		style: italic;
 	}
 	
@@ -737,7 +745,7 @@ a.member{
 	margin: 10px 0 30px;
 	color: rgba(0,0,0,0.5);
 	&.solution{
-		font-size:15px;
+		font-size:16px;
 		color:rgba(0,0,0,0.6);
 		@include sizes(95%, null, 500px);
 		margin:20px auto 60px;
@@ -760,7 +768,7 @@ a.member{
 	border-radius: 60px;
 	padding: 12px 40px;
 	font-weight: bold;
-	font-size:15px;
+	font-size:16px;
 	text-transform: uppercase;
 	letter-spacing: 1px;
 	@include sizes(auto);
@@ -1061,14 +1069,14 @@ $imgshadow: 0 0 14px rgba(0,0,0,0.2);
 			text-align: left;
 			@include sizes(95%, null, 700px);
 			margin:80px auto 100px;
-			font-size:15px;
+			font-size:16px;
 
 			.biotitle{
 				margin-top:60px;
 				text-transform: uppercase;
 				font: {
 					weight:bold;
-					size:16px;
+					size:17px;
 				}
 			}
 			.biocontent{

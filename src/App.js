@@ -120,6 +120,13 @@ class App extends Component {
           </div>
         </div>
         <Header key="header" pagenum={this.state.menu} menustatus={this.menustatus} />
+        <div className = "header">
+        <div className="logowrap header" key="toplogo" style={{opacity:(this.state.star_opacity - 1) * -0.8}}>
+              <a href={process.env.PUBLIC_URL +"/projects"} >
+                <img src={this.logoList[this.state.page]} id="ylogo" alt="logo" style={this.logoStyle[this.state.page]} onClick={(ev)=> this.setState({menu:0})}/>
+                </a> 
+            </div>
+            </div>
         <div className="sectopwrapper" />
         <div className="works">
         
@@ -135,7 +142,7 @@ class App extends Component {
           <Switch>
           <Route path={process.env.PUBLIC_URL} exact render = {props => <MainProject starOff={this.starOff.bind(this)} starOn = {this.starOn.bind(this)} />} />
           <Route path={process.env.PUBLIC_URL + "/projects/"} render = {props => <MainProject starOff={this.starOff.bind(this)} starOn = {this.starOn.bind(this)} />} />
-          <Route path={process.env.PUBLIC_URL +"/fun/"} render = {props => <Fun starOff={this.starOff.bind(this)} starOn = {this.starOn.bind(this)} />} />
+          <Route path={process.env.PUBLIC_URL +"/more/"} render = {props => <Fun starOff={this.starOff.bind(this)} starOn = {this.starOn.bind(this)} />} />
           <Route path={process.env.PUBLIC_URL +"/fineart/"} component={FAs} />
           <Route path={process.env.PUBLIC_URL +"/about/"} component={About} />
           <Route path={process.env.PUBLIC_URL +"/404/"} render={props => <Page404  updateLogo={this.updateLogo.bind(this)}/>} />
