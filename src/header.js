@@ -15,7 +15,7 @@ class Header extends Component {
         }
         this.menulist = {
             "Projects": ["projects", "projects"],
-            "Side Projects": ["sideProjects", "side projects"],
+            "Side Projects": ["sideProjects", "more"],
             "Fine Art": ["FA", "fineart"],
             "About/Contact": ["contact", "about"]
         }
