@@ -221,6 +221,7 @@ $up: #E9974C;
 					line-height:3;
 					font-size:18px;
 				}
+				
 				@include sizes(calc(100% - 250px), null, 500px);
 				margin: 0 10px 60px;
 			}
@@ -344,6 +345,8 @@ $up: #E9974C;
 			font-size:18px;
 			background:#fff;
 		}
+
+		
 		.processExpla{
 			opacity:.8;
 			font: {
@@ -351,6 +354,18 @@ $up: #E9974C;
 				weight:400;
 			}
 			
+		}
+
+		@media screen and (max-width:700px){
+			width:100%;
+			margin:30px auto;
+
+			.processBox {
+				width:100%;
+			}
+			.processExpla {
+				width:100%;
+			}
 		}
 		
 	}
@@ -372,6 +387,14 @@ $up: #E9974C;
 	p{
 		@include sizes(95%,null,750px);
 		margin:0 auto;
+		&.mainPoint{
+			text-align:center;
+			font : {
+				weight:bold;
+				size:20px;
+			}
+			color:#000;
+		}
 	}
 	.topinfo{
 		@include sizes(95%,null,750px);

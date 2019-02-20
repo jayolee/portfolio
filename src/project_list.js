@@ -132,6 +132,7 @@ import up_knobnot from './up/knob_not.gif'
 import up_knobcode from './up/knobcode.jpg'
 import up_workknob from './up/worknob.gif'
 import up_iniscr from './up/initial_screenmap.jpg'
+import up_activity from './up/activity.svg'
 
 function anigenerator() {
     let element = [];
@@ -168,7 +169,7 @@ const protoRef = React.createRef();
 export const projectList = {
     "up": {
         "projectTitle": "Up",
-        "quote": "How might we help (CMU) students via ubiquitous devices?",
+        "quote": "How might we use ubiquitous devices to help (CMU) students?",
         "topimg": <img id="up" alt="Up Top Screen" className="topimg" src={up_breathing} />,
 
         "exlpla": {
@@ -202,22 +203,25 @@ export const projectList = {
             </div>,
         "Ideation & Research": <div>
             <p>Our idea started from interviews with CMU students about causes of stress they get. Interestingly, they answered that students at CMU tend not to sleep even though they don't have things to do. They are worrying about if they are productive enough, and this gives them so much stress. We set the goal of our project as <b>relieving students' stress and promoting productivity.</b></p>
-            <p style={{textAlign:"center", fontWeight:"bold", color:"#000", fontSize:"20px", textDecoration:"underline wavy #E9974C"}}>
-            How can a mobile app promote productivity, combat ego-depletion and stress?</p>
+            <p className="mainPoint" >
+            <span style={{boxShadow:"inset 0 -1.5px white, inset 0 -3px #E9974C, inset 0 -4.5px white, inset 0 -6px #E9974C"}} >How can a mobile app promote productivity, combat ego-depletion and stress?</span></p>
             <p><br />Our original idea was apply love languages to self-love. We planned to prompt random tasks based on their love languages every day to give students joyful moments to care of themselves. However, we realized that the rationale is weak, so we decided to focus on a specific task which is proven as effective.</p>
             <img src={up_protos} alt="Initial Paper Prototypes" className="zoomable" onClick={zoomimg} /><div className="imgdes">Initial Paper Prototypes</div>
             
             <p>Through literature review, we found activities proven as effective to relieve stress or promote creativity. Among the activities, we paid attention to <a href="http://www.hsj.gr/medicine/stress-management-techniques-evidencebased-procedures-that-reduce-stress-and-promote-health.pdf" target="_blank" rel="noopener noreferrer" ><b>diaphragmatic breathing,</b> which is shown as effective to relieve stress</a> and <a href="https://behavioralandbrainfunctions.biomedcentral.com/articles/10.1186/1744-9081-10-9" target="_blank" rel="noopener noreferrer" ><b>short-term meditation</b> which improves creativity.</a> </p>
+            
+            <p>Malcolm Gladwell’s 10,000 hours rule states that one requires over 10,000 hours of practice to become an expert of some sort; however, such number of hours is difficult of practice for young adults in college or workplace. <b>But what if we base this idea to encourage users to build a focusing habit?</b> We used this idea to motivate users.</p>
+            <img src={up_activity} style={{maxWidth:"700px", width:"100%"}} alt="Design Rationales"/><div className="imgdes" style={{marginBottom:"50px"}}>Design Rationales</div>
 
-            <p>As a tool to track the productivity, we decided to use Malcolm Gladwell’s 10,000 hours rule. It is stated that one requires over 10,000 hours of practice to become an expert of some sort; however, such number of hours is extremely difficult of practice for young adults in college or workplace. But what if we base this idea to encourage users to build a focusing habit?</p>
-           
             <p>
-                Based on the research we conducted, our team created ​<i>Up</i> based on several psychological concepts including self control, ego-depletion, stress-reduction, and embodied cognition. <i>Up</i> encourages users <b>to form a habitual focus timing of 90 minutes.</b> Users are encouraged to perform a short guided breathing exercise of blowing a balloon immediately after a focus session concludes to regather
-                brain resources. </p></div>,
-                "Final Design":<div>
+                Based on the research we conducted, our team created ​<i><b>Up</b></i> based on several psychological concepts including self control, ego-depletion, stress-reduction, and embodied cognition. <i>Up</i> encourages users <b>to form a habitual focus timing of 90 minutes.</b> Users are encouraged to perform a short guided breathing exercise of blowing a balloon immediately after a focus session concludes to regather
+                brain resources. </p>
+                <p className="mainPoint"><span style={{color:"#e9974c", fontSize:"22px"}}>Up,</span> an app that encourages users to form a habitual focus timing of 90 minutes.</p></div>,
+            "The Solution":<div>
                 <img src={up_screenmap} alt="Screenmap" className="zoomable" onClick={zoomimg} /><div className="imgdes">Screenmap of the Final Design</div>
-               <p>After few iterations of conducting Think-alouds and making changes based on the feedback we got, we finalized our design. Below is the key features of our design. </p>
-    
+                {/* <div style={{textAlign:"center"}}>
+                <a href="https://jayolee.github.io/Team-UP-prototype_react/" target="_blank" rel="noopener noreferrer">
+            <div className="button up">Play with the Prototype</div></a></div> */}
                 <div className="up_expla_screen">
                     
                     <div className="imgwrap_sc" >
@@ -232,7 +236,8 @@ export const projectList = {
                     Prevent them from working on a task too long that they run out of mental energy
                     </li>
                 </ul>
-                The concentration timer is modeled off the <b>Pomodoro technique,</b> which was designed for people to overcome procrastination by committing fully to completing a certain task during a time period of 25 minutes and then having a break of 5 minutes.
+                The concentration timer is modeled off the <b>Pomodoro technique.</b> 
+                {/* which was designed for people to overcome procrastination by committing fully to completing a certain task during a time period of 25 minutes and then having a break of 5 minutes. */}
                 </p>
                 </div>
     
@@ -357,8 +362,8 @@ export const projectList = {
         "Ideation": <div>
             <p>The ideation started from the matchmaking process. How can we help human using Machine Learning (ML)? While identifying possible activities and domains to which we can apply ML model, one of the dataset from Kaggle (<a href="https://www.kaggle.com/c/whats-cooking" target="_blank" rel="noopener noreferrer">cuisines and ingredients</a>) inspired me. It brought my experience having small amounts of ingredients which are leftovers after cooking. It’s often challenging to deal with these leftovers. The idea of creating a model can help people cleaning out their fridges came up in my mind. I created a ML model providing foods to cook based on the ingredients provided from users, and a web platform for people to use this model.
                 </p>
-                <p style={{textAlign:"center", fontWeight:"bold", color:"#000", fontSize:"20px", textDecoration:"underline wavy #617D31"}}>
-                   How might Machine Learning help people clean out the fridge?</p></div>,
+                <p className="mainPoint">
+                <span style={{boxShadow:"inset 0 -1.5px white, inset 0 -3px #617D31, inset 0 -4.5px white, inset 0 -6px #617D31"}} >How might Machine Learning help people clean out the fridge?</span></p></div>,
         "Research": <div>
             <p> In the beginning, I planned to create an Amazon Alexa Skill. <b>However, although 41.4% of people place their smart speakers in the kitchen, only 26.5% of people use the speakers to look for recipes monthly, and only 5.1% people use it daily.</b> This is a comparably low percentage comparing to other popular functions such as listening music (76.2% of monthly use, 41.9% of daily use) or checking the weather (69.1% of monthly use, 41.4% of daily use). <a href=" https://voicebot.ai/2018/03/21/data-breakdown-consumers-use-smart-speakers-today/" target="_blank" rel="noopener noreferrer">(Source)</a> Therefore, I decided to create a website which can also provide visual interaction to users.</p>
             <img src={getcuisine8} alt="Where do people put their smart speakers?" style={{ maxWidth: "500px" }} />

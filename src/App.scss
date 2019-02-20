@@ -489,6 +489,7 @@ width:102px;
 .workbox {
   min-height: 440px;
   @include sizes(100%);
+  margin-top:65px;
   .funwork, .fa{
     display: inline-block;
     margin: 3% 1%;
@@ -520,7 +521,7 @@ width:102px;
   .main_work {
     display: inline-block;
     @include sizes(46%);
-    margin: 3% 2%;
+    margin: 24px 2%;
     transition: .4s;
     &:hover {
         text-transform: none;
