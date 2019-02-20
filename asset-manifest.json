@@ -1,9 +1,9 @@
 {
-  "main.css": "/portfolio/static/css/main.d9734c04.chunk.css",
-  "main.js": "/portfolio/static/js/main.35b6f2b3.chunk.js",
-  "main.js.map": "/portfolio/static/js/main.35b6f2b3.chunk.js.map",
-  "static/js/1.bcd0314a.chunk.js": "/portfolio/static/js/1.bcd0314a.chunk.js",
-  "static/js/1.bcd0314a.chunk.js.map": "/portfolio/static/js/1.bcd0314a.chunk.js.map",
+  "main.css": "/portfolio/static/css/main.4b472342.chunk.css",
+  "main.js": "/portfolio/static/js/main.023a3be8.chunk.js",
+  "main.js.map": "/portfolio/static/js/main.023a3be8.chunk.js.map",
+  "static/js/1.72005393.chunk.js": "/portfolio/static/js/1.72005393.chunk.js",
+  "static/js/1.72005393.chunk.js.map": "/portfolio/static/js/1.72005393.chunk.js.map",
   "runtime~main.js": "/portfolio/static/js/runtime~main.ee2a1003.js",
   "runtime~main.js.map": "/portfolio/static/js/runtime~main.ee2a1003.js.map",
   "static/media/17.png": "/portfolio/static/media/17.7966679a.png",
@@ -136,6 +136,7 @@
   "static/media/knobcode.jpg": "/portfolio/static/media/knobcode.83cfc097.jpg",
   "static/media/worknob.gif": "/portfolio/static/media/worknob.860ffc27.gif",
   "static/media/initial_screenmap.jpg": "/portfolio/static/media/initial_screenmap.a54e150d.jpg",
+  "static/media/activity.svg": "/portfolio/static/media/activity.64bc717f.svg",
   "static/media/lights.jpg": "/portfolio/static/media/lights.1027bc79.jpg",
   "static/media/momo.png": "/portfolio/static/media/momo.9789988b.png",
   "static/media/gssh.jpg": "/portfolio/static/media/gssh.ba70970c.jpg",
@@ -185,8 +186,8 @@
   "static/media/in_blue.svg": "/portfolio/static/media/in_blue.5ee23c10.svg",
   "static/media/404momo.svg": "/portfolio/static/media/404momo.a49b885b.svg",
   "static/media/top.png": "/portfolio/static/media/top.c9e50ad6.png",
-  "static/css/main.d9734c04.chunk.css.map": "/portfolio/static/css/main.d9734c04.chunk.css.map",
+  "static/css/main.4b472342.chunk.css.map": "/portfolio/static/css/main.4b472342.chunk.css.map",
   "index.html": "/portfolio/index.html",
-  "precache-manifest.9dd397d2020f3f936208bfd39c517158.js": "/portfolio/precache-manifest.9dd397d2020f3f936208bfd39c517158.js",
+  "precache-manifest.e333b500eeb86c5888646f64f2842eae.js": "/portfolio/precache-manifest.e333b500eeb86c5888646f64f2842eae.js",
   "service-worker.js": "/portfolio/service-worker.js"
 }
