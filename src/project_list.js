@@ -216,12 +216,12 @@ export const projectList = {
             <p>
                 Based on the research we conducted, our team created ​<i><b>Up</b></i> based on several psychological concepts including self control, ego-depletion, stress-reduction, and embodied cognition. <i>Up</i> encourages users <b>to form a habitual focus timing of 90 minutes.</b> Users are encouraged to perform a short guided breathing exercise of blowing a balloon immediately after a focus session concludes to regather
                 brain resources. </p>
-                <p className="mainPoint"><span style={{color:"#e9974c", fontSize:"22px"}}>Up,</span> an app that encourages users to form a habitual focus timing of 90 minutes.</p></div>,
-            "The Solution":<div>
-                <img src={up_screenmap} alt="Screenmap" className="zoomable" onClick={zoomimg} /><div className="imgdes">Screenmap of the Final Design</div>
-                {/* <div style={{textAlign:"center"}}>
+                <p className="solutionPoint"><span style={{color:"#e9974c", fontSize:"26px", fontWeight:"bold"}}>Up,</span> an app that encourages users to form a habitual focus timing of 90 minutes.</p></div>,
+        "The Solution":<div>
+                <img src={up_screenmap} alt="Screenmap" className="zoomable imgBorder" onClick={zoomimg} /><div className="imgdes">Screenmap of the Final Design</div>
+                <div style={{textAlign:"center"}}>
                 <a href="https://jayolee.github.io/Team-UP-prototype_react/" target="_blank" rel="noopener noreferrer">
-            <div className="button up">Play with the Prototype</div></a></div> */}
+            <div className="button up" style={{margin:"20px auto 40px"}}>Play with the Prototype</div></a></div>
                 <div className="up_expla_screen">
                     
                     <div className="imgwrap_sc" >
@@ -249,9 +249,12 @@ export const projectList = {
     
                     <p>
                     <span class="title up">Guided Deep-breathing Exercise</span><br />
-                    “Break” portion encourages users to follow a guided deep-breathing exercise. As users breathe out, they will watch a balloon being blown up, which is a <b>stealth intervention helping users relieve stress and counteract ego-depletion.</b> Replenishing mental resource contributes to them forming the habit of working productively,
-                taking breaks, and ultimately returning to our application. 
-                <b>Blowing up a balloon utilizes the technique of obfuscation via distancing, as the “story” of blowing up a balloon is metaphorical for blowing away one’s stress.</b> Also, gamified elements such as the colorful graphics of the balloon would serve as red herrings to detract from the our actual stealth interventions.</p>
+                    “Break” portion encourages users to follow a guided deep-breathing exercise. A balloon is blown up as users breathe out. 
+                    <ul>
+                    <li>Ballon is a metaphor of blowing away one’s stress and replenishing mental resource. </li>
+                    <li>This contributes to users forming the habit of working productively, taking breaks, and ultimately returning to our application.</li>
+                    </ul>
+                    We used <b>an obfuscation via distancing.</b> The gamified elements (colorful graphics) would serve as red herrings to detract from our stealth interventions.</p>
                 </div>
               
                    
@@ -261,19 +264,25 @@ export const projectList = {
                         <div className="imgdes">'My Island' in Report</div>
                     </div>
                 <p><span class="title up">Saving Virtual Endangered Animals</span><br />
-                    The last major feature is to save virtual endangered animals by obtaining a certain amount of balloons.
-                    Users can obtain different sized balloons after concentration sessions based off legth of focus time. This feature would incentive users to participate in guided-breathing exercise. <b>We decided not to give out incentives because it might undermine intrinsic motivation.</b> We also incorporate a report on user’s focus time as evidence of progress, which would increase intrinsic motivation to continue using our application</p></div>
+                    Users can save virtual endangered animals using a certain amount of balloons, which they can obtain after concentration sessions. 
+                   <ul>
+                    <li>This feature would incentive users to participate in guided-breathing exercise.</li> 
+                    <li><b>By not giving out monetary incentives, we avoid undermining intrinsic motivation (developing their skills).</b></li>
+                    </ul></p></div>
                     </div>,
 
-        "Iteration": <div>
+        "Design Process": <div>
             <img src={up_iniscr} alt="Initial Screenmap" className="zoomable" onClick={zoomimg}/> 
             <div className="imgdes">Screenmap of Initial Prototype</div>
-            <p>Based on the insights gained from the literature review, our team created a lo-fi prototype using Figma. We conducted Think-aloud using this prototype. At this point, main features were selecting an animal to save, concentration session, and breathing session.</p> 
+            <p>After the literature review, our team created a lo-fi prototype using Figma based on the insights we gained. We conducted Think-aloud with this prototype. At this point, the main features were <ul>
+                <li>Selecting an animal to save before starting the session.</li>
+                <li>Concentration session in the amount of maximum 90 minutes.</li>
+                <li>Following guided breathing session while watching characterized balloons.</li></ul></p> 
             <div className="halfwrap">
             <img src={up_meeting} alt="Early Prototype" className="half zoomable" onClick={zoomimg} />
             <img src={up_earlyProto} className="half zoomable" alt="Early Prototype" onClick={zoomimg} /> <div className='imgdes'>Screen Sketches by Young and Think-aloud Using the Early Prototype</div>
             </div>
-                <p>From the Think-aloud, we got feedback that the connection between saving endangered animals and the concentration session is not clear. Also, most testers felt that <b>facial expressions on balloons are unnecessary and distracting,</b> which we added to create empathy to users.<br />
+                <p>From the Think-aloud, we got feedback that the connection between saving endangered animals and the concentration session is not clear. Also, we added facial expression on balloons to create empathy; however, most testers felt that <b>facial expressions are distracting,</b> because they need to hold their phones near their mouth while following the instructions.<br />
                 From the testing, we realized that it is <b>hard to get meaningful usability test data with static screens due to the missing key interactions.</b> Therefore, we decided to create a working prototype by code to give realistic experience to our testers. It was my role to build a working prototype.</p></div>,
        
        
@@ -283,7 +292,7 @@ export const projectList = {
             <p><b>- How can we reduce demoralizing factors?</b><br />
                 We conceded about users setting the very short sessions and not performing the breathing sessions to get the rewards. To avoid this, we decided three approaches.
                 <ul>
-                    <li>Not offering incentives</li>
+                    <li>Not offering monetary incentives</li>
                     <li>Setting 10 minutes as the minimum session duration</li>
                     <li>Using the iPhone breathing sensor</li>
                 </ul>
@@ -298,17 +307,17 @@ export const projectList = {
                     <img src={up_knobnot} alt="Knob Prototype" className="phonesc" />
                 </div>
                 <div className="imgwrap_sc" >
-                    <img src={up_knob} className="challhalf" alt="Knob Position Calculation" /> </div>
+                    <img src={up_knob} className="challhalf zoomable" onClick={zoomimg} alt="Knob Position Calculation" /> </div>
             </div>
             <div className='imgdes' style={{ marginBottom: "60px" }}>First Prototype of the Knob Dial</div>
 
             <p>Therefore, I implemented the knob dial using <b>rotation.</b> This way, there is no worries of the knob derailing from the path, and the calculation became much simpler.</p>
             <div style={{ textAlign: "center" }}>
                 <div className="imgwrap_sc" >
-                    <img src={up_workknob} className="phonesc" alt="Concentration Session" />
+                    <img src={up_workknob} className="phonesc" alt="Knob Dial" />
                 </div>
                 <div className="imgwrap_sc" >
-                    <img src={up_knobcode} className="challhalf" alt="Concentration Session Prototype" />
+                    <img src={up_knobcode} className="challhalf zoomable" onClick={zoomimg} alt="Knob Dial Code" />
                 </div>
             </div>
             <div className="imgdes">Final Implementation of the Knob Dial</div>
@@ -318,14 +327,14 @@ export const projectList = {
         "Next Steps": <div>
             <img src={up_animals} id="e_animals" alt="Playing with Breathing Sensor" /><div className='imgdes'>Endangered Animal Illustrations By Young and <a href="http://judithleng.me/" target="_blank" rel="noopener noreferrer">Judith Leng</a></div>
 
-            <p className="addmargin">While <i>Up</i> is a productivity mobile application that serves as a concentration tool, the overall message is <b>importance of constant effort and taking efficient breaks.</b> <i>Up</i> aims to reduce the demoralizing factor occurring outside of the application by constantly rewarding users with animals and acts as a companion that travels with users to keep track of every effort that can count.</p>
+            <p className="addmargin">While <i>Up</i> is a productivity mobile application that serves as a concentration tool, the overall message is <b>importance of constant effort and taking efficient breaks.</b> <i>Up</i> aims to reduce the demoralizing factor occurring outside of the application by constantly rewarding users with animals.</p>
             <p>
-                At current stage of design, user are limited to saving virtual animals, which may not be as rewarding as contributing to saving animals in the real world. For future implementations, we look forward to having a sponsorship partner with wildlife organizations such as the World WildLife Fund (WWF).</p>
+                At current stage of design, user are limited to saving virtual animals, which may not be as rewarding as contributing to saving animals in the real world. Therefore, we look forward to having a sponsorship partner with wildlife organizations for future implementations.</p>
         </div>,
     },
     "getcuisine": {
         "projectTitle": "Get Cuisine",
-        "quote": "How might we help human using Machine Learning?",
+        "quote": "How might we help people using Machine Learning?",
         "topimg": <div style={{ width: "640px", maxWidth: "100%", height: "auto", margin: "0 auto" }}><Vimeo video="315035206" /></div>,
         
         "exlpla": {
@@ -360,10 +369,14 @@ export const projectList = {
         </div>
         </div>,
         "Ideation": <div>
-            <p>The ideation started from the matchmaking process. How can we help human using Machine Learning (ML)? While identifying possible activities and domains to which we can apply ML model, one of the dataset from Kaggle (<a href="https://www.kaggle.com/c/whats-cooking" target="_blank" rel="noopener noreferrer">cuisines and ingredients</a>) inspired me. It brought my experience having small amounts of ingredients which are leftovers after cooking. It’s often challenging to deal with these leftovers. The idea of creating a model can help people cleaning out their fridges came up in my mind. I created a ML model providing foods to cook based on the ingredients provided from users, and a web platform for people to use this model.
+            <p>The ideation started from the matchmaking process. How can we help human using Machine Learning (ML)? While identifying possible activities and domains to which we can apply ML model, one of the dataset from Kaggle (<a href="https://www.kaggle.com/c/whats-cooking" target="_blank" rel="noopener noreferrer">cuisines and ingredients</a>) inspired me. It brought my experience having small amounts of ingredients which are leftovers after cooking. It’s often challenging to deal with these leftovers. 
                 </p>
                 <p className="mainPoint">
-                <span style={{boxShadow:"inset 0 -1.5px white, inset 0 -3px #617D31, inset 0 -4.5px white, inset 0 -6px #617D31"}} >How might Machine Learning help people clean out the fridge?</span></p></div>,
+                <span style={{boxShadow:"inset 0 -1.5px white, inset 0 -3px #617D31, inset 0 -4.5px white, inset 0 -6px #617D31"}} >How might Machine Learning help people clean out the fridge?</span></p>
+                
+                <p>
+                The idea of creating a ML model can help people cleaning out their fridges came up in my mind. I created a ML model providing foods to cook based on the ingredients provided from users, and deployed a web platform for people to be able to use this model.</p>
+                <p className="solutionPoint"><span style={{color:"#617d31", fontSize:"26px", fontWeight:"bold"}}>Get Cuisine,</span> a ML powered web platform to help clean out the fridge</p></div>,
         "Research": <div>
             <p> In the beginning, I planned to create an Amazon Alexa Skill. <b>However, although 41.4% of people place their smart speakers in the kitchen, only 26.5% of people use the speakers to look for recipes monthly, and only 5.1% people use it daily.</b> This is a comparably low percentage comparing to other popular functions such as listening music (76.2% of monthly use, 41.9% of daily use) or checking the weather (69.1% of monthly use, 41.4% of daily use). <a href=" https://voicebot.ai/2018/03/21/data-breakdown-consumers-use-smart-speakers-today/" target="_blank" rel="noopener noreferrer">(Source)</a> Therefore, I decided to create a website which can also provide visual interaction to users.</p>
             <img src={getcuisine8} alt="Where do people put their smart speakers?" style={{ maxWidth: "500px" }} />

@@ -1,5 +1,5 @@
 
-@import url('https://fonts.googleapis.com/css?family=Titillium+Web:300,400,600,700');
+@import url('https://fonts.googleapis.com/css?family=Titillium+Web:300,400,600,700|News+Cycle:700');
 @mixin transform($transform) {
     -webkit-transform: $transform;
     -ms-transform: $transform;
@@ -121,7 +121,7 @@ img {
 
 .starwrap_in{
   position: relative; 
-  @include sizes(100%, 310px); 
+  @include sizes(100%, 320px); 
     background:linear-gradient(#000,#10162B); 
     @include positions(0,null,null,0);
     overflow:hidden;
@@ -489,7 +489,7 @@ width:102px;
 .workbox {
   min-height: 440px;
   @include sizes(100%);
-  margin-top:65px;
+  margin-top:80px;
   .funwork, .fa{
     display: inline-block;
     margin: 3% 1%;

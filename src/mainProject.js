@@ -41,7 +41,7 @@ class MainProject extends Component {
           "class": "uiux development portwrap",
           "mainClass": "main_work",
           "types": "UI/UX | Development",
-          "expla":"A website helping people clean out the fridge with ML model",
+          "expla":"A ML powered website to help clean out the fridge",
           "title": "Get Cuisine",
         },
         {
