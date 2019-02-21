@@ -591,13 +591,13 @@ width:102px;
         size:17px;
         weight:300;
       }
-      line-height: 1.7;
+      line-height: 1.5;
       color:#fff;
       @include sizes(95%,null, 300px);
       &.fun{
         @include sizes(95%,null,240px);
       }
-      margin:10px auto 20px;
+      margin:6px auto 20px;
     }
   
   
@@ -683,7 +683,7 @@ width:102px;
 .myphoto{
   @include sizes(95%, null, 300px);
     border-radius:160px;
-    margin:0 auto;
+    margin:100px auto 0;
     display:block;
 }
 .iconwrap{

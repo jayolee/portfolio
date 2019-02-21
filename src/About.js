@@ -39,7 +39,8 @@ class About extends Component {
             <div className="bio">
             <div>
             <span className="hello">Hello, I am Young.</span><br /> <p>I am a designer and developer who loves to code to implement my designs.</p>
-<p>As a person has a Fine Art background and graphic, aesthetic design experiences, my strength resides in a strong sense of aesthetics and having keen eyes on details. Also, as a designer who spent most of the times with people who are not in the field, it is my strength working with and taking account of diverse perspectives. With this experience and UX design experience at an EdTech Startup whose product targeted people who are not tech-savvy, I have an interest in creating intuitive interactions.</p> 
+<p>As a person has a Fine Art background and visual design experiences, my strength resides having keen eyes on details. Also, as a designer who spent most of the times with people who are not in the field, it is my strength working with and taking account of diverse perspectives. 
+  With UX design experience at an EdTech Startup whose product changed the way of education, I have an interest in learning new technologies and design a way to improve the everyday life while considering the shortcomings of the technology.</p> 
 <p>My Fine Art experience made me a creator loves to implement my ideas into usable products/services. I use codes with various multimedia skills as mediums.</p>
             </div>
             </div>

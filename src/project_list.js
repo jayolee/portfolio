@@ -376,7 +376,12 @@ export const projectList = {
                 
                 <p>
                 The idea of creating a ML model can help people cleaning out their fridges came up in my mind. I created a ML model providing foods to cook based on the ingredients provided from users, and deployed a web platform for people to be able to use this model.</p>
-                <p className="solutionPoint"><span style={{color:"#617d31", fontSize:"26px", fontWeight:"bold"}}>Get Cuisine,</span> a ML powered web platform to help clean out the fridge</p></div>,
+                <p className="solutionPoint"><span style={{color:"#617d31", fontSize:"26px", fontWeight:"bold"}}>Get Cuisine,</span> a ML powered web platform to help clean out the fridge</p>
+                <div style={{textAlign:"center"}}><a href="http://getcuisine.herokuapp.com" target="_blank" rel="noopener noreferrer">
+            <div className="button getcuisine" style={{margin:"20px auto 40px"}}>Go to the Website</div></a>
+            <div style={{transform:"translateY(-26px)", margin:"0", height:"0"}}>*Initial loading is very slow</div>
+            </div>
+                </div>,
         "Research": <div>
             <p> In the beginning, I planned to create an Amazon Alexa Skill. <b>However, although 41.4% of people place their smart speakers in the kitchen, only 26.5% of people use the speakers to look for recipes monthly, and only 5.1% people use it daily.</b> This is a comparably low percentage comparing to other popular functions such as listening music (76.2% of monthly use, 41.9% of daily use) or checking the weather (69.1% of monthly use, 41.4% of daily use). <a href=" https://voicebot.ai/2018/03/21/data-breakdown-consumers-use-smart-speakers-today/" target="_blank" rel="noopener noreferrer">(Source)</a> Therefore, I decided to create a website which can also provide visual interaction to users.</p>
             <img src={getcuisine8} alt="Where do people put their smart speakers?" style={{ maxWidth: "500px" }} />
