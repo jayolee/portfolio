@@ -87,7 +87,6 @@ class App extends Component {
   //functions to change star opacity
   starOff(){
     this.setState({star_opacity: 0});
-    console.log(this.state.star_opacity)
   }
   starOn(){
     this.setState({star_opacity: 1});
