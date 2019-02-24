@@ -3,13 +3,21 @@ import { Route, BrowserRouter as Router, Switch, Redirect} from 'react-router-do
 import './App.scss';
 import Header from './header.js'
 import Fun from './fun.js'
-import logo from './images/younglogo.svg'
+import logo from './images/logo3.png'
 import text from './images/404text.svg'
 import './projects.scss'
 import MainProject from './mainProject.js'
 import FAs from './FA.js'
 import About from './About.js'
 import Page404 from './page404.js'
+
+import solar1 from './images/solar/mercury.png'
+import solar2 from './images/solar/venus.png'
+import solar3 from './images/solar/mars.png'
+import solar4 from './images/solar/jupyter.png'
+import solar5 from './images/solar/saturn.png'
+import solar6 from './images/solar/out1.png'
+import solar7 from './images/solar/out2.png'
 
 class App extends Component {
 
@@ -24,8 +32,6 @@ class App extends Component {
       deactivelist: [],
       star_opacity: 1,
     }
-    this.star_position = this.starPosGenerator();
-    this.star_twinkle = this.starTwinkleGenerator();
     this.logoList=[logo, text];
     this.logoStyle=[{}, {width:"90%"}];
     this.logoWrapStyle=[{}, {height:"171px"}];
@@ -47,43 +53,8 @@ class App extends Component {
 
   //Funcs for stars 
   //function to generate star animation durations
-  starTwinkleGenerator() {
-    let duration = [];
-    let starstyle = {};
-    let temp_duration = 0;
-    for (let i = 0; i < 80; i++) {
-      temp_duration = Math.random();
-      if (temp_duration < .4) {
-        temp_duration += .4;
-      }
-      starstyle = { animationDuration: temp_duration + 's' };
-      duration.push(starstyle);
-    }
-    return duration;
-  }
 
   //function to randomly generate star positions
-  starPosGenerator() {
-    let element = [];
-    let leftv = 0;
-    let topv = 0;
-    let position = 0;
-    let starstyle = {};
-    for (let i = 0; i < 80; i++) {
-      position = parseInt(Math.random() * 100);
-      leftv = position + "%";
-      position = parseInt(Math.random() * 100);
-      topv = position + "%";
-      position = (Math.random());
-      starstyle = {
-        left: leftv,
-        bottom: topv,
-        opacity: position,
-      }
-      element.push(starstyle)
-    }
-    return (element);
-  }
   //functions to change star opacity
   starOff(){
     this.setState({star_opacity: 0});
@@ -96,25 +67,60 @@ class App extends Component {
     let welcommsg = '　　　　　　　∩\n　　　　　　　||\n　　　　　　　||\n　　　　　　　||\n　　　　　 ／￣￣＼\n　　　　　｜　　　 ヽ\n　　　　　/　　　　 |\n　 |＼　／　／ヽ / ノ\n　 |／￣￣￣＼ |/ /\n　 /　　　　　Ｖ＿)\n　｜(● ●)　 ｜\n　王(_人_) 三 /\n　 ＼＿＿＿_／\n　 _/ /_/ /\n　(＿ﾉ(＿ﾉ\n WELCOME!'
     console.log(welcommsg); //welcome message printing
     let element = [];
-
-    for (let i = 0; i < this.star_position.length; i++){
+    let solars = [solar1, solar2, solar3, solar6, solar7, solar4,  solar5]
       element.push(
-      <div className="star_opac_wrap" key={"starwrap" + i} style={this.star_twinkle[i]}>
-        <div className="stars" key={"star" + i} style={this.star_position[i]} />
-      </div>
+        <div className="solarwrap" data-depth="0.1" style={{width:"100%", height:"500px", position: "relative", left:"0",}}>
+        <img src={solar1} className={"solar0"}/>
+        <div className={"shadow solar0"} />
+        </div>
       )
-    }
+      element.push(
+        <div className="solarwrap" data-depth="0.3" style={{width:"100%", height:"500px", position: "relative", left:"0",}}>
+<img src={solar2} className={"solar1"}/>
+<div className={"shadow solar1"} />
+</div>
+      )
+      element.push(
+        <div className="solarwrap" data-depth="0.5" style={{width:"100%", height:"500px", position: "relative", left:"0",}}>
+<img src={solar3} className={"solar2"}/>
+<div className={"shadow solar2"} />
+</div>
+      )
+      element.push(
+<div className="solarwrap" data-depth="0.5" style={{width:"100%", height:"500px", position: "relative", left:"0",}}>
+        <img src={solar6} className={"solar3"}/>
+        <div className={"shadow solar3"} />
+
+         <img src={solar7} className={"solar4"}/>
+        <div className={"shadow solar4"} />
+        </div>
+      )
+      element.push(
+        <div className="solarwrap" data-depth="0.8" style={{width:"100%", height:"500px", position: "relative", left:"0",}}>
+                <img src={solar4} className={"solar5"}/>
+                <div className={"shadow solar5"} />
+        
+                 <img src={solar5} className={"solar6"}/>
+                <div className={"shadow solar6"} />
+                </div>
+              )
     return element;
   }
-
+  componentDidMount(){
+    var scene = document.getElementById('solarsystem');
+    const Parallax = window.Parallax;
+    var parallaxInstance = new Parallax(scene);
+  }
   render() { 
     return (
       <Router>
         <div>
         <div className="starwrap_out">
           <div className="starwrap_in" key="starwrap">
-          <div style={{opacity:this.state.star_opacity, transition:".4s"}} key={"staropacity"}>
+          <div  id="solarsystem" >
+          {/* <div style={{opacity:this.state.star_opacity, transition:".4s"}} key={"staropacity"}> */}
             {this.starGenerator()}
+            {/* </div> */}
             </div>
           </div>
         </div>

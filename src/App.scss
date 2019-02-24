@@ -114,19 +114,97 @@ img {
 
 .starwrap_out{
   @include sizes( 100%, 400px); 
-    overflow:hidden; 
     position:absolute;
     z-index:-999;
-    contain:content;
 
 .starwrap_in{
   position: relative; 
-  @include sizes(100%, 320px); 
-    background:linear-gradient(#000,#10162B); 
-    @include positions(0,null,null,0);
-    overflow:hidden;
-    contain:content;
-   
+  @include sizes(1400px, 320px); 
+    // background:linear-gradient(#10162B, #fff); 
+    @include positions(0,null,null,50%);
+    @include transform(translateX(-50%));
+    // overflow:hidden;
+    // contain:content;
+   img {
+     position:absolute;
+   }
+   .shadow{
+     position:absolute;
+      border-radius: 450px;
+  }
+   .solar0 {
+     //mercury
+    width:10%;
+    max-width:40px;
+    top:110px;
+    left:790px;
+    &.shadow{
+      height:40px;
+      box-shadow: 0 0 10px #dbbbff;
+    }
+  }
+   .solar1 {
+     //venus
+     width:10%;
+     max-width:130px;
+     left: 520px;
+     top:90px;
+     &.shadow{
+       height:130px;
+      box-shadow: 0 0 30px #ffa75f;
+    }
+   }
+   .solar2 {
+     //mars
+     width: 20%;
+     max-width:100px;
+     top:210px;
+     right:450px;
+     &.shadow{
+      height:100px;
+     box-shadow: 0 0 20px #ff9595;
+   }
+   }
+   .solar5 {
+     //jupiter
+     width:30%;
+     max-width:340px;
+     top:110px;
+     right:30px;
+     &.shadow{
+      height:340px;
+     box-shadow: 0 0 30px #ffe9d7;
+   }
+   }
+   .solar6 {
+     //saturn
+     width:60%;
+     left:-350px;
+     top:-150px
+   }
+   .solar3 {
+     //out1
+     width:20%;
+     max-width:80px;
+     right:40px;
+     top:74px;
+     &.shadow{
+      height:80px;
+     box-shadow: 0 0 30px #ade1ff;
+   }
+   }
+   .solar4 {
+     //out2
+     width:15%;
+     max-width:80px;
+     left:40px;
+     top:260px;
+     &.shadow{
+      height:80px;
+     box-shadow: 0 0 30px #a8aeff;
+   }
+   }
+
 }
 .star_opac_wrap{
   @include animation('twinkle infinite forwards');
@@ -409,7 +487,7 @@ width:102px;
 
 .logowrap {
   position: relative;
-  @include sizes(360px, 85px);
+  @include sizes(400px, 85px);
   margin:0 auto;
 
   &.header{
@@ -787,10 +865,7 @@ width:102px;
 
 
 .starwrap_in{position: relative; 
-  background:linear-gradient(#000,#10162B); 
-  @include positions(-130px,null,null, -25%); 
-  overflow:hidden;
- 
+   @include positions(-130px,null,null, -25%); 
 }
 	.logowrap{
 		margin-bottom:38px;
