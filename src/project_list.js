@@ -26,10 +26,10 @@ import dote5 from './Dotenote/notify2.svg'
 
 import getcuisine1 from './getcuisine/top.gif'
 import getcuisine3 from './getcuisine/icons.png'
-import getcuisine4 from './getcuisine/hi_1.jpg'
-import getcuisine5 from './getcuisine/hi_2.jpg'
-import getcuisine6 from './getcuisine/final_1.jpg'
-import getcuisine7 from './getcuisine/final_2.jpg'
+import getcuisine_persona1 from './getcuisine/persona1.jpg'
+import getcuisine_persona2 from './getcuisine/persona2.jpg'
+import getcuisine_story from './getcuisine/storyboard.jpg'
+import getcuisine_story2 from './getcuisine/storyboard2.jpg'
 import getcuisine8 from './getcuisine/report1.svg'
 import getcuisine9 from './getcuisine/report2.svg'
 import getcuision10 from './getcuisine/modelerror.gif'
@@ -334,11 +334,11 @@ export const projectList = {
     },
     "getcuisine": {
         "projectTitle": "Get Cuisine",
-        "quote": "How might we help people using Machine Learning?",
+        "quote": "How might Machine Learning can help people?",
         "topimg": <div style={{ width: "640px", maxWidth: "100%", height: "auto", margin: "0 auto" }}><Vimeo video="315035206" /></div>,
         
         "exlpla": {
-            "Duration": "2 months (Dec 2018 ~ Jan 2019)",
+            "Duration": "Dec 2018 ~ Current",
             "Team": "Ja Young Lee",
             "Role": "UI/UX, development",
             "Tool": "Python Flask, jQuery, HTML, CSS, Adobe Illustrator",
@@ -347,7 +347,8 @@ export const projectList = {
             <div className="button getcuisine">Go to the Website</div></a>
             <div style={{transform:"translateY(-26px)"}}>*Initial loading is very slow</div>
             </div>,
-        "Process": <div className="processBoxWrap">
+        "Process": <div> 
+        <div className="processBoxWrap">
          <div className="proBoxLine getcuisine" />
         <div className="proBoxOut">
             <div className="processBox getcuisine">Ideate</div>
@@ -367,6 +368,21 @@ export const projectList = {
             <div className="processBox getcuisine fin">Finalize</div>
             <div className="processExpla">Deployment</div>
         </div>
+        </div>
+        <div className="processBoxWrap">
+         <div className="proBoxLine getcuisine" />
+        <div className="proBoxOut">
+            <div className="processBox getcuisine">Research</div>
+            <div className="processExpla">Survey</div>
+            <div className="processExpla">Semi-Structured Interview</div>
+            <div className="processExpla">Speed Dating</div>
+        </div>
+        
+        <div className="proBoxOut">
+            <div className="processBox getcuisine">Iterate</div>
+        </div>
+        </div>
+        
         </div>,
         "Ideation": <div>
             <p>The ideation started from the matchmaking process. How can we help human using Machine Learning (ML)? While identifying possible activities and domains to which we can apply ML model, one of the dataset from Kaggle (<a href="https://www.kaggle.com/c/whats-cooking" target="_blank" rel="noopener noreferrer">cuisines and ingredients</a>) inspired me. It brought my experience having small amounts of ingredients which are leftovers after cooking. It’s often challenging to deal with these leftovers. 
@@ -382,25 +398,22 @@ export const projectList = {
             <div style={{transform:"translateY(-26px)", margin:"0", height:"0"}}>*Initial loading is very slow</div>
             </div>
                 </div>,
-        "Research": <div>
+        "Initial Research": <div>
             <p> In the beginning, I planned to create an Amazon Alexa Skill. <b>However, although 41.4% of people place their smart speakers in the kitchen, only 26.5% of people use the speakers to look for recipes monthly, and only 5.1% people use it daily.</b> This is a comparably low percentage comparing to other popular functions such as listening music (76.2% of monthly use, 41.9% of daily use) or checking the weather (69.1% of monthly use, 41.4% of daily use). <a href=" https://voicebot.ai/2018/03/21/data-breakdown-consumers-use-smart-speakers-today/" target="_blank" rel="noopener noreferrer">(Source)</a> Therefore, I decided to create a website which can also provide visual interaction to users.</p>
-            <img src={getcuisine8} alt="Where do people put their smart speakers?" style={{ maxWidth: "500px" }} />
-            <img src={getcuisine9} alt="Smart Speaker Use Case Frequency Jan 2018" /><div className="imgdes">
+            <div className="halfwrap" style={{marginTop:"0"}}>
+            <img src={getcuisine8} alt="Where do people put their smart speakers?" className="half" style={{ maxWidth: "500px", marginTop:"0"}} />
+            <img src={getcuisine9} alt="Smart Speaker Use Case Frequency Jan 2018" className="half" style={{ maxWidth: "500px", marginTop:"0"}}/><div className="imgdes">
                 <a href=" https://voicebot.ai/2018/03/21/data-breakdown-consumers-use-smart-speakers-today/" target="_blank" rel="noopener noreferrer">(Source of the graphs above)</a>
+                </div>
             </div>
         </div>,
  "ML Model": <div>
      <p>
-     I built pipelines of three algorithms: K-Nearest Neighbors (K-NN), Support Vector Machine, Multinomial Naive Bayesian from Scikit-learn with CountVectorizer and TfidfTransformer.</p>
+     I built pipelines of three algorithms: K-Nearest Neighbors (K-NN), Support Vector Machine, Multinomial Naive Bayesian from Scikit-learn with CountVectorizer and TfidfTransformer. Among three models, I decided to use K-NN model because it returned highest accuracy from K-fold Cross-validation (K = 5).</p>
     <img src={getcuisineword} alt = "Pipeline Structure" />
     <div className="imgdes">Pipeline Structure</div>
-     <p>
-     I ran K-fold Cross-validation (K = 5) on the three models. K-NN model returned the heighst accuracy, so I chose K-NN model.
-     </p>
-     <img src={getcuisinekfold} style={{ maxWidth: "400px" }} alt="K-fold Cross Validation"/>
-     <div className="imgdes">K-fold Cross Validation (k = 5) Accuracy Values</div>
      <div className="triwrap getcuisine">
-     <div className = "triinner">
+     <div className = "triinner" style={{boxShadow:"0 0 20px rgba(97,125,49,0.5)", borderRadius:"10px"}}>
         <img src={getcuisinemod1} alt="K-NN Model"  className="half" />
         <div className="imgdes">K-NN Model<br />Accuracy: 0.73</div>
      </div>
@@ -429,26 +442,43 @@ export const projectList = {
             </p>
         </div>,
        
-        "Design": <div>
-            <div className="halfwrap fit">
-            <img className="half imgBorder addmargin zoomable" src={getcuisine4} alt="Hi-fi prototype" onClick={zoomimg} /><img className="half addmargin zoomable" src={getcuisine5} alt="Hi-fi prototype" onClick={zoomimg} /><div className='imgdes'>Hi-fi Prototype made of HTML, CSS, jQuery, and Flask</div>
-            </div>
-            <p className="addmargin">Because I trained the model with certain ingredients, I wanted people to type ingredients in a format that can be processed. Therefore, I implemented an autocomplete function on the search bar using jQuery Autocomplete API.</p>
+        "Initial Design": <div>
+            <p className="addmargin">I added an autocomplete function to the search bar using jQuery Autocomplete API because I wanted users to type ingredients in a same format as the train data. Also, One of the concerns about this project is that the data this website provides can easily be obtained from websites providing recipes. Also, the data people need is recipes, not a cuisine type to look for. Therefore, I created a function sending users to Google Search searching recipes with the predicted cuisine and given ingredients.</p>
             <p>
-                 The biggest issue of using ML is that it is hard to optimize the website for shorter loadings. I tried to optimize the files as much as possible; however, the initial response time is still long due to Heroku (If the app has no traffic for 30 mins, it goes to sleep due to Heroku's policy).<br /><br /></p>
+                 The biggest issue of using ML is that it is hard to optimize the website for shorter loadings. I tried to optimize the files as much as possible; however, the initial response time is still long due to Heroku (If the app has no traffic for 30 mins, it goes to sleep due to Heroku's policy).</p>
 
             <img src={getcuisine3} alt="Cuisine Icons" onClick={zoomimg} className="zoomable" /><div className='imgdes'>Cuisine Icons</div>
-            <p>
-                One of the concerns about this project is that the data this website provides can easily be obtained, and even more data can be obtained by searching on websites providing recipes. Also, the data people need is recipes, not a cuisine type to look for. <b>However, I got feedback that this website not only provides information but also fun.</b> Therefore, I focused on providing interesting interactions. I added graphics for visual pleasure.</p>
-                <img className="zoomable" src={getcuisine1} onClick={zoomimg}/>
-            <div className="halfwrap fit">
-                 <img className="half imgBorder addmargin zoomable" src={getcuisine6} alt="Final Design" onClick={zoomimg} />
-                 <img className="half addmargin zoomable" src={getcuisine7} alt="Final Design" onClick={zoomimg} />
+            <img className="zoomable" src={getcuisine1} onClick={zoomimg}/>
                  <div className='imgdes'>Final Design</div>
-            </div>
-            <p>
-                Also, to provide more helpful information, I created a function sending users to Google Search searching recipes with the predicted cuisine and given ingredients.</p></div>,
-
+          </div>,
+        "Second Round Research": <div>
+        <p>However, does this website fulfill the initial goal of "helping people clean out the fridge"? The answer was <b>NO.</b> The website was more about exploring the development of a ML powered website. Therefore, I started the second round of design process to achieve the original goal.</p>
+        <p>First, I surveyed to understand if people struggle with dealing with remaining ingredients, and what platforms and keywords people use to search for foods to cook.
+            <ul>
+                <li>Almost similar amount of people usually throw out leftover ingredients after gone bad as people who cook another food with those.</li>
+                <li>Almost similar amount of people use ingredients as the keyword as those who use dish names for search to look for recipes.</li>
+            </ul>
+        Besides, there were fun facts such as <i>People make a meal plan before going  groceries more tends to throw out groceries after they gone bad than those who plan meals after getting groceries.</i> Based on this survey data, I conducted semi-structured interviews to learn about their decision making process about how they decide what to cook from the search result. From the interview, I found some trends.
+            <ul>
+                <li>When deciding what to cook using remaining ingredients, it is important how many other ingredients are needed.</li>
+                <li>When cooking with leftover ingredients, not only finding a recipe using only the currently having ingredients, but required utensils are also important.</li>
+                <li>Sometimes search results are overwhelming, and the experience of leftovers prevents people from cooking.</li>
+            </ul>
+        </p>
+        <p>Based on the interview, I created two personas and storyboards.</p>
+        <div className="halfwrap">
+            <img src={getcuisine_persona1} alt="Persona 1" className="half" style={{maxWidth:"350px", marginTop:"0"}}/>
+            <img src={getcuisine_persona2} className="half" alt="Persona 2" style={{maxWidth:"350px", marginTop:"0"}}/> <div className='imgdes'>Personas Created Based on the Survey and Semi-Structured Interview</div>
+            
+        </div>
+        <img src={getcuisine_story} alt="Storyboard"  onClick={zoomimg} className="zoomable"/>
+        <div className='imgdes'>Storyboards Explaining the Scenarios</div>
+        <p>How can <i>Get Cuisine</i> website be integrated to the service as additional feature to help people? I got the inspiration from the interviews. I asked people if they had tried new dishes to cook, what the reasons were. Many people who cook often like trying new foods. I thought that I can connect this to another insight that sometimes search results are overwhelming, and the experience of leftovers prevents people from cooking. Below is the scenario of how an app can convey the insight.</p>
+        <img src={getcuisine_story2} alt="Storyboard"  onClick={zoomimg} className="zoomable"/>
+        <div className='imgdes'>A Scenario Explaining How Get Cuisine Function Can Help People</div>
+        <p>Currently, I am conducting Speed Dating with the storyboards.</p>
+        <p style={{textAlign:"center", fontSize:"24px",fontWeight:"bold",color:"rgb(97,125,49)"}}>To be continued!</p>
+        </div>
 
     },
     "logpos": {
