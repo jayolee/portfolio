@@ -72,7 +72,6 @@ class MainProject extends Component {
     setTimeout(this.setState({ page: 0 }), 300);
 
   }
-
   starOff(){
     this.props.starOff();
   }
@@ -156,9 +155,6 @@ class MainProject extends Component {
             <div className="discrip">
             <div>
               {this.state.worklist[i].title}</div>
-              {/* <div className="types">
-                {this.state.worklist[i].types}
-              </div> */}
               <div className="expla">
                 {this.state.worklist[i].expla}
               </div>

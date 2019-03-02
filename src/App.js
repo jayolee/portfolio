@@ -19,6 +19,13 @@ import solar5 from './images/solar/saturn.png'
 import solar6 from './images/solar/out1.png'
 import solar7 from './images/solar/out2.png'
 
+import res_grey from './images/res_grey.svg'
+import res_blk from './images/res_blk.svg'
+import git_grey from './images/hub_grey.svg'
+import git_blk from './images/hub_blk.svg'
+import in_grey from './images/in_grey.svg'
+import in_blk from './images/in_blue.svg'
+
 class App extends Component {
 
   constructor(props) {
@@ -81,7 +88,7 @@ class App extends Component {
 </div>
       )
       element.push(
-        <div className="solarwrap" data-depth="0.5" style={{width:"100%", height:"500px", position: "relative", left:"0",}}>
+        <div className="solarwrap" data-depth="0.2" style={{width:"100%", height:"500px", position: "relative", left:"0",}}>
 <img src={solar3} className={"solar2"}/>
 <div className={"shadow solar2"} />
 </div>
@@ -96,7 +103,7 @@ class App extends Component {
         </div>
       )
       element.push(
-        <div className="solarwrap" data-depth="0.8" style={{width:"100%", height:"500px", position: "relative", left:"0",}}>
+        <div className="solarwrap" data-depth="1" style={{width:"100%", height:"500px", position: "relative", left:"0",}}>
                 <img src={solar4} className={"solar5"}/>
                 <div className={"shadow solar5"} />
         
@@ -107,9 +114,9 @@ class App extends Component {
     return element;
   }
   componentDidMount(){
-    var scene = document.getElementById('solarsystem');
+    const scene = document.getElementById('solarsystem');
     const Parallax = window.Parallax;
-    var parallaxInstance = new Parallax(scene);
+    const parallaxInstance = new Parallax(scene, {hoverOnly: true});
   }
   render() { 
     return (
@@ -122,6 +129,26 @@ class App extends Component {
             {this.starGenerator()}
             {/* </div> */}
             </div>
+            <div className="logobox">
+            <div className="logowrap" style={this.logoWrapStyle[this.state.page]}>
+              <a href={process.env.PUBLIC_URL +"/projects"} >
+                <img src={this.logoList[this.state.page]} id="ylogo" alt="logo" style={this.logoStyle[this.state.page]} onClick={(ev)=> this.setState({menu:0})}/>
+                </a>
+               
+            </div>
+            <div class="titles">Hi! I am Ja <b>"Young"</b> Lee,<br /><span style={{fontSize:"20px"}}>a product designer currently pursuing a Master of HCI at CMU</span></div>
+            <a href="http://goo.gl/j91z25" target="_blank" rel="noopener noreferrer" style={{margin:"10px"}}>
+            <div className="icons" id="resu"><img src={res_blk} alt="Resume_hover" /><img src={res_grey}  alt="Resume"/></div>
+            </a>
+            <a href="https://www.linkedin.com/in/jyounglee/" target="_blank" rel="noopener noreferrer" style={{margin:"10px"}}>
+            <div className="icons" id="linked"><img src={in_blk} alt="Linkedin_hover"/><img src={in_grey} alt="Linkedin"/></div>
+            </a>
+            <a href="https://github.com/jayolee" target="_blank" rel="noopener noreferrer" style={{margin:"10px"}}>
+            <div className="icons" id="git"><img src={git_blk} alt="Github_hover"/><img src={git_grey} alt="Github"/></div>
+            </a>
+          </div>
+           
+            
           </div>
         </div>
         <Header key="header" pagenum={this.state.menu} menustatus={this.menustatus} />
@@ -135,15 +162,7 @@ class App extends Component {
         <div className="sectopwrapper" />
         <div className="works">
         
-          <div className="logobox">
-            <div className="logowrap" style={this.logoWrapStyle[this.state.page]}>
-              <a href={process.env.PUBLIC_URL +"/projects"} >
-                <img src={this.logoList[this.state.page]} id="ylogo" alt="logo" style={this.logoStyle[this.state.page]} onClick={(ev)=> this.setState({menu:0})}/>
-                </a>
-               
-            </div>
-            <div class="titles">Designer | Developer</div>
-          </div>
+         
           <Switch>
           <Route path={process.env.PUBLIC_URL} exact render = {props => <MainProject starOff={this.starOff.bind(this)} starOn = {this.starOn.bind(this)} />} />
           <Route path={process.env.PUBLIC_URL + "/projects/"} render = {props => <MainProject starOff={this.starOff.bind(this)} starOn = {this.starOn.bind(this)} />} />

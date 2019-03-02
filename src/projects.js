@@ -174,10 +174,13 @@ class Projects extends Component {
   }
   render() {
     return (
-      <div style={{ position: "absolute", top: "0", left: "0", width: "100%", height: "100%" }}>
+      <div style={{ position: "relative", top: "0", left: "0", width: "100%", height: "100%" }}>
         <div className="greybox" style={{opacity:this.state.opacity}} onClick={this.rolldown.bind(this)}/>
         {this.contentgenerator()}
-        <div className={"gototop "+ this.props.idnum} id={this.state.anilist[this.state.anistat]} key="topBtn" style={{opacity:this.state.opacity}} onClick={(ev) => window.scroll({top: 0, left: 0,  behavior: 'smooth'})} >
+        
+           {this.renderDetail()}
+<div>
+           <div className={"gototop "+ this.props.idnum} id={this.state.anilist[this.state.anistat]} key="topBtn" style={{opacity:this.state.opacity}} onClick={(ev) => window.scroll({top: 0, left: 0,  behavior: 'smooth'})} >
         <svg width="30" height="30">
               <path d="M4 15 L15 4 L26 15 M15 4 L15 26" />
             </svg>
@@ -185,7 +188,7 @@ class Projects extends Component {
             </div>
             <div className={"triangle " + this.props.idnum} />
             </div>
-           {this.renderDetail()}
+            </div>
       </div>
 
     );

@@ -148,9 +148,9 @@ $up: #E9974C;
 .greybox {
 	position: fixed;
 	@include sizes(100vw, 100vh);
-	@include positions(0,null,null,0);
+	@include positions(0,null,null,calc(-50vw + 50%));
 	background: rgba(0,0,0,0.3);
-	z-index: 1;
+	z-index: 999;
 	transition:.4s;
 	cursor:url("images/xcursor.svg") 2 2, auto;
 }
@@ -158,10 +158,10 @@ $up: #E9974C;
 	opacity:0;
 	@include sizes(100vw); 
 	background:#fff; 
-	margin:86px 0 0; 
+	margin:0 0; 
 	position:absolute; 
 	z-index: 1000; 
-	@include positions(-130px,null,null, calc(-50vw + 50%));
+	@include positions(calc(-60vh - 70px),null,null, calc(-50vw + 50%));
 	padding: {
 		top:0;
 		bottom:400px;
@@ -612,9 +612,9 @@ $up: #E9974C;
 	&#btnBounce{
 		@include animation("bounceBtn .5s ease-in-out infinite");
 	}
+	position:fixed;
 	@include sizes(50px, 50px);
 	@include positions(null, 4vw, 50px);
-	position:fixed;
 	z-index:1000;
 	border-radius:40px;
 	@include bgcolors;

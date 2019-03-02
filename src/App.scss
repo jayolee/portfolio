@@ -113,13 +113,11 @@ img {
 }
 
 .starwrap_out{
-  @include sizes( 100%, 400px); 
+  @include sizes( 100%, 100vh); 
     position:absolute;
-    z-index:-999;
-
 .starwrap_in{
   position: relative; 
-  @include sizes(1400px, 320px); 
+  @include sizes(100%, 100%); 
     // background:linear-gradient(#10162B, #fff); 
     @include positions(0,null,null,50%);
     @include transform(translateX(-50%));
@@ -132,45 +130,52 @@ img {
      position:absolute;
       border-radius: 450px;
   }
+  #solarsystem{
+    @include sizes(100%, 100vh);
+    overflow:hidden;
+  }
    .solar0 {
      //mercury
-    width:10%;
-    max-width:40px;
-    top:110px;
-    left:790px;
+    width:40px;
+    top:19vh;
+    left:50%;
+    @include transform(translateX(90px));
     &.shadow{
+      width:40px;
       height:40px;
       box-shadow: 0 0 10px #dbbbff;
     }
   }
    .solar1 {
      //venus
-     width:10%;
-     max-width:130px;
-     left: 520px;
-     top:90px;
+     width:130px;
+     left: 50%;
+     top:47vh;
+     @include transform(translateX(-500px));
      &.shadow{
+       width:130px;
        height:130px;
       box-shadow: 0 0 30px #ffa75f;
     }
    }
    .solar2 {
      //mars
-     width: 20%;
-     max-width:100px;
-     top:210px;
-     right:450px;
+     width:100px;
+     top:18vh;
+     left: 50%;
+     @include transform(translateX(280px));
      &.shadow{
+      width: 100px;
       height:100px;
      box-shadow: 0 0 20px #ff9595;
    }
    }
    .solar5 {
      //jupiter
-     width:30%;
-     max-width:340px;
-     top:110px;
-     right:30px;
+     width:340px;
+     top:38vh;
+     left: 50%;
+     @include transform(translateX(400px));
      &.shadow{
       height:340px;
      box-shadow: 0 0 30px #ffe9d7;
@@ -178,16 +183,17 @@ img {
    }
    .solar6 {
      //saturn
-     width:60%;
-     left:-350px;
-     top:-150px
+     width:730px;
+     left: 50%;
+     top:-160px;
+     @include transform(translateX(-860px) rotate(-4deg));
    }
    .solar3 {
      //out1
-     width:20%;
-     max-width:80px;
-     right:40px;
-     top:74px;
+     width:80px;
+     left: 50%;
+     top:32vh;
+     @include transform(translateX(800px));
      &.shadow{
       height:80px;
      box-shadow: 0 0 30px #ade1ff;
@@ -195,10 +201,10 @@ img {
    }
    .solar4 {
      //out2
-     width:15%;
-     max-width:80px;
-     left:40px;
-     top:260px;
+     width:80px;
+     left: 50%;
+     top:31vh;
+     @include transform(translateX(-780px));
      &.shadow{
       height:80px;
      box-shadow: 0 0 30px #a8aeff;
@@ -471,15 +477,17 @@ width:102px;
   @include sizes(100%);
   position: relative;
   @include positions(0);
-  margin: 50px auto 50px;
+  margin: -76vh auto 50px;
   text-align: center;
   .titles{
-    color:#2de9ff;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    margin-top:26px;
+    padding:0 5px;
+    color:#001a49;
+    // text-transform: uppercase;
+    letter-spacing: .4px;
+    margin-top:52px;
+    margin-bottom:30px;
     font: {
-      size:18px;
+      size:24px;
       weight:400;
     }
   }
@@ -487,9 +495,9 @@ width:102px;
 
 .logowrap {
   position: relative;
-  @include sizes(400px, 85px);
+  @include sizes(400px, 85px, 100%);
   margin:0 auto;
-
+  
   &.header{
     @include sizes(150px);
     position:absolute;
@@ -506,9 +514,8 @@ width:102px;
 
 .works {
   position: relative;
-  margin-top: 10%;
   @include sizes(null,null, 1100px);
-  margin: 0 auto;
+  margin: calc(60vh + 86px) auto 40vh;
   padding: 0;
   text-align: left;
 }
@@ -749,7 +756,7 @@ width:102px;
 
 .cprg {
   @include sizes(100%);
-  margin-top:150px;
+  margin-top:80vh;
   margin-bottom: 5px;
   text-align: center;
   font-size: 14px;
