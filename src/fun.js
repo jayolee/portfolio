@@ -3,11 +3,13 @@ import { Link, Route } from 'react-router-dom'
 import './App.scss';
 import Projects from './projects.js'
 import './projects.scss'
+
 import reporter from './images/lights.jpg'
 import even from './images/even2.png'
 import momoko from './images/momo.png'
 import gssh from './images/gssh.jpg'
 import naoshima from './images/naoshima.png'
+
 
 
 class Fun extends Component {

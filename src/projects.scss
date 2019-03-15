@@ -401,6 +401,17 @@ $up: #E9974C;
 	p{
 		@include sizes(95%,null,750px);
 		margin:0 auto;
+		&.mainT{
+			margin: {
+				bottom: 10px;
+				top: 90px;
+			}
+			color: rgba(0,0,0,0.9);
+			font: {
+				weight: bold;
+				size:24px;
+			}
+		}
 		&.mainPoint{
 			text-align:center;
 			font : {
@@ -752,7 +763,7 @@ a.member{
 	@include sizes(95%,null,750px);
 	@include transform(translateX(-20px));
 	font: {
-		size: 26px;
+		size: 24px;
 		weight: 700;
 	}
 	@include textcolors;

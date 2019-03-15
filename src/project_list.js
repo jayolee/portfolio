@@ -37,7 +37,7 @@ import getcuisine11 from './getcuisine/503error.jpg'
 import getcuisinemod1 from './getcuisine/knear.svg'
 import getcuisinemod2 from './getcuisine/svm.svg'
 import getcuisinemod3 from './getcuisine/multi.svg'
-import getcuisinekfold from './getcuisine/accuracy.png'
+import getcuisine_aff from './getcuisine/affinity.jpg'
 import getcuisineword from './getcuisine/wordbag.svg'
 
 import reporter0 from './reporter/int1.jpg'
@@ -325,7 +325,7 @@ export const projectList = {
 
         </div>,
         "Next Steps": <div>
-            <img src={up_animals} id="e_animals" alt="Playing with Breathing Sensor" /><div className='imgdes'>Endangered Animal Illustrations By Young and <a href="http://judithleng.me/" target="_blank" rel="noopener noreferrer">Judith Leng</a></div>
+            <img src={up_animals} id="e_animals" alt="Playing with Breathing Sensor" /><div className='imgdes'>Endangered Animal Illustrations By Young</div>
 
             <p className="addmargin">While <i>Up</i> is a productivity mobile application that serves as a concentration tool, the overall message is <b>importance of constant effort and taking efficient breaks.</b> <i>Up</i> aims to reduce the demoralizing factor occurring outside of the application by constantly rewarding users with animals.</p>
             <p>
@@ -375,6 +375,8 @@ export const projectList = {
             <div className="processBox getcuisine">Research</div>
             <div className="processExpla">Survey</div>
             <div className="processExpla">Semi-Structured Interview</div>
+            <div className="processExpla">Affinity Diagraming</div>
+            <div className="processExpla">User Personas</div>
             <div className="processExpla">Speed Dating</div>
         </div>
         
@@ -412,8 +414,8 @@ export const projectList = {
      I built pipelines of three algorithms: K-Nearest Neighbors (K-NN), Support Vector Machine, Multinomial Naive Bayesian from Scikit-learn with CountVectorizer and TfidfTransformer. Among three models, I decided to use K-NN model because it returned highest accuracy from K-fold Cross-validation (K = 5).</p>
     <img src={getcuisineword} alt = "Pipeline Structure" />
     <div className="imgdes">Pipeline Structure</div>
-     <div className="triwrap getcuisine">
-     <div className = "triinner" style={{boxShadow:"0 0 20px rgba(97,125,49,0.5)", borderRadius:"10px"}}>
+     <div className="triwrap getcuisine" style={{marginTop:"60px"}}>
+     <div className = "triinner" style={{border:"4px solid rgba(97,125,49,0.5)", padding:"5px 15px 5px 0", borderRadius:"10px"}}>
         <img src={getcuisinemod1} alt="K-NN Model"  className="half" />
         <div className="imgdes">K-NN Model<br />Accuracy: 0.73</div>
      </div>
@@ -453,12 +455,14 @@ export const projectList = {
           </div>,
         "Second Round Research": <div>
         <p>However, does this website fulfill the initial goal of "helping people clean out the fridge"? The answer was <b>NO.</b> The website was more about exploring the development of a ML powered website. Therefore, I started the second round of design process to achieve the original goal.</p>
-        <p>First, I surveyed to understand if people struggle with dealing with remaining ingredients, and what platforms and keywords people use to search for foods to cook.
+        <p>First, I surveyed to understand what are the struggles people have regarding food consumption cycles, and how people search foods to cook.
             <ul>
                 <li>Almost similar amount of people usually throw out leftover ingredients after gone bad as people who cook another food with those.</li>
                 <li>Almost similar amount of people use ingredients as the keyword as those who use dish names for search to look for recipes.</li>
             </ul>
-        Besides, there were fun facts such as <i>People make a meal plan before going  groceries more tends to throw out groceries after they gone bad than those who plan meals after getting groceries.</i> Based on this survey data, I conducted semi-structured interviews to learn about their decision making process about how they decide what to cook from the search result. From the interview, I found some trends.
+        Besides, there were fun facts such as <i>People make a meal plan before going  groceries more tends to throw out groceries after they gone bad than those who plan meals after getting groceries.</i> Based on this survey data, I conducted semi-structured interviews to learn about their decision making process about how they decide what to cook from the search result. I created an affinity diagram with the interviews. From the interview, I found some trends.</p>
+        <img src={getcuisine_aff}  onClick={zoomimg} className="zoomable"/><div className='imgdes'>Affinity Diagram</div>
+        <p>
             <ul>
                 <li>When deciding what to cook using remaining ingredients, it is important how many other ingredients are needed.</li>
                 <li>When cooking with leftover ingredients, not only finding a recipe using only the currently having ingredients, but required utensils are also important.</li>
