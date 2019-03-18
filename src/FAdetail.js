@@ -14,7 +14,7 @@ class FAdetail extends Component {
   }
   componentDidMount(){
 
-    let curscroll=window.scrollY
+    let curscroll=window.scrollY - (window.innerHeight* 2 / 3);
    this.setState({scroll: curscroll});
     setTimeout(function(){
         this.setState({opacity:1})

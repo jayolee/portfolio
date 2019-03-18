@@ -10,10 +10,13 @@ class FaCv extends Component {
         super(props);
         this.state = {
             opacity:0,
+            scroll: 0,
         }
 
     }
     componentDidMount(){
+        let curscroll=window.scrollY - (window.innerHeight* 2 / 3);
+        this.setState({scroll: curscroll});
         setTimeout(function(){
             this.setState({opacity:1})
         }.bind(this),10);
@@ -29,7 +32,7 @@ class FaCv extends Component {
             <div style={{opacity:this.state.opacity, transition:'.3s'}} >
             <div className="greybox" onClick={this.closing.bind(this)}/>
                 
-                <div className="FAdetail Facv">
+                <div className="FAdetail Facv" style={{ top:this.state.scroll}}>
                 <div className="xmark" onClick={this.closing.bind(this)} >
                     <svg width="50" height="50">
                         <path d="M10 10 L40 40 M40 10 L10 40" />

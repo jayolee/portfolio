@@ -2,11 +2,17 @@ import React, { Component } from 'react';
 import { Link, Route } from 'react-router-dom'
 import './App.scss';
 import './projects.scss'
-import logpos from './images/logpos2.jpg'
+
 import dotenote from './images/dotenote.jpg'
 import getcuisine from './images/getcuisine.jpg'
 import up_main from './up/blowmain.jpg'
 
+import nao from './images/nao_main.jpg'
+import report from './images/report_main.jpg'
+import momo from './images/momo_main.jpg'
+import log from './images/log_main.jpg'
+
+import fa from './FA/images/image2-4.jpg'
 import Projects from './projects.js'
 
 class MainProject extends Component {
@@ -26,16 +32,6 @@ class MainProject extends Component {
         'development': ['Development', "worksbutton workactive"]
       },
       worklist: [
-        
-        {
-          "id": "getcuisine",
-          "image": getcuisine,
-          "class": "uiux development portwrap",
-          "mainClass": "main_work",
-          "types": "UI/UX | Development",
-          "expla":"A ML powered website to help clean out the fridge (Ongoing)",
-          "title": "Get Cuisine",
-        },
         {
           "id": "up",
           "image": up_main,
@@ -44,6 +40,15 @@ class MainProject extends Component {
           "types": "UI/UX | Development",
           "expla":"A mobile app that promotes productivity and combat stress",
           "title": "Up",
+        },
+        {
+          "id": "getcuisine",
+          "image": getcuisine,
+          "class": "uiux development portwrap",
+          "mainClass": "main_work",
+          "types": "UI/UX | Development",
+          "expla":"A ML powered website to help clean out the fridge (Ongoing)",
+          "title": "Get Cuisine",
         },
         {
           "id": "dote",
@@ -55,13 +60,13 @@ class MainProject extends Component {
           "title": "DoteNote",
         },
          {
-          "id": "logpos",
-          "image": logpos,
+          "id": "buncee",
+          "image": "",
           "class": "ideation portwrap",
           "mainClass": "main_work",
           "types": "Ideation",
-          "expla":"Improving rescue operations communication using audio AR",
-          "title": "LOG + POS",
+          "expla":"A creation tool for school communities (www.buncee.com)",
+          "title": "Buncee",
         },
         
       ],
@@ -142,11 +147,32 @@ class MainProject extends Component {
 
   //create boxes
   projects() {
+
     let element = [];
     let routelist=[];
     let projectUrl = '';
     for (let i = 0; i < this.state.worklist.length; i++) {
       projectUrl=process.env.PUBLIC_URL +'/projects/'+this.state.worklist[i].id+'/';
+      if(this.state.worklist[i].id === "buncee"){
+        element.push(
+          <div id={this.state.worklist[i].id} key={this.state.worklist[i].id} className={this.state.worklist[i].mainClass}  >
+          <div className={this.state.worklist[i].class} key={this.state.worklist[i].id + "wrapper"}>
+             <div className="discrip">
+            <div>
+              {this.state.worklist[i].title}</div>
+              <div className="expla">
+                {this.state.worklist[i].expla}
+              </div>
+            </div>
+          </div>
+          <div className="discripsmaller">
+            {this.state.worklist[i].title}<br />
+            <span className="types"> {this.state.worklist[i].expla}</span>
+          </div>
+        </div>
+        );
+        continue;
+      }
      element.push(
         <Link to={projectUrl} key={this.state.worklist[i].id+'_link'} >
         <div id={this.state.worklist[i].id} key={this.state.worklist[i].id} className={this.state.worklist[i].mainClass}  >
@@ -171,7 +197,7 @@ class MainProject extends Component {
         <Route path={projectUrl} key={"routeto_"+this.state.worklist[i].id} render={props => <Projects key="Projects" idnum={this.state.worklist[i].id}  projecttype="/projects" starOff={this.starOff.bind(this)} starOn = {this.starOn.bind(this)}  />}  />
       )
     }
-    element = <div>{routelist}{element}</div>;
+  element = [<div style={{textAlign: "left"}}>{routelist}</div>, <div style={{maxWidth: "1200px", margin: "0 auto"}}>{element}</div>];
     return element
   }
  
@@ -179,6 +205,62 @@ class MainProject extends Component {
     return (
       <div className="workbox">
         {this.projects()}
+
+        <div style={{width:"100%", maxWidth:"1200px", margin: "150px auto 0", textAlign: "center", fontSize:"20px", lineHeight: "1.8"}} >
+        I also have some cool side projects which has <b>less research but for fun.</b><br />Feel free to check them out!
+        </div>
+        
+        <div className = "moreExpla" style={{width:"100%", maxWidth:"1200px"}}>
+        <div className="moreouterWrap">
+          <div className = "morewrap" id="nao" >
+            <img src = {nao} />
+            <div className = "moretitle">Artwork of Naoshima</div>
+            <div className = "moredescrip">A website about Naoshima with my illustrations</div>
+            {/* <div className = "btn">Read More</div> */}
+          </div>
+
+           <div className = "morewrap" id="momo" >
+            <img src = {momo} />
+            <div className = "moretitle">Happy Momoko</div>
+            <div className = "moredescrip">An animation Emoji set for messaging</div>
+            {/* <div className = "btn">Read More</div> */}
+          </div>
+          </div>
+          <div className="moreouterWrap">
+          <div className = "morewrap" id="report" >
+            <img src = {report} />
+            <div className = "moretitle">I am a Reporter</div>
+            <div className = "moredescrip">A visual novel game for novice users</div>
+            {/* <div className = "btn">Read More</div> */}
+          </div>
+
+             <div className = "morewrap" id="log" >
+            <img src = {log} />
+            <div className = "moretitle">LOG + POS</div>
+            <div className = "moredescrip">An audio AR solution improving rescue operations</div>
+            {/* <div className = "btn">Read More</div> */}
+          </div>
+          </div>
+          <div style={{width:"100%"}}>
+          <a href="https://jayolee.github.io/portfolio/more" rel="noopener noreferrer">
+          <div className = "button">View more side projects</div></a>
+          </div>
+        </div>
+        
+        <div className="mainfaWrap">
+          <div className = "mainfa">
+            <img src = {fa} />
+          </div>
+          <div className="mainfades" >
+            Do you like <b>fine art?</b>
+            <br />Check out my fine artwork.<br />
+
+            <a href="https://jayolee.github.io/portfolio/fineart" rel="noopener noreferrer">
+            <div className = "button" style={{background: "#2068b5"}}>View More Fine Art</div>
+          </a>
+          </div>
+          
+        </div>
          </div>
     );
   }

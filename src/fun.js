@@ -5,10 +5,11 @@ import Projects from './projects.js'
 import './projects.scss'
 
 import reporter from './images/lights.jpg'
+import logpos from './images/logpos2.jpg'
 import even from './images/even2.png'
 import momoko from './images/momo.png'
 import gssh from './images/gssh.jpg'
-import naoshima from './images/naoshima.png'
+import naoshima from './images/naoshima.jpg'
 
 
 
@@ -47,6 +48,22 @@ class Fun extends Component {
           "expla":"A visual novel game for novice users",
           "title": "I Am a Reporter",
         },
+        { "id":"momo",
+        "image":momoko,
+        "class":"animation portwrap",
+        "mainClass":"funwork",
+        "types": "Animation (Emoji Stickers)",
+        "expla":"Animation Emoji Stickers",
+        "title": "Happy Momoko",
+      },
+        { "id":"logpos",
+        "image":logpos,
+        "class":"animation portwrap",
+        "mainClass":"funwork",
+        "types": "UX",
+        "expla":"An audio AR solution improving rescue operations",
+        "title": "LOG + POS",
+      },
         { "id":"even",
           "image":even,
           "class":"uiux portwrap",
@@ -55,14 +72,7 @@ class Fun extends Component {
           "expla":"A mobile app that finds the best place to meet",
           "title": "Even",
         },
-        { "id":"momo",
-          "image":momoko,
-          "class":"animation portwrap",
-          "mainClass":"funwork",
-          "types": "Animation (Emoji Stickers)",
-          "expla":"Animation Emoji Stickers",
-          "title": "Happy Momoko",
-        },
+       
         { "id":"gssh",
           "image":gssh,
           "class":"video portwrap",
@@ -165,8 +175,8 @@ class Fun extends Component {
         <Route path={projectUrl} key={"routeto_"+this.state.worklist[i].id} render={props => <Projects key="Projects" idnum={this.state.worklist[i].id} projecttype="/more" starOff={this.starOff.bind(this)} starOn = {this.starOn.bind(this)} />} />
       )
     }
-    element=<div>{routelist}{element}</div>;
-    return element  
+    element = [<div style={{textAlign: "left"}}>{routelist}</div>, <div style={{maxWidth: "1200px", margin: "0 auto"}}>{element}</div>];
+  return element  
   }
    
   render() {

@@ -65,49 +65,49 @@ class App extends Component {
   }
   //function to create stars
   starGenerator() {
-    let welcommsg = '　　　　　　　∩\n　　　　　　　||\n　　　　　　　||\n　　　　　　　||\n　　　　　 ／￣￣＼\n　　　　　｜　　　 ヽ\n　　　　　/　　　　 |\n　 |＼　／　／ヽ / ノ\n　 |／￣￣￣＼ |/ /\n　 /　　　　　Ｖ＿)\n　｜(● ●)　 ｜\n　王(_人_) 三 /\n　 ＼＿＿＿_／\n　 _/ /_/ /\n　(＿ﾉ(＿ﾉ\n WELCOME!'
-    console.log(welcommsg); //welcome message printing
     let element = [];
-    let solars = [solar1, solar2, solar3, solar6, solar7, solar4, solar5]
     element.push(
-      <div className="solarwrap" data-depth="0.1" style={{ width: "100%", height: "500px", position: "relative", left: "0", }}>
-        <img src={solar1} className={"solar0"} />
+      <div className="solarwrap" key="solar0" data-depth="0.1" style={{ width: "100%", height: "500px", position: "relative", left: "0", }}>
+        <img src={solar1} className={"solar0"} alt = "mercury"/>
         <div className={"shadow solar0"} />
       </div>
     )
     element.push(
-      <div className="solarwrap" data-depth="0.3" style={{ width: "100%", height: "500px", position: "relative", left: "0", }}>
-        <img src={solar2} className={"solar1"} />
+      <div className="solarwrap" key="solar1" data-depth="0.3" style={{ width: "100%", height: "500px", position: "relative", left: "0", }}>
+        <img src={solar2} className={"solar1"} alt = "Venus" />
         <div className={"shadow solar1"} />
       </div>
     )
     element.push(
-      <div className="solarwrap" data-depth="0.2" style={{ width: "100%", height: "500px", position: "relative", left: "0", }}>
-        <img src={solar3} className={"solar2"} />
+      <div className="solarwrap" key="solar2" data-depth="0.2" style={{ width: "100%", height: "500px", position: "relative", left: "0", }}>
+        <img src={solar3} className={"solar2"} alt = "mars" />
         <div className={"shadow solar2"} />
       </div>
     )
     element.push(
-      <div className="solarwrap" data-depth="0.5" style={{ width: "100%", height: "500px", position: "relative", left: "0", }}>
-        <img src={solar6} className={"solar3"} />
+      <div className="solarwrap" key="solar3" data-depth="0.5" style={{ width: "100%", height: "500px", position: "relative", left: "0", }}>
+        <img src={solar6} className={"solar3"} alt = "Uranus" />
         <div className={"shadow solar3"} />
 
-        <img src={solar7} className={"solar4"} />
+        <img src={solar7} className={"solar4"} alt = "neptune" />
         <div className={"shadow solar4"} />
       </div>
     )
     element.push(
-      <div className="solarwrap" data-depth="1" style={{ width: "100%", height: "500px", position: "relative", left: "0", }}>
-        <img src={solar4} className={"solar5"} />
+      <div className="solarwrap" key="solar4" data-depth="1" style={{ width: "100%", height: "500px", position: "relative", left: "0", }}>
+        <img src={solar4} className={"solar5"} alt = "jupyter" />
         <div className={"shadow solar5"} />
 
-        <img src={solar5} className={"solar6"} />
+        <img src={solar5} className={"solar6"} alt = "saturn" />
         <div className={"shadow solar6"} />
       </div>
     )
     return element;
   }
   componentDidMount() {
+    const welcommsg = '　　　　　　　∩\n　　　　　　　||\n　　　　　　　||\n　　　　　　　||\n　　　　　 ／￣￣＼\n　　　　　｜　　　 ヽ\n　　　　　/　　　　 |\n　 |＼　／　／ヽ / ノ\n　 |／￣￣￣＼ |/ /\n　 /　　　　　Ｖ＿)\n　｜(● ●)　 ｜\n　王(_人_) 三 /\n　 ＼＿＿＿_／\n　 _/ /_/ /\n　(＿ﾉ(＿ﾉ\n WELCOME!'
+    console.log(welcommsg); //welcome message printing
+   
     const scene = document.getElementById('solarsystem');
     const Parallax = window.Parallax;
     const parallaxInstance = new Parallax(scene, { hoverOnly: true });

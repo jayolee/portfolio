@@ -26,12 +26,13 @@ class Projects extends Component {
       "gssh": "lUaJy9qo6qA",
     }
     this.contents = projectList;
+    this.width = 0;
   }
   
   rollup() {
     this.setState({opacity:1})
     setTimeout(function () { this.setState({transform:"translateY(0)"}) }.bind(this), 50)
-
+    
 
   }
   rolldown() {
@@ -153,6 +154,7 @@ class Projects extends Component {
     setTimeout(this.rollup(), 10);
     this.setState({anistat:0});
     this.props.starOff();
+    this.width = window.innerWidth;
   }
   componentWillUnmount() {
     this.props.starOn();
@@ -174,7 +176,7 @@ class Projects extends Component {
   }
   render() {
     return (
-      <div style={{ position: "relative", top: "0", left: "0", width: "100%", height: "100%" }}>
+      <div style={{ position: "relative", top: "0", left: "0", width:"100%", height: "100%" }}>
         <div className="greybox" style={{opacity:this.state.opacity}} onClick={this.rolldown.bind(this)}/>
         {this.contentgenerator()}
         

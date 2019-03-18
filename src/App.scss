@@ -35,6 +35,7 @@
 }
 html,
 body {
+  
   margin: 0;
   @include sizes( 100%, 100%,100%);
   padding: 0;
@@ -514,10 +515,10 @@ width:102px;
 
 .works {
   position: relative;
-  @include sizes(null,null, 1100px);
+  @include sizes(100%,null);
   margin: calc(60vh + 86px) auto 40vh;
   padding: 0;
-  text-align: left;
+  text-align: center;
 }
 
 .worksbutton {
@@ -575,13 +576,101 @@ width:102px;
   min-height: 440px;
   @include sizes(100%);
   margin-top:80px;
+  .mainfaWrap{
+    width: 100%;
+    display: flex;
+     margin: 180px auto;
+    justify-content:center;
+    align-items: center;
+    padding: 0 10px;
+    flex-wrap:wrap;
+    @media screen and (max-width: 895px) {
+      display:block;
+    }
+  }
+  .mainfa{
+    @include sizes(50%,null ,700px);
+    margin: 0 10px;
+    img{
+      @include sizes(100%);
+    }
+    @media screen and (max-width: 895px) {
+      width: 100%;
+      margin: 0 auto;
+    }
+  }
+  .mainfades{
+    @include sizes(50%, null, 400px);
+   font-size:20px;
+    line-height: 1.8;
+    text-align:left;
+    margin:0 10px;
+    padding: 0 0 0 40px;
+    @media screen and (max-width: 895px) {
+      padding: 0;
+      text-align: center;
+      width: 100%;
+      margin: 30px auto;
+    }
+  }
+  .moreExpla{
+    display:flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 50px auto 0;
+    .moreouterWrap{
+      width: 50%;
+      min-width: 500px;
+      margin: 0 auto 30px;
+      display: flex;
+      flex-wrap: center;
+      
+    }
+    .morewrap{
+      text-align: center;
+      align-items:center;
+      display: flex;
+      flex-direction: column;
+      padding: 10px;
+      @include sizes(50%,null);
+      min-width: 200px;
+      .moredescrip, .moretitle{
+        max-width: 200px;
+      }
+      
+    }
+    .button{
+      margin-top: 20px;
+      background:#2068b5;
+
+    }
+    .moretitle{
+      margin-top: 6px;
+     margin-bottom: 10px;
+      font: {
+        size: 18px;
+        weight: bold;
+      }
+      line-height: 1.6;
+    }
+    #nao img, #log img{
+        @include sizes(100%, null, 200px);
+      
+    }
+    #report img{
+      @include sizes(100%, null, 200px);
+    }
+    #momo img{
+      @include sizes(100%, null, 200px);
+    }
+  }
   .funwork, .fa{
     display: inline-block;
-    margin: 3% 1%;
+    margin: 2% .5%;
     transition: .4s;
   }
   .funwork{
-    width:31%;
+    width:32%;
   }
   .fa{
     width:23%;
@@ -615,7 +704,7 @@ width:102px;
         @include sizes(null,null,500px,400px);
         transition:.4s;
       }
-      
+    
   }
   .hidden{
     opacity:0;
@@ -627,7 +716,7 @@ width:102px;
 
 .portwrap {
   background: #000;
-  @include sizes(100%, 30vw, 300px, 300px);
+  @include sizes(100%, 30vw, 360px, 300px);
   display: inline-block;
   overflow: hidden;
   position: relative;
@@ -756,7 +845,7 @@ width:102px;
 
 .cprg {
   @include sizes(100%);
-  margin-top:80vh;
+  margin-top:200px;
   margin-bottom: 5px;
   text-align: center;
   font-size: 14px;

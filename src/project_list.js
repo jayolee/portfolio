@@ -117,7 +117,6 @@ import nao_sketches from './naoshima/sketches.gif'
 import nao_about from './naoshima/about.gif'
 import nao_detail from './naoshima/detail.jpg'
 
-import up_main from './up/top.png'
 import up_animals from './up/animals.jpg'
 import up_proto_blow from './up/blow.jpg'
 import up_earlyProto from './up/prototype.jpg'
@@ -202,12 +201,13 @@ export const projectList = {
             </div>
             </div>,
         "Ideation & Research": <div>
+             <p className = "mainT" style={{marginTop:"10px"}}>CMU students cannot sleep because of anxiety about being productive, but the anxiety affects productivity</p>
             <p>Our idea started from interviews with CMU students about causes of stress they get. Interestingly, they answered that students at CMU tend not to sleep even though they don't have things to do. They are worrying about if they are productive enough, and this gives them so much stress. We set the goal of our project as <b>relieving students' stress and promoting productivity.</b></p>
             <p className="mainPoint" >
             <span style={{boxShadow:"inset 0 -1.5px white, inset 0 -3px #E9974C, inset 0 -4.5px white, inset 0 -6px #E9974C"}} >How can a mobile app promote productivity, combat ego-depletion and stress?</span></p>
             <p><br />Our original idea was apply love languages to self-love. We planned to prompt random tasks based on their love languages every day to give students joyful moments to care of themselves. However, we realized that the rationale is weak, so we decided to focus on a specific task which is proven as effective.</p>
             <img src={up_protos} alt="Initial Paper Prototypes" className="zoomable" onClick={zoomimg} /><div className="imgdes">Initial Paper Prototypes</div>
-            
+            <p className = "mainT">Activities proven as improving productivity and relieving stress with 10,000 hours rule as a tracker</p>
             <p>Through literature review, we found activities proven as effective to relieve stress or promote creativity. Among the activities, we paid attention to <a href="http://www.hsj.gr/medicine/stress-management-techniques-evidencebased-procedures-that-reduce-stress-and-promote-health.pdf" target="_blank" rel="noopener noreferrer" ><b>diaphragmatic breathing,</b> which is shown as effective to relieve stress</a> and <a href="https://behavioralandbrainfunctions.biomedcentral.com/articles/10.1186/1744-9081-10-9" target="_blank" rel="noopener noreferrer" ><b>short-term meditation</b> which improves creativity.</a> </p>
             
             <p>Malcolm Gladwell’s 10,000 hours rule states that one requires over 10,000 hours of practice to become an expert of some sort; however, such number of hours is difficult of practice for young adults in college or workplace. <b>But what if we base this idea to encourage users to build a focusing habit?</b> We used this idea to motivate users.</p>
@@ -227,7 +227,7 @@ export const projectList = {
                     <div className="imgwrap_sc" >
                         <img src={up_session} className="phonesc" alt="Concentration Session" /><div className="imgdes">Concentration Session</div></div>
                 
-                <p> <span class="title up">Concentration Timer</span><br />
+                <p> <span className="title up">Concentration Timer</span><br />
                 Users can set a time ranging from a minimum of 15 to a maximum of 90 minutes to work on a task of their choice. Our goal is <br />
                 <ul>
                     <li>Improve users’ productivity by having them devote a set block of time to working on a specific task
@@ -248,7 +248,7 @@ export const projectList = {
                     </div>
     
                     <p>
-                    <span class="title up">Guided Deep-breathing Exercise</span><br />
+                    <span className="title up">Guided Deep-breathing Exercise</span><br />
                     “Break” portion encourages users to follow a guided deep-breathing exercise. A balloon is blown up as users breathe out. 
                     <ul>
                     <li>Ballon is a metaphor of blowing away one’s stress and replenishing mental resource. </li>
@@ -263,7 +263,7 @@ export const projectList = {
                         <img src={up_report} className="phonesc" alt="Report" />
                         <div className="imgdes">'My Island' in Report</div>
                     </div>
-                <p><span class="title up">Saving Virtual Endangered Animals</span><br />
+                <p><span className="title up">Saving Virtual Endangered Animals</span><br />
                     Users can save virtual endangered animals using a certain amount of balloons, which they can obtain after concentration sessions. 
                    <ul>
                     <li>This feature would incentive users to participate in guided-breathing exercise.</li> 
@@ -288,8 +288,9 @@ export const projectList = {
        
 
         "Challenges": <div>
-            <div className="title up">Design Challenge:</div>
-            <p><b>- How can we reduce demoralizing factors?</b><br />
+            
+            <p className = "mainT" style={{marginTop: "30px"}}>How can we reduce demoralizing factors?</p>
+            <p>
                 We conceded about users setting the very short sessions and not performing the breathing sessions to get the rewards. To avoid this, we decided three approaches.
                 <ul>
                     <li>Not offering monetary incentives</li>
@@ -297,10 +298,10 @@ export const projectList = {
                     <li>Using the iPhone breathing sensor</li>
                 </ul>
                 The iPhone breathing sensor not only tracks the activity, but also strengthens the metaphor of blowing away one’s stress.</p>
-            <img src={up_proto_blow} alt="Playing with Breathing Sensor" className="zoomable" onClick={zoomimg} /><div className='imgdes'>Breathing Sensor Detecting the Breathing Activity</div><br /><br />
+            <img src={up_proto_blow} alt="Playing with Breathing Sensor" className="zoomable" onClick={zoomimg} /><div className='imgdes'>Breathing Sensor Detecting the Breathing Activity</div>
 
-            <div className="title up">Technical Challenge:</div>
-            <p><b>- Creating knob dials</b><br />
+            <p className = "mainT">Coding a knob dial</p>
+            <p>
                 The biggest technical challenge I had was creating a knob dial. At first, I tried to calculate the exact X and Y position of a knob using the angle from the center of the dial. However, it was slow and didn't work correctly.</p>
             <div style={{ textAlign: "center" }}>
                 <div className="imgwrap_sc" >
@@ -326,7 +327,7 @@ export const projectList = {
         </div>,
         "Next Steps": <div>
             <img src={up_animals} id="e_animals" alt="Playing with Breathing Sensor" /><div className='imgdes'>Endangered Animal Illustrations By Young</div>
-
+            <p className = "mainT">What if users can save real animals?</p>
             <p className="addmargin">While <i>Up</i> is a productivity mobile application that serves as a concentration tool, the overall message is <b>importance of constant effort and taking efficient breaks.</b> <i>Up</i> aims to reduce the demoralizing factor occurring outside of the application by constantly rewarding users with animals.</p>
             <p>
                 At current stage of design, user are limited to saving virtual animals, which may not be as rewarding as contributing to saving animals in the real world. Therefore, we look forward to having a sponsorship partner with wildlife organizations for future implementations.</p>
@@ -387,6 +388,7 @@ export const projectList = {
         
         </div>,
         "Ideation": <div>
+           
             <p>The ideation started from the matchmaking process. How can we help human using Machine Learning (ML)? While identifying possible activities and domains to which we can apply ML model, one of the dataset from Kaggle (<a href="https://www.kaggle.com/c/whats-cooking" target="_blank" rel="noopener noreferrer">cuisines and ingredients</a>) inspired me. It brought my experience having small amounts of ingredients which are leftovers after cooking. It’s often challenging to deal with these leftovers. 
                 </p>
                 <p className="mainPoint">
@@ -401,6 +403,7 @@ export const projectList = {
             </div>
                 </div>,
         "Initial Research": <div>
+            <p className = "mainT" style={{marginTop: "30px"}}>People don't use Alexa to search for recipes</p>
             <p> In the beginning, I planned to create an Amazon Alexa Skill. <b>However, although 41.4% of people place their smart speakers in the kitchen, only 26.5% of people use the speakers to look for recipes monthly, and only 5.1% people use it daily.</b> This is a comparably low percentage comparing to other popular functions such as listening music (76.2% of monthly use, 41.9% of daily use) or checking the weather (69.1% of monthly use, 41.4% of daily use). <a href=" https://voicebot.ai/2018/03/21/data-breakdown-consumers-use-smart-speakers-today/" target="_blank" rel="noopener noreferrer">(Source)</a> Therefore, I decided to create a website which can also provide visual interaction to users.</p>
             <div className="halfwrap" style={{marginTop:"0"}}>
             <img src={getcuisine8} alt="Where do people put their smart speakers?" className="half" style={{ maxWidth: "500px", marginTop:"0"}} />
@@ -430,30 +433,39 @@ export const projectList = {
      </div>
      </div>,
 
-        "Challenges": <div><p><b>- Lack of the open source recipe dataset</b><br />
+        "Challenges": <div> <p className = "mainT" style={{marginTop:"30px"}}>Using Google search to solve the lack of the open source recipe dataset</p>
+        <p>
             Since there was no open source recipe dataset, I used the <a href="https://www.kaggle.com/c/whats-cooking" target="_blank" rel="noopener noreferrer">cuisines and ingredients dataset</a>. Therefore, I decided to limit the functionality as providing the appropriate cuisine to look for based on the given ingredients. Because providing cuisine requires additional efforts for users to look for a specific food to cook, I also created a function sending users to Google Search searching recipes with the predicted cuisine and given ingredients.</p>
-
-            <p><b>- Debugging server error</b><br />
+            <p className = "mainT">Optimizing the site</p>
+            <p>
+            The biggest issue of using ML is that it is hard to optimize the website for shorter loadings. I tried to optimize the files as much as possible; however, the initial response time is still long due to Heroku (If the app has no traffic for 30 mins, it goes to sleep due to Heroku's policy).
+            </p>
+            <p className = "mainT">Debugging server error</p>
+            <p>
                 This was the first time I used Python Flask and managed the server side. I used ajax call to send and get the data to the server. It kept returning 500 error, and I could not figure out what it was. By deleting the code line by line, I figured out this happened because I passed Null value to the server to run the model. Later, I learned that I also need to make a server return the error indicating what type of error it is for the sake of debugging.
             <img src={getcuisine11} alt="500 error" style={{ maxWidth: "500px" }} /><div className="imgdes">500 Error... What Does It Mean?</div>
             </p>
-            <p><b>- Managing the data type to run the ML model</b><br />
+            <p className = "mainT">Managing the format of users' input to run the ML model</p>
+            <p>
                 The training data I used didn't have colum headers, and the data I passed from the inputs (JSON -> Pandas Dataframe) had column headers. As a result, it only returned French Cuisine (error). I added a line of code to get rid of the column headers to fix the error.
-            <img src={getcuision10} className="imgBorder" style={{ maxWidth: "500px" }} alt="Model Returning Error" /><div className="imgdes">ML Model Only Returning French Cuisine<br />(Curry Paste + Tamarind Paste + Chicken Breasts = French Food?)</div>
+            <img src={getcuision10} className="imgBorder" style={{ maxWidth: "500px" }} alt="Model Returning Error" /><div className="imgdes">ML Model Only Returning French Cuisine<br />(Curry Paste + Tamarind Paste + Chicken Breasts = French Food?)
+            </div>
+            <p>Also, I added an autocomplete function to the search bar using jQuery Autocomplete API because I wanted users to type ingredients in a same format as the train data.</p>
+            
 
             </p>
         </div>,
        
         "Initial Design": <div>
-            <p className="addmargin">I added an autocomplete function to the search bar using jQuery Autocomplete API because I wanted users to type ingredients in a same format as the train data. Also, One of the concerns about this project is that the data this website provides can easily be obtained from websites providing recipes. Also, the data people need is recipes, not a cuisine type to look for. Therefore, I created a function sending users to Google Search searching recipes with the predicted cuisine and given ingredients.</p>
-            <p>
-                 The biggest issue of using ML is that it is hard to optimize the website for shorter loadings. I tried to optimize the files as much as possible; however, the initial response time is still long due to Heroku (If the app has no traffic for 30 mins, it goes to sleep due to Heroku's policy).</p>
+            <p className = "mainT" style={{marginTop:"30px"}}>"Curiosity" can be a value of this website</p>
+            <p className="addmargin">One of the concerns about this project is that the data this website provides can easily be obtained from other websites. Also, the data people need is recipes, not a cuisine type to look for. However, I got feedback that once knowing that this website is using ML, people become curious to see the result and get interested.</p>
 
             <img src={getcuisine3} alt="Cuisine Icons" onClick={zoomimg} className="zoomable" /><div className='imgdes'>Cuisine Icons</div>
-            <img className="zoomable" src={getcuisine1} onClick={zoomimg}/>
+            <img className="zoomable" src={getcuisine1} onClick={zoomimg} alt="final design"/>
                  <div className='imgdes'>Final Design</div>
           </div>,
         "Second Round Research": <div>
+            <p className = "mainT" style={{marginTop:"30px"}}>The solution didn't solve the problem</p>
         <p>However, does this website fulfill the initial goal of "helping people clean out the fridge"? The answer was <b>NO.</b> The website was more about exploring the development of a ML powered website. Therefore, I started the second round of design process to achieve the original goal.</p>
         <p>First, I surveyed to understand what are the struggles people have regarding food consumption cycles, and how people search foods to cook.
             <ul>
@@ -461,7 +473,7 @@ export const projectList = {
                 <li>Almost similar amount of people use ingredients as the keyword as those who use dish names for search to look for recipes.</li>
             </ul>
         Besides, there were fun facts such as <i>People make a meal plan before going  groceries more tends to throw out groceries after they gone bad than those who plan meals after getting groceries.</i> Based on this survey data, I conducted semi-structured interviews to learn about their decision making process about how they decide what to cook from the search result. I created an affinity diagram with the interviews. From the interview, I found some trends.</p>
-        <img src={getcuisine_aff}  onClick={zoomimg} className="zoomable"/><div className='imgdes'>Affinity Diagram</div>
+        <img src={getcuisine_aff}  alt = "Affinity diagram" onClick={zoomimg} className="zoomable"/><div className='imgdes'>Affinity Diagram</div>
         <p>
             <ul>
                 <li>When deciding what to cook using remaining ingredients, it is important how many other ingredients are needed.</li>
@@ -485,6 +497,9 @@ export const projectList = {
         </div>
 
     },
+    "Buncee":{
+
+    } ,
     "logpos": {
         "projectTitle": "LOG + POS",
         "quote": <span>How can we improve the communication at rescue operations using audio AR?<br /><br /></span>,
