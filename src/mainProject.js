@@ -256,7 +256,7 @@ class MainProject extends Component {
             <br />Check out my fine artwork.<br />
 
             <a href="https://jayolee.github.io/portfolio/fineart" rel="noopener noreferrer">
-            <div className = "button" style={{background: "#2068b5"}}>View More Fine Art</div>
+            <div className = "button" style={{background: "#0b6ff5", lineHeight: "1.5"}}>View More Fine Arts</div>
           </a>
           </div>
           

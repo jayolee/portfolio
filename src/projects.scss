@@ -841,7 +841,7 @@ a.member{
 	display:inline-block;
 	margin: 40px auto 50px;
 	cursor: pointer;
-	
+	line-height: 1.5;
 	&:hover {
 	transform: translateY(-4px);
 	box-shadow: 0 6px 30px rgba(0,0,0,0.3);

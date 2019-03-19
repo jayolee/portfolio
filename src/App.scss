@@ -593,6 +593,7 @@ width:102px;
     margin: 0 10px;
     img{
       @include sizes(100%);
+      box-shadow: 0 0 18px rgba(0, 0, 0, 0.4);
     }
     @media screen and (max-width: 895px) {
       width: 100%;
@@ -605,7 +606,7 @@ width:102px;
     line-height: 1.8;
     text-align:left;
     margin:0 10px;
-    padding: 0 0 0 40px;
+    padding: 0 0 0 60px;
     @media screen and (max-width: 895px) {
       padding: 0;
       text-align: center;
@@ -641,7 +642,7 @@ width:102px;
     }
     .button{
       margin-top: 20px;
-      background:#2068b5;
+      background:#0b6ff5;
 
     }
     .moretitle{

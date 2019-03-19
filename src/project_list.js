@@ -178,7 +178,7 @@ export const projectList = {
             "Tool": "React, HTML, SCSS, Adobe Illustrator, Figma",
         },
         "button": <a href="https://jayolee.github.io/Team-UP-prototype_react/" target="_blank" rel="noopener noreferrer">
-            <div className="button up">Play with the Prototype</div></a>,
+            <div className="button up">Play with the React Prototype</div></a>,
         "Process": <div className="processBoxWrap">
             <div className="proBoxLine up" />
             <div className="proBoxOut">
@@ -188,6 +188,7 @@ export const projectList = {
                 <div className="processBox up">Research</div>
                 <div className="processExpla">Interview</div>
                 <div className="processExpla">Literature Review</div>
+                <div className="processExpla">Competitive Analysis</div>
             </div>
             <div className="proBoxOut">
                 <div className="processBox up">Iterate</div>
@@ -199,97 +200,97 @@ export const projectList = {
                 <div className="processBox up fin">Finalize</div>
                 <div className="processExpla">Demo</div>
             </div>
-            </div>,
+        </div>,
         "Ideation & Research": <div>
-             <p className = "mainT" style={{marginTop:"10px"}}>CMU students cannot sleep because of anxiety about being productive, but the anxiety affects productivity</p>
+            <p className="mainT" style={{ marginTop: "10px" }}>CMU students cannot sleep because of anxiety about being productive, but the anxiety affects productivity</p>
             <p>Our idea started from interviews with CMU students about causes of stress they get. Interestingly, they answered that students at CMU tend not to sleep even though they don't have things to do. They are worrying about if they are productive enough, and this gives them so much stress. We set the goal of our project as <b>relieving students' stress and promoting productivity.</b></p>
             <p className="mainPoint" >
-            <span style={{boxShadow:"inset 0 -1.5px white, inset 0 -3px #E9974C, inset 0 -4.5px white, inset 0 -6px #E9974C"}} >How can a mobile app promote productivity, combat ego-depletion and stress?</span></p>
+                <span style={{ boxShadow: "inset 0 -1.5px white, inset 0 -3px #E9974C, inset 0 -4.5px white, inset 0 -6px #E9974C" }} >How can a mobile app promote productivity, combat ego-depletion and stress?</span></p>
             <p><br />Our original idea was apply love languages to self-love. We planned to prompt random tasks based on their love languages every day to give students joyful moments to care of themselves. However, we realized that the rationale is weak, so we decided to focus on a specific task which is proven as effective.</p>
             <img src={up_protos} alt="Initial Paper Prototypes" className="zoomable" onClick={zoomimg} /><div className="imgdes">Initial Paper Prototypes</div>
-            <p className = "mainT">Activities proven as improving productivity and relieving stress with 10,000 hours rule as a tracker</p>
+            <p className="mainT">Activities proven as improving productivity and relieving stress with 10,000 hours rule as a tracker</p>
             <p>Through literature review, we found activities proven as effective to relieve stress or promote creativity. Among the activities, we paid attention to <a href="http://www.hsj.gr/medicine/stress-management-techniques-evidencebased-procedures-that-reduce-stress-and-promote-health.pdf" target="_blank" rel="noopener noreferrer" ><b>diaphragmatic breathing,</b> which is shown as effective to relieve stress</a> and <a href="https://behavioralandbrainfunctions.biomedcentral.com/articles/10.1186/1744-9081-10-9" target="_blank" rel="noopener noreferrer" ><b>short-term meditation</b> which improves creativity.</a> </p>
-            
+
             <p>Malcolm Gladwell’s 10,000 hours rule states that one requires over 10,000 hours of practice to become an expert of some sort; however, such number of hours is difficult of practice for young adults in college or workplace. <b>But what if we base this idea to encourage users to build a focusing habit?</b> We used this idea to motivate users.</p>
-            <img src={up_activity} style={{maxWidth:"700px", width:"100%"}} alt="Design Rationales"/><div className="imgdes" style={{marginBottom:"50px"}}>Design Rationales</div>
+            <img src={up_activity} style={{ maxWidth: "700px", width: "100%" }} alt="Design Rationales" /><div className="imgdes" style={{ marginBottom: "50px" }}>Design Rationales</div>
 
             <p>
                 Based on the research we conducted, our team created ​<i><b>Up</b></i> based on several psychological concepts including self control, ego-depletion, stress-reduction, and embodied cognition. <i>Up</i> encourages users <b>to form a habitual focus timing of 90 minutes.</b> Users are encouraged to perform a short guided breathing exercise of blowing a balloon immediately after a focus session concludes to regather
                 brain resources. </p>
-                <p className="solutionPoint"><span style={{color:"#e9974c", fontSize:"26px", fontWeight:"bold"}}>Up,</span> an app that encourages users to form a habitual focus timing of 90 minutes.</p></div>,
-        "The Solution":<div>
-                <img src={up_screenmap} alt="Screenmap" className="zoomable imgBorder" onClick={zoomimg} /><div className="imgdes">Screenmap of the Final Design</div>
-                <div style={{textAlign:"center"}}>
+            <p className="solutionPoint"><span style={{ color: "#e9974c", fontSize: "26px", fontWeight: "bold" }}>Up,</span> an app that encourages users to form a habitual focus timing of 90 minutes.</p></div>,
+        "The Solution": <div>
+            <img src={up_screenmap} alt="Screenmap" className="zoomable imgBorder" onClick={zoomimg} /><div className="imgdes">Screenmap of the Final Design</div>
+            <div style={{ textAlign: "center" }}>
                 <a href="https://jayolee.github.io/Team-UP-prototype_react/" target="_blank" rel="noopener noreferrer">
-            <div className="button up" style={{margin:"20px auto 40px"}}>Play with the Prototype</div></a></div>
-                <div className="up_expla_screen">
-                    
-                    <div className="imgwrap_sc" >
-                        <img src={up_session} className="phonesc" alt="Concentration Session" /><div className="imgdes">Concentration Session</div></div>
-                
-                <p> <span className="title up">Concentration Timer</span><br />
-                Users can set a time ranging from a minimum of 15 to a maximum of 90 minutes to work on a task of their choice. Our goal is <br />
-                <ul>
-                    <li>Improve users’ productivity by having them devote a set block of time to working on a specific task
-                    </li>
-                    <li>
-                    Prevent them from working on a task too long that they run out of mental energy
-                    </li>
-                </ul>
-                The concentration timer is modeled off the <b>Pomodoro technique.</b> 
-                {/* which was designed for people to overcome procrastination by committing fully to completing a certain task during a time period of 25 minutes and then having a break of 5 minutes. */}
-                </p>
-                </div>
-    
-    
-                <div className="up_expla_screen">
+                    <div className="button up" style={{ margin: "20px auto 40px" }}>Play with the React Prototype</div></a></div>
+            <div className="up_expla_screen">
+
                 <div className="imgwrap_sc" >
-                        <img src={up_breathing} className="phonesc" alt="Breathing Session" /><div className="imgdes">Breathing Session</div>
-                    </div>
-    
-                    <p>
-                    <span className="title up">Guided Deep-breathing Exercise</span><br />
-                    “Break” portion encourages users to follow a guided deep-breathing exercise. A balloon is blown up as users breathe out. 
+                    <img src={up_session} className="phonesc" alt="Concentration Session" /><div className="imgdes">Concentration Session</div></div>
+
+                <p> <span className="title up">Concentration Timer</span><br />
+                    Users can set a time ranging from a minimum of 15 to a maximum of 90 minutes to work on a task of their choice. Our goal is <br />
                     <ul>
-                    <li>Ballon is a metaphor of blowing away one’s stress and replenishing mental resource. </li>
-                    <li>This contributes to users forming the habit of working productively, taking breaks, and ultimately returning to our application.</li>
+                        <li>Improve users’ productivity by having them devote a set block of time to working on a specific task
+                    </li>
+                        <li>
+                            Prevent them from working on a task too long that they run out of mental energy
+                    </li>
+                    </ul>
+                    The concentration timer is modeled off the <b>Pomodoro technique.</b>
+                    {/* which was designed for people to overcome procrastination by committing fully to completing a certain task during a time period of 25 minutes and then having a break of 5 minutes. */}
+                </p>
+            </div>
+
+
+            <div className="up_expla_screen">
+                <div className="imgwrap_sc" >
+                    <img src={up_breathing} className="phonesc" alt="Breathing Session" /><div className="imgdes">Breathing Session</div>
+                </div>
+
+                <p>
+                    <span className="title up">Guided Deep-breathing Exercise</span><br />
+                    “Break” portion encourages users to follow a guided deep-breathing exercise. A balloon is blown up as users breathe out.
+                    <ul>
+                        <li>Ballon is a metaphor of blowing away one’s stress and replenishing mental resource. </li>
+                        <li>This contributes to users forming the habit of working productively, taking breaks, and ultimately returning to our application.</li>
                     </ul>
                     We used <b>an obfuscation via distancing.</b> The gamified elements (colorful graphics) would serve as red herrings to detract from our stealth interventions.</p>
+            </div>
+
+
+            <div className="up_expla_screen">
+                <div className="imgwrap_sc" >
+                    <img src={up_report} className="phonesc" alt="Report" />
+                    <div className="imgdes">'My Island' in Report</div>
                 </div>
-              
-                   
-                <div className="up_expla_screen">   
-                    <div className="imgwrap_sc" >
-                        <img src={up_report} className="phonesc" alt="Report" />
-                        <div className="imgdes">'My Island' in Report</div>
-                    </div>
                 <p><span className="title up">Saving Virtual Endangered Animals</span><br />
-                    Users can save virtual endangered animals using a certain amount of balloons, which they can obtain after concentration sessions. 
+                    Users can save virtual endangered animals using a certain amount of balloons, which they can obtain after concentration sessions.
                    <ul>
-                    <li>This feature would incentive users to participate in guided-breathing exercise.</li> 
-                    <li><b>By not giving out monetary incentives, we avoid undermining intrinsic motivation (developing their skills).</b></li>
+                        <li>This feature would incentive users to participate in guided-breathing exercise.</li>
+                        <li><b>By not giving out monetary incentives, we avoid undermining intrinsic motivation (developing their skills).</b></li>
                     </ul></p></div>
-                    </div>,
+        </div>,
 
         "Design Process": <div>
-            <img src={up_iniscr} alt="Initial Screenmap" className="zoomable" onClick={zoomimg}/> 
+            <img src={up_iniscr} alt="Initial Screenmap" className="zoomable" onClick={zoomimg} />
             <div className="imgdes">Screenmap of Initial Prototype</div>
             <p>After the literature review, our team created a lo-fi prototype using Figma based on the insights we gained. We conducted Think-aloud with this prototype. At this point, the main features were <ul>
                 <li>Selecting an animal to save before starting the session.</li>
                 <li>Concentration session in the amount of maximum 90 minutes.</li>
-                <li>Following guided breathing session while watching characterized balloons.</li></ul></p> 
+                <li>Following guided breathing session while watching characterized balloons.</li></ul></p>
             <div className="halfwrap">
-            <img src={up_meeting} alt="Early Prototype" className="half zoomable" onClick={zoomimg} />
-            <img src={up_earlyProto} className="half zoomable" alt="Early Prototype" onClick={zoomimg} /> <div className='imgdes'>Screen Sketches by Young and Think-aloud Using the Early Prototype</div>
+                <img src={up_meeting} alt="Early Prototype" className="half zoomable" onClick={zoomimg} />
+                <img src={up_earlyProto} className="half zoomable" alt="Early Prototype" onClick={zoomimg} /> <div className='imgdes'>Screen Sketches by Young and Think-aloud Using the Early Prototype</div>
             </div>
-                <p>From the Think-aloud, we got feedback that the connection between saving endangered animals and the concentration session is not clear. Also, we added facial expression on balloons to create empathy; however, most testers felt that <b>facial expressions are distracting,</b> because they need to hold their phones near their mouth while following the instructions.<br />
+            <p>From the Think-aloud, we got feedback that the connection between saving endangered animals and the concentration session is not clear. Also, we added facial expression on balloons to create empathy; however, most testers felt that <b>facial expressions are distracting,</b> because they need to hold their phones near their mouth while following the instructions.<br />
                 From the testing, we realized that it is <b>hard to get meaningful usability test data with static screens due to the missing key interactions.</b> Therefore, we decided to create a working prototype by code to give realistic experience to our testers. It was my role to build a working prototype.</p></div>,
-       
-       
+
+
 
         "Challenges": <div>
-            
-            <p className = "mainT" style={{marginTop: "30px"}}>How can we reduce demoralizing factors?</p>
+
+            <p className="mainT" style={{ marginTop: "30px" }}>How can we reduce demoralizing factors?</p>
             <p>
                 We conceded about users setting the very short sessions and not performing the breathing sessions to get the rewards. To avoid this, we decided three approaches.
                 <ul>
@@ -300,7 +301,7 @@ export const projectList = {
                 The iPhone breathing sensor not only tracks the activity, but also strengthens the metaphor of blowing away one’s stress.</p>
             <img src={up_proto_blow} alt="Playing with Breathing Sensor" className="zoomable" onClick={zoomimg} /><div className='imgdes'>Breathing Sensor Detecting the Breathing Activity</div>
 
-            <p className = "mainT">Coding a knob dial</p>
+            <p className="mainT">Coding a knob dial</p>
             <p>
                 The biggest technical challenge I had was creating a knob dial. At first, I tried to calculate the exact X and Y position of a knob using the angle from the center of the dial. However, it was slow and didn't work correctly.</p>
             <div style={{ textAlign: "center" }}>
@@ -327,7 +328,7 @@ export const projectList = {
         </div>,
         "Next Steps": <div>
             <img src={up_animals} id="e_animals" alt="Playing with Breathing Sensor" /><div className='imgdes'>Endangered Animal Illustrations By Young</div>
-            <p className = "mainT">What if users can save real animals?</p>
+            <p className="mainT">What if users can save real animals?</p>
             <p className="addmargin">While <i>Up</i> is a productivity mobile application that serves as a concentration tool, the overall message is <b>importance of constant effort and taking efficient breaks.</b> <i>Up</i> aims to reduce the demoralizing factor occurring outside of the application by constantly rewarding users with animals.</p>
             <p>
                 At current stage of design, user are limited to saving virtual animals, which may not be as rewarding as contributing to saving animals in the real world. Therefore, we look forward to having a sponsorship partner with wildlife organizations for future implementations.</p>
@@ -337,7 +338,7 @@ export const projectList = {
         "projectTitle": "Get Cuisine",
         "quote": "How might Machine Learning can help people?",
         "topimg": <div style={{ width: "640px", maxWidth: "100%", height: "auto", margin: "0 auto" }}><Vimeo video="315035206" /></div>,
-        
+
         "exlpla": {
             "Duration": "Dec 2018 ~ Current",
             "Team": "Ja Young Lee",
@@ -346,160 +347,187 @@ export const projectList = {
         },
         "button": <div><a href="http://getcuisine.herokuapp.com" target="_blank" rel="noopener noreferrer">
             <div className="button getcuisine">Go to the Website</div></a>
-            <div style={{transform:"translateY(-26px)"}}>*Initial loading is very slow</div>
-            </div>,
-        "Process": <div> 
-        <div className="processBoxWrap">
-         <div className="proBoxLine getcuisine" />
-        <div className="proBoxOut">
-            <div className="processBox getcuisine">Ideate</div>
-            <div className="processExpla">Matchmaking</div>
-        </div>
-        <div className="proBoxOut">
-            <div className="processBox getcuisine">Research</div>
-            <div className="processExpla">Descriptive Research</div>
-            <div className="processExpla">Survey</div>
-        </div>
-        <div className="proBoxOut">
-            <div className="processBox getcuisine">Iterate</div>
-            <div className="processExpla">Hi-fi Prototype</div>
-            <div className="processExpla">Think-aloud</div>
-        </div>
-        <div className="proBoxOut">
-            <div className="processBox getcuisine fin">Finalize</div>
-            <div className="processExpla">Deployment</div>
-        </div>
-        </div>
-        <div className="processBoxWrap">
-         <div className="proBoxLine getcuisine" />
-        <div className="proBoxOut">
-            <div className="processBox getcuisine">Research</div>
-            <div className="processExpla">Survey</div>
-            <div className="processExpla">Semi-Structured Interview</div>
-            <div className="processExpla">Affinity Diagraming</div>
-            <div className="processExpla">User Personas</div>
-            <div className="processExpla">Speed Dating</div>
-        </div>
-        
-        <div className="proBoxOut">
-            <div className="processBox getcuisine">Iterate</div>
-        </div>
-        </div>
-        
+            <div style={{ transform: "translateY(-26px)" }}>*Initial loading is very slow</div>
+        </div>,
+        "Process": <div>
+            <div className="processBoxWrap">
+                <div className="proBoxLine getcuisine" />
+                <div className="proBoxOut">
+                    <div className="processBox getcuisine">Ideate</div>
+                    <div className="processExpla">Matchmaking</div>
+                </div>
+                <div className="proBoxOut">
+                    <div className="processBox getcuisine">Research</div>
+                    <div className="processExpla">Descriptive Research</div>
+                    <div className="processExpla">Survey</div>
+                </div>
+                <div className="proBoxOut">
+                    <div className="processBox getcuisine">Iterate</div>
+                    <div className="processExpla">Hi-fi Prototype</div>
+                    <div className="processExpla">Think-aloud</div>
+                </div>
+                <div className="proBoxOut">
+                    <div className="processBox getcuisine fin">Finalize</div>
+                    <div className="processExpla">Deployment</div>
+                </div>
+            </div>
+            <div className="processBoxWrap">
+                <div className="proBoxLine getcuisine" />
+                <div className="proBoxOut">
+                    <div className="processBox getcuisine">Research</div>
+                    <div className="processExpla">Survey</div>
+                    <div className="processExpla">Semi-Structured Interview</div>
+                    <div className="processExpla">Affinity Diagraming</div>
+                    <div className="processExpla">User Personas</div>
+                    <div className="processExpla">Speed Dating</div>
+                </div>
+
+                <div className="proBoxOut">
+                    <div className="processBox getcuisine">Iterate</div>
+                </div>
+            </div>
+
         </div>,
         "Ideation": <div>
-           
-            <p>The ideation started from the matchmaking process. How can we help human using Machine Learning (ML)? While identifying possible activities and domains to which we can apply ML model, one of the dataset from Kaggle (<a href="https://www.kaggle.com/c/whats-cooking" target="_blank" rel="noopener noreferrer">cuisines and ingredients</a>) inspired me. It brought my experience having small amounts of ingredients which are leftovers after cooking. It’s often challenging to deal with these leftovers. 
+
+            <p>The ideation started from the matchmaking process. How can we help human using Machine Learning (ML)? While identifying possible activities and domains to which we can apply ML model, one of the dataset from Kaggle (<a href="https://www.kaggle.com/c/whats-cooking" target="_blank" rel="noopener noreferrer">cuisines and ingredients</a>) inspired me. It brought my experience having small amounts of ingredients which are leftovers after cooking. It’s often challenging to deal with these leftovers.
                 </p>
-                <p className="mainPoint">
-                <span style={{boxShadow:"inset 0 -1.5px white, inset 0 -3px #617D31, inset 0 -4.5px white, inset 0 -6px #617D31"}} >How might Machine Learning help people clean out the fridge?</span></p>
-                
-                <p>
+            <p className="mainPoint">
+                <span style={{ boxShadow: "inset 0 -1.5px white, inset 0 -3px #617D31, inset 0 -4.5px white, inset 0 -6px #617D31" }} >How might Machine Learning help people clean out the fridge?</span></p>
+
+            <p>
                 The idea of creating a ML model can help people cleaning out their fridges came up in my mind. I created a ML model providing foods to cook based on the ingredients provided from users, and deployed a web platform for people to be able to use this model.</p>
-                <p className="solutionPoint"><span style={{color:"#617d31", fontSize:"26px", fontWeight:"bold"}}>Get Cuisine,</span> a ML powered web platform to help clean out the fridge</p>
-                <div style={{textAlign:"center"}}><a href="http://getcuisine.herokuapp.com" target="_blank" rel="noopener noreferrer">
-            <div className="button getcuisine" style={{margin:"20px auto 40px"}}>Go to the Website</div></a>
-            <div style={{transform:"translateY(-26px)", margin:"0", height:"0"}}>*Initial loading is very slow</div>
+            <p className="solutionPoint"><span style={{ color: "#617d31", fontSize: "26px", fontWeight: "bold" }}>Get Cuisine,</span> a ML powered web platform to help clean out the fridge</p>
+            <div style={{ textAlign: "center" }}><a href="http://getcuisine.herokuapp.com" target="_blank" rel="noopener noreferrer">
+                <div className="button getcuisine" style={{ margin: "20px auto 40px" }}>Go to the Website</div></a>
+                <div style={{ transform: "translateY(-26px)", margin: "0", height: "0" }}>*Initial loading is very slow</div>
             </div>
-                </div>,
+        </div>,
         "Initial Research": <div>
-            <p className = "mainT" style={{marginTop: "30px"}}>People don't use Alexa to search for recipes</p>
+            <p className="mainT" style={{ marginTop: "30px" }}>People don't use Alexa to search for recipes</p>
             <p> In the beginning, I planned to create an Amazon Alexa Skill. <b>However, although 41.4% of people place their smart speakers in the kitchen, only 26.5% of people use the speakers to look for recipes monthly, and only 5.1% people use it daily.</b> This is a comparably low percentage comparing to other popular functions such as listening music (76.2% of monthly use, 41.9% of daily use) or checking the weather (69.1% of monthly use, 41.4% of daily use). <a href=" https://voicebot.ai/2018/03/21/data-breakdown-consumers-use-smart-speakers-today/" target="_blank" rel="noopener noreferrer">(Source)</a> Therefore, I decided to create a website which can also provide visual interaction to users.</p>
-            <div className="halfwrap" style={{marginTop:"0"}}>
-            <img src={getcuisine8} alt="Where do people put their smart speakers?" className="half" style={{ maxWidth: "500px", marginTop:"0"}} />
-            <img src={getcuisine9} alt="Smart Speaker Use Case Frequency Jan 2018" className="half" style={{ maxWidth: "500px", marginTop:"0"}}/><div className="imgdes">
-                <a href=" https://voicebot.ai/2018/03/21/data-breakdown-consumers-use-smart-speakers-today/" target="_blank" rel="noopener noreferrer">(Source of the graphs above)</a>
+            <div className="halfwrap" style={{ marginTop: "0" }}>
+                <img src={getcuisine8} alt="Where do people put their smart speakers?" className="half" style={{ maxWidth: "500px", marginTop: "0" }} />
+                <img src={getcuisine9} alt="Smart Speaker Use Case Frequency Jan 2018" className="half" style={{ maxWidth: "500px", marginTop: "0" }} /><div className="imgdes">
+                    <a href=" https://voicebot.ai/2018/03/21/data-breakdown-consumers-use-smart-speakers-today/" target="_blank" rel="noopener noreferrer">(Source of the graphs above)</a>
                 </div>
             </div>
         </div>,
- "ML Model": <div>
-     <p>
-     I built pipelines of three algorithms: K-Nearest Neighbors (K-NN), Support Vector Machine, Multinomial Naive Bayesian from Scikit-learn with CountVectorizer and TfidfTransformer. Among three models, I decided to use K-NN model because it returned highest accuracy from K-fold Cross-validation (K = 5).</p>
-    <img src={getcuisineword} alt = "Pipeline Structure" />
-    <div className="imgdes">Pipeline Structure</div>
-     <div className="triwrap getcuisine" style={{marginTop:"60px"}}>
-     <div className = "triinner" style={{border:"4px solid rgba(97,125,49,0.5)", padding:"5px 15px 5px 0", borderRadius:"10px"}}>
-        <img src={getcuisinemod1} alt="K-NN Model"  className="half" />
-        <div className="imgdes">K-NN Model<br />Accuracy: 0.73</div>
-     </div>
-     <div className = "triinner">
-        <img src={getcuisinemod2} alt= "SVM Model" className="half" />
-        <div className="imgdes">SVM Model<br />Accuracy: 0.06</div>
-     </div>
-     <div className = "triinner">
-        <img src={getcuisinemod3} alt = "Multinomial Naive Bayesian Model" className="half"/>
-        <div className="imgdes">Multinomial NB Model<br />Accuracy: 0.63</div>
-     </div>
-     </div>
-     </div>,
-
-        "Challenges": <div> <p className = "mainT" style={{marginTop:"30px"}}>Using Google search to solve the lack of the open source recipe dataset</p>
-        <p>
-            Since there was no open source recipe dataset, I used the <a href="https://www.kaggle.com/c/whats-cooking" target="_blank" rel="noopener noreferrer">cuisines and ingredients dataset</a>. Therefore, I decided to limit the functionality as providing the appropriate cuisine to look for based on the given ingredients. Because providing cuisine requires additional efforts for users to look for a specific food to cook, I also created a function sending users to Google Search searching recipes with the predicted cuisine and given ingredients.</p>
-            <p className = "mainT">Optimizing the site</p>
+        "ML Model": <div>
             <p>
-            The biggest issue of using ML is that it is hard to optimize the website for shorter loadings. I tried to optimize the files as much as possible; however, the initial response time is still long due to Heroku (If the app has no traffic for 30 mins, it goes to sleep due to Heroku's policy).
+                I built pipelines of three algorithms: K-Nearest Neighbors (K-NN), Support Vector Machine, Multinomial Naive Bayesian from Scikit-learn with CountVectorizer and TfidfTransformer. Among three models, I decided to use K-NN model because it returned highest accuracy from K-fold Cross-validation (K = 5).</p>
+            <img src={getcuisineword} alt="Pipeline Structure" />
+            <div className="imgdes">Pipeline Structure</div>
+            <div className="triwrap getcuisine" style={{ marginTop: "60px" }}>
+                <div className="triinner" style={{ border: "4px solid rgba(97,125,49,0.5)", padding: "5px 15px 5px 0", borderRadius: "10px" }}>
+                    <img src={getcuisinemod1} alt="K-NN Model" className="half" />
+                    <div className="imgdes">K-NN Model<br />Accuracy: 0.73</div>
+                </div>
+                <div className="triinner">
+                    <img src={getcuisinemod2} alt="SVM Model" className="half" />
+                    <div className="imgdes">SVM Model<br />Accuracy: 0.06</div>
+                </div>
+                <div className="triinner">
+                    <img src={getcuisinemod3} alt="Multinomial Naive Bayesian Model" className="half" />
+                    <div className="imgdes">Multinomial NB Model<br />Accuracy: 0.63</div>
+                </div>
+            </div>
+        </div>,
+
+        "Challenges": <div> <p className="mainT" style={{ marginTop: "30px" }}>Using Google search to solve the lack of the open source recipe dataset</p>
+            <p>
+                Since there was no open source recipe dataset, I used the <a href="https://www.kaggle.com/c/whats-cooking" target="_blank" rel="noopener noreferrer">cuisines and ingredients dataset</a>. Therefore, I decided to limit the functionality as providing the appropriate cuisine to look for based on the given ingredients. Because providing cuisine requires additional efforts for users to look for a specific food to cook, I also created a function sending users to Google Search searching recipes with the predicted cuisine and given ingredients.</p>
+            <p className="mainT">Optimizing the site</p>
+            <p>
+                The biggest issue of using ML is that it is hard to optimize the website for shorter loadings. I tried to optimize the files as much as possible; however, the initial response time is still long due to Heroku (If the app has no traffic for 30 mins, it goes to sleep due to Heroku's policy).
             </p>
-            <p className = "mainT">Debugging server error</p>
+            <p className="mainT">Debugging server error</p>
             <p>
                 This was the first time I used Python Flask and managed the server side. I used ajax call to send and get the data to the server. It kept returning 500 error, and I could not figure out what it was. By deleting the code line by line, I figured out this happened because I passed Null value to the server to run the model. Later, I learned that I also need to make a server return the error indicating what type of error it is for the sake of debugging.
             <img src={getcuisine11} alt="500 error" style={{ maxWidth: "500px" }} /><div className="imgdes">500 Error... What Does It Mean?</div>
             </p>
-            <p className = "mainT">Managing the format of users' input to run the ML model</p>
+            <p className="mainT">Managing the format of users' input to run the ML model</p>
             <p>
                 The training data I used didn't have colum headers, and the data I passed from the inputs (JSON -> Pandas Dataframe) had column headers. As a result, it only returned French Cuisine (error). I added a line of code to get rid of the column headers to fix the error.
             <img src={getcuision10} className="imgBorder" style={{ maxWidth: "500px" }} alt="Model Returning Error" /><div className="imgdes">ML Model Only Returning French Cuisine<br />(Curry Paste + Tamarind Paste + Chicken Breasts = French Food?)
             </div>
-            <p>Also, I added an autocomplete function to the search bar using jQuery Autocomplete API because I wanted users to type ingredients in a same format as the train data.</p>
-            
+                <p>Also, I added an autocomplete function to the search bar using jQuery Autocomplete API because I wanted users to type ingredients in a same format as the train data.</p>
+
 
             </p>
         </div>,
-       
+
         "Initial Design": <div>
-            <p className = "mainT" style={{marginTop:"30px"}}>"Curiosity" can be a value of this website</p>
+            <p className="mainT" style={{ marginTop: "30px" }}>"Curiosity" can be a value of this website</p>
             <p className="addmargin">One of the concerns about this project is that the data this website provides can easily be obtained from other websites. Also, the data people need is recipes, not a cuisine type to look for. However, I got feedback that once knowing that this website is using ML, people become curious to see the result and get interested.</p>
 
             <img src={getcuisine3} alt="Cuisine Icons" onClick={zoomimg} className="zoomable" /><div className='imgdes'>Cuisine Icons</div>
-            <img className="zoomable" src={getcuisine1} onClick={zoomimg} alt="final design"/>
-                 <div className='imgdes'>Final Design</div>
-          </div>,
+            <img className="zoomable" src={getcuisine1} onClick={zoomimg} alt="final design" />
+            <div className='imgdes'>Final Design</div>
+        </div>,
         "Second Round Research": <div>
-            <p className = "mainT" style={{marginTop:"30px"}}>The solution didn't solve the problem</p>
-        <p>However, does this website fulfill the initial goal of "helping people clean out the fridge"? The answer was <b>NO.</b> The website was more about exploring the development of a ML powered website. Therefore, I started the second round of design process to achieve the original goal.</p>
-        <p>First, I surveyed to understand what are the struggles people have regarding food consumption cycles, and how people search foods to cook.
+            <p className="mainT" style={{ marginTop: "30px" }}>The solution didn't solve the problem</p>
+            <p>However, does this website fulfill the initial goal of "helping people clean out the fridge"? The answer was <b>NO.</b> The website was more about exploring the development of a ML powered website. Therefore, I started the second round of design process to achieve the original goal.</p>
+            <p>First, I surveyed to understand what are the struggles people have regarding food consumption cycles, and how people search foods to cook.
             <ul>
-                <li>Almost similar amount of people usually throw out leftover ingredients after gone bad as people who cook another food with those.</li>
-                <li>Almost similar amount of people use ingredients as the keyword as those who use dish names for search to look for recipes.</li>
-            </ul>
-        Besides, there were fun facts such as <i>People make a meal plan before going  groceries more tends to throw out groceries after they gone bad than those who plan meals after getting groceries.</i> Based on this survey data, I conducted semi-structured interviews to learn about their decision making process about how they decide what to cook from the search result. I created an affinity diagram with the interviews. From the interview, I found some trends.</p>
-        <img src={getcuisine_aff}  alt = "Affinity diagram" onClick={zoomimg} className="zoomable"/><div className='imgdes'>Affinity Diagram</div>
-        <p>
-            <ul>
-                <li>When deciding what to cook using remaining ingredients, it is important how many other ingredients are needed.</li>
-                <li>When cooking with leftover ingredients, not only finding a recipe using only the currently having ingredients, but required utensils are also important.</li>
-                <li>Sometimes search results are overwhelming, and the experience of leftovers prevents people from cooking.</li>
-            </ul>
-        </p>
-        <p>Based on the interview, I created two personas and storyboards.</p>
-        <div className="halfwrap">
-            <img src={getcuisine_persona1} alt="Persona 1" className="half" style={{maxWidth:"350px", marginTop:"0"}}/>
-            <img src={getcuisine_persona2} className="half" alt="Persona 2" style={{maxWidth:"350px", marginTop:"0"}}/> <div className='imgdes'>Personas Created Based on the Survey and Semi-Structured Interview</div>
-            
-        </div>
-        <img src={getcuisine_story} alt="Storyboard"  onClick={zoomimg} className="zoomable"/>
-        <div className='imgdes'>Storyboards Explaining the Scenarios</div>
-        <p>How can <i>Get Cuisine</i> website be integrated to the service as additional feature to help people? I got the inspiration from the interviews. I asked people if they had tried new dishes to cook, what the reasons were. Many people who cook often like trying new foods. I thought that I can connect this to another insight that sometimes search results are overwhelming, and the experience of leftovers prevents people from cooking. Below is the scenario of how an app can convey the insight.</p>
-        <img src={getcuisine_story2} alt="Storyboard"  onClick={zoomimg} className="zoomable"/>
-        <div className='imgdes'>A Scenario Explaining How Get Cuisine Function Can Help People</div>
-        <p>Currently, I am conducting Speed Dating with the storyboards.</p>
-        <p style={{textAlign:"center", fontSize:"24px",fontWeight:"bold",color:"rgb(97,125,49)"}}>To be continued!</p>
+                    <li>Almost similar amount of people usually throw out leftover ingredients after gone bad as people who cook another food with those.</li>
+                    <li>Almost similar amount of people use ingredients as the keyword as those who use dish names for search to look for recipes.</li>
+                </ul>
+                Besides, there were fun facts such as <i>People make a meal plan before going  groceries more tends to throw out groceries after they gone bad than those who plan meals after getting groceries.</i> Based on this survey data, I conducted semi-structured interviews to learn about their decision making process about how they decide what to cook from the search result. I created an affinity diagram with the interviews. From the interview, I found some trends.</p>
+            <img src={getcuisine_aff} alt="Affinity diagram" onClick={zoomimg} className="zoomable" /><div className='imgdes'>Affinity Diagram</div>
+            <p>
+                <ul>
+                    <li>When deciding what to cook using remaining ingredients, it is important how many other ingredients are needed.</li>
+                    <li>When cooking with leftover ingredients, not only finding a recipe using only the currently having ingredients, but required utensils are also important.</li>
+                    <li>Sometimes search results are overwhelming, and the experience of leftovers prevents people from cooking.</li>
+                </ul>
+            </p>
+            <p>Based on the interview, I created two personas and storyboards.</p>
+            <div className="halfwrap">
+                <img src={getcuisine_persona1} alt="Persona 1" className="half" style={{ maxWidth: "350px", marginTop: "0" }} />
+                <img src={getcuisine_persona2} className="half" alt="Persona 2" style={{ maxWidth: "350px", marginTop: "0" }} /> <div className='imgdes'>Personas Created Based on the Survey and Semi-Structured Interview</div>
+
+            </div>
+            <img src={getcuisine_story} alt="Storyboard" onClick={zoomimg} className="zoomable" />
+            <div className='imgdes'>Storyboards Explaining the Scenarios</div>
+            <p>How can <i>Get Cuisine</i> website be integrated to the service as additional feature to help people? I got the inspiration from the interviews. I asked people if they had tried new dishes to cook, what the reasons were. Many people who cook often like trying new foods. I thought that I can connect this to another insight that sometimes search results are overwhelming, and the experience of leftovers prevents people from cooking. Below is the scenario of how an app can convey the insight.</p>
+            <img src={getcuisine_story2} alt="Storyboard" onClick={zoomimg} className="zoomable" />
+            <div className='imgdes'>A Scenario Explaining How Get Cuisine Function Can Help People</div>
+            <p>Currently, I am conducting Speed Dating with the storyboards.</p>
+            <p style={{ textAlign: "center", fontSize: "24px", fontWeight: "bold", color: "rgb(97,125,49)" }}>To be continued!</p>
         </div>
 
     },
-    "Buncee":{
+    "buncee": {
+        "projectTitle": "Buncee",
+        "quote": <span>A creating tool for school communities<br /><br /></span>,
+        "topimg": <div />,
+        "exlpla": {
+            "": <span>I worked as a graphic/UX designer at <i>Buncee</i> from May 2015 to May 2017.<br />Below are some projects I participated at Buncee.</span>,
+        },
+        "Buncee Features": <div>
+            <p><b>Role:</b> Web design, prototyping using HTML/CSS/JQuery, Infographics</p>
+            <p>A web page explaining the features of Buncee</p>
+            <p>Challenges: Explaining different levels of features
+                - Canvas features, - Different type of users (School, Teacher, students)
+                Creating infographic can explain abstract concept </p>
+        </div>,
+        "Buncee Gallery": <div>
+        <p><b>Role:</b> Web design, prototyping using HTML/CSS/JQuery</p>
+        <p>A portal where students and teachers can get the sample Buncees as references</p>
+        <p>Challenges: Make the UI intuitive enough for non tech-savyy users
+            - provide overall summary of contents which can also be 
+used similar to breadcrumbs </p>
+    </div>,
+        "Buncee Emotion iOS Sticker Pack": <div>
+        <p><b>Role:</b> Creating Animation stickers</p>
+        <p> iOS sticker pack for iMessage </p>
+    </div>,
+        "Buncee iOS App": <div>
+        <p><b>Role:</b> UX design, graphic design</p>
+        <p>An iOS app for Buncee canvas.</p></div>
 
-    } ,
+    },
     "logpos": {
         "projectTitle": "LOG + POS",
         "quote": <span>How can we improve the communication at rescue operations using audio AR?<br /><br /></span>,
@@ -515,25 +543,25 @@ export const projectList = {
             "Tool": "Maya, After Effects, Illustrator",
         },
         "Process": <div className="processBoxWrap">
-         <div className="proBoxLine logpos" />
-        <div className="proBoxOut">
-            <div className="processBox logpos">Ideate</div>
-            <div className="processExpla">Matchmaking</div>
-        </div>
+            <div className="proBoxLine logpos" />
+            <div className="proBoxOut">
+                <div className="processBox logpos">Ideate</div>
+                <div className="processExpla">Matchmaking</div>
+            </div>
 
-        <div className="proBoxOut">
-            <div className="processBox logpos">Research</div>
-            <div className="processExpla">Interview</div>
-        </div>
-        <div className="proBoxOut">
-            <div className="processBox logpos">Design</div>
-            <div className="processExpla">Device design</div>
-            <div className="processExpla">UI design</div>
-        </div>
-        <div className="proBoxOut">
-            <div className="processBox logpos">Finalize</div>
-            <div className="processExpla">Video</div>
-        </div>
+            <div className="proBoxOut">
+                <div className="processBox logpos">Research</div>
+                <div className="processExpla">Interview</div>
+            </div>
+            <div className="proBoxOut">
+                <div className="processBox logpos">Design</div>
+                <div className="processExpla">Device design</div>
+                <div className="processExpla">UI design</div>
+            </div>
+            <div className="proBoxOut">
+                <div className="processBox logpos">Finalize</div>
+                <div className="processExpla">Video</div>
+            </div>
         </div>,
         "Ideation": <div>
             <p> The prompt of Bose Challenge was <i><b>“How might we use sound-based augmented reality to improve our lives?”</b></i> Among the idea we had, we decided to focus on improving cooperation situations which require team members’ communications about their locations and status. More specifically, we narrowed down our target as firefighters, about their rescue operations in extreme situations.</p> <p>Our assumption here is that under the urgent circumstances of limited vision and hearing, it is difficult to communicate accurate location information via speaking. Therefore, we designed a way to communicate each other automatically generated location data based on their GPS with minimum hand control. </p><img src={logpos1} alt="Ideation Meeting" className="zoomable" onClick={zoomimg} /><div className='imgdes'>Ideation Meeting, Sketch by Young</div> </div>,
@@ -541,22 +569,22 @@ export const projectList = {
             <p> With our basic ideation, we conducted a phone interview with a firefighter. He confirmed that our idea will be helpful, and gave us the problems about the current system has.</p><img src={logpos2} alt="Phone Interview" /><div className='imgdes'>Phone Interview</div><p>According to the firefighter, there is a system providing location information using sound and blinking lights after a firefighter being motionless for 30 seconds (Watch the video for additional information). However, the issue is that the location information is verbally communicated, so the information rescue team has might not be the latest information. Also, the light and sound signals can be hindered by the fire and the smoke. Our solution solves this problem by providing real-time information directly to the firefighters through the device.</p></div>,
 
         "Challenges": <div><div className='title logpos' >Technical Challenge:</div><p>How can we get the accurate indoor location data?<div className='solution'><li>To get accurate location data, we designed our device to use the bluetooth devices for better location accuracy.</li></div></p>
-        
-        <div className='title logpos'>Social Constraints:</div><p>According to the interview, there are two social constraints:<br />Firefighters sometimes rely on their ears to determine the temprature. Therefore, there should not be a thing cover their ears.<br /> Firefighters resist change, especially if it is going to be hard to put on. <div className='solution'> <li>We designed an audio AR device satisfying these challenges. </li></div>
-        </p>
+
+            <div className='title logpos'>Social Constraints:</div><p>According to the interview, there are two social constraints:<br />Firefighters sometimes rely on their ears to determine the temprature. Therefore, there should not be a thing cover their ears.<br /> Firefighters resist change, especially if it is going to be hard to put on. <div className='solution'> <li>We designed an audio AR device satisfying these challenges. </li></div>
+            </p>
             <img src={logpos3} alt="Device Design" className="zoomable" onClick={zoomimg} /><div className='imgdes'>Device Desiged by <a href='http://www.hyunwoopaik.com' target='_blank' rel="noopener noreferrer">Hyun Woo Paik</a></div></div>,
 
         "Final Design": <div><p>To create a video explining our idea, we made a scenario conveying how our design can be applied to the target situations.</p>
-           <div className="halfwrap">
-                <img className="half zoomable" onClick={zoomimg} src={logposstory1} alt="Storyboard 1" /> 
+            <div className="halfwrap">
+                <img className="half zoomable" onClick={zoomimg} src={logposstory1} alt="Storyboard 1" />
                 <img className="half zoomable" onClick={zoomimg} src={logposstory2} alt="Storyboard 2" />
                 <div className="imgdes">Video Storyboard by Young</div>
             </div>
             <p>The device can be controlled with verbal and head motions.</p>
             <div className="control">
                 <img id="connected" src={logposrun1} alt="Control: Connect" /></div>
-             <div className="imgdes solution">Team members connect the devices before getting into the operation.</div>
-            <div className="control" style={{width:"230px"}}>
+            <div className="imgdes solution">Team members connect the devices before getting into the operation.</div>
+            <div className="control" style={{ width: "230px" }}>
                 <img className="anim continuImg" alt="Control: Getting Messages 1" src={logposrun2} />
                 <img className="continuImg" src={logposrun3} alt="Control: Getting Messages 2" /></div><div className="imgdes hover">Hover on the image</div>
             <div className="imgdes solution">Users will continuously get the messages from others as walkie-talkie</div>
@@ -579,39 +607,39 @@ export const projectList = {
             id="player"
         />,
         "exlpla": {
-            " ": <span style={{fontStyle:"italic"}} >This is a project for a hackathon held at CMU (HackCMU 2018) which got <b>3rd Place.</b></span>,
+            " ": <span style={{ fontStyle: "italic" }} >This is a project for a hackathon held at CMU (HackCMU 2018) which got <b>3rd Place.</b></span>,
             "Duration": <span>24 hours - <b>HackCMU 2018</b> (Sep 21st ~ 22nd)</span>,
             "Team": <span>DoteNote (Aniruddh Iyer, <a className="member" href="http://www.hyunwoopaik.com/" target="_blank" rel="noopener noreferrer">Hyun Woo Paik,</a> Ja Young Lee, <a className="member" href="https://wwchung.github.io/SSUI-Portfolio/index.html" target="_blank" rel="noopener noreferrer">Won-Woo Chung</a>)</span>,
             "Role": "ideation, UI/UX design, video directing/editing",
             "Tool": "Adobe XD, After Effects, Illustrator",
         },
-        "button": <a onClick={(ev)=>{var proto = document.getElementById("doteproto"); window.scroll( {top: proto.offsetTop, left: 0,  behavior: 'smooth'})}}>
-        <div className="button dote">Play with the Prototype</div></a>,
+        "button": <a onClick={(ev) => { var proto = document.getElementById("doteproto"); window.scroll({ top: proto.offsetTop, left: 0, behavior: 'smooth' }) }}>
+            <div className="button dote">Play with the Prototype</div></a>,
         "Process": <div className="processBoxWrap">
-         <div className="proBoxLine dote" />
-        <div className="proBoxOut">
-            <div className="processBox dote">Ideate</div>
-        </div>
+            <div className="proBoxLine dote" />
+            <div className="proBoxOut">
+                <div className="processBox dote">Ideate</div>
+            </div>
 
-        <div className="proBoxOut">
-            <div className="processBox dote">Iterate</div>
-            <div className="processExpla">Hi-fi Prototype</div>
-        </div>
-        <div className="proBoxOut">
-            <div className="processBox dote fin">Finalize</div>
-            <div className="processExpla">Video</div>
-        </div>
+            <div className="proBoxOut">
+                <div className="processBox dote">Iterate</div>
+                <div className="processExpla">Hi-fi Prototype</div>
+            </div>
+            <div className="proBoxOut">
+                <div className="processBox dote fin">Finalize</div>
+                <div className="processExpla">Video</div>
+            </div>
         </div>,
         "Ideation": <div>
             <p> Our idea started from a thought: what if we can leave our lovers a virtual message at a specific location ?
             Using AR technology, we focused on messaging emotions related to locations.
                 With DoteNote, users can leave 3D messages at specific locations.</p>
-                <div className="halfwrap">
-                    <img className="half zoomable" onClick={zoomimg} src={dote1} alt="Ideation Meeting 1" />
-                    <img className="half zoomable" onClick={zoomimg} src={dote2} alt="Ideation Meeting 2" />
-                    <div className="imgdes">Ideation Meeting</div> 
-                </div>
-            </div>,
+            <div className="halfwrap">
+                <img className="half zoomable" onClick={zoomimg} src={dote1} alt="Ideation Meeting 1" />
+                <img className="half zoomable" onClick={zoomimg} src={dote2} alt="Ideation Meeting 2" />
+                <div className="imgdes">Ideation Meeting</div>
+            </div>
+        </div>,
         "Challenges": <div>
             <img src={dote3} alt="AR Testting" className="zoomable" onClick={zoomimg} />
             <div className="imgdes">AR Testing</div>
@@ -639,7 +667,7 @@ export const projectList = {
 
         "Final Design": <div>
             <div className="screens" id="doteproto">
-                <Dote style={{ contain: "content" }}  ref={protoRef}/></div></div>,
+                <Dote style={{ contain: "content" }} ref={protoRef} /></div></div>,
 
         "Further Question": <p>How can we deal with the indoor messages on different floors?</p>,
     },
@@ -703,7 +731,7 @@ export const projectList = {
   mid point based on the time it takes for each person to get to the point. I was the lead designer who improved the interface
   of the application.
                 </p></div>,
-        "Design Changes": <div className="center" style={{maxWidth:"1100px", margin:"60px auto 0"}}>
+        "Design Changes": <div className="center" style={{ maxWidth: "1100px", margin: "60px auto 0" }}>
             <div className="evensc before"> <img src={even1} alt="Screen Before" />
                 <div className="ori">Original</div>
             </div>
@@ -784,7 +812,7 @@ export const projectList = {
                 <div className="animation_wrap">
                     <img src={momo3} id="pointers" alt="Pointer Animation" />
                     <p>
-                    {anigenerator()}
+                        {anigenerator()}
                     </p>
                 </div>
             </div>
@@ -835,7 +863,7 @@ export const projectList = {
 
         "Illustrations": <div>
             <div className="halfwrap">
-                <img src={nao_sketches} alt="Illustrations" className="half zoomable" onClick={zoomimg} /> 
+                <img src={nao_sketches} alt="Illustrations" className="half zoomable" onClick={zoomimg} />
                 <img src={nao_drawing} alt="Drawing on iPad" className="half zoomable" onClick={zoomimg} />
                 <div className='imgdes'>Hand-Drawn Digital Illustrations on iPad Sketch</div>
             </div>
