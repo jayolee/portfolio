@@ -412,6 +412,23 @@ $up: #E9974C;
 				size:24px;
 			}
 		}
+		&.insights, &.challenges{
+			margin: {
+				bottom: 10px;
+				top: 40px;
+			}
+			color: rgba(0,0,0,0.7);
+			font: {
+				weight: bold;
+				size:22px;
+			}
+		}
+		&.insights, &.insight_des{
+			padding-left: 5%;
+		}
+		&.insight_des{
+			margin-bottom: 20px;
+		}
 		&.mainPoint{
 			text-align:center;
 			font : {
