@@ -1237,33 +1237,33 @@ $imgshadow: 0 0 14px rgba(0,0,0,0.2);
 @include keyframes(pointersani) {
 	from{
 		visibility: visible;
-		@include positions(null,null,null,95%);
+		@include positions(null,null,null,60%);
 		margin-top:20px;
 	}
 	33% {
-		@include positions(null,null,null,85%);
+		@include positions(null,null,null,50%);
 		margin-top:60px;
 	}
 	34% {
-		@include positions(null,null,null,95%);
+		@include positions(null,null,null,60%);
 		margin-top:20px;
 	}
 	66% {
 		
-		@include positions(null,null,null,85%);
+		@include positions(null,null,null,50%);
 		margin-top:60px;
 	}
 	67% {
-		@include positions(null,null,null,95%);
+		@include positions(null,null,null,60%);
 		margin-top:20px;
 	}
 	99% {
 		
-		@include positions(null,null,null,85%);
+		@include positions(null,null,null,50%);
 		margin-top:60px;
 	}
 	to {
-		@include positions(null,null,null,85%);
+		@include positions(null,null,null,50%);
 		margin-top:60px;
 		visibility: hidden;
 	}
@@ -1272,13 +1272,13 @@ $imgshadow: 0 0 14px rgba(0,0,0,0.2);
 	position:absolute;
 	z-index:999;
 	@include sizes(200px);
-	transform:rotate(-35deg);
-	@include positions(null,null,null,98%);
+	transform:rotate(-35deg) translateX(380px);
+	@include positions(200px,null,null,80%);
 	visibility: hidden;
 }
 .animation_wrap {
 	position:relative;
-
+	overflow: hidden;
 	&:hover #pointers{
 	@include animation('pointersani 3s 1 forwards');
 }

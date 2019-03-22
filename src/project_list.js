@@ -23,13 +23,10 @@ import dote2 from './Dotenote/meeting2.jpg'
 import dote3 from './Dotenote/testing.jpg'
 import dote4 from './Dotenote/notify1.svg'
 import dote5 from './Dotenote/notify2.svg'
+import dote_story from './Dotenote/storyboard.png'
 
 import getcuisine1 from './getcuisine/top.gif'
 import getcuisine3 from './getcuisine/icons.png'
-import getcuisine_persona1 from './getcuisine/persona1.jpg'
-import getcuisine_persona2 from './getcuisine/persona2.jpg'
-import getcuisine_story from './getcuisine/storyboard.jpg'
-import getcuisine_story2 from './getcuisine/storyboard2.jpg'
 import getcuisine8 from './getcuisine/report1.svg'
 import getcuisine9 from './getcuisine/report2.svg'
 import getcuision10 from './getcuisine/modelerror.gif'
@@ -116,6 +113,7 @@ import nao_drawing from './naoshima/draw.jpg'
 import nao_sketches from './naoshima/sketches.gif'
 import nao_about from './naoshima/about.gif'
 import nao_detail from './naoshima/detail.jpg'
+import nao_hie from './naoshima/hie.jpg'
 
 import up_animals from './up/animals.jpg'
 import up_proto_blow from './up/blow.jpg'
@@ -556,18 +554,20 @@ used similar to breadcrumbs </p>
                 <div className="processExpla">Video</div>
             </div>
         </div>,
-        "Ideation": <div>
+        "Ideation": <div> <p className="mainT" style={{marginTop: "30px"}}>Audio AR for circumstances with communication difficulties</p>
             <p> The prompt of Bose Challenge was <i><b>“How might we use sound-based augmented reality to improve our lives?”</b></i> Among the idea we had, we decided to focus on improving cooperation situations which require team members’ communications about their locations and status. More specifically, we narrowed down our target as firefighters, about their rescue operations in extreme situations.</p> <p>Our assumption here is that under the urgent circumstances of limited vision and hearing, it is difficult to communicate accurate location information via speaking. Therefore, we designed a way to communicate each other automatically generated location data based on their GPS with minimum hand control. </p><img src={logpos1} alt="Ideation Meeting" className="zoomable" onClick={zoomimg} /><div className='imgdes'>Ideation Meeting, Sketch by Young</div> </div>,
         "User Research": <div>
-            <p> With our basic ideation, we conducted a phone interview with a firefighter. He confirmed that our idea will be helpful, and gave us the problems about the current system has.</p><img src={logpos2} alt="Phone Interview" /><div className='imgdes'>Phone Interview</div><p>According to the firefighter, there is a system providing location information using sound and blinking lights after a firefighter being motionless for 30 seconds (Watch the video for additional information). However, the issue is that the location information is verbally communicated, so the information rescue team has might not be the latest information. Also, the light and sound signals can be hindered by the fire and the smoke. Our solution solves this problem by providing real-time information directly to the firefighters through the device.</p></div>,
+            <p className="mainT" style={{marginTop: "30px"}}>Why do firefighters need an audio AR solution?</p>
+            <p> With our initial ideation, we conducted a phone interview with a firefighter. He confirmed that our idea will be helpful, and gave us the problems about the current system has.</p><img src={logpos2} alt="Phone Interview" /><div className='imgdes'>Phone Interview</div><p>According to the firefighter, there is a system providing location information using sound and blinking lights after a firefighter being motionless for 30 seconds (Watch the video for additional information). However, the issue is that the location information is verbally communicated, so the information rescue team has might not be the latest information. Also, the light and sound signals can be hindered by the fire and the smoke. Our solution solves this problem by providing real-time information directly to the firefighters through the device.</p></div>,
 
-        "Challenges": <div><div className='title logpos' >Technical Challenge:</div><p>How can we get the accurate indoor location data?<div className='solution'><li>To get accurate location data, we designed our device to use the bluetooth devices for better location accuracy.</li></div></p>
+        "Challenges": <div><p className="challenges">How can we get the accurate indoor location data?</p>
+        <p>To get accurate location data, we designed our device to use the bluetooth devices for better location accuracy.</p>
 
-            <div className='title logpos'>Social Constraints:</div><p>According to the interview, there are two social constraints:<br />Firefighters sometimes rely on their ears to determine the temprature. Therefore, there should not be a thing cover their ears.<br /> Firefighters resist change, especially if it is going to be hard to put on. <div className='solution'> <li>We designed an audio AR device satisfying these challenges. </li></div>
+            <p className='challenges'>Social Constraints</p><p>According to the interview, there are two social constraints:<br />1. Firefighters sometimes rely on their ears to determine the temprature. Therefore, there should not be a thing cover their ears.<br />2. Firefighters resist change, especially if it is going to be hard to put on. We designed an audio AR device satisfying these challenges.
             </p>
             <img src={logpos3} alt="Device Design" className="zoomable" onClick={zoomimg} /><div className='imgdes'>Device Desiged by <a href='http://www.hyunwoopaik.com' target='_blank' rel="noopener noreferrer">Hyun Woo Paik</a></div></div>,
 
-        "Final Design": <div><p>To create a video explining our idea, we made a scenario conveying how our design can be applied to the target situations.</p>
+        "Final Design": <div><p>We created a video explaining our idea. We made a scenario conveying how our design can be applied to the target situations. I created a storyboard to communicate with the team.</p>
             <div className="halfwrap">
                 <img className="half zoomable" onClick={zoomimg} src={logposstory1} alt="Storyboard 1" />
                 <img className="half zoomable" onClick={zoomimg} src={logposstory2} alt="Storyboard 2" />
@@ -624,7 +624,8 @@ used similar to breadcrumbs </p>
             </div>
         </div>,
         "Ideation": <div>
-            <p> Our idea started from a thought: what if we can leave our lovers a virtual message at a specific location ?
+            <p className="mainT" style={{marginTop: "30px"}}>What if we can leave our lovers a virtual message at a specific location?</p>
+            <p> Our idea started from this one sentence.
             Using AR technology, we focused on messaging emotions related to locations.
                 With DoteNote, users can leave 3D messages at specific locations.</p>
             <div className="halfwrap">
@@ -636,18 +637,13 @@ used similar to breadcrumbs </p>
         "Challenges": <div>
             <img src={dote3} alt="AR Testting" className="zoomable" onClick={zoomimg} />
             <div className="imgdes">AR Testing</div>
-            <div className="title dote">Technical Challenge:</div>
-            <p>Due to the accuracy of GPS, we faced following challenges:
-              Can we leave messages towards a certain angle and position?
-                        In what range do users get notifications?</p>
+            <p className="challenges">How can we deal with the accuracy of GPS?</p>
+            <p>Due to the low accuracy of GPS, we faced following challenges:
+              users cannot leave messages to a certain direction and position. If so, how can prompt the new message notifications efficiently? In other words, how users can find messages without getting wandering while keeping the message as a surprise?</p>
 
+            <p>To solve this questions, we had two sub-questions. First, in what distance do we want to push the notifications? Second, from the point they get notifications, how can we direct them to the message?<br /><br />
 
-            <div className="title dote">UX Challenges:</div>
-            <p>Also, because we wanted to keep the factor of surprise, we had another challenges:
-                      In what distance do we want to push the notifications?<br />
-                From the point they get notifications, how can we direct them to the message?<br /><br />
-
-                To solve these issues we decided to push the notification approximately within a block. </p>
+                As a solution, we decided to push the notification approximately within a block. </p>
 
             <div>
                 <img className="solu_dote" src={dote4} alt="Solution 1" />
@@ -655,14 +651,26 @@ used similar to breadcrumbs </p>
 
             <div>
                 <img className="solu_dote" src={dote5} alt="Solution 2" />
-                <div className="imgdes solution">If a user is around the corner, because the notification comes up when they enter the range of one block, they can know which direction the message is located. If they are from the side where the message is located, they get the notification before they enter the street.</div>
+                <div className="imgdes solution">If a user approaches from around the corner, they can know to which direction they need to move because the notification comes up when they enter the range.<br />If they enter the block from the side where the message is located, they get the notification before they enter the street.</div>
             </div></div>,
 
         "Final Design": <div>
             <div className="screens" id="doteproto">
                 <Dote style={{ contain: "content" }} ref={protoRef} /></div></div>,
-
-        "Further Question": <p>How can we deal with the indoor messages on different floors?</p>,
+        "Video":
+        <div>
+            <img src={dote_story} alt="storyboard" className="zoomable" onClick={zoomimg} />
+            <div className = "imgdes">Video Storyboard by Young</div>
+            <p className = "mainT">Lyrical mood is the key</p>
+            <p>We created a video to explain our solution. Since our design is targeting lovers and emotional communication, I focused on creating a lyrical mood. To organize my ideas and communicate with other team members, I created a storyboard using Adobe Illustrator.</p>
+        </div>,
+        "Further Questions": 
+        <div>
+        <p className="mainT" style={{marginTop:"30px"}}>How about indoor use cases?</p>
+        <p>We considered of outdoor possible cases. However, indoor use cases are more challenging. For example, how can we deal with the indoor messages on different floors? We expect that we can use bluetooth to get more accurate positions; however, further research is required. </p>
+        <p className="mainT" style={{marginTop:"30px"}}>Does the solution fulfill the goal?</p>
+        <p>Since this was a hackathon project which was made within 24 hours, we don't have enough user research to prove the solution achieved the goal. Further research about location-related emotions (ex. does certain time or direction matters) and the way people communicate their feelings is required to validate our idea.</p>
+        </div>,
     },
     "reporter": {
         "projectTitle": "I am a Reporter",
@@ -826,7 +834,7 @@ used similar to breadcrumbs </p>
     },
     "naoshima": {
         "projectTitle": "Artwork of Naoshima",
-        "quote": "How can a web application introduce a travel location?",
+        "quote": "How might we introduce a travel location via single page web application?",
         "topimg": <img id='naoshima' className="topimg" src={naoshima} alt="Naoshima" />,
         "button": <a href="https://jayolee.github.io/Travel-app/" target="_blank" rel="noopener noreferrer">
             <div className="button naoshima">Go to the Website</div>
@@ -835,36 +843,38 @@ used similar to breadcrumbs </p>
             "Duration": "1 month (Sep 2018)",
             "Team": "Ja Young Lee",
             "Role": "illustration, UI/UX design, development",
-            "Tool": "Sketch (iPad), React, Adobe Photoshop",
+            "Tool": "Paper (iPad), React, Adobe Photoshop",
         },
         "Ideation": <div>
-            <p>For a React web application project for <i>Software Structures for User Interfaces</i> class at CMU in Fall 2018, I chose Naoshima, Japan as the travel location I will introduce.<br />
-                Naoshima is the place I visited in summer 2018. It is an island full of artworks.  </p></div>,
-        "Prototypes": <div>
+            <p className = "mainT" style ={{marginTop: "30px"}}>Why Naoshima?</p>
+            <p>For a React web application project for <i>Software Structures for User Interfaces</i> class at CMU in Fall 2018, I chose Naoshima, Japan as the travel location I will introduce.
+                Naoshima is the place I visited in summer 2018. It is an island full of artworks.</p>
+                <p> Unlike other travel locations, because Naoshima is a small island with very little public transportation, it is important to know the locations of each key travel spots to make a plan. The pros of single page web app is that by making the layer salient, users can easily get the hierarchy of the information.</p>
+                <img src= {nao_hie} alt="App structure" />
+                <div className = "imgdes">App Structure</div></div>,
+        "Design": <div>
             <div className="halfwrap">
                 <img src={nao_lofi} alt="Lo-fi Prototype" className="half zoomable" onClick={zoomimg} />
                 <img src={nao_midfi} alt="Mid-fi Prototype" className="half zoomable" onClick={zoomimg} />
                 <div className="imgdes">Lo-fi and Mid-fi Prototypes</div>
             </div>
-            <p>As a web application introducing a specific location, I wanted to give a feeling of staying on one page but looking at different aspects of the website. Therefore, I designed all pages appearing as layers above the home page.</p>
-        </div>,
-
-        "Interaction": <div>
+            <p>To give a feeling of staying on one page but looking at different aspects of the website, I designed all pages appearing as layers above the home page.</p>
+        
             <img src={nao_about} className="imgBorder" alt="About Page Interaction" />
             <div className="imgdes">About Page Interaction</div>
-            <p>To make different layers of pages more obvious, I gave page transition animations.</p></div>,
+            <p>I also utilized page transition animations to make the layer structure salient.</p></div>,
 
         "Illustrations": <div>
             <div className="halfwrap">
                 <img src={nao_sketches} alt="Illustrations" className="half zoomable" onClick={zoomimg} />
                 <img src={nao_drawing} alt="Drawing on iPad" className="half zoomable" onClick={zoomimg} />
-                <div className='imgdes'>Hand-Drawn Digital Illustrations on iPad Sketch</div>
+                <div className='imgdes'>Hand-Drawn Digital Illustrations on iPad Paper</div>
             </div>
-            <p>Because Naoshima is the island with many famous artworks, I wanted to give the artistic feeling to the website. Therefore, I added hand-drawn digital illustrations.</p>
+            <p>Naoshima is the island with many famous artworks, so I wanted to provide the artistic feeling. Therefore, I created hand-drawn digital illustrations.</p>
         </div>,
 
         "Image Source": <div>
             <img src={nao_detail} alt="Source Button on Detail Page" className="zoomable" onClick={zoomimg} /><div className='imgdes'>Image Source Button on the Detail Pages</div>
-            <p>Since the website is heavily relying on many images from other sites, I added Images Source buttons on each detail page of photos.</p></div>,
+            <p>I used images from external sources to explain the locations. Although all are copyright free images, to provide credit, I added buttons to images sources on each detail page of photos.</p></div>,
     },
 }
