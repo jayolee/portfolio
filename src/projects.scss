@@ -474,7 +474,7 @@ $up: #E9974C;
 		}
 	}
 	.halfwrap{
-		@include sizes(100%,null,1100px);
+		@include sizes(100%,null,1200px);
 		&.fit{
 			max-width:750px;
 			.zoomed{
