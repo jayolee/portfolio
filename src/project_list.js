@@ -588,7 +588,7 @@ export const projectList = {
         "Second Round Research": <div>
             <p className="mainT" style={{ marginTop: "30px" }}>The initial solution didn't solve the problem</p>
             <p>However, does this website fulfill the initial goal of "helping people clean out the fridge"? The answer was <b>NO.</b> The website was more about exploring the development of a ML powered website. Therefore, I started the second round of design . This time, I tried to figure out why people have leftover ingredients.</p>
-            <p className="mainT" style={{ marginTop: "30px" }}>WWhat is the cooking life-cycle?</p>
+            <p className="mainT" style={{ marginTop: "30px" }}>What is the cooking life-cycle?</p>
             <p>First, I conducted the survey and semi-structured interviews to learn about people's decision making process regarding cooking and find pain points. Participants were people in mid-20s to early 30s and who prepare food for themselves. Most of them also have a busy schedule. From the research, I got the following insights.</p>
             <img src={getcuisine_aff} alt="Affinity diagram" onClick={zoomimg} className="zoomable" /><div className='imgdes'>Affinity Diagram</div>
             <div className="insightWrap" style={{ margin: "50px auto 60px" }}>
