@@ -10,6 +10,7 @@ $naoshima: #e5b354;
 $getcuisine: #617D31;
 $up: #E9974C;
 $forkie: #fa6c42;
+$bc : #00bac0;
 
 @font-face {
 	font-family:"lucida grande";
@@ -98,6 +99,9 @@ $forkie: #fa6c42;
 		&.forkie{
 			color: $forkie;
 		}
+		&.buncee{
+			color: $bc;
+		}
 }
 @mixin bgcolors{
 	&.dote{
@@ -129,6 +133,9 @@ $forkie: #fa6c42;
 		}
 		&.forkie{
 			background: $forkie;
+		}
+		&.buncee{
+			background: $bc;
 		}
 }
 #player {
@@ -347,9 +354,13 @@ $forkie: #fa6c42;
 			&.forkie{
 				border: 1px solid $forkie
 			}
+			&.buncee{
+				border: 1px solid $bc
+			}
 			@media screen and (max-width: 700px){
 				display:none;
 			}
+
 	}
 	.proBoxOut{
 		text-align: center;
@@ -789,6 +800,9 @@ a.member{
 	&.forkie{
 		border-bottom: 2px dashed $forkie;
 	}
+	&.buncee{
+		border-bottom: 2px dashed $bc;
+	}
 }
 .sectitle {
 	@include sizes(95%,null,750px);
@@ -921,6 +935,9 @@ a.member{
 		}
 		&.forkie{
 			border: 2px solid $forkie;
+		}
+		&.buncee{
+			border: 2px solid $bc;
 		}
 		@include textcolors;
 	}

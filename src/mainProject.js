@@ -7,6 +7,8 @@ import dotenote from './images/dotenote.jpg'
 import getcuisine from './images/getcuisine.jpg'
 import up_main from './up/blowmain.jpg'
 
+import buncee_logo from './images/buncee.jpg'
+
 import nao from './images/nao_main.jpg'
 import report from './images/report_main.jpg'
 import momo from './images/momo_main.jpg'
@@ -61,7 +63,7 @@ class MainProject extends Component {
         },
          {
           "id": "buncee",
-          "image": "",
+          "image": buncee_logo,
           "class": "ideation portwrap",
           "mainClass": "main_work",
           "types": "Ideation",
@@ -153,26 +155,26 @@ class MainProject extends Component {
     let projectUrl = '';
     for (let i = 0; i < this.state.worklist.length; i++) {
       projectUrl=process.env.PUBLIC_URL +'/projects/'+this.state.worklist[i].id+'/';
-      if(this.state.worklist[i].id === "buncee"){
-        element.push(
-          <div id={this.state.worklist[i].id} key={this.state.worklist[i].id} className={this.state.worklist[i].mainClass}  >
-          <div className={this.state.worklist[i].class} key={this.state.worklist[i].id + "wrapper"}>
-             <div className="discrip">
-            <div>
-              {this.state.worklist[i].title}</div>
-              <div className="expla">
-                {this.state.worklist[i].expla}
-              </div>
-            </div>
-          </div>
-          <div className="discripsmaller">
-            {this.state.worklist[i].title}<br />
-            <span className="types"> {this.state.worklist[i].expla}</span>
-          </div>
-        </div>
-        );
-        continue;
-      }
+      // if(this.state.worklist[i].id === "buncee"){
+      //   element.push(
+      //     <div id={this.state.worklist[i].id} key={this.state.worklist[i].id} className={this.state.worklist[i].mainClass}  >
+      //     <div className={this.state.worklist[i].class} key={this.state.worklist[i].id + "wrapper"}>
+      //        <div className="discrip">
+      //       <div>
+      //         {this.state.worklist[i].title}</div>
+      //         <div className="expla">
+      //           {this.state.worklist[i].expla}
+      //         </div>
+      //       </div>
+      //     </div>
+      //     <div className="discripsmaller">
+      //       {this.state.worklist[i].title}<br />
+      //       <span className="types"> {this.state.worklist[i].expla}</span>
+      //     </div>
+      //   </div>
+      //   );
+      //   continue;
+      // }
      element.push(
         <Link to={projectUrl} key={this.state.worklist[i].id+'_link'} >
         <div id={this.state.worklist[i].id} key={this.state.worklist[i].id} className={this.state.worklist[i].mainClass}  >
