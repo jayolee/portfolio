@@ -487,7 +487,7 @@ export const projectList = {
                 <div className="imgwrap_sc" >
                     <img src={forkie_cmt} className="phonesc" alt="Comment" style={{ width: "250px" }} />
                 </div>
-                <p><span className="title forkie"> Share first-hand experience via crowdsourcing</span><br />
+                <p><span className="title forkie"> Share tips from your experience via crowdsourcing</span><br />
                     Different people have different tips and ideas regarding a recipe. Leave comments on a recipe to share the tips.
             </p>
             </div>
