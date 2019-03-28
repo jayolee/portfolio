@@ -52,6 +52,16 @@ import forkie_lofi4 from './getcuisine/lofi_ml.jpg'
 import forkie_mid from './getcuisine/mid_ml.jpg'
 import forkie_mid2 from './getcuisine/mid_fork.jpg'
 import forkie_mid3 from './getcuisine/mid_home.jpg'
+import forkie_phone from './getcuisine/commentphone.gif'
+import forkie_fork from './getcuisine/fork.gif'
+import forkie_cmt from './getcuisine/commenting_recipe.gif'
+import forkie_crt from './getcuisine/create_phone.gif'
+
+import forkie_ins1 from './getcuisine/insight1.jpg'
+import forkie_ins2 from './getcuisine/insight2.jpg'
+import forkie_ins3 from './getcuisine/insight3.jpg'
+import forkie_ins from './getcuisine/insight_over.jpg'
+import forkie_scmap from './getcuisine/screenmap.jpg'
 
 import reporter0 from './reporter/int1.jpg'
 import reporter1 from './reporter/garage.jpg'
@@ -167,10 +177,15 @@ function zoomimg(e) {
     let classlist = e.target.classList;
     if (classlist.contains("zoomed")) {
         e.target.classList.remove("zoomed");
-        // window.scrollTo(e.target.offsetTop);
+        if(e.target.offsetTop || e.target.height){
+            window.scrollTo({top:e.target.offsetTop + e.target.height, behavior: 'smooth'});
+        }
     }
     else {
         e.target.classList.add("zoomed");
+        if(e.target.offsetTop){
+        window.scrollTo({top:e.target.offsetTop, behavior: 'smooth'});
+    }
     }
 }
 const vidid = {
@@ -353,66 +368,143 @@ export const projectList = {
                 At current stage of design, user are limited to saving virtual animals, which may not be as rewarding as contributing to saving animals in the real world. Therefore, we look forward to having a sponsorship partner with wildlife organizations for future implementations.</p>
         </div>,
     },
-    "getcuisine": {
-        "projectTitle": "Get Cuisine",
-        "quote": "How might Machine Learning can help people?",
-        "topimg": <div style={{ width: "640px", maxWidth: "100%", height: "auto", margin: "0 auto" }}><Vimeo video="315035206" /></div>,
+    "forkie": {
+        "projectTitle": "Forkie",
+        "quote":<span>How might we help people regain passion for cooking?<br />
+                <span style={{fontSize:"16px", opacity: ".7s"}}>How might we minimize the food waste?</span></span>,
+        "topimg": <div />,
 
         "exlpla": {
-            "Duration": "Dec 2018 ~ Current",
+            "Duration": "Dec 2018 ~ March 2019",
             "Team": "Ja Young Lee, June Byeon (from the second round)",
             "Role": "User Reserach, UI/UX design, front, back-end development",
-            "Tool": "Python Flask, jQuery, HTML, CSS, Adobe Illustrator",
+            "Tool": "Python Flask, jQuery, HTML, CSS, Adobe Illustrator, Figma, Sketch",
         },
-        "button": <div><a href="http://getcuisine.herokuapp.com" target="_blank" rel="noopener noreferrer">
-            <div className="button getcuisine">Go to the Website</div></a>
-            <div style={{ transform: "translateY(-26px)" }}>*Initial loading is very slow</div>
-        </div>,
+        "button": <div><a href="https://jayolee.github.io/forkie/" target="_blank" rel="noopener noreferrer">
+        <div className="button forkie">Play with the React Prototype</div></a></div>,
         "Process": <div>
             <div className="processBoxWrap">
-                <div className="proBoxLine getcuisine" />
+                <div className="proBoxLine forkie" />
                 <div className="proBoxOut">
-                    <div className="processBox getcuisine">Ideate</div>
+                    <div className="processBox forkie">Ideate</div>
                     <div className="processExpla">Matchmaking</div>
                 </div>
                 <div className="proBoxOut">
-                    <div className="processBox getcuisine">Research</div>
+                    <div className="processBox forkie">Research</div>
                     <div className="processExpla">Descriptive Research</div>
                     <div className="processExpla">Survey</div>
                 </div>
                 <div className="proBoxOut">
-                    <div className="processBox getcuisine">Iterate</div>
+                    <div className="processBox forkie">Iterate</div>
                     <div className="processExpla">Hi-fi Prototype</div>
                     <div className="processExpla">Think-aloud</div>
                 </div>
                 <div className="proBoxOut">
-                    <div className="processBox getcuisine fin">Finalize</div>
+                    <div className="processBox forkie fin">Finalize</div>
                     <div className="processExpla">Deployment</div>
                 </div>
             </div>
             <div className="processBoxWrap">
-                <div className="proBoxLine getcuisine" />
+                <div className="proBoxLine forkie" />
                 <div className="proBoxOut">
-                    <div className="processBox getcuisine">Research</div>
+                    <div className="processBox forkie">Research</div>
                     <div className="processExpla">Survey</div>
                     <div className="processExpla">Semi-Structured Interview</div>
+                    <div className="processExpla">Competitive Analysis</div>
                     <div className="processExpla">Affinity Diagraming</div>
-                    <div className="processExpla">User Personas</div>
                     <div className="processExpla">Speed Dating</div>
                 </div>
 
                 <div className="proBoxOut">
-                    <div className="processBox getcuisine">Iterate</div>
+                    <div className="processBox forkie">Iterate</div>
+                    <div className="processExpla">Lo-fi Prototype</div>
+                    <div className="processExpla">Think-Alouds</div>
+                    <div className="processExpla">Mid-fi Prototype</div>
+                </div>
+
+                <div className="proBoxOut">
+                    <div className="processBox forkie">Finalize</div>
+                    <div className="processExpla">Front-end Development</div>
                 </div>
             </div>
 
         </div>,
-        "Ideation": <div>
+         "Solution": <div>
+         <div className="insightWrap">
+            <div style={{display:"flex", flexDirection:"column", alignItems:"flex-start"}} className = "forkie_insight">
+                <img src={forkie_ins1} alt="Insight 1"  className = "ins_img"/>
+                <div className = "ins">Cooking requires contextualizing</div>
+                <div className = "ins_des">
+People consider many factors such as the amount of effort needed or their previous experience when cooking. A lot of people cook the foods they are familiar with.</div>
+            </div>
+
+              <div style={{display:"flex", flexDirection:"column", alignItems:"flex-start"}} className = "forkie_insight">
+                <img src={forkie_ins2} alt="Insight 2" className = "ins_img"/>
+                <div className = "ins">People are risk-averse when cooking.</div>
+                <div className = "ins_des">
+                Unlike ordering food at restaurants, cooking requires time and effort. Therefore, people are looking for recipes of which the taste is almost guaranteed. They rely on credible sources, popularity, expertise and past experience.</div>
+            </div>
+
+             <div style={{display:"flex", flexDirection:"column",alignItems:"flex-start"}} className = "forkie_insight">
+                <img src={forkie_ins3} alt="Insight 3" className = "ins_img"/>
+                <div className = "ins">People have unintended food waste</div>
+                <div className = "ins_des">
+                Most of people have leftover ingredients after cooking which they throw out in the end. They try to use those ingredients; however, there's unfamiliraity with the ingredients, so they procrastinate using those and forget about them.
+                </div>
+            </div>
+         </div>
+         <img src={forkie_ins} alt="Main insight" style={{maxWidth:"500px", margin:"40px auto 0"}}/>
+         <p className="mainT" style={{marginTop:"30px"}}>Why do people have food waste?</p>
+         <p>From our research, we learned that leftover ingredients become food waste because of unfamiliraity they have with the ingredients. People either don't know how to use, or not familiar with the portion. They lose passion on cooking them, so procrastinate cooking and forget about them. We found that <b>people can be motivated from social interaction regarding recipes with their personal connections.</b> Therefore, we found our solution from recipe-sharing social network which would make people regain passion on cooking to minimize the food waste generated from leftover ingredients.</p>
+         <p className="solutionPoint" style={{ marginTop: "30px", maxWidth:"750px"}}>Forkie, a mobile app help people regain passion for cooking</p>
+         <p><b>Sharing recipe is sharing experience.</b> Forkie helps people regain the passion for cooking by fostering the communication with friends. Below is the key features.</p>
+         <div className="up_expla_screen forkie">
+            <div className="imgwrap_sc" >
+                <img src={forkie_phone} className="phonesc" alt="Comment" style={{width:"250px"}}/>
+            </div>
+            <p><span className="title forkie">Share first-hand experience about a recipe</span><br />
+                Sharing first-hand experience can motivate people to cook. Forkie foster the communication by providing commenting functions per recipe.
+            </p>
+        </div>
+        <div className="up_expla_screen forkie">
+            <div className="imgwrap_sc" >
+                <img src={forkie_fork} className="phonesc" alt="Comment" style={{width:"250px"}}/>
+            </div>
+            <p><span className="title forkie">Fork recipes and create various versions</span><br />
+                A dish can have various versions depending on users' backgrounds and preferences. Forkie allow users to create various branches (versions) so other users can choose a version to cook, and even track the original version.
+            </p>
+        </div>
+        <div className="up_expla_screen">
+            <div className="imgwrap_sc" >
+                <img src={forkie_cmt} className="phonesc" alt="Comment" style={{width:"250px"}}/>
+            </div>
+            <p><span className="title forkie"> Share first-hand experience via crowdsourcing</span><br />
+                Different people have different tips and ideas regarding a recipe. Leave comments on a recipe to share the tips.
+            </p>
+        </div>
+           <div className="up_expla_screen">
+            <div className="imgwrap_sc" >
+                <img src={forkie_crt} className="phonesc" alt="Comment" style={{width:"250px"}}/>
+            </div>
+            <p><span className="title forkie">Easily create accurate recipes with ML</span><br />
+                Recipe becomes conversational when people share them. Forkie provides recommendations to make the recipes more accurate. Also, it parse the ingredients from the steps, so users don't need to going back and forth to list the ingredients.<br />
+                Also, buy providing recommendations in a way that doesn't disturb users' typing, users can easily ignore it and keep typing if the recommendation is not what they want.
+            </p>
+        </div>
+        <div style={{width:"100%", margint:"0 auto", textAlign:"center"}}><a style={{margin: "0"}} href="https://jayolee.github.io/forkie/" target="_blank" rel="noopener noreferrer">
+        <div className="button forkie" style={{margin: "0"}}>Play with the React Prototype</div></a></div>
+
+       
+     </div>,
+             "The Project": <div>
+             <p>The project had two rounds. It started with exploring how Machine Learning (ML) can help people clean out the fridge. Later, I realized the initial solution didn't solve the problem, so had another round to get the solution.</p>
+        </div>,
+        "Initial Ideation": <div>
             <p className="mainT" style={{ marginTop: "30px" }}>How might we help people using Machine Learning?</p>
             <p>While the matchmaking process identifying possible activities and domains to which we can apply Machine Learning (ML) model, one of the dataset from Kaggle (<a href="https://www.kaggle.com/c/whats-cooking" target="_blank" rel="noopener noreferrer">cuisines and ingredients</a>) inspired me. It brought my experience having small amounts of ingredients which are leftovers after cooking. It’s often challenging to deal with these leftovers. Therefore, I redefined the problem space as below.
                 </p>
             <p className="mainPoint" style={{marginBottom: "0" }}>
-                <span style={{ boxShadow: "inset 0 -1.5px white, inset 0 -3px #617D31, inset 0 -4.5px white, inset 0 -6px #617D31"}} >How might Machine Learning help people clean out the fridge?</span></p>
+                <span style={{ boxShadow: "inset 0 -1.5px white, inset 0 -3px #fa6c42, inset 0 -4.5px white, inset 0 -6px #fa6c42"}} >How might Machine Learning help people clean out the fridge?</span></p>
         </div>,
         "Platform Research": <div>
             <p className="mainT" style={{ marginTop: "30px" }}>People don't use Alexa to search for recipes</p>
@@ -469,26 +561,51 @@ export const projectList = {
         </div>,
 
         "Initial Solution": <div>
+        
+            <div style={{ width: "640px", maxWidth: "100%", height: "auto", margin: "0 auto" }}><Vimeo video="315035206" /></div>
+            <p className = "solutionPoint" style={{margin:"30px auto 0", maxWidth:"100%"}}><span style={{color:"#617D31", fontWeight:"bold"}}>Get Cuisine,</span><br />a ML powered website to help clean out the fridge</p>
+            <div style={{textAlign:"center"}}>
+                <a href="http://getcuisine.herokuapp.com" target="_blank" rel="noopener noreferrer">
+                <div className="button getcuisine">Go to the Website</div></a>
+                <div style={{ transform: "translateY(-26px)" }}>*Initial loading is very slow</div>
+            </div>
             <p className="mainT" style={{ marginTop: "30px" }}>"Curiosity" can be a value of this website</p>
-            <p className="addmargin">One of the concerns about this project is that the data this website provides can easily be obtained from other websites. Also, what people need is recipes, not a cuisine type for search. However, I got feedback that once knowing that this website is using ML, people become curious to see the result and get interested. Therefore, I focused on providing 'fun' and 'curiosity.'</p>
-
+            <p className="addmargin">One of the concerns about this project is that the data this website provides can easily be obtained from other websites. Also, what people need is recipes, not a cuisine type for search. However, I got feedback that once knowing that this website is using ML, people become curious to see the result and get interested. Therefore, I focused on providing 'fun' and fulfilling 'curiosity.'</p>
+        
             <img src={getcuisine3} alt="Cuisine Icons" onClick={zoomimg} className="zoomable" /><div className='imgdes'>Cuisine Icons</div>
             <img className="zoomable" src={getcuisine1} onClick={zoomimg} alt="final design" />
             <div className='imgdes'>Final Design</div>
         </div>,
         "Second Round Research": <div>
             <p className="mainT" style={{ marginTop: "30px" }}>The initial solution didn't solve the problem</p>
-            <p>However, does this website fulfill the initial goal of "helping people clean out the fridge"? The answer was <b>NO.</b> The website was more about exploring the development of a ML powered website. Therefore, I started the second round of design process to achieve the original goal.</p>
+            <p>However, does this website fulfill the initial goal of "helping people clean out the fridge"? The answer was <b>NO.</b> The website was more about exploring the development of a ML powered website. Therefore, I started the second round of design . This time, I tried to figure out why people have leftover ingredients.</p>
             <p className="mainT" style={{ marginTop: "30px" }}>What is the cooking life-cycle?</p>
             <p>First, I conducted survey and semi-structured interviews to learn about people's decision making process regarding cooking and find pain points. Participants were people in mid 20s to early 30s and who prepare food for themselves. Most of them also have busy schedule. From the research, I got following insights.</p>
             <img src={getcuisine_aff} alt="Affinity diagram" onClick={zoomimg} className="zoomable" /><div className='imgdes'>Affinity Diagram</div>
-            <p className="insights">1. Cooking requires contextualizing</p>
-            <p className = "insight_des">People consider many factors such as the amount of effort they would need to cook or their previous experience when cooking. A lot of people cook the foods they are familiar with.</p>
-            <p className="insights">2. People are risk-aversive when cooking.</p>
-            <p className = "insight_des">Unlike ordering food at restaurants, cooking requires time and effort. Therefore, people are looking for recipes of which the taste is almost guaranteed. They rely on credible sources, popularity, expertise and past experience.</p>
-            <p className="insights">3. People have unintended food waste due to the loss of passion.</p>
-            <p className = "insight_des" style={{marginBottom:"60px"}}>Most of people have leftover ingredients after cooking which they throw out in the end. They try to use those ingredients; however, they either <b>don't know how to use,</b> or because <b>the portion is unfamiliar,</b> they procrastinate using those and forget about them.</p>
-            <p>From the research, we thought that there's an opportunity on providing recipe that can be cooked with resources users have of which the taste is familiar based on their preference. To learn if there is any similar apps managing this problem, and if so, what approach they are taking, we conducted competitive analysis of the existing apps.</p>
+            <div className="insightWrap" style={{margin: "50px auto 60px"}}>
+            <div style={{display:"flex", flexDirection:"column", alignItems:"flex-start"}} className = "forkie_insight">
+                <img src={forkie_ins1} className = "ins_img"/>
+                <div className = "ins">Cooking requires contextualizing</div>
+                <div className = "ins_des">
+People consider many factors such as the amount of effort needed or their previous experience when cooking. A lot of people cook the foods they are familiar with.</div>
+            </div>
+
+              <div style={{display:"flex", flexDirection:"column", alignItems:"flex-start"}} className = "forkie_insight">
+                <img src={forkie_ins2} className = "ins_img"/>
+                <div className = "ins">People are risk-averse when cooking.</div>
+                <div className = "ins_des">
+                Unlike ordering food at restaurants, cooking requires time and effort. Therefore, people are looking for recipes of which the taste is almost guaranteed. They rely on credible sources, popularity, expertise and past experience.</div>
+            </div>
+
+             <div style={{display:"flex", flexDirection:"column",alignItems:"flex-start"}} className = "forkie_insight">
+                <img src={forkie_ins3} className = "ins_img"/>
+                <div className = "ins">People have unintended food waste</div>
+                <div className = "ins_des">
+                Most of people have leftover ingredients after cooking which they throw out in the end. They try to use those ingredients; however, there's infamiliraity with the ingredients, so they procrastinate using those and forget about them.
+                </div>
+            </div>
+         </div>
+            <p>Until this point, I thought that there's an opportunity on recipe recommendation based on users' context. To learn if there is any similar apps managing this problem, and if so, what approach they are taking, we conducted competitive analysis of the existing apps.</p>
 
             <p className="mainT" style={{ marginTop: "30px" }}>Adaptive recipe recommendation after grocery is the key</p>
             <p>From the competitive analysis, we learned that the current apps are missing recipe recommendations after grocery. Also, they only provide static recommendations based on the ingredients without considering users' preference.</p>
@@ -503,21 +620,22 @@ export const projectList = {
             <p>Based on the research, we came up with following ideas.<br />
                 <b>1. Recipe recommendation after the grocery</b><br />
                 <b>2. Adaptive recommendation considering the context using ML</b><br />
-                <b>3. Integration with daily routine</b><br />
-                Our solution was to enable regaining the passion for food by providing an automatic food inventory tracker and recipe recommendation tool based on users' context.
+                <b>3. Integration with daily routine for contextualizing</b><br />
+                Our solution was to enable regaining the passion for food by providing an <b>automatic food inventory tracker</b> and <b>recipe recommendation tool</b> based on users' context.
             </p>
             <p className = "mainT">However, people don't care about leftovers</p>
             <p>With our idea, we did speed dating with the storyboards. However, we learned that people are not interested in our idea. People don't care about reducing food waste or managing the food inventory because of the effort required. </p>
             <img src={forkie_story} alt="Storyboard" onClick={zoomimg} className="zoomable" />
             <div className = "imgdes">"I don't really care"</div>
 
-            <p className = "mainT">Social aspects can be a key to regain passion</p>
-            <p>From the speed dating, We noticed that people often mention about interaction with other people as a motivation for cooking. We went back to the affinity diagram and found some notes we misunderstood. We percieved "guaranteed taste" is coming from well-known chefs; however, personal connection was another key providing trust.</p>
+            <p className = "mainT">Social interaction can be a key to regain passion</p>
+            <p>From the speed dating, We noticed that people often mention about <b>interaction with other people</b> as <b>a motivation for cooking</b>. We went back to the affinity diagram and found some notes we misunderstood. We percieved "guaranteed taste" is coming from well-known chefs; however, personal connection was another key providing trust.</p>
             <div style={{display:"flex",flexWrap:"wrap", alignItems:"center", maxWidth:"750px",margin:"0 auto 60px"}}>
                 <div style={{margin:"0 auto", background:"rgba(97,125,49,.2)",maxWidth:"300px",padding:"8px 16px",fontWeight:"600",color:"#000",borderRadius:"6px"}}>My friend who’s good at cooking recommended this site so I trust</div>
                 <div style={{margin:"0 auto", background:"rgba(97,125,49,.2)",maxWidth:"300px",padding:"8px 16px",fontWeight:"600",color:"#000",borderRadius:"6px"}}>She kept telling me about Kabocha so I tried.</div>
             </div>
-            <p>To learn more about how people share recipes, we did research about how people write a recipe and share it. We learned that people communicate recipes in <b>conversational way.</b> Also, many people write down ingredients first; however, they <b>go through the entire process to remember the ingredients</b> in their minds.</p>
+            <p className="insights">1. Recipe becomes conversational when shared</p>
+            <p className = "insight_des">To learn more about how people share recipes, we did research about how people write a recipe and share it. We learned that people communicate recipes in <b>conversational way.</b> Also, many people write down ingredients first; however, they <b>go through the entire process to remember the ingredients</b> in their minds.</p>
             <div style={{width:"100%",maxWidth:"1200px", display:"flex", flexDirection:"column",margin:"0 auto"}}>
                 <div style={{display:"flex", flexWrap:"wrap", alignItems:"center"}}>
                 <img src={forkie_recipe1} alt="How do you share a recipe" onClick={zoomimg} className="zoomable" style={{width:"49%"}}/>
@@ -525,15 +643,15 @@ export const projectList = {
                 </div>
                 <div className = "imgdes">How do you write or share a recipe?</div>
             </div>
-            <p className = "mainT">People trust personal connections because of diverse versions of a dish</p>
-            <p>Moreover, one of reason people rely on word of mouth is because a dish can have various versions. From this insight, <b>Github's 'forking'</b> came up in my mind.</p>
-            <div style={{margin:"0 auto", background:"rgba(97,125,49,.2)",maxWidth:"400px",padding:"16px 24px",fontWeight:"600",color:"#000",borderRadius:"6px"}}>I tried Bulgogi at a Korean restaurant so tried to make it, but the taste was different. I think it was the recipe which was wrong.</div>
+            <p className="insights">2. People rely on personal connections because of variations of a dish</p>
+            <p className = "insight_des">Moreover, people rely on word of mouth is because a dish can have various versions. Which means, there's higher chance that people would like the version of what their friends recommend. From this insight, <b>Github's 'forking'</b> came up in my mind.</p>
+            <div style={{margin:"60px auto 0", background:"rgba(97,125,49,.2)",maxWidth:"400px",padding:"16px 24px",fontWeight:"600",color:"#000",borderRadius:"6px"}}>I tried Bulgogi at a Korean restaurant so tried to make it, but the taste was different. I think it was the recipe which was wrong.</div>
             </div>,
 
         "Design Iteration": 
             <div>
                 <p className = "mainT" style={{marginTop:"30px"}}>Sharing recipe is sharing experience</p>
-                <p>Based on our research, we decided three main features of the app.
+                <p>Based on our research, we decided four main features of the app.
                
                 {/* <b>1. Share recipe with friends.</b><br />
                 <b>2. Create branches (fork) of a recipe.</b><br />
@@ -541,19 +659,23 @@ export const projectList = {
                  </p>
 
                 <p className = "insights">1. Share recipe with friends.</p>
-                <p className = "insight_des">From the research, we learned that sharing recipe is about sharing experience. Our goal was to foster the communication between people ragarding a recipe. However, <b>people feel uncomfortable sharing it with random people.</b> We believed that as people share a recipe with their personal connections, the entire community sharing experiences of a single recipe can be very big.</p>
-                <img src={forkie_diff} style={{maxWidth: "600px"}} alt="Information Diffusion"/>
-                <div className = "imgdes">Information Diffusion</div>
+                <p className = "insight_des">From the research, we learned that sharing recipe is about sharing experience. Our goal was to foster the communication between people ragarding a recipe. However, <b>people feel uncomfortable sharing it with random people.</b> Then how can we foster the communication and enlarge the community? We believed that as people share a recipe with their personal connections, chaining effect occurs and <b>the entire community sharing experiences of a single recipe can grow up very large.</b></p>
+                <img src={forkie_diff} style={{maxWidth: "600px", paddingLeft:"5%"}} alt="Information Diffusion"/>
+                <div className = "imgdes" style={{paddingLeft:"5%"}}>Information Diffusion</div>
         
                 <p className = "insights">2. Create branches (fork) of a recipe.</p>
-                <p className = "insight_des">Pasta in Italy and in USA taste different. Recipes of a dish can be vary depending on culture or personal preference. Forking function not only make people be able to enjoy what they want, but also would allow people to be able to track the original recipe.</p>
-                <img src={forkie_diff2} style={{maxWidth: "600px"}} alt="Forking Recipes"/>
-                <div className = "imgdes">Various Versions of a Recipe</div>
+                <p className = "insight_des">Pasta in Italy and in USA taste different. Recipes of a dish can be vary depending on users' cultural backgrounds or personal preferences. Forking function not only make people be able to enjoy what they want, but also would allow people to be able to track the original recipe. It's also another way of information diffusion.</p>
+                <img src={forkie_diff2} style={{maxWidth: "600px", paddingLeft:"5%"}} alt="Forking Recipes"/>
+                <div className = "imgdes" style={{paddingLeft:"5%"}}>Various Versions of a Recipe</div>
+                <p className = "insights">3. Share first-hand experience via crowdsourcing.</p>
+                <p className = "insight_des">People have their own tips from their experience, and these tips could be added to recipes in a form of comments.</p>
 
-                  <p className = "insights">3. Easily creating recipes using ML.</p>
+                  <p className = "insights">4. Easily creating recipes using ML.</p>
                 <p className = "insight_des">While watching people writing recipes on the reserach phase, I saw how people go back and forth because they forget to mention something. Also, recipe becomes conversational. Our goal is trying to provide recommendations which can higher the accuracy of recipes.</p>
-                <img src={forkie_lofi4} alt="Writing recommendations using ML" onClick={zoomimg} className="zoomable" />
-                <div className = "imgdes">Writing Recommendations</div>
+                <img src={forkie_lofi4} alt="Writing recommendations using ML" onClick={zoomimg} className="zoomable" style={{paddingLeft:"5%"}}/>
+                <div className = "imgdes" style={{paddingLeft:"5%"}}>Writing Recommendations</div>
+
+                  
 
                 <p>We drew the information architecture of the app based on the ideas we have. We created lo-fi prorotypes for three key ideas and conducted user testing.</p>
                 <img src={forkie_struc}  alt="Information Architecture" onClick={zoomimg} className="zoomable"/>
@@ -566,8 +688,8 @@ export const projectList = {
                 <img src={forkie_lofi2} alt="Lo-fi user testing2" onClick={zoomimg} className="zoomable" style={{width:"49%"}}/>
                 </div>
                 <div className = "imgdes">User Testing with Lo-fi Prototypes</div>
-
-                <p>We tested various versions, and re-iterated the information architecture and screens based on the usability testing.</p>
+                <p className = "mainT" style={{marginTop:"30px"}}>The key is conversation about 'a recipe'</p>
+                <p>We tested various versions. One of the questions we had was <b>how do we want users to interact with each other.</b> Do we want users having continuous communications or several interactions about recipes? Because the key point of our design is a <b>communication hub where people share their experience about recipes to help others regain passion for cooking,</b> our answer was the latter. Based on this idea, we updated the information architecture and screens.  </p>
                 <img src={forkie_struc2}  alt="Information Architecture" onClick={zoomimg} className="zoomable"/>
                 <div className = "imgdes">Updated Information Architecture</div>
             </div>
@@ -575,13 +697,29 @@ export const projectList = {
             <img src={forkie_mid2}  alt="Information Architecture" onClick={zoomimg} className="zoomable"/>
             <img src={forkie_mid3}  alt="Information Architecture" onClick={zoomimg} className="zoomable"/>
             <div className = "imgdes">Mid-fi Prototype</div>
-                  
+            <p>For this time, we conducted usability testing alsp with people who are good at cooking. From the testing, we could've get feedback about how to improve the recipe view. </p>
+            </div>,
+                "Final Design": <div>
 
-            </div>
-        
-        
+                     <img src={forkie_scmap}  alt="Screenmap" onClick={zoomimg} className="zoomable"/>
+            <div className = "imgdes">Screenmap</div>
+            <p className = "solutionT">Forkie, a recipe-sharing social network which help people regain passion for cooking.</p>
+            <div style={{width:"100%", margin:"30px 0", textAlign:"center"}}><a href="https://jayolee.github.io/forkie/" target="_blank" rel="noopener noreferrer">
+        <div className="button forkie">Play with the React Prototype</div></a></div>
+                </div>,
+                "Next Steps": 
+                <div>
+                <p className = "mainT">How can we manage the crowdsourcing?</p>
+                <p>Forkie uses crowdsourcing to allow users to share tips. The question is, how can we moderate the comments they share? Currently, comments with high numbers of likes would be on the top. However, is sending the comments with lower likes to the bottom a right way to manage the contents? What if there's only one comment? If there's a thumbs down button and we automatically delete comments with high numbers of thumbs down, how can we make users not abuse the function?</p>
 
+                <p className = "mainT">How can we provide options for users to find new friends?</p>
+                <p>Currently, Forkie doesn't provide a funntion for users to find a new friend. They can only make new following via the chain of their personal connections. However, what if a user doesn't have a friend who is on the app?</p>
+
+                 <p className = "mainT">How can users use the app while cooking?</p>
+                <p>When people cook, often their hands are not free. Since Forkie is a native mobile app, we can use voice assistants of mobile devices to solve this problem. What are other technological possibilities that can also be helpful? </p>
+                </div>,
     },
+
     "buncee": {
         "projectTitle": "Buncee",
         "quote": <span>A creating tool for school communities<br /><br /></span>,

@@ -31,7 +31,15 @@ class MainProject extends Component {
         'uiux': ['UI', "worksbutton workactive"],
         'development': ['Development', "worksbutton workactive"]
       },
-      worklist: [
+      worklist: [{
+        "id": "forkie",
+        "image": getcuisine,
+        "class": "uiux development portwrap",
+        "mainClass": "main_work",
+        "types": "UI/UX | Development",
+        "expla":"A mobile app help people regain passion for cooking",
+        "title": "Forkie",
+      },
         {
           "id": "up",
           "image": up_main,
@@ -41,15 +49,7 @@ class MainProject extends Component {
           "expla":"A mobile app that promotes productivity and combat stress",
           "title": "Up",
         },
-        {
-          "id": "getcuisine",
-          "image": getcuisine,
-          "class": "uiux development portwrap",
-          "mainClass": "main_work",
-          "types": "UI/UX | Development",
-          "expla":"A ML powered website to help clean out the fridge (Ongoing)",
-          "title": "Get Cuisine",
-        },
+        
         {
           "id": "dote",
           "image": dotenote,
