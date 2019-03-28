@@ -1,15 +1,15 @@
 self.__precacheManifest = [
   {
-    "revision": "93a4f2c070e4932d652a6fe243c4c5ee",
-    "url": "/portfolio/static/media/7.93a4f2c0.gif"
+    "revision": "4cfbba5d8c750acbd697f5d408b240c5",
+    "url": "/portfolio/static/media/9.4cfbba5d.png"
   },
   {
-    "revision": "5313652b4ed14baff26e",
-    "url": "/portfolio/static/css/main.ad33bb02.chunk.css"
+    "revision": "848cc08eea93193140c2",
+    "url": "/portfolio/static/css/main.d0fcdc3a.chunk.css"
   },
   {
-    "revision": "464f2fc70d1f654e162e",
-    "url": "/portfolio/static/js/1.464f2fc7.chunk.js"
+    "revision": "57730ca19f855ed787ce",
+    "url": "/portfolio/static/js/1.57730ca1.chunk.js"
   },
   {
     "revision": "ee2a100325fd284f0097",
@@ -24,8 +24,8 @@ self.__precacheManifest = [
     "url": "/portfolio/static/media/phone.2fc87b81.png"
   },
   {
-    "revision": "d33a94b67929866311cfe8521fed2ffe",
-    "url": "/portfolio/static/media/xcursor.d33a94b6.svg"
+    "revision": "27728c90bb2846a22f3ee8c612968c1d",
+    "url": "/portfolio/static/media/xcursor.27728c90.svg"
   },
   {
     "revision": "83de335cb9ac6623ca3bbdf165bdaac1",
@@ -440,8 +440,8 @@ self.__precacheManifest = [
     "url": "/portfolio/static/media/7.16279493.png"
   },
   {
-    "revision": "5313652b4ed14baff26e",
-    "url": "/portfolio/static/js/main.5313652b.chunk.js"
+    "revision": "93a4f2c070e4932d652a6fe243c4c5ee",
+    "url": "/portfolio/static/media/7.93a4f2c0.gif"
   },
   {
     "revision": "d29fdedc24bbf14557969d814b987eb9",
@@ -452,8 +452,8 @@ self.__precacheManifest = [
     "url": "/portfolio/static/media/8.89ca7e59.gif"
   },
   {
-    "revision": "4cfbba5d8c750acbd697f5d408b240c5",
-    "url": "/portfolio/static/media/9.4cfbba5d.png"
+    "revision": "848cc08eea93193140c2",
+    "url": "/portfolio/static/js/main.848cc08e.chunk.js"
   },
   {
     "revision": "a9825fdefd3240512a014dfeb08b5335",
@@ -668,6 +668,26 @@ self.__precacheManifest = [
     "url": "/portfolio/static/media/activity.70fafe4d.svg"
   },
   {
+    "revision": "dfc43020aa78fc077068cb8682d39728",
+    "url": "/portfolio/static/media/apppre.dfc43020.png"
+  },
+  {
+    "revision": "6994802a134c7cdedce63429908f65ee",
+    "url": "/portfolio/static/media/emoji.6994802a.gif"
+  },
+  {
+    "revision": "1e78ae7c537d12ad53c6fa885fcba8e6",
+    "url": "/portfolio/static/media/ff0.1e78ae7c.jpg"
+  },
+  {
+    "revision": "355ca7c76712af2ffad49ed526ec3eae",
+    "url": "/portfolio/static/media/gallery.355ca7c7.jpg"
+  },
+  {
+    "revision": "e555de0514d05c4ab0a790d93e006033",
+    "url": "/portfolio/static/media/signup.e555de05.jpg"
+  },
+  {
     "revision": "1027bc79c1df6ee247c7dba1c8152456",
     "url": "/portfolio/static/media/lights.1027bc79.jpg"
   },
@@ -700,12 +720,16 @@ self.__precacheManifest = [
     "url": "/portfolio/static/media/dotenote.2adb6938.jpg"
   },
   {
-    "revision": "e962753de3abdb63ea0403fe6c888a76",
-    "url": "/portfolio/static/media/getcuisine.e962753d.jpg"
+    "revision": "d15125ce91665391957257e143d02023",
+    "url": "/portfolio/static/media/getcuisine.d15125ce.jpg"
   },
   {
     "revision": "bd7ab8980e45b7c11461c1ea3c9f1286",
     "url": "/portfolio/static/media/blowmain.bd7ab898.jpg"
+  },
+  {
+    "revision": "d82ae78ed977799ffb9c09698b38959a",
+    "url": "/portfolio/static/media/buncee.d82ae78e.jpg"
   },
   {
     "revision": "64cfd37a205b2488211acd4aab9ae6bf",
@@ -880,7 +904,7 @@ self.__precacheManifest = [
     "url": "/portfolio/static/media/out2.315b8222.png"
   },
   {
-    "revision": "45d8fb8399f91362d044439ba32c4a4c",
+    "revision": "9d6483def79cec6a1975e7c72c805465",
     "url": "/portfolio/index.html"
   }
 ];
