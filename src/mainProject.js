@@ -67,7 +67,7 @@ class MainProject extends Component {
           "class": "ideation portwrap",
           "mainClass": "main_work",
           "types": "Ideation",
-          "expla":"A creation tool for school communities (www.buncee.com)",
+          "expla":"A tool for fostering creativity in school communities (www.buncee.com)",
           "title": "Buncee",
         },
         
@@ -208,8 +208,8 @@ class MainProject extends Component {
       <div className="workbox">
         {this.projects()}
 
-        <div style={{width:"100%", maxWidth:"1200px", margin: "150px auto 0", textAlign: "center", fontSize:"20px", lineHeight: "1.8"}} >
-        I also have some cool side projects which has <b>less research but for fun.</b><br />Feel free to check them out!
+        <div style={{width:"100%", maxWidth:"1200px", margin: "150px auto 0", textAlign: "center", fontSize:"22px", fontWeight:"bold", color:"#475d79", lineHeight: "1.8"}} >
+        I also have some cool side projects—feel free to check them out!
         </div>
         
         <div className = "moreExpla" style={{width:"100%", maxWidth:"1200px"}}>
@@ -245,7 +245,7 @@ class MainProject extends Component {
           </div>
           <div style={{width:"100%"}}>
           <a href="https://jayolee.github.io/portfolio/more" rel="noopener noreferrer">
-          <div className = "button">View more side projects</div></a>
+          <div className = "button blue">View more side projects</div></a>
           </div>
         </div>
         
@@ -253,12 +253,12 @@ class MainProject extends Component {
           <div className = "mainfa">
             <img src = {fa} />
           </div>
-          <div className="mainfades" >
-            Do you like <b>fine art?</b>
+          <div className="mainfades" style={{fontSize:"22px", fontWeight:"bold", color:"#475d79"}}>
+            Do you like fine art?
             <br />Check out my fine artwork.<br />
 
             <a href="https://jayolee.github.io/portfolio/fineart" rel="noopener noreferrer">
-            <div className = "button" style={{background: "#0b6ff5", lineHeight: "1.5"}}>View More Fine Arts</div>
+            <div className = "button blue" style={{background: "#0b6ff5", lineHeight: "1.5"}}>View More Fine Arts</div>
           </a>
           </div>
           

@@ -748,8 +748,8 @@ export const projectList = {
                 <p style={{ width: "calc(100% - 90px)", paddingLeft: "20px" }}>Explaining different levels of features
                 <ul style={{ marginTop: "10px" }}>
                         <li>
-                            - Canvas features</li><li>
-                            - Different type of users (School, Teacher, students)
+                             Canvas features</li><li>
+                             Different type of users (School, Teacher, students)
                 </li>
                     </ul>
                     Creating infographic of abstract concepts </p>

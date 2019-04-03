@@ -287,13 +287,13 @@ detailviewgenerator(){
     return (
       <div className="workbox">
 	  <div className="button fa" onClick={(ev) => this.setState({page : 9})}>Artist CV</div>
-	  <div>
+	  <div style={{margin:"0 auto 90px", maxWidth:"1300px"}}>
 		{this.listgenerator(this.gallery_paint)}
 		</div>
-		<div>
+		<div style={{margin:"0 auto 90px", maxWidth:"1300px"}}>
 		{this.listgenerator(this.gallery_draw)}
 		</div>
-		<div>
+		<div style={{margin:"0 auto 90px", maxWidth:"1300px"}}>
 		{this.listgenerator(this.gallery_others)}
 		</div>
 		{this.detailviewgenerator()}

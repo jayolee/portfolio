@@ -622,9 +622,9 @@ width:102px;
     .moreouterWrap{
       width: 50%;
       min-width: 500px;
-      margin: 0 auto 30px;
+      margin: 0 auto 34px;
       display: flex;
-      flex-wrap: center;
+      justify-content:center;
       
     }
     .morewrap{
@@ -633,10 +633,12 @@ width:102px;
       display: flex;
       flex-direction: column;
       padding: 10px;
-      @include sizes(50%,null);
+
+      @include sizes(calc(50% - 20px),null);
       min-width: 200px;
       .moredescrip, .moretitle{
         max-width: 200px;
+        color:#001a49
       }
       
     }
