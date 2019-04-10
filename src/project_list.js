@@ -377,6 +377,130 @@ export const projectList = {
                 At current stage of design, user are limited to saving virtual animals, which may not be as rewarding as contributing to saving animals in the real world. Therefore, we look forward to having a sponsorship partner with wildlife organizations for future implementations.</p>
         </div>,
     },
+    "getcuisine": {
+        "projectTitle": "Get Cuisine",
+        "quote": "How might Machine Learning can help people?",
+        "topimg": <div style={{ width: "640px", maxWidth: "100%", height: "auto", margin: "0 auto" }}><Vimeo video="315035206" /></div>,
+
+        "exlpla": {
+            "Duration": "Dec 2018 ~ Current",
+            "Team": "Ja Young Lee, June Byeon (from the second round)",
+            "Role": "User Reserach, UI/UX design, front, back-end development",
+            "Tool": "Python Flask, jQuery, HTML, CSS, Adobe Illustrator",
+        },
+        "button": <div><a href="http://getcuisine.herokuapp.com" target="_blank" rel="noopener noreferrer">
+            <div className="button getcuisine">Go to the Website</div></a>
+            <div style={{ transform: "translateY(-26px)" }}>*Initial loading is very slow</div>
+        </div>,
+        "Process": <div>
+            <div className="processBoxWrap">
+                <div className="proBoxLine getcuisine" />
+                <div className="proBoxOut">
+                    <div className="processBox getcuisine">Ideate</div>
+                    <div className="processExpla">Matchmaking</div>
+                </div>
+                <div className="proBoxOut">
+                    <div className="processBox getcuisine">Research</div>
+                    <div className="processExpla">Descriptive Research</div>
+                    <div className="processExpla">Survey</div>
+                </div>
+                <div className="proBoxOut">
+                    <div className="processBox getcuisine">Iterate</div>
+                    <div className="processExpla">Hi-fi Prototype</div>
+                    <div className="processExpla">Think-aloud</div>
+                </div>
+                <div className="proBoxOut">
+                    <div className="processBox getcuisine fin">Finalize</div>
+                    <div className="processExpla">Deployment</div>
+                </div>
+            </div>
+
+        </div>,
+        "Ideation": <div>
+            <p className="mainT" style={{ marginTop: "30px" }}>How might we help people using Machine Learning?</p>
+            <p>While the matchmaking process identifying possible activities and domains to which we can apply Machine Learning (ML) model, one of the dataset from Kaggle (<a href="https://www.kaggle.com/c/whats-cooking" target="_blank" rel="noopener noreferrer">cuisines and ingredients</a>) inspired me. It brought my experience having small amounts of ingredients which are leftovers after cooking. It’s often challenging to deal with these leftovers. Therefore, I redefined the problem space as below.
+                </p>
+            <p className="mainPoint" style={{ marginBottom: "0" }}>
+                <span style={{ boxShadow: "inset 0 -1.5px white, inset 0 -3px #617D31, inset 0 -4.5px white, inset 0 -6px #617D31" }} >How might Machine Learning help people clean out the fridge?</span></p>
+        </div>,
+        "Platform Research": <div>
+        <p className="mainT" style={{ marginTop: "30px" }}>People don't use Alexa to search for recipes</p>
+        <p> Originally, I planned to create an Amazon Alexa Skill because I believed it would be handy to provide recipe via conversational user interface. <b>However, although 41.4% of people place their smart speakers in the kitchen, only 26.5% of people use the speakers to look for recipes monthly, and only 5.1% people use it daily.</b> This is a comparably low comparing to other popular functions such as listening music (76.2% of monthly use, 41.9% of daily use) or checking the weather (69.1% of monthly use, 41.4% of daily use). <a href=" https://voicebot.ai/2018/03/21/data-breakdown-consumers-use-smart-speakers-today/" target="_blank" rel="noopener noreferrer">(Source)</a> Therefore, I chose website as a platform which can also provide visual interaction to users.</p>
+        <div className="halfwrap" style={{ marginTop: "0" }}>
+            <img src={getcuisine8} alt="Where do people put their smart speakers?" className="half" style={{ maxWidth: "500px", marginTop: "0" }} />
+            <img src={getcuisine9} alt="Smart Speaker Use Case Frequency Jan 2018" className="half" style={{ maxWidth: "500px", marginTop: "0" }} /><div className="imgdes">
+                <a href=" https://voicebot.ai/2018/03/21/data-breakdown-consumers-use-smart-speakers-today/" target="_blank" rel="noopener noreferrer">(Source of the graphs above)</a>
+            </div>
+        </div>
+    </div>,
+    "ML Model": <div>
+        <p>
+            I built pipelines of three algorithms: K-Nearest Neighbors (K-NN), Support Vector Machine, Multinomial Naive Bayesian from Scikit-learn with CountVectorizer and TfidfTransformer. Among three models, I decided to use K-NN model because it returned highest accuracy from K-fold Cross-validation (K = 5).</p>
+        <img src={getcuisineword} alt="Pipeline Structure" />
+        <div className="imgdes">Pipeline Structure</div>
+        <div className="triwrap getcuisine" style={{ marginTop: "60px" }}>
+            <div className="triinner" style={{ border: "4px solid rgba(97,125,49,0.5)", padding: "5px 15px 5px 0", borderRadius: "10px" }}>
+                <img src={getcuisinemod1} alt="K-NN Model" className="half" />
+                <div className="imgdes">K-NN Model<br />Accuracy: 0.73</div>
+            </div>
+            <div className="triinner">
+                <img src={getcuisinemod2} alt="SVM Model" className="half" />
+                <div className="imgdes">SVM Model<br />Accuracy: 0.06</div>
+            </div>
+            <div className="triinner">
+                <img src={getcuisinemod3} alt="Multinomial Naive Bayesian Model" className="half" />
+                <div className="imgdes">Multinomial NB Model<br />Accuracy: 0.63</div>
+            </div>
+        </div>
+    </div>,
+
+    "Challenges": <div> <p className="challenges" style={{ marginTop: "30px" }}>Lack of the open source recipe dataset</p>
+        <p>
+            I could not find and open source recipe dataset, so I used <a href="https://www.kaggle.com/c/whats-cooking" target="_blank" rel="noopener noreferrer">cuisines and ingredients dataset</a>. As a result, the functionality of the website is limited to provide only suitable cuisines instead of recipes. It requires additional efforts for users to look for a dish and a recipe to cook. Therefore, I added a function sending users to Google Search of recipes with the predicted cuisine and given ingredients.</p>
+        <p className="challenges">Optimizing the site</p>
+        <p>
+            The biggest issue of using ML is that it is hard to optimize the website for shorter loadings. I tried to optimize the files as much as possible; however, the initial response time is still long due to Heroku's policy (If the app has no traffic for 30 mins, it goes to sleep).
+        </p>
+        <p className="challenges">Debugging server error</p>
+        <p>
+            This was the first time I managed the server side. It kept returning 500 error from the ajax call, and I could not figure out the reason. By deleting the code line by line, I figured out this happened because I passed Null value to the server to run the model. Later, I learned that I need to make a server return the error indicating the type for the sake of debugging.
+        <img src={getcuisine11} alt="500 error" style={{ maxWidth: "500px" }} /><div className="imgdes">500 Error... What Does It Mean?</div>
+        </p>
+        <p className="challenges">Managing the data format to run the ML model</p>
+        <p>
+            The training data I used didn't have colum headers, and the data I passed from the inputs (JSON -> Pandas Dataframe) had column headers. As a result, it only returned French Cuisine (error). I added a line of code to get rid of the column headers to fix the error.
+        <img src={getcuision10} className="imgBorder" style={{ maxWidth: "500px" }} alt="Model Returning Error" /><div className="imgdes">ML Model Only Returning French Cuisine<br />(Curry Paste + Tamarind Paste + Chicken Breasts = French Food?)
+        </div>
+            <p>Also, I added an autocomplete function to the search bar using jQuery Autocomplete API because I wanted users to type ingredients in the same format as the train data.</p>
+
+
+        </p>
+    </div>,
+
+    "Initial Solution": <div>
+
+        <div style={{ width: "640px", maxWidth: "100%", height: "auto", margin: "0 auto" }}><Vimeo video="315035206" /></div>
+        <p className="solutionPoint" style={{ margin: "30px auto 0", maxWidth: "100%" }}><span style={{ color: "#617D31", fontWeight: "bold" }}>Get Cuisine,</span><br />a ML powered website to help clean out the fridge</p>
+        <div style={{ textAlign: "center" }}>
+            <a href="http://getcuisine.herokuapp.com" target="_blank" rel="noopener noreferrer">
+                <div className="button getcuisine">Go to the Website</div></a>
+            <div style={{ transform: "translateY(-26px)" }}>*Initial loading is very slow</div>
+        </div>
+        <p className="mainT" style={{ marginTop: "30px" }}>"Curiosity" can be a value of this website</p>
+        <p className="addmargin">One of the concerns about this project is that the data this website provides can easily be obtained from other websites. Also, what people need is recipes, not a cuisine type for search. However, I got feedback that once knowing that this website is using ML, people become curious to see the result and get interested. Therefore, I focused on providing 'fun' and fulfilling 'curiosity.'</p>
+
+        <img src={getcuisine3} alt="Cuisine Icons" onClick={zoomimg} className="zoomable" /><div className='imgdes'>Cuisine Icons</div>
+        <img className="zoomable" src={getcuisine1} onClick={zoomimg} alt="final design" />
+        <div className='imgdes'>Final Design</div>
+    </div>,
+    "Next Steps":<div>
+        <p className="mainT" style={{ marginTop: "30px" }}>The solution didn't solve the problem</p>
+            <p>Does this website fulfill the initial goal of "helping people clean out the fridge"? The answer was <b>NO.</b> The website was more about exploring the development of a ML powered website. Therefore, I started the second round of design. The final solution we got was <span style={{ color:"#fa6c42", fontWeight:"bold"}}>"Forkie."</span></p>
+            <div style={{width:"100%", textAlign:"center", margin:"0"}}>
+            <a href="https://jayolee.github.io/portfolio/projects/forkie/" rel="noopener noreferrer" ><div className="button forkie" style={{margin:"0"}}>See Forkie</div></a>
+            </div>
+    </div>
+    },
     "forkie": {
         "projectTitle": "Forkie",
         "quote": <span>How might we help people regain passion for cooking?<br />
@@ -385,9 +509,9 @@ export const projectList = {
 
         "exlpla": {
             "Duration": "Dec 2018 ~ March 2019",
-            "Team": "Ja Young Lee, June Byeon (from the second round)",
+            "Team": "Ja Young Lee, June Byeon",
             "Role": "User Reserach, UI/UX design, front/back-end development",
-            "Tool": "Python Flask, jQuery, HTML, CSS, Adobe Illustrator, Figma, Sketch, React",
+            "Tool": " React, HTML, SCSS, Adobe Illustrator, Figma, Sketch",
         },
         "button": <div><a href="https://jayolee.github.io/forkie/" target="_blank" rel="noopener noreferrer">
             <div className="button forkie">Play with the React Prototype</div></a></div>,
@@ -395,26 +519,9 @@ export const projectList = {
             <div className="processBoxWrap">
                 <div className="proBoxLine forkie" />
                 <div className="proBoxOut">
-                    <div className="processBox forkie">Ideate</div>
-                    <div className="processExpla">Matchmaking</div>
+                    <div className="processBox forkie">Initial Solution</div>
+                    <a href="https://jayolee.github.io/portfolio/projects/getcuisine/" target="_blank" rel="noopener noreferrer" ><div className="processExpla">Get Cuisine</div></a>
                 </div>
-                <div className="proBoxOut">
-                    <div className="processBox forkie">Research</div>
-                    <div className="processExpla">Descriptive Research</div>
-                    <div className="processExpla">Survey</div>
-                </div>
-                <div className="proBoxOut">
-                    <div className="processBox forkie">Iterate</div>
-                    <div className="processExpla">Hi-fi Prototype</div>
-                    <div className="processExpla">Think-aloud</div>
-                </div>
-                <div className="proBoxOut">
-                    <div className="processBox forkie fin">Finalize</div>
-                    <div className="processExpla">Deployment</div>
-                </div>
-            </div>
-            <div className="processBoxWrap">
-                <div className="proBoxLine forkie" />
                 <div className="proBoxOut">
                     <div className="processBox forkie">Research</div>
                     <div className="processExpla">Survey</div>
@@ -438,6 +545,12 @@ export const projectList = {
             </div>
 
         </div>,
+         "The Project": <div>
+         <p>The project had two rounds. It started with the project <span style={{color:"#617D31", fontWeight:"bold"}}>"Get Cuisine,"</span> which was about exploring how Machine Learning (ML) can help people clean out the fridge. Later, I realized the initial solution didn't solve the problem, so I had another round to get the solution.</p>
+        <div style={{width:"100%", textAlign:"center", margin:"0"}}>
+         <a href="https://jayolee.github.io/portfolio/projects/getcuisine/" target="_blank" rel="noopener noreferrer" ><div className="button getcuisine" style={{margin:"0"}}>See Get Cuisine</div></a>
+         </div>
+     </div>,
         "Solution": <div>
             <div className="insightWrap">
                 <div style={{ display: "flex", flexDirection: "column", alignItems: "flex-start" }} className="forkie_insight">
@@ -505,89 +618,9 @@ export const projectList = {
 
 
         </div>,
-        "The Project": <div>
-            <p>The project had two rounds. It started with exploring how Machine Learning (ML) can help people clean out the fridge. Later, I realized the initial solution didn't solve the problem, so I had another round to get the solution.</p>
-        </div>,
-        "Initial Ideation": <div>
-            <p className="mainT" style={{ marginTop: "30px" }}>How might we help people using Machine Learning?</p>
-            <p>While the matchmaking process identifying possible activities and domains to which we can apply Machine Learning (ML) model, one of the dataset from Kaggle (<a href="https://www.kaggle.com/c/whats-cooking" target="_blank" rel="noopener noreferrer">cuisines and ingredients</a>) inspired me. It brought my experience having small amounts of ingredients which are leftovers after cooking. It’s often challenging to deal with these leftovers. Therefore, I redefined the problem space as below.
-                </p>
-            <p className="mainPoint" style={{ marginBottom: "0" }}>
-                <span style={{ boxShadow: "inset 0 -1.5px white, inset 0 -3px #fa6c42, inset 0 -4.5px white, inset 0 -6px #fa6c42" }} >How might Machine Learning help people clean out the fridge?</span></p>
-        </div>,
-        "Platform Research": <div>
-            <p className="mainT" style={{ marginTop: "30px" }}>People don't use Alexa to search for recipes</p>
-            <p> Originally, I planned to create an Amazon Alexa Skill because I believed it would be handy to provide recipe via conversational user interface. <b>However, although 41.4% of people place their smart speakers in the kitchen, only 26.5% of people use the speakers to look for recipes monthly, and only 5.1% people use it daily.</b> This is a comparably low comparing to other popular functions such as listening music (76.2% of monthly use, 41.9% of daily use) or checking the weather (69.1% of monthly use, 41.4% of daily use). <a href=" https://voicebot.ai/2018/03/21/data-breakdown-consumers-use-smart-speakers-today/" target="_blank" rel="noopener noreferrer">(Source)</a> Therefore, I chose website as a platform which can also provide visual interaction to users.</p>
-            <div className="halfwrap" style={{ marginTop: "0" }}>
-                <img src={getcuisine8} alt="Where do people put their smart speakers?" className="half" style={{ maxWidth: "500px", marginTop: "0" }} />
-                <img src={getcuisine9} alt="Smart Speaker Use Case Frequency Jan 2018" className="half" style={{ maxWidth: "500px", marginTop: "0" }} /><div className="imgdes">
-                    <a href=" https://voicebot.ai/2018/03/21/data-breakdown-consumers-use-smart-speakers-today/" target="_blank" rel="noopener noreferrer">(Source of the graphs above)</a>
-                </div>
-            </div>
-        </div>,
-        "ML Model": <div>
-            <p>
-                I built pipelines of three algorithms: K-Nearest Neighbors (K-NN), Support Vector Machine, Multinomial Naive Bayesian from Scikit-learn with CountVectorizer and TfidfTransformer. Among three models, I decided to use K-NN model because it returned highest accuracy from K-fold Cross-validation (K = 5).</p>
-            <img src={getcuisineword} alt="Pipeline Structure" />
-            <div className="imgdes">Pipeline Structure</div>
-            <div className="triwrap getcuisine" style={{ marginTop: "60px" }}>
-                <div className="triinner" style={{ border: "4px solid rgba(97,125,49,0.5)", padding: "5px 15px 5px 0", borderRadius: "10px" }}>
-                    <img src={getcuisinemod1} alt="K-NN Model" className="half" />
-                    <div className="imgdes">K-NN Model<br />Accuracy: 0.73</div>
-                </div>
-                <div className="triinner">
-                    <img src={getcuisinemod2} alt="SVM Model" className="half" />
-                    <div className="imgdes">SVM Model<br />Accuracy: 0.06</div>
-                </div>
-                <div className="triinner">
-                    <img src={getcuisinemod3} alt="Multinomial Naive Bayesian Model" className="half" />
-                    <div className="imgdes">Multinomial NB Model<br />Accuracy: 0.63</div>
-                </div>
-            </div>
-        </div>,
-
-        "Challenges": <div> <p className="challenges" style={{ marginTop: "30px" }}>Lack of the open source recipe dataset</p>
-            <p>
-                I could not find and open source recipe dataset, so I used <a href="https://www.kaggle.com/c/whats-cooking" target="_blank" rel="noopener noreferrer">cuisines and ingredients dataset</a>. As a result, the functionality of the website is limited to provide only suitable cuisines instead of recipes. It requires additional efforts for users to look for a dish and a recipe to cook. Therefore, I added a function sending users to Google Search of recipes with the predicted cuisine and given ingredients.</p>
-            <p className="challenges">Optimizing the site</p>
-            <p>
-                The biggest issue of using ML is that it is hard to optimize the website for shorter loadings. I tried to optimize the files as much as possible; however, the initial response time is still long due to Heroku's policy (If the app has no traffic for 30 mins, it goes to sleep).
-            </p>
-            <p className="challenges">Debugging server error</p>
-            <p>
-                This was the first time I managed the server side. It kept returning 500 error from the ajax call, and I could not figure out the reason. By deleting the code line by line, I figured out this happened because I passed Null value to the server to run the model. Later, I learned that I need to make a server return the error indicating the type for the sake of debugging.
-            <img src={getcuisine11} alt="500 error" style={{ maxWidth: "500px" }} /><div className="imgdes">500 Error... What Does It Mean?</div>
-            </p>
-            <p className="challenges">Managing the data format to run the ML model</p>
-            <p>
-                The training data I used didn't have colum headers, and the data I passed from the inputs (JSON -> Pandas Dataframe) had column headers. As a result, it only returned French Cuisine (error). I added a line of code to get rid of the column headers to fix the error.
-            <img src={getcuision10} className="imgBorder" style={{ maxWidth: "500px" }} alt="Model Returning Error" /><div className="imgdes">ML Model Only Returning French Cuisine<br />(Curry Paste + Tamarind Paste + Chicken Breasts = French Food?)
-            </div>
-                <p>Also, I added an autocomplete function to the search bar using jQuery Autocomplete API because I wanted users to type ingredients in the same format as the train data.</p>
-
-
-            </p>
-        </div>,
-
-        "Initial Solution": <div>
-
-            <div style={{ width: "640px", maxWidth: "100%", height: "auto", margin: "0 auto" }}><Vimeo video="315035206" /></div>
-            <p className="solutionPoint" style={{ margin: "30px auto 0", maxWidth: "100%" }}><span style={{ color: "#617D31", fontWeight: "bold" }}>Get Cuisine,</span><br />a ML powered website to help clean out the fridge</p>
-            <div style={{ textAlign: "center" }}>
-                <a href="http://getcuisine.herokuapp.com" target="_blank" rel="noopener noreferrer">
-                    <div className="button getcuisine">Go to the Website</div></a>
-                <div style={{ transform: "translateY(-26px)" }}>*Initial loading is very slow</div>
-            </div>
-            <p className="mainT" style={{ marginTop: "30px" }}>"Curiosity" can be a value of this website</p>
-            <p className="addmargin">One of the concerns about this project is that the data this website provides can easily be obtained from other websites. Also, what people need is recipes, not a cuisine type for search. However, I got feedback that once knowing that this website is using ML, people become curious to see the result and get interested. Therefore, I focused on providing 'fun' and fulfilling 'curiosity.'</p>
-
-            <img src={getcuisine3} alt="Cuisine Icons" onClick={zoomimg} className="zoomable" /><div className='imgdes'>Cuisine Icons</div>
-            <img className="zoomable" src={getcuisine1} onClick={zoomimg} alt="final design" />
-            <div className='imgdes'>Final Design</div>
-        </div>,
-        "Second Round Research": <div>
+        "Research": <div>
             <p className="mainT" style={{ marginTop: "30px" }}>The initial solution didn't solve the problem</p>
-            <p>However, does this website fulfill the initial goal of "helping people clean out the fridge"? The answer was <b>NO.</b> The website was more about exploring the development of a ML powered website. Therefore, I started the second round of design . This time, I tried to figure out why people have leftover ingredients.</p>
+            <p>Did <span style={{color:"#617D31", fontWeight:"bold"}}>Get Cuisine</span> fulfill the initial goal of "helping people clean out the fridge"? The answer was <b>NO.</b> The website was more about exploring the development of a ML powered website. Therefore, I started the second round of design. This time, I tried to figure out why people have leftover ingredients.</p>
             <p className="mainT" style={{ marginTop: "30px" }}>What is the cooking life-cycle?</p>
             <p>First, I conducted the survey and semi-structured interviews to learn about people's decision making process regarding cooking and find pain points. Participants were people in mid-20s to early 30s and who prepare food for themselves. Most of them also have a busy schedule. From the research, I got the following insights.</p>
             <img src={getcuisine_aff} alt="Affinity diagram" onClick={zoomimg} className="zoomable" /><div className='imgdes'>Affinity Diagram</div>

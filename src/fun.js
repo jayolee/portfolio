@@ -9,6 +9,8 @@ import logpos from './images/logpos2.jpg'
 import even from './images/even2.png'
 import momoko from './images/momo.png'
 import gssh from './images/gssh.jpg'
+
+import dotenote from './images/dotenote.jpg'
 import naoshima from './images/naoshima.jpg'
 
 
@@ -56,6 +58,15 @@ class Fun extends Component {
         "expla":"Animation Emoji Stickers",
         "title": "Happy Momoko",
       },
+      {
+        "id": "dote",
+        "image": dotenote,
+        "class": "ideation uiux portwrap",
+        "mainClass": "funwork",
+        "types": "UI/UX | Ideation",
+        "expla":"Location specific virtual messaging mobile application",
+        "title": "DoteNote",
+      },
         { "id":"logpos",
         "image":logpos,
         "class":"animation portwrap",
@@ -71,16 +82,7 @@ class Fun extends Component {
           "types": "UI/UX",
           "expla":"A mobile app that finds the best place to meet",
           "title": "Even",
-        },
-       
-        { "id":"gssh",
-          "image":gssh,
-          "class":"video portwrap",
-          "mainClass":"funwork",
-          "types": "Video",
-          "expla":"Video about my high school",
-          "title": "GSSH - Class of 2011",
-        },
+        }
        
       ]
     }

@@ -3,8 +3,8 @@ import { Link, Route } from 'react-router-dom'
 import './App.scss';
 import './projects.scss'
 
-import dotenote from './images/dotenote.jpg'
-import getcuisine from './images/getcuisine.jpg'
+import forkie from './images/getcuisine.jpg'
+import getcuisine from './images/getcuisine_ori.jpg'
 import up_main from './up/blowmain.jpg'
 
 import buncee_logo from './images/buncee.jpg'
@@ -35,7 +35,7 @@ class MainProject extends Component {
       },
       worklist: [{
         "id": "forkie",
-        "image": getcuisine,
+        "image": forkie,
         "class": "uiux development portwrap",
         "mainClass": "main_work",
         "types": "UI/UX | Development",
@@ -51,15 +51,14 @@ class MainProject extends Component {
           "expla":"A mobile app that promotes productivity and combat stress",
           "title": "Up",
         },
-        
         {
-          "id": "dote",
-          "image": dotenote,
-          "class": "ideation uiux portwrap",
+          "id": "getcuisine",
+          "image": getcuisine,
+          "class": "uiux development portwrap",
           "mainClass": "main_work",
-          "types": "UI/UX | Ideation",
-          "expla":"Location specific virtual messaging mobile application",
-          "title": "DoteNote",
+          "types": "UI/UX | Development",
+          "expla":"A ML powered website to help clean out the fridge",
+          "title": "Get Cuisine",
         },
          {
           "id": "buncee",
