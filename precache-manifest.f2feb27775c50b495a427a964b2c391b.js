@@ -1,15 +1,15 @@
 self.__precacheManifest = [
   {
-    "revision": "4cfbba5d8c750acbd697f5d408b240c5",
-    "url": "/portfolio/static/media/9.4cfbba5d.png"
+    "revision": "a9825fdefd3240512a014dfeb08b5335",
+    "url": "/portfolio/static/media/9.a9825fde.gif"
   },
   {
-    "revision": "899528c1234a39f8e8d7",
-    "url": "/portfolio/static/css/main.c9530775.chunk.css"
+    "revision": "35f6afb7768d2cbcdd04",
+    "url": "/portfolio/static/css/main.e74c9601.chunk.css"
   },
   {
-    "revision": "57730ca19f855ed787ce",
-    "url": "/portfolio/static/js/1.57730ca1.chunk.js"
+    "revision": "0a10c3e48966cf61b3b7",
+    "url": "/portfolio/static/js/1.0a10c3e4.chunk.js"
   },
   {
     "revision": "ee2a100325fd284f0097",
@@ -452,12 +452,12 @@ self.__precacheManifest = [
     "url": "/portfolio/static/media/8.89ca7e59.gif"
   },
   {
-    "revision": "899528c1234a39f8e8d7",
-    "url": "/portfolio/static/js/main.899528c1.chunk.js"
+    "revision": "4cfbba5d8c750acbd697f5d408b240c5",
+    "url": "/portfolio/static/media/9.4cfbba5d.png"
   },
   {
-    "revision": "a9825fdefd3240512a014dfeb08b5335",
-    "url": "/portfolio/static/media/9.a9825fde.gif"
+    "revision": "35f6afb7768d2cbcdd04",
+    "url": "/portfolio/static/js/main.35f6afb7.chunk.js"
   },
   {
     "revision": "ff80dca30d6254e9635ea3adda0cc799",
@@ -700,8 +700,8 @@ self.__precacheManifest = [
     "url": "/portfolio/static/media/momo.9789988b.png"
   },
   {
-    "revision": "ba70970c27138b7820499561284acdc3",
-    "url": "/portfolio/static/media/gssh.ba70970c.jpg"
+    "revision": "2adb69384e872eb217c0649b14f8b233",
+    "url": "/portfolio/static/media/dotenote.2adb6938.jpg"
   },
   {
     "revision": "69b00c271242d9af018b65e9f8c80b08",
@@ -716,12 +716,12 @@ self.__precacheManifest = [
     "url": "/portfolio/static/media/404text.df004c01.svg"
   },
   {
-    "revision": "2adb69384e872eb217c0649b14f8b233",
-    "url": "/portfolio/static/media/dotenote.2adb6938.jpg"
-  },
-  {
     "revision": "d15125ce91665391957257e143d02023",
     "url": "/portfolio/static/media/getcuisine.d15125ce.jpg"
+  },
+  {
+    "revision": "e962753de3abdb63ea0403fe6c888a76",
+    "url": "/portfolio/static/media/getcuisine_ori.e962753d.jpg"
   },
   {
     "revision": "bd7ab8980e45b7c11461c1ea3c9f1286",
@@ -904,7 +904,11 @@ self.__precacheManifest = [
     "url": "/portfolio/static/media/out2.315b8222.png"
   },
   {
-    "revision": "8c7d9e087f2a72c440d27d8ba09c4471",
+    "revision": "ba70970c27138b7820499561284acdc3",
+    "url": "/portfolio/static/media/gssh.ba70970c.jpg"
+  },
+  {
+    "revision": "f60344c09687c2c6d684cc6508130d75",
     "url": "/portfolio/index.html"
   }
 ];
