@@ -13,6 +13,7 @@ import nao from './images/nao_main.jpg'
 import report from './images/report_main.jpg'
 import momo from './images/momo_main.jpg'
 import log from './images/log_main.jpg'
+import bc from './images/school.jpg'
 
 import fa from './FA/images/image2-4.jpg'
 import Projects from './projects.js'
@@ -62,7 +63,7 @@ class MainProject extends Component {
         },
          {
           "id": "buncee",
-          "image": buncee_logo,
+          "image": bc,
           "class": "ideation portwrap",
           "mainClass": "main_work",
           "types": "Ideation",

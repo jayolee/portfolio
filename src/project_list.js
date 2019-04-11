@@ -778,14 +778,14 @@ export const projectList = {
             <p style={{ margin: "10px auto", fontSize: "18px" }}><b>A web page explaining the features of Buncee</b></p>
             <div style={{ display: "flex", justifyContent: "center", maxWidth: "550px", margin: "0 auto", alignItems: "flex-start" }}>
                 <p style={{ width: "90px", marginLeft:"10px" }}><b>Challenges:</b></p>
-                <p style={{ width: "calc(100% - 90px)", paddingLeft: "20px" }}>Explaining different levels of features
+                <p style={{ width: "calc(100% - 90px)", paddingLeft: "20px" }}>- Explaining different levels of features
                 <ul style={{ marginTop: "10px" }}>
                         <li>
                              Canvas features</li><li>
                              Different type of users (School, Teacher, students)
                 </li>
                     </ul>
-                    Creating infographic of abstract concepts </p>
+                    - Creating infographic of abstract concepts </p>
             </div>
             </div>
         </div>,
@@ -798,38 +798,38 @@ export const projectList = {
                 <p style={{ margin: "10px auto", fontSize: "18px", fontWeight: "bold" }}>A portal where students and teachers can get the sample Buncees as references</p>
                 <div style={{ display: "flex", justifyContent: "center", maxWidth: "550px", margin: "0 auto", alignItems: "flex-start" }}>
                 <p style={{ width: "90px", marginLeft:"10px" }}><b>Challenges:</b></p>
-                    <p style={{ width: "calc(100% - 90px)", paddingLeft: "20px" }}>Make the UI intuitive enough for non tech-savyy users<br />
-                        provide overall summary of contents which can also be
-                used as breadcrumbs </p>
+                    <p style={{ width: "calc(100% - 90px)", paddingLeft: "20px" }}>- Make the UI intuitive enough for non tech-savyy users<br />
+                        - provide overall summary of contents which can also be used as breadcrumbs </p>
                 </div>
             </div>
         </div>,
         "Sign Up Page": <div style={{display: "flex", justifyContent: "space-around", maxWidth: "1000px", margin: "0 auto", alignItems: "center", flexWrap:"wrap"}}>
 
             <div style={{width:"360px"}}>
-                <img src={buncee5} />
-                <div style={{ width: "100%", textAlign: "center" }}><a href="https://app.edu.buncee.com/signup?account_type=generic-premium&tier=plus" target="_blank" rel="noopener noreferrer">
-                    <div className="button buncee">Visit the Site</div></a></div>
+                <img src={buncee5} style={{boxShadow:"0 0 10px rgba(0,0,0,0.2)", padding:"16px 0 14px 20px"}} />
             </div>
             <div>
-            <p style={{ margin: "10px 0" }}><b>Role:</b> Web design, prototyping using InVision, Adobe After Effect</p>
+            <p style={{ margin: "10px 0" }}><b>Role:</b> Web design, prototyping using InVision, Adobe After Effects</p>
             <p style={{ margin: "10px 0", fontSize: "18px", fontWeight: "bold" }}>A web page explaining the features of Buncee</p>
             <div style={{ display: "flex", maxWidth: "500px", margin: "0 auto", alignItems: "flex-start" }}>
                 <p style={{ width: "65px" }}><b>Challenges:</b></p>
-                <p style={{ width: "calc(100% - 90px)", paddingLeft: "30px" }}>Providing clear instruction and error messages<br />Divide pages for easier flow</p>
+                <p style={{ width: "calc(100% - 90px)", paddingLeft: "30px" }}>- Providing clear instruction and error messages (using the button as a progress bar)<br />- Divide pages for easier flow</p> 
             </div>
+            <div style={{ width: "100%", textAlign: "center" }}><a href="https://app.edu.buncee.com/signup?account_type=generic-premium&tier=plus" target="_blank" rel="noopener noreferrer">
+                    <div className="button buncee" style={{marginTop:0}}>Visit the Site</div></a></div>
             </div>
         </div>,
         "Buncee Emotion iOS Sticker Pack": <div style={{display: "flex", justifyContent: "space-between", maxWidth: "850px", margin: "0 auto", alignItems: "center", flexWrap:"wrap"}}>
                <div style={{width:"350px"}}>
-                <img src={buncee2} style={{maxWidth:"280px"}}/>
-                <div style={{ width: "100%", textAlign: "center" }}><a href="https://app.edu.buncee.com/signup?account_type=generic-premium&tier=plus" target="_blank" rel="noopener noreferrer">
-                    <div className="button buncee">Open the Appstore</div></a></div>
+                <img src={buncee2} style={{maxWidth:"280px", boxShadow:"0 0 10px rgba(0,0,0,0.2)"}}/>
             </div>
-            <div style={{width:"100%", maxWidth:"450px",marginLeft:"30px"}}>
+            <div style={{width:"100%", maxWidth:"450px",marginLeft:"30px", textAlign:"center"}}>
             <p style={{ margin: "10px 0" }}><b>Role:</b> Creating Animation stickers</p>
             <p style={{ margin: "10px 0", fontSize: "18px", fontWeight: "bold" }}>iOS sticker pack for iMessage </p>
+            <div style={{ width: "100%", textAlign: "center" }}><a href="https://app.edu.buncee.com/signup?account_type=generic-premium&tier=plus" target="_blank" rel="noopener noreferrer">
+                    <div className="button buncee" style={{marginTop:"30px"}}>Open the Appstore</div></a></div>
             </div>
+           
         </div>,
         "Buncee iOS App": <div>
 
