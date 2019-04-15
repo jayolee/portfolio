@@ -56,6 +56,9 @@ import forkie_phone from './getcuisine/commentphone.gif'
 import forkie_fork from './getcuisine/fork.gif'
 import forkie_cmt from './getcuisine/commenting_recipe.gif'
 import forkie_crt from './getcuisine/create_phone.gif'
+import forkie_logo from './getcuisine/forkie_logo.svg'
+import forkie_top from './getcuisine/forkie_top.png'
+import forkie_top2 from './getcuisine/forkie_top2.png'
 
 import forkie_ins1 from './getcuisine/insight1.jpg'
 import forkie_ins2 from './getcuisine/insight2.jpg'
@@ -504,8 +507,8 @@ export const projectList = {
     "forkie": {
         "projectTitle": "Forkie",
         "quote": <span>How might we help people regain passion for cooking?<br />
-            <span style={{ fontSize: "16px", opacity: ".7s" }}>How might we minimize the food waste?</span></span>,
-        "topimg": <div />,
+            <span style={{ fontSize: "16px", opacity: ".7s" }}>How might we reduce food waste?</span></span>,
+        "topimg": <div style={{width:"100%", textAlign:"center"}}><img src={forkie_logo} style={{maxWidth:"300px", width:"100%", padding:"60px 0 30px"}}/></div>,
 
         "exlpla": {
             "Duration": "Dec 2018 ~ March 2019",
