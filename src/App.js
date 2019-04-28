@@ -32,7 +32,9 @@ class App extends Component {
       activelist: ['uiux', 'code', 'ideation', 'illustration', 'animation', 'video'],
       deactivelist: [],
       star_opacity: 1,
+      solar: 1,
     }
+    this.parallaxInst = '';
     this.logoList = [logo, text];
     this.logoStyle = [{}, { width: "90%" }];
     this.logoWrapStyle = [{}, { height: "171px" }];
@@ -53,15 +55,13 @@ class App extends Component {
   }
 
   //Funcs for stars 
-  //function to generate star animation durations
-
-  //function to randomly generate star positions
-  //functions to change star opacity
   starOff() {
-    this.setState({ star_opacity: 0 });
+    this.parallaxInst.disable();
+    // this.setState({ star_opacity: 0 });
   }
   starOn() {
-    this.setState({ star_opacity: 1 });
+    this.parallaxInst.enable();
+    // this.setState({ star_opacity: 1 });
   }
   //function to create stars
   starGenerator() {
@@ -111,6 +111,7 @@ class App extends Component {
     const scene = document.getElementById('solarsystem');
     const Parallax = window.Parallax;
     const parallaxInstance = new Parallax(scene, { hoverOnly: true });
+    this.parallaxInst = parallaxInstance;
   }
 
   render() {

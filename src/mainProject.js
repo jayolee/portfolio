@@ -7,8 +7,6 @@ import forkie from './images/getcuisine.jpg'
 import getcuisine from './images/getcuisine_ori.jpg'
 import up_main from './up/blowmain.jpg'
 
-import buncee_logo from './images/buncee.jpg'
-
 import nao from './images/nao_main.jpg'
 import report from './images/report_main.jpg'
 import momo from './images/momo_main.jpg'
@@ -155,26 +153,6 @@ class MainProject extends Component {
     let projectUrl = '';
     for (let i = 0; i < this.state.worklist.length; i++) {
       projectUrl=process.env.PUBLIC_URL +'/projects/'+this.state.worklist[i].id+'/';
-      // if(this.state.worklist[i].id === "buncee"){
-      //   element.push(
-      //     <div id={this.state.worklist[i].id} key={this.state.worklist[i].id} className={this.state.worklist[i].mainClass}  >
-      //     <div className={this.state.worklist[i].class} key={this.state.worklist[i].id + "wrapper"}>
-      //        <div className="discrip">
-      //       <div>
-      //         {this.state.worklist[i].title}</div>
-      //         <div className="expla">
-      //           {this.state.worklist[i].expla}
-      //         </div>
-      //       </div>
-      //     </div>
-      //     <div className="discripsmaller">
-      //       {this.state.worklist[i].title}<br />
-      //       <span className="types"> {this.state.worklist[i].expla}</span>
-      //     </div>
-      //   </div>
-      //   );
-      //   continue;
-      // }
      element.push(
         <Link to={projectUrl} key={this.state.worklist[i].id+'_link'} >
         <div id={this.state.worklist[i].id} key={this.state.worklist[i].id} className={this.state.worklist[i].mainClass}  >
@@ -208,7 +186,7 @@ class MainProject extends Component {
       <div className="workbox">
         {this.projects()}
 
-        <div style={{width:"100%", maxWidth:"1200px", margin: "150px auto 0", textAlign: "center", fontSize:"22px", fontWeight:"bold", color:"#475d79", lineHeight: "1.8"}} >
+        <div style={{width:"100%", maxWidth:"1200px", margin: "150px auto 0", textAlign: "center", fontSize:"24px", fontWeight:"700", color:"#001a49", lineHeight: "1.8"}} >
         I also have some cool side projects—feel free to check them out!
         </div>
         
@@ -253,7 +231,7 @@ class MainProject extends Component {
           <div className = "mainfa">
             <img src = {fa} />
           </div>
-          <div className="mainfades" style={{fontSize:"22px", fontWeight:"bold", color:"#475d79"}}>
+          <div className="mainfades" style={{fontSize:"22px", fontWeight:"bold", color:"rgb(0, 26, 73)"}}>
             Do you like fine art?
             <br />Check out my fine artwork.<br />
 

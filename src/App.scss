@@ -319,6 +319,7 @@ img {
 
 .activemenu {
   color: #16e6ff !important;
+  
 	font-weight:bold;
 	z-index:999;
 }
@@ -593,7 +594,7 @@ width:102px;
     margin: 0 10px;
     img{
       @include sizes(100%);
-      box-shadow: 0 0 18px rgba(0, 0, 0, 0.4);
+      box-shadow: 0 0 6px rgba(0, 0, 0, 0.4);
     }
     @media screen and (max-width: 895px) {
       width: 100%;
@@ -638,7 +639,7 @@ width:102px;
       min-width: 200px;
       .moredescrip, .moretitle{
         max-width: 200px;
-        color:#001a49
+        color:#475d79
       }
       
     }
@@ -648,8 +649,7 @@ width:102px;
 
     }
     .moretitle{
-      margin-top: 6px;
-     margin-bottom: 10px;
+      margin:6px 0;
       font: {
         size: 18px;
         weight: bold;
