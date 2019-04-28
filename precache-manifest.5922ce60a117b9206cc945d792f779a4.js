@@ -1,15 +1,15 @@
 self.__precacheManifest = [
   {
-    "revision": "ff80dca30d6254e9635ea3adda0cc799",
-    "url": "/portfolio/static/media/10.ff80dca3.png"
+    "revision": "a9825fdefd3240512a014dfeb08b5335",
+    "url": "/portfolio/static/media/9.a9825fde.gif"
   },
   {
-    "revision": "1020519eacbcd48fd595",
-    "url": "/portfolio/static/css/main.600e9e46.chunk.css"
+    "revision": "2a602346f524538d528a",
+    "url": "/portfolio/static/css/main.0a76e64f.chunk.css"
   },
   {
-    "revision": "851324e28c1b9d5c5033",
-    "url": "/portfolio/static/js/1.851324e2.chunk.js"
+    "revision": "b56f22c7a17534d3f1fc",
+    "url": "/portfolio/static/js/1.b56f22c7.chunk.js"
   },
   {
     "revision": "ee2a100325fd284f0097",
@@ -24,12 +24,12 @@ self.__precacheManifest = [
     "url": "/portfolio/static/media/phone.2fc87b81.png"
   },
   {
-    "revision": "27728c90bb2846a22f3ee8c612968c1d",
-    "url": "/portfolio/static/media/xcursor.27728c90.svg"
-  },
-  {
     "revision": "83de335cb9ac6623ca3bbdf165bdaac1",
     "url": "/portfolio/static/media/cursor.83de335c.svg"
+  },
+  {
+    "revision": "27728c90bb2846a22f3ee8c612968c1d",
+    "url": "/portfolio/static/media/xcursor.27728c90.svg"
   },
   {
     "revision": "8824f724782801f0ad50bb5178bed7d0",
@@ -460,12 +460,12 @@ self.__precacheManifest = [
     "url": "/portfolio/static/media/9.4cfbba5d.png"
   },
   {
-    "revision": "a9825fdefd3240512a014dfeb08b5335",
-    "url": "/portfolio/static/media/9.a9825fde.gif"
+    "revision": "2a602346f524538d528a",
+    "url": "/portfolio/static/js/main.2a602346.chunk.js"
   },
   {
-    "revision": "1020519eacbcd48fd595",
-    "url": "/portfolio/static/js/main.1020519e.chunk.js"
+    "revision": "ff80dca30d6254e9635ea3adda0cc799",
+    "url": "/portfolio/static/media/10.ff80dca3.png"
   },
   {
     "revision": "a57e253dfb1cda1d83f256cce84cba33",
@@ -920,11 +920,7 @@ self.__precacheManifest = [
     "url": "/portfolio/static/media/gssh.ba70970c.jpg"
   },
   {
-    "revision": "d82ae78ed977799ffb9c09698b38959a",
-    "url": "/portfolio/static/media/buncee.d82ae78e.jpg"
-  },
-  {
-    "revision": "bc3cb4962ccc3b6d583dd40194e21198",
+    "revision": "820a5ad88f57aff9cd23a51808c7b2ab",
     "url": "/portfolio/index.html"
   }
 ];
