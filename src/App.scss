@@ -138,9 +138,9 @@ img {
    .solar0 {
      //mercury
     width:40px;
-    top:19vh;
+    top:17vh;
     left:50%;
-    @include transform(translateX(90px));
+    @include transform(translateX(100px));
     &.shadow{
       width:40px;
       height:40px;
@@ -151,8 +151,8 @@ img {
      //venus
      width:130px;
      left: 50%;
-     top:47vh;
-     @include transform(translateX(-500px));
+     top:40vh;
+     @include transform(translateX(-430px));
      &.shadow{
        width:130px;
        height:130px;
@@ -174,9 +174,9 @@ img {
    .solar5 {
      //jupiter
      width:340px;
-     top:38vh;
+     top:44vh;
      left: 50%;
-     @include transform(translateX(400px));
+     @include transform(translateX(360px));
      &.shadow{
       height:340px;
      box-shadow: 0 0 30px #ffe9d7;
@@ -186,7 +186,7 @@ img {
      //saturn
      width:730px;
      left: 50%;
-     top:-160px;
+     top:-180px;
      @include transform(translateX(-860px) rotate(-4deg));
    }
    .solar3 {
@@ -194,7 +194,7 @@ img {
      width:80px;
      left: 50%;
      top:32vh;
-     @include transform(translateX(800px));
+     @include transform(translateX(700px));
      &.shadow{
       height:80px;
      box-shadow: 0 0 30px #ade1ff;
@@ -204,7 +204,7 @@ img {
      //out2
      width:80px;
      left: 50%;
-     top:31vh;
+     top:28vh;
      @include transform(translateX(-780px));
      &.shadow{
       height:80px;
@@ -308,7 +308,7 @@ img {
         transition: .3s;
         &:hover {
             text-decoration: none;
-            color:#16e6ff;
+            color:#0b6ff5 ;
             font-weight:700;
           }
         cursor: pointer;
@@ -318,7 +318,7 @@ img {
 }
 
 .activemenu {
-  color: #16e6ff !important;
+  color: #0b6ff5 !important;
   
 	font-weight:bold;
 	z-index:999;
@@ -458,25 +458,15 @@ width:102px;
 /*sectop*/
 
 .sectopwrapper {
-  @include sizes(100%,80px);
+  @include sizes(100%,1px);
   position: relative;
   @include positions(0,null,null,0);
   padding: 0;
   margin: 0;
 }
 
-.sectop {
-  position: absolute;
-  overflow: hidden;
-  display: block;
-  @include positions(0,null,null,0);
-  margin: 0;
-  @include sizes(100%, 100%);
-  background: linear-gradient(#f9c1d0, #bce6fb, #fff);
-}
-
 .logobox {
-  @include sizes(100%);
+  @include sizes(100%,null,1130px);
   position: relative;
   @include positions(0);
   margin: -76vh auto 50px;
@@ -486,10 +476,10 @@ width:102px;
     color:#001a49;
     // text-transform: uppercase;
     letter-spacing: .4px;
-    margin-top:52px;
+    margin-top:16px;
     margin-bottom:30px;
     font: {
-      size:24px;
+      size:22px;
       weight:400;
     }
   }
@@ -509,15 +499,15 @@ width:102px;
 }
 
 #ylogo {
-  @include sizes(100%);
-  position: absolute;
-  @include positions(null,null,null ,0);
+  display: inline-block;
+  @include sizes(50px, 50px);
+  position:relative;
 }
 
 .works {
   position: relative;
   @include sizes(100%,null);
-  margin: calc(60vh + 86px) auto 40vh;
+  margin: calc(50vh + 86px) auto 20vh;
   padding: 0;
   text-align: center;
 }
@@ -871,9 +861,6 @@ width:102px;
         weight:500;
         size:18px;
     }
-    
-  
-
     a{
       @include sizes(40px);
         margin:10px;

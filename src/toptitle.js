@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom'
 
+import logo from './images/peach.svg'
 import res_grey from './images/res_grey.svg'
 import res_blk from './images/res_blk.svg'
 import git_grey from './images/hub_grey.svg'
@@ -27,9 +28,9 @@ class Toptitle extends Component {
   render() {
     return (
               <div>
-                
+                {/* <img src={logo} id="ylogo" alt="logo"/> */}
                <div key="title" style={{display:this.titleStyle[this.pagenum[this.state.page]]}}>
-                      <div className="titles">Hi! I am Ja <b>"Young"</b> Lee,<br /><span style={{ fontSize: "20px" }}>a product designer currently pursuing a Master of HCI at CMU</span></div>
+                      <div className="titles">Hi! I am Ja <span style={{color:"#0b6ff5", fontWeight: "bold"}}>Young</span> Lee,<br /><span style={{ fontSize: "18px"}}>a product designer currently pursuing a Master of HCI at CMU</span></div>
                       <a href="http://goo.gl/j91z25" target="_blank" rel="noopener noreferrer" style={{ margin: "10px" }}>
                         <div className="icons" id="resu"><img src={res_blk} alt="Resume_hover" /><img src={res_grey} alt="Resume" /></div>
                       </a>

@@ -121,21 +121,11 @@ class App extends Component {
           <div className="starwrap_out">
             <div className="starwrap_in" key="starwrap">
               <div id="solarsystem" >
-                {/* <div style={{opacity:this.state.star_opacity, transition:".4s"}} key={"staropacity"}> */}
                 {this.starGenerator()}
-                {/* </div> */}
               </div>
               <div className="logobox">
-                <div className="logowrap" style={this.logoWrapStyle[this.state.page]}>
-                  <a href={process.env.PUBLIC_URL + "/projects"} >
-                    <img src={this.logoList[this.state.page]} id="ylogo" alt="logo" style={this.logoStyle[this.state.page]} onClick={(ev) => this.setState({ menu: 0 })} />
-                  </a>
-
-                </div>
                 <Toptitle />
               </div>
-
-
             </div>
           </div>
           <Header key="header" pagenum={this.state.menu} menustatus={this.menustatus}/>

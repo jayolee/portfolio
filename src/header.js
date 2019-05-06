@@ -67,7 +67,7 @@ class Header extends Component {
             menuUrl = process.env.PUBLIC_URL + '/' + this.menulist[this.keylist[i]][1];  //Set the url depends on the menu
             element.push(
                 <li id={this.menulist[this.keylist[i]][0]} key={"menuli" + i} className={this.state.menuli[i]}>
-                    <div className={this.state.menudot[i]} key={"menudot" + i} />
+                    {/* <div className={this.state.menudot[i]} key={"menudot" + i} /> */}
                     <Link to={menuUrl} className={this.state.aclass[i]} key={"menua" + i} id={i} onClick={(ev)=> {this.setState({pagenumber: i}); this.updateStyle(i)}}>{this.keylist[i]}</Link>
                 </li>
             );
