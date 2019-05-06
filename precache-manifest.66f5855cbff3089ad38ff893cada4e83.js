@@ -4,8 +4,8 @@ self.__precacheManifest = [
     "url": "/portfolio/static/media/10.ff80dca3.png"
   },
   {
-    "revision": "35c94ed8ad473a5d4dda",
-    "url": "/portfolio/static/css/main.52125536.chunk.css"
+    "revision": "fa318378b562ea034eb6",
+    "url": "/portfolio/static/css/main.562c3e2c.chunk.css"
   },
   {
     "revision": "851324e28c1b9d5c5033",
@@ -24,12 +24,12 @@ self.__precacheManifest = [
     "url": "/portfolio/static/media/phone.2fc87b81.png"
   },
   {
-    "revision": "83de335cb9ac6623ca3bbdf165bdaac1",
-    "url": "/portfolio/static/media/cursor.83de335c.svg"
-  },
-  {
     "revision": "27728c90bb2846a22f3ee8c612968c1d",
     "url": "/portfolio/static/media/xcursor.27728c90.svg"
+  },
+  {
+    "revision": "83de335cb9ac6623ca3bbdf165bdaac1",
+    "url": "/portfolio/static/media/cursor.83de335c.svg"
   },
   {
     "revision": "8824f724782801f0ad50bb5178bed7d0",
@@ -464,8 +464,8 @@ self.__precacheManifest = [
     "url": "/portfolio/static/media/9.a9825fde.gif"
   },
   {
-    "revision": "35c94ed8ad473a5d4dda",
-    "url": "/portfolio/static/js/main.35c94ed8.chunk.js"
+    "revision": "fa318378b562ea034eb6",
+    "url": "/portfolio/static/js/main.fa318378.chunk.js"
   },
   {
     "revision": "a57e253dfb1cda1d83f256cce84cba33",
@@ -924,7 +924,7 @@ self.__precacheManifest = [
     "url": "/portfolio/static/media/peach.33788bae.svg"
   },
   {
-    "revision": "302b5c38cb891c44ed42351ef397a670",
+    "revision": "ae3c30cb804a8033646678d051b2c54b",
     "url": "/portfolio/index.html"
   }
 ];
