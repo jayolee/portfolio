@@ -175,7 +175,7 @@ $bc : #00bac0;
 	margin:0 0; 
 	position:absolute; 
 	z-index: 1000; 
-	@include positions(calc(-60vh - 70px),null,null, 0);
+	@include positions(calc(-42vh - 70px),null,null, 0);
 	padding: {
 		top:0;
 		bottom:400px;
@@ -1215,53 +1215,7 @@ $imgshadow: 0 0 14px rgba(0,0,0,0.2);
 		text-align:center;
 	}
 }
-//FA Page
 
-.FAdetail{
-	position:absolute;
-	@include sizes(100%,auto);
-	background:#fff;
-	@include positions(0);
-	z-index:999;
-	text-align:center;
-	&.Facv{
-		.FAcv_detail{
-			text-align: left;
-			@include sizes(95%, null, 700px);
-			margin:80px auto 100px;
-			font-size:16px;
-
-			.biotitle{
-				margin-top:60px;
-				text-transform: uppercase;
-				font: {
-					weight:bold;
-					size:17px;
-				}
-			}
-			.biocontent{
-				display:flex;
-				line-height:2;
-				.bioyear{
-					font: {
-						weight:bold;
-						
-					}
-					color:rgba(0,0,0,0.6);
-					margin-right:20px;
-					
-				}
-				.bioname{
-					
-						color:rgba(0,0,0,0.8);
-					.title{
-						font-style:italic;
-					}
-				}
-			}
-		}
-	}
-}
 
 .detail_wrapper{
 	display:flex;
