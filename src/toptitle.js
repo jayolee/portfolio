@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom'
 
-import logo from './images/peach.svg'
 import res_grey from './images/res_grey.svg'
 import res_blk from './images/res_blk.svg'
 import git_grey from './images/hub_grey.svg'

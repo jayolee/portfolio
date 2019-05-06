@@ -153,7 +153,8 @@ class Projects extends Component {
     window.scrollTo({top: 0, left: 0})
     setTimeout(this.rollup(), 10);
     this.setState({anistat:0});
-    this.props.starOff();
+    if(this.props.starOff()){
+    this.props.starOff();}
     this.width = window.innerWidth;
   }
   componentWillUnmount() {

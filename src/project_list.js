@@ -57,8 +57,6 @@ import forkie_fork from './getcuisine/fork.gif'
 import forkie_cmt from './getcuisine/commenting_recipe.gif'
 import forkie_crt from './getcuisine/create_phone.gif'
 import forkie_logo from './getcuisine/forkie_logo.svg'
-import forkie_top from './getcuisine/forkie_top.png'
-import forkie_top2 from './getcuisine/forkie_top2.png'
 
 import forkie_ins1 from './getcuisine/insight1.jpg'
 import forkie_ins2 from './getcuisine/insight2.jpg'
@@ -508,7 +506,7 @@ export const projectList = {
         "projectTitle": "Forkie",
         "quote": <span>How might we help people regain passion for cooking?<br />
             <span style={{ fontSize: "16px", opacity: ".7s" }}>How might we reduce food waste?</span></span>,
-        "topimg": <div style={{width:"100%", textAlign:"center"}}><img src={forkie_logo} style={{maxWidth:"300px", width:"100%", padding:"60px 0 30px"}}/></div>,
+        "topimg": <div style={{width:"100%", textAlign:"center"}}><img src={forkie_logo} alt="Forkie Logo" style={{maxWidth:"300px", width:"100%", padding:"60px 0 30px"}}/></div>,
 
         "exlpla": {
             "Duration": "Dec 2018 ~ March 2019",
@@ -629,21 +627,21 @@ export const projectList = {
             <img src={getcuisine_aff} alt="Affinity diagram" onClick={zoomimg} className="zoomable" /><div className='imgdes'>Affinity Diagram</div>
             <div className="insightWrap" style={{ margin: "50px auto 60px" }}>
                 <div style={{ display: "flex", flexDirection: "column", alignItems: "flex-start" }} className="forkie_insight">
-                    <img src={forkie_ins1} className="ins_img" />
+                    <img src={forkie_ins1} alt="Insight 1" className="ins_img" />
                     <div className="ins">Cooking requires contextualizing</div>
                     <div className="ins_des">
                     People consider many factors such as the amount of effort needed or their previous experience when cooking. A lot of people cook the foods they are familiar with.</div>
                 </div>
 
                 <div style={{ display: "flex", flexDirection: "column", alignItems: "flex-start" }} className="forkie_insight">
-                    <img src={forkie_ins2} className="ins_img" />
+                    <img src={forkie_ins2} alt="Insight 2" className="ins_img" />
                     <div className="ins">People are risk-averse when cooking.</div>
                     <div className="ins_des">
                     Unlike ordering food at restaurants, cooking requires time and effort. Therefore, people are looking for recipes of which the taste is almost guaranteed. They rely on credible sources, popularity, expertise and past experience.</div>
                 </div>
 
                 <div style={{ display: "flex", flexDirection: "column", alignItems: "flex-start" }} className="forkie_insight">
-                    <img src={forkie_ins3} className="ins_img" />
+                    <img src={forkie_ins3} alt="Insight 3" className="ins_img" />
                     <div className="ins">People have unintended food waste</div>
                     <div className="ins_des">
                     Most people have leftover ingredients after cooking which they throw out in the end. They try to use those ingredients; however, there's unfamiliarity with the ingredients, so they procrastinate using those and forget about them.
@@ -773,7 +771,7 @@ export const projectList = {
             "What are these?": <span><i>Buncee </i>is a creation tool for school communities. Students, teachers and other community members can use the Buncee canvas as a presentation, communication and creation tool. I worked as a graphic/UX designer at <i>Buncee</i>. Below are some projects I did at <i>Buncee.</i></span>,
         },
         "Buncee Features": <div>
-            <img src={buncee3} style={{ size: "100%", maxWidth: "1200px" }} />
+            <img src={buncee3} alt="Buncee Features" style={{ size: "100%", maxWidth: "1200px" }} />
             <div style={{ width: "100%", textAlign: "center" }}><a href="https://www.edu.buncee.com/features" target="_blank" rel="noopener noreferrer">
                 <div className="button buncee">Visit the Site</div></a></div>
                 <div style={{maxWidth:"550px", margin:"0 auto"}}>
@@ -793,9 +791,11 @@ export const projectList = {
             </div>
         </div>,
         "Buncee Gallery": <div>
-            <img src={buncee4} style={{ size: "100%", maxWidth: "500px" }} />
-            <div style={{ width: "100%", textAlign: "center" }}><a href="https://www.edu.buncee.com/gallery" target="_blank" rel="noopener noreferrer">
-                <div className="button buncee">Visit the Site</div></a></div>
+            <img src={buncee4} alt="Buncee Gallery"  style={{ size: "100%", maxWidth: "500px" }} />
+            <div style={{ width: "100%", textAlign: "center" }}>
+                <div className="button buncee" style={{background:"#ccc", boxShadow:"none"}}>Visit the Site</div>
+                <div style={{fontSize:"14px", transform:
+            "translateY(-50px)"}}>Contact me for more information</div></div>
             <div style={{maxWidth:"550px", margin:"0 auto"}}>
                 <p style={{ marginBottom: "10px" }}><b>Role:</b> Web design, prototyping using HTML/CSS/JQuery</p>
                 <p style={{ margin: "10px auto", fontSize: "18px", fontWeight: "bold" }}>A portal where students and teachers can get the sample Buncees as references</p>

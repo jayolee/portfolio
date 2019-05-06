@@ -34,6 +34,7 @@ class App extends Component {
       star_opacity: 1,
       solar: 1,
     }
+    this.solarRef = React.createRef();
     this.parallaxInst = '';
     this.logoList = [logo, text];
     this.logoStyle = [{}, { width: "90%" }];
@@ -56,11 +57,15 @@ class App extends Component {
 
   //Funcs for stars 
   starOff() {
+    if(this.parallaxInst){
     this.parallaxInst.disable();
     // this.setState({ star_opacity: 0 });
   }
+  }
   starOn() {
+    if(this.parallaxInst){
     this.parallaxInst.enable();
+    }
     // this.setState({ star_opacity: 1 });
   }
   //function to create stars
@@ -108,7 +113,7 @@ class App extends Component {
     const welcommsg = '　　　　　　　∩\n　　　　　　　||\n　　　　　　　||\n　　　　　　　||\n　　　　　 ／￣￣＼\n　　　　　｜　　　 ヽ\n　　　　　/　　　　 |\n　 |＼　／　／ヽ / ノ\n　 |／￣￣￣＼ |/ /\n　 /　　　　　Ｖ＿)\n　｜(● ●)　 ｜\n　王(_人_) 三 /\n　 ＼＿＿＿_／\n　 _/ /_/ /\n　(＿ﾉ(＿ﾉ\n WELCOME!'
     console.log(welcommsg); //welcome message printing
    
-    const scene = document.getElementById('solarsystem');
+    const scene = this.solarRef.current;
     const Parallax = window.Parallax;
     const parallaxInstance = new Parallax(scene, { hoverOnly: true });
     this.parallaxInst = parallaxInstance;
@@ -120,12 +125,14 @@ class App extends Component {
         <div>
           <div className="starwrap_out">
             <div className="starwrap_in" key="starwrap">
-              <div id="solarsystem" >
+              <div id="solarsystem" ref = {this.solarRef}>
                 {this.starGenerator()}
               </div>
               <div className="logobox">
                 <Toptitle />
               </div>
+
+
             </div>
           </div>
           <Header key="header" pagenum={this.state.menu} menustatus={this.menustatus}/>

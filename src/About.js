@@ -3,12 +3,6 @@ import './App.scss';
 import './projects.scss'
 
 import myphoto from './images/photo_me.jpg'
-import res_grey from './images/res_grey.svg'
-import res_blk from './images/res_blk.svg'
-import git_grey from './images/hub_grey.svg'
-import git_blk from './images/hub_blk.svg'
-import in_grey from './images/in_grey.svg'
-import in_blk from './images/in_blue.svg'
 
 class About extends Component {
 

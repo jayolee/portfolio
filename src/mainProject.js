@@ -177,7 +177,7 @@ class MainProject extends Component {
         <Route path={projectUrl} key={"routeto_"+this.state.worklist[i].id} render={props => <Projects key="Projects" idnum={this.state.worklist[i].id}  projecttype="/projects" starOff={this.starOff.bind(this)} starOn = {this.starOn.bind(this)}  />}  />
       )
     }
-  element = [<div style={{textAlign: "left"}}>{routelist}</div>, <div style={{maxWidth: "1200px", margin: "0 auto"}}>{element}</div>];
+  element = [<div key="routes" style={{textAlign: "left"}}>{routelist}</div>, <div key="routelist" style={{maxWidth: "1200px", margin: "0 auto"}}>{element}</div>];
     return element
   }
  
@@ -193,14 +193,14 @@ class MainProject extends Component {
         <div className = "moreExpla" style={{width:"100%", maxWidth:"1200px"}}>
         <div className="moreouterWrap">
           <div className = "morewrap" id="nao" >
-            <img src = {nao} />
+            <img src = {nao} alt = "Artwork of Naoshima" />
             <div className = "moretitle">Artwork of Naoshima</div>
             <div className = "moredescrip">A website about Naoshima with my illustrations</div>
             {/* <div className = "btn">Read More</div> */}
           </div>
 
            <div className = "morewrap" id="momo" >
-            <img src = {momo} />
+            <img src = {momo} alt = "Happy Momoko" />
             <div className = "moretitle">Happy Momoko</div>
             <div className = "moredescrip">An animation Emoji set for messaging</div>
             {/* <div className = "btn">Read More</div> */}
@@ -208,14 +208,14 @@ class MainProject extends Component {
           </div>
           <div className="moreouterWrap">
           <div className = "morewrap" id="report" >
-            <img src = {report} />
+            <img src = {report} alt = "I am a Reporter"/>
             <div className = "moretitle">I am a Reporter</div>
             <div className = "moredescrip">A visual novel game for novice users</div>
             {/* <div className = "btn">Read More</div> */}
           </div>
 
              <div className = "morewrap" id="log" >
-            <img src = {log} />
+            <img src = {log} alt = "LOG + POS"/>
             <div className = "moretitle">LOG + POS</div>
             <div className = "moredescrip">An audio AR solution improving rescue operations</div>
             {/* <div className = "btn">Read More</div> */}
@@ -229,7 +229,7 @@ class MainProject extends Component {
         
         <div className="mainfaWrap">
           <div className = "mainfa">
-            <img src = {fa} />
+            <img src = {fa} alt = "Fine Art" />
           </div>
           <div className="mainfades" style={{fontSize:"22px", fontWeight:"bold", color:"rgb(0, 26, 73)"}}>
             Do you like fine art?
