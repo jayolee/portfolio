@@ -32,7 +32,7 @@ class FaCv extends Component {
             <div style={{opacity:this.state.opacity, transition:'.3s'}} >
             <div className="greybox" onClick={this.closing.bind(this)}/>
                 
-                <div className="FAdetail Facv" style={{ top:this.state.scroll}}>
+                <div className="FAdetail Facv" style={{ top:"0"}}>
                 <div className="xmark" onClick={this.closing.bind(this)} >
                     <svg width="50" height="50">
                         <path d="M10 10 L40 40 M40 10 L10 40" />
