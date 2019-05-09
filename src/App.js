@@ -148,7 +148,7 @@ class App extends Component {
 
 
             <Switch>
-              <Route path={process.env.PUBLIC_URL} exact render={props => <MainProject starOff={this.starOff.bind(this)} starOn={this.starOn.bind(this)} />} />
+              <Route path={process.env.PUBLIC_URL} exact render={props => <FAs starOff={this.starOff.bind(this)} starOn={this.starOn.bind(this)} />} />
               <Route path={process.env.PUBLIC_URL + "/projects/"} render={props => <MainProject starOff={this.starOff.bind(this)} starOn={this.starOn.bind(this)} />} />
               <Route path={process.env.PUBLIC_URL + "/more/"} render={props => <Fun starOff={this.starOff.bind(this)} starOn={this.starOn.bind(this)} />} />
               <Route path={process.env.PUBLIC_URL + "/fineart/"} component={FAs} />
