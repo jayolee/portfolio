@@ -689,16 +689,33 @@ width:102px;
   .main_work {
     display: inline-block;
     @include sizes(46%);
-    margin: 24px 2%;
+    margin: 46px 2%;
     transition: .4s;
     &:hover {
         text-transform: none;
       }
+      &.double{
+        @include sizes(92%);
+      }
       .portwrap{
         @include sizes(null,null,500px,400px);
         transition:.4s;
+        &.double{
+          @include sizes(null,null,1300px,340px);
+          img{
+            width: 100%;
+          }
+        }
       }
-    
+    #external{
+      width: 24px;
+      display: inline-block;
+      position: relative;
+      top: 6px;
+      left: 10px;
+      transform: none;
+      opacity: .8;
+    }
   }
   .hidden{
     opacity:0;

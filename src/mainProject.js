@@ -7,11 +7,14 @@ import forkie from './images/getcuisine.jpg'
 import getcuisine from './images/getcuisine_ori.jpg'
 import up_main from './up/blowmain.jpg'
 
+import external from './images/external.svg'
+
 import nao from './images/nao_main.jpg'
 import report from './images/report_main.jpg'
 import momo from './images/momo_main.jpg'
 import log from './images/log_main.jpg'
 import bc from './images/school.jpg'
+import bcr from './images/bcr.jpg'
 
 import fa from './FA/images/image2-4.jpg'
 import Projects from './projects.js'
@@ -37,41 +40,43 @@ class MainProject extends Component {
         "image": forkie,
         "class": "uiux development portwrap",
         "mainClass": "main_work",
-        "types": "UI/UX | Development",
         "expla":"A mobile app help people regain passion for cooking",
         "title": "Forkie",
+      },{
+        "id": "getcuisine",
+        "image": getcuisine,
+        "class": "uiux development portwrap",
+        "mainClass": "main_work",
+        "expla":"A ML powered website to help clean out the fridge",
+        "title": "Get Cuisine",
       },
         {
           "id": "up",
           "image": up_main,
           "class": "uiux development portwrap",
           "mainClass": "main_work",
-          "types": "UI/UX | Development",
           "expla":"A mobile app that promotes productivity and combat stress",
           "title": "Up",
         },
-        {
-          "id": "getcuisine",
-          "image": getcuisine,
-          "class": "uiux development portwrap",
-          "mainClass": "main_work",
-          "types": "UI/UX | Development",
-          "expla":"A ML powered website to help clean out the fridge",
-          "title": "Get Cuisine",
-        },
+        
          {
           "id": "buncee",
           "image": bc,
           "class": "ideation portwrap",
           "mainClass": "main_work",
-          "types": "Ideation",
           "expla":"A tool for fostering creativity in school communities (www.buncee.com)",
           "title": "Buncee",
+        }, {
+          "id": "bcr",
+          "image": bcr,
+          "class": "portwrap double",
+          "mainClass": "main_work double",
+          "expla":"Service for recovering PTSD veterans and first responders",
+          "title": "Boulder Crest x CMU (Ongoing)",
         },
         
       ],
     }
-    this.typelist = ['uiux', 'development', 'ideation'];
   }
   closehandler() {
     setTimeout(this.setState({ page: 0 }), 300);
@@ -151,7 +156,7 @@ class MainProject extends Component {
     let element = [];
     let routelist=[];
     let projectUrl = '';
-    for (let i = 0; i < this.state.worklist.length; i++) {
+    for (let i = 0; i < this.state.worklist.length - 1; i++) {
       projectUrl=process.env.PUBLIC_URL +'/projects/'+this.state.worklist[i].id+'/';
      element.push(
         <Link to={projectUrl} key={this.state.worklist[i].id+'_link'} >
@@ -177,6 +182,26 @@ class MainProject extends Component {
         <Route path={projectUrl} key={"routeto_"+this.state.worklist[i].id} render={props => <Projects key="Projects" idnum={this.state.worklist[i].id}  projecttype="/projects" starOff={this.starOff.bind(this)} starOn = {this.starOn.bind(this)}  />}  />
       )
     }
+    element.push(
+      <a href="https://jayolee.github.io/BCR/research.html" target="_blank" rel="noopener noreferrer"  key={this.state.worklist[4].id+'_link'} >
+      <div id={this.state.worklist[4].id} key={this.state.worklist[4].id} className={this.state.worklist[4].mainClass}  >
+        <div className={this.state.worklist[4].class} key={this.state.worklist[4].id + "wrapper"}>
+          <img className="longim" alt={this.state.worklist[4].title} src={this.state.worklist[4].image} key={this.state.worklist[4].title + "image"} />
+          <div className="discrip">
+          <div>
+            {this.state.worklist[4].title}<img src={external} id="external" /></div>
+            <div className="expla">
+              {this.state.worklist[4].expla}
+            </div>
+          </div>
+        </div>
+        <div className="discripsmaller">
+          {this.state.worklist[4].title}<img src={external} id="external" /><br />
+          <span className="types"> {this.state.worklist[4].expla}</span>
+        </div>
+      </div>
+      </a>
+    )
   element = [<div key="routes" style={{textAlign: "left"}}>{routelist}</div>, <div key="routelist" style={{maxWidth: "1200px", margin: "0 auto"}}>{element}</div>];
     return element
   }
@@ -195,14 +220,14 @@ class MainProject extends Component {
           <div className = "morewrap" id="nao" >
             <img src = {nao} alt = "Artwork of Naoshima" />
             <div className = "moretitle">Artwork of Naoshima</div>
-            <div className = "moredescrip">A website about Naoshima with my illustrations</div>
+            <div className = "moredescrip">A website about Naoshima with illustrations</div>
             {/* <div className = "btn">Read More</div> */}
           </div>
 
            <div className = "morewrap" id="momo" >
             <img src = {momo} alt = "Happy Momoko" />
             <div className = "moretitle">Happy Momoko</div>
-            <div className = "moredescrip">An animation Emoji set for messaging</div>
+            <div className = "moredescrip">An animation Emoji set for text messaging</div>
             {/* <div className = "btn">Read More</div> */}
           </div>
           </div>
