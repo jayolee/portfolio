@@ -1335,7 +1335,20 @@ $imgshadow: 0 0 14px rgba(0,0,0,0.2);
 		display:none;
 	}
 }
-
+.fork1{color: #FA5327}
+		.fork2{ color: #1186A5}
+		.fork3{color: #8DA0A1}
+		.ins_title{
+			text-align: left;
+			width: 100%;
+			margin: 32px 0 0;
+			text-transform: uppercase;
+			line-height: 1;
+			font: {
+				size: 14px;
+				weight: bold;
+			}
+		}
 .insightWrap{
 	display:flex;
 	justify-content:space-between;
@@ -1348,25 +1361,32 @@ $imgshadow: 0 0 14px rgba(0,0,0,0.2);
 		align-items: center;
 		
 	}
+	
 .forkie_insight{
-	text-align: center;
+	text-align: left;
 	max-width: 340px;
 	@media screen and (max-width: 1010px){
 		margin: 16px 0;
 	}
 	.ins_img{
 		width: 100%;
-		max-width: 300px;
+		max-width: 250px;
+		&.new{
+			max-width: 200px;
+		}
 	}
+
 	.ins{
+		text-align: left;
 		width: 100%;
-		margin: 16px 0 12px;
+		margin: 0 0 12px;
 		font: {
 			size: 20px;
 			weight: bold;
 		}	
 		}
 	.ins_des{
+		text-align: left;
 		width: 100%;
 		font-size: 16px;
 		line-height: 1.7;
