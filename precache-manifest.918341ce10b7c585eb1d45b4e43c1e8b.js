@@ -1,15 +1,15 @@
 self.__precacheManifest = [
   {
-    "revision": "bfa58f1112e86bd832b557f9dd8750b3",
-    "url": "/portfolio/static/media/12.bfa58f11.png"
+    "revision": "a577de29a79780c0b57daf80a0b33802",
+    "url": "/portfolio/static/media/13.a577de29.gif"
   },
   {
-    "revision": "995637f0d2b78753408a",
-    "url": "/portfolio/static/css/main.4cd6e17a.chunk.css"
+    "revision": "44d2740d697457ccb2bd",
+    "url": "/portfolio/static/css/main.0d52bea2.chunk.css"
   },
   {
-    "revision": "ee5fce27bf31a1f77d8f",
-    "url": "/portfolio/static/js/1.ee5fce27.chunk.js"
+    "revision": "e5a526fe6010f3cb559a",
+    "url": "/portfolio/static/js/1.e5a526fe.chunk.js"
   },
   {
     "revision": "ee2a100325fd284f0097",
@@ -46,18 +46,6 @@ self.__precacheManifest = [
   {
     "revision": "35d1e9e93b4f8d7c50dcb79fe650cb38",
     "url": "/portfolio/static/media/image2-4.35d1e9e9.jpg"
-  },
-  {
-    "revision": "7d99c9317281916b1384917827b9e6b3",
-    "url": "/portfolio/static/media/insight1.7d99c931.jpg"
-  },
-  {
-    "revision": "a357ba113d4a004ad5df5d268d8f0ea0",
-    "url": "/portfolio/static/media/insight2.a357ba11.jpg"
-  },
-  {
-    "revision": "96ca09aa705023d8abfbecdaf197fd51",
-    "url": "/portfolio/static/media/insight3.96ca09aa.jpg"
   },
   {
     "revision": "4e9b5039d191ed2a22db142d83e6eded",
@@ -244,14 +232,6 @@ self.__precacheManifest = [
     "url": "/portfolio/static/media/forkiestoryboard.87b1d483.jpg"
   },
   {
-    "revision": "2049ea1f3db57ba2342aea62630ca417",
-    "url": "/portfolio/static/media/shareRecipe1.2049ea1f.jpg"
-  },
-  {
-    "revision": "a56fdcf5b0c31971e61c8342ae7b281a",
-    "url": "/portfolio/static/media/shareRecipe2.a56fdcf5.jpg"
-  },
-  {
     "revision": "ac54e61bb4e9240f9c86960b5ecb93b1",
     "url": "/portfolio/static/media/structure3.ac54e61b.jpg"
   },
@@ -284,16 +264,12 @@ self.__precacheManifest = [
     "url": "/portfolio/static/media/lofi_ml.895dd819.jpg"
   },
   {
-    "revision": "6687a74b7b599a3383ab2dc520b97c1f",
-    "url": "/portfolio/static/media/mid_ml.6687a74b.jpg"
+    "revision": "660828cbd953aca49dd958cab0fc7592",
+    "url": "/portfolio/static/media/mid_ml.660828cb.jpg"
   },
   {
-    "revision": "c8ab0ee935e9876d645f784e99792603",
-    "url": "/portfolio/static/media/mid_fork.c8ab0ee9.jpg"
-  },
-  {
-    "revision": "2c1af2e0473e05ad749abe4dec727e53",
-    "url": "/portfolio/static/media/mid_home.2c1af2e0.jpg"
+    "revision": "c02a4cfb2700fe051c190bbafa4053e8",
+    "url": "/portfolio/static/media/top.c02a4cfb.png"
   },
   {
     "revision": "808114b69c715d37085bd136c4227ee5",
@@ -312,16 +288,28 @@ self.__precacheManifest = [
     "url": "/portfolio/static/media/create_phone.aa21b31a.gif"
   },
   {
-    "revision": "e8f09150076b39d1a2bcc99135a5da3d",
-    "url": "/portfolio/static/media/forkie_logo.e8f09150.svg"
+    "revision": "fe00e7b0cc57a3ee3278a2ddbfd95806",
+    "url": "/portfolio/static/media/diagram2.fe00e7b0.png"
   },
   {
-    "revision": "a7277098d27a0a4705f95d73416da407",
-    "url": "/portfolio/static/media/insight_over.a7277098.jpg"
+    "revision": "05d4ebf1d4616cc7428f71f92daade4f",
+    "url": "/portfolio/static/media/forkie_diffver.05d4ebf1.png"
   },
   {
-    "revision": "a4d2ed4ee9302f7f989c41f6eff16af9",
-    "url": "/portfolio/static/media/screenmap.a4d2ed4e.jpg"
+    "revision": "6e6567cebbcd2f135451a2f90d580eb6",
+    "url": "/portfolio/static/media/forkie_convo.6e6567ce.png"
+  },
+  {
+    "revision": "7d99c9317281916b1384917827b9e6b3",
+    "url": "/portfolio/static/media/insight1.7d99c931.jpg"
+  },
+  {
+    "revision": "a357ba113d4a004ad5df5d268d8f0ea0",
+    "url": "/portfolio/static/media/insight2.a357ba11.jpg"
+  },
+  {
+    "revision": "96ca09aa705023d8abfbecdaf197fd51",
+    "url": "/portfolio/static/media/insight3.96ca09aa.jpg"
   },
   {
     "revision": "fdf3341547c4b32e6ef15761e0c7d2b8",
@@ -460,8 +448,8 @@ self.__precacheManifest = [
     "url": "/portfolio/static/media/11.055e63ba.gif"
   },
   {
-    "revision": "995637f0d2b78753408a",
-    "url": "/portfolio/static/js/main.995637f0.chunk.js"
+    "revision": "bfa58f1112e86bd832b557f9dd8750b3",
+    "url": "/portfolio/static/media/12.bfa58f11.png"
   },
   {
     "revision": "893acce2e3cf34a63bc5b4a187a53486",
@@ -472,8 +460,8 @@ self.__precacheManifest = [
     "url": "/portfolio/static/media/13.ce92ad27.png"
   },
   {
-    "revision": "a577de29a79780c0b57daf80a0b33802",
-    "url": "/portfolio/static/media/13.a577de29.gif"
+    "revision": "44d2740d697457ccb2bd",
+    "url": "/portfolio/static/js/main.44d2740d.chunk.js"
   },
   {
     "revision": "f4681663dc377b895af323e7258d6c77",
@@ -916,11 +904,23 @@ self.__precacheManifest = [
     "url": "/portfolio/static/media/out2.315b8222.png"
   },
   {
+    "revision": "2049ea1f3db57ba2342aea62630ca417",
+    "url": "/portfolio/static/media/shareRecipe1.2049ea1f.jpg"
+  },
+  {
+    "revision": "a56fdcf5b0c31971e61c8342ae7b281a",
+    "url": "/portfolio/static/media/shareRecipe2.a56fdcf5.jpg"
+  },
+  {
+    "revision": "e8f09150076b39d1a2bcc99135a5da3d",
+    "url": "/portfolio/static/media/forkie_logo.e8f09150.svg"
+  },
+  {
     "revision": "ba70970c27138b7820499561284acdc3",
     "url": "/portfolio/static/media/gssh.ba70970c.jpg"
   },
   {
-    "revision": "2b7e60ea1d7427f98a139293471422ac",
+    "revision": "c6c6595b8e3a654e129edfb1d992e846",
     "url": "/portfolio/index.html"
   }
 ];
