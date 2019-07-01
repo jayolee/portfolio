@@ -39,8 +39,6 @@ import getcuisineword from './getcuisine/wordbag.svg'
 import forkie_competitive from './getcuisine/competitive.jpg'
 import forkie_oppor from './getcuisine/opportunity.jpg'
 import forkie_story from './getcuisine/forkiestoryboard.jpg'
-import forkie_recipe1 from './getcuisine/shareRecipe1.jpg'
-import forkie_recipe2 from './getcuisine/shareRecipe2.jpg'
 import forkie_struc from './getcuisine/structure3.jpg'
 import forkie_struc2 from './getcuisine/structure.jpg'
 import forkie_diff from './getcuisine/diffusion.jpg'
@@ -774,14 +772,16 @@ export const projectList = {
                 <p style={{ margin: "10px auto", fontSize: "18px" }}><b>A web page explaining the features of Buncee</b></p>
                 <div style={{ display: "flex", justifyContent: "center", maxWidth: "550px", margin: "0 auto", alignItems: "flex-start" }}>
                     <p style={{ width: "90px", marginLeft: "10px" }}><b>Challenges:</b></p>
-                    <p style={{ width: "calc(100% - 90px)", paddingLeft: "20px" }}>- Explaining different levels of features
+                    <p style={{ width: "calc(100% - 90px)", paddingLeft: "20px" }}>
+                    - Creating infographic of abstract concepts <br />
+                    - Explaining different levels of features
                 <ul style={{ marginTop: "10px" }}>
                             <li>
                                 Canvas features</li><li>
                                 Different type of users (School, Teacher, students)
                 </li>
                         </ul>
-                        - Creating infographic of abstract concepts </p>
+                        </p>
                 </div>
             </div>
         </div>,

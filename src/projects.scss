@@ -421,6 +421,7 @@ $bc : #00bac0;
 .expla {
 
 	p{
+		text-align: left;
 		@include sizes(95%,null,750px);
 		margin:0 auto;
 		&.mainT{
@@ -473,6 +474,7 @@ $bc : #00bac0;
 	.topinfo{
 		@include sizes(95%,null,750px);
 		margin:0 auto;
+		text-align: left;
 	}
 	.triwrap{
 		@include sizes(100%,null,1100px);
@@ -763,6 +765,8 @@ a.member{
 }
 .enttitle {
 	position:relative;
+	display: flex;
+	justify-content: space-between;
 	font: {
 		size: 24px;
 		weight:500;
@@ -805,6 +809,7 @@ a.member{
 	}
 }
 .sectitle {
+	text-align: left;
 	@include sizes(95%,null,750px);
 	@include transform(translateX(-20px));
 	font: {

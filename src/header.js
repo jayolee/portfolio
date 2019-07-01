@@ -9,17 +9,16 @@ class Header extends Component {
         this.state = {
             pagenumber:0,
             togglestat: 0,
-            menuli: ["active", "", "", ""],
-            menudot: ["menudot active", "menudot", "menudot", "menudot"],
-            aclass: ["activemenu menua", "menua", "menua", "menua"]
+            menuli: ["active", "", ""],
+            menudot: ["menudot active",  "menudot", "menudot"],
+            aclass: ["activemenu menua", "menua", "menua"]
         }
         this.menulist = {
             "Projects": ["projects", "projects"],
-            "Side Projects": ["sideProjects", "more"],
             "Fine Art": ["FA", "fineart"],
             "About/Contact": ["contact", "about"]
         }
-        this.keylist = ["Projects", "Side Projects", "Fine Art", "About/Contact"]
+        this.keylist = ["Projects", "Fine Art", "About/Contact"]
     }
     componentDidMount(){
         this.getCurPage();
@@ -28,7 +27,7 @@ class Header extends Component {
         let curpagePath=this.props.location.pathname;
         curpagePath=curpagePath.toLowerCase();
         
-        let urlList=['/projects', '/more', '/fineart', '/about']
+        let urlList=['/projects', '/fineart', '/about']
         let newpage=0;
         let urlRegex;
         for(let i=0; i<urlList.length; i++){
@@ -40,9 +39,9 @@ class Header extends Component {
         }
         
         let newid=newpage;
-        let menuli = ["", "", "", ""];
-        let menudot = ["menudot", "menudot", "menudot", "menudot"];
-        let aclass = ["menua", "menua", "menua", "menua"];
+        let menuli = ["", "", ""];
+        let menudot = ["menudot", "menudot", "menudot"];
+        let aclass = ["menua", "menua", "menua"];
         menuli[newid] = "active"
         menudot[newid] = "menudot active"
         aclass[newid] = "activemenu menua"
@@ -51,9 +50,9 @@ class Header extends Component {
     }
     //update menu style(state) when menu is clicked
     updateStyle(newid){
-        let menuli = ["", "", "", ""];
-        let menudot = ["menudot", "menudot", "menudot", "menudot"];
-        let aclass = ["menua", "menua", "menua", "menua"];
+        let menuli = ["",  "", ""];
+        let menudot = ["menudot",  "menudot", "menudot"];
+        let aclass = ["menua",  "menua", "menua"];
         menuli[newid] = "active"
         menudot[newid] = "menudot active"
         aclass[newid] = "activemenu menua"
@@ -63,11 +62,10 @@ class Header extends Component {
     headergenerator() {
         let element = [];
         let menuUrl = '/';
-        for (let i = 0; i < 4; i++) {
+        for (let i = 0; i < 3; i++) {
             menuUrl = process.env.PUBLIC_URL + '/' + this.menulist[this.keylist[i]][1];  //Set the url depends on the menu
             element.push(
                 <li id={this.menulist[this.keylist[i]][0]} key={"menuli" + i} className={this.state.menuli[i]}>
-                    {/* <div className={this.state.menudot[i]} key={"menudot" + i} /> */}
                     <Link to={menuUrl} className={this.state.aclass[i]} key={"menua" + i} id={i} onClick={(ev)=> {this.setState({pagenumber: i}); this.updateStyle(i)}}>{this.keylist[i]}</Link>
                 </li>
             );
