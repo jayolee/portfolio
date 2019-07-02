@@ -567,6 +567,12 @@ width:102px;
   min-height: 440px;
   @include sizes(100%);
   margin-top:80px;
+  &.fa{
+    margin-top: 72vh;
+    @media screen and (max-width: 895px) {
+      margin-top: 62vh;
+    }
+  }
   .mainfaWrap{
     width: 100%;
     display: flex;
