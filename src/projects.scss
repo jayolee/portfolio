@@ -175,7 +175,7 @@ $bc : #00bac0;
 	margin:0 0; 
 	position:absolute; 
 	z-index: 1000; 
-	@include positions(calc(-42vh - 70px),null,null, 0);
+	@include positions(calc(-37vh - 70px),null,null, 0);
 	padding: {
 		top:0;
 		bottom:400px;

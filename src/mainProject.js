@@ -341,7 +341,7 @@ class MainProject extends Component {
        {this.routelist()}
         {this.projects()}
         <div style={{width:"100%", maxWidth:"1200px", margin: "150px auto 60px", textAlign: "center", fontSize:"24px", fontWeight:"700", color:"#001a49", lineHeight: "1.8"}} >
-        I also have some cool side projects—feel free to check them out!
+        I also have some cool <span style = {{color: "rgb(11, 111, 245)"}}>side projects</span>—feel free to check them out!
         </div>
         {this.sideProjects()}
         
@@ -384,7 +384,7 @@ class MainProject extends Component {
             <img src={fa} alt="Fine Art" />
           </div>
           <div className="mainfades" style={{ fontSize: "22px", fontWeight: "bold", color: "rgb(0, 26, 73)" }}>
-            Do you like fine art?
+            Do you like <span style = {{color: "rgb(11, 111, 245)"}}>fine art?</span>
             <br />Check out my fine artwork.<br />
 
             <a href="https://jayolee.github.io/portfolio/fineart" rel="noopener noreferrer">

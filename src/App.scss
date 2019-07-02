@@ -150,8 +150,8 @@ img {
    .solar1 {
      //venus
      width:130px;
-     left: 50%;
-     top:40vh;
+     left: 52%;
+     top:38vh;
      @include transform(translateX(-430px));
      &.shadow{
        width:130px;
@@ -174,7 +174,7 @@ img {
    .solar5 {
      //jupiter
      width:340px;
-     top:44vh;
+     top:42vh;
      left: 50%;
      @include transform(translateX(360px));
      &.shadow{
@@ -205,7 +205,7 @@ img {
      width:80px;
      left: 50%;
      top:28vh;
-     @include transform(translateX(-780px));
+     @include transform(translateX(-750px));
      &.shadow{
       height:80px;
      box-shadow: 0 0 30px #a8aeff;
@@ -479,7 +479,7 @@ width:102px;
     margin-top:16px;
     margin-bottom:30px;
     font: {
-      size:22px;
+      size:24px;
       weight:400;
     }
   }
@@ -507,7 +507,7 @@ width:102px;
 .works {
   position: relative;
   @include sizes(100%,null);
-  margin: calc(50vh + 86px) auto 20vh;
+  margin: calc(44vh + 86px) auto 20vh;
   padding: 0;
   text-align: center;
 }
@@ -669,7 +669,7 @@ width:102px;
     }
     &:hover{
       img{
-        opacity: .3;
+        opacity: .1;
       }
       .discrip{
         opacity: 1;
@@ -718,6 +718,20 @@ width:102px;
         @include sizes(92%);
       }
       .portwrap{
+        img{
+          opacity: 1;
+        }
+        .discrip{
+          opacity: 0;
+        }
+        &:hover{
+          img{
+            opacity: .1;
+          }
+          .discrip{
+            opacity: 1;
+          }
+        }
         @include sizes(null,null,500px,400px);
         transition:.4s;
         &.double{
@@ -746,18 +760,18 @@ width:102px;
 }
 
 .portwrap {
-  background: #000;
+  background: #edf3ff;
   @include sizes(100%, 30vw, 360px, 300px);
   display: inline-block;
   overflow: hidden;
   position: relative;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  // box-shadow: 0 10px 20px rgba(10, 111, 244, 0.2);
   border-radius: 18px;
   cursor: pointer;
   transition: .3s;
   &:hover {
     color: #525461;
-    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.3);
+    // box-shadow: 0 10px 30px rgba(10, 111, 244, 0.2);
     @include transform(translateY(-4px));
 
   }
@@ -774,14 +788,13 @@ width:102px;
     position: absolute;
     @include positions( 50%,null,null,50%);
     @include transform( translateX(-50%) translateY(-50%));
-    text-shadow: 0 0 14px rgba(0,0,0,1);
     font: {
         size: 24px;
         weight: 600;
     }
     letter-spacing: .5px;
     line-height: 1.5;
-    color: #fff;
+    color: rgba(0, 26, 73, .8);
     opacity: 1;
   
     .types {
@@ -798,8 +811,16 @@ width:102px;
       }
       letter-spacing: .8px;
       line-height: 1.5;
-      color:#fff;
+      color:rgb(0, 26, 73);
       @include sizes(95%,null, 300px);
+      &:hover{
+        .discrip {
+     opacity: 0;
+   }
+   img {
+     opacity: 1;
+   }
+ }
       &.fun{
         @include sizes(95%,null,240px);
       }
@@ -812,14 +833,7 @@ width:102px;
     opacity:.3;
     transition:.4s;
   }
-  &:hover{
-       .discrip {
-    opacity: 0;
-  }
-  img {
-    opacity: 1;
-  }
-}
+
 }
 
 .hiim {
