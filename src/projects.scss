@@ -949,7 +949,7 @@ a.member{
 	&.fa{
 		text-align:center;
 		display:block;
-		margin:-140px auto 60px;
+		margin:-70px auto 60px;
 		background:#2068b5;
 	&:hover{
 		background:#3285de;
@@ -1376,6 +1376,7 @@ $imgshadow: 0 0 14px rgba(0,0,0,0.2);
 	.ins_img{
 		width: 100%;
 		max-width: 250px;
+		object-fit: contain;
 		&.new{
 			max-width: 200px;
 		}
