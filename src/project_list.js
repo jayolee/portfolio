@@ -512,7 +512,7 @@ export const projectList = {
             "Tool": " React, HTML, SCSS, Adobe Illustrator, Figma, Sketch",
         },
         "button": <div><a href="https://jayolee.github.io/forkie/" target="_blank" rel="noopener noreferrer">
-            <div className="button forkie">Play with the React Prototype</div></a></div>,
+            <div className="button forkie">Play with the React Prototype (Updating)</div></a></div>,
         "Process": <div>
             <div className="processBoxWrap">
                 <div className="proBoxLine forkie" />
@@ -697,7 +697,7 @@ export const projectList = {
                         <span className ="fork3">unfamiliarity</span>
                     </p>
                     <span className="title forkie">Share first-hand experience about a recipe</span><br />
-                    Sharing recipe is sharing the experience. Forkie helps people regain the passion for cooking by fostering communication with friends. Below are the key features.
+                    Sharing recipe is sharing the experience. Forkie helps people regain the passion for cooking by fostering communication with friends.
             </p>
             </div>
             <div className="up_expla_screen forkie">
@@ -710,7 +710,7 @@ export const projectList = {
                         <span className ="fork2">Risk-averse</span>&nbsp;&nbsp;
                         <span >Variations</span>
                     </p>
-                    <span className="title forkie">Fork recipes and create various versions</span><br />
+                    <span className="title forkie">Fork recipes and create various versions (Updating)</span><br />
                     A dish can have various versions depending on users' backgrounds and preferences. Forkie allows users to create multiple branches (versions) so other users can choose a version to cook, and even track the original version.
             </p>
             </div>
@@ -722,7 +722,7 @@ export const projectList = {
                 <p className = "ins_title" style={{marginBottom: "0", marginLeft: "0"}}>
                         <span className ="fork1">Context</span>
                     </p>
-                    <span className="title forkie"> Share tips from your experience via crowdsourcing</span><br />
+                    <span className="title forkie"> Share tips from your experience via crowdsourcing (Updating)</span><br />
                     Different people have different tips and ideas regarding a recipe. Leave comments on a recipe to share the tips.
             </p>
             </div>
@@ -734,7 +734,7 @@ export const projectList = {
                 <p className = "ins_title" style={{marginBottom: "0", marginLeft: "0"}}>
                         <span >Inaccuracy</span>
                     </p>
-                    <span className="title forkie">Easily create accurate recipes with ML</span><br />
+                    <span className="title forkie">Easily create accurate recipes with ML (Updating)</span><br />
                     Recipe becomes conversational when people share them. Forkie provides recommendations to make the recipes more accurate. Also, it parses the ingredients from the steps, so users don't need to going back and forth to list the ingredients.<br />
                     Also, by providing recommendations in a way that doesn't disturb users' typing, users can easily ignore it and keep typing if the suggestion is not what they want.
             </p>
