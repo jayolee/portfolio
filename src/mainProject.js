@@ -74,6 +74,14 @@ class MainProject extends Component {
         "title": "Boulder Crest x CMU (Ongoing)",
       },
       {
+        "id": "up",
+        "image": up_main,
+        "class": "uiux development portwrap",
+        "mainClass": "main_work",
+        "expla": "A mobile app that promotes productivity and combat stress",
+        "title": "Up",
+      },
+      {
         "id": "iml",
         "image": iml,
         "class": "development uiux portwrap",
@@ -82,14 +90,7 @@ class MainProject extends Component {
         "expla": "A web-based game collecting the data of ML interpretability",
         "title": "ML Interpretability (Ongoing)",
       },
-      {
-        "id": "up",
-        "image": up_main,
-        "class": "uiux development portwrap",
-        "mainClass": "main_work",
-        "expla": "A mobile app that promotes productivity and combat stress",
-        "title": "Up",
-      }
+      
       ],
       sideWork: [
         {
