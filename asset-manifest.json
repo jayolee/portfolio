@@ -1,9 +1,9 @@
 {
-  "main.css": "/portfolio/static/css/main.a98bc4b8.chunk.css",
-  "main.js": "/portfolio/static/js/main.9a10e4cc.chunk.js",
-  "main.js.map": "/portfolio/static/js/main.9a10e4cc.chunk.js.map",
-  "static/js/1.e530cbbf.chunk.js": "/portfolio/static/js/1.e530cbbf.chunk.js",
-  "static/js/1.e530cbbf.chunk.js.map": "/portfolio/static/js/1.e530cbbf.chunk.js.map",
+  "main.css": "/portfolio/static/css/main.49430637.chunk.css",
+  "main.js": "/portfolio/static/js/main.b0c2b2d2.chunk.js",
+  "main.js.map": "/portfolio/static/js/main.b0c2b2d2.chunk.js.map",
+  "static/js/1.5bd36204.chunk.js": "/portfolio/static/js/1.5bd36204.chunk.js",
+  "static/js/1.5bd36204.chunk.js.map": "/portfolio/static/js/1.5bd36204.chunk.js.map",
   "runtime~main.js": "/portfolio/static/js/runtime~main.ee2a1003.js",
   "runtime~main.js.map": "/portfolio/static/js/runtime~main.ee2a1003.js.map",
   "static/media/17.gif": "/portfolio/static/media/17.e72d5c70.gif",
@@ -172,6 +172,7 @@
   "static/media/solution.png": "/portfolio/static/media/solution.ea861374.png",
   "static/media/screen1.png": "/portfolio/static/media/screen1.f823fd4a.png",
   "static/media/0.png": "/portfolio/static/media/0.a15d72aa.png",
+  "static/media/solution.jpg": "/portfolio/static/media/solution.a98641ac.jpg",
   "static/media/logo3.png": "/portfolio/static/media/logo3.914524f3.png",
   "static/media/404text.svg": "/portfolio/static/media/404text.df004c01.svg",
   "static/media/forkie.png": "/portfolio/static/media/forkie.e4101225.png",
@@ -235,8 +236,8 @@
   "static/media/report_main.jpg": "/portfolio/static/media/report_main.2f963a24.jpg",
   "static/media/momo_main.jpg": "/portfolio/static/media/momo_main.98f04177.jpg",
   "static/media/log_main.jpg": "/portfolio/static/media/log_main.20751812.jpg",
-  "static/css/main.a98bc4b8.chunk.css.map": "/portfolio/static/css/main.a98bc4b8.chunk.css.map",
+  "static/css/main.49430637.chunk.css.map": "/portfolio/static/css/main.49430637.chunk.css.map",
   "index.html": "/portfolio/index.html",
-  "precache-manifest.771073ac410089c5b957958cda6c2ae7.js": "/portfolio/precache-manifest.771073ac410089c5b957958cda6c2ae7.js",
+  "precache-manifest.169ee9f163981173e61f3eb754717132.js": "/portfolio/precache-manifest.169ee9f163981173e61f3eb754717132.js",
   "service-worker.js": "/portfolio/service-worker.js"
 }
