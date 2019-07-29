@@ -167,6 +167,7 @@ import herecare_solu from './herecare/solution.png'
 import herecare_alex from './herecare/screen1.png'
 import herecare_rout from './herecare/screen2.png'
 import herecare_solu_screen from './herecare/0.png'
+import herecare_solutions from './herecare/solution.jpg'
 
 
 function anigenerator() {
@@ -959,6 +960,7 @@ overall, our expert sources were enthusiastic about the potential they see in au
             </p>
         </div>,
         "Solution": <div>
+            <img src = {herecare_solutions} className = "zoomable" onClick={zoomimg}  />
             <p className="solutionPoint" style={{ margin: "30px auto 0", maxWidth: "100%" }}><span style={{ color: "#3D7AAF", fontWeight: "bold" }}>HereCare,</span> a service providing at-home rehabilitation assistance via multiple touchpoint</p>
             
             <img src = {herecare_solu} style ={{maxWidth: "600px"}} alt="Solution" />
