@@ -99,8 +99,8 @@ class Projects extends Component {
         </div>
         <div className={"maincontent " + this.props.idnum}>
           {this.contents[item].topimg}
-          <div className="toptitle ">
-            <div className={"qtmark " + this.props.idnum} > <q></q> </div>
+          <div className="toptitle "  style= {{maxWidth: "800px"}}>
+            <div className={"qtmark " + this.props.idnum}> <q></q> </div>
             {this.contents[item].quote}
 
           </div>
@@ -131,8 +131,8 @@ class Projects extends Component {
         </div>
         <div className="maincontent">
           {this.contents[item].topimg}
-          <div className="toptitle ">
-            <div className={"qtmark " + this.props.idnum} > <q></q> </div>
+          <div className="toptitle "  style= {{maxWidth: "800px"}}>
+            <div className={"qtmark " + this.props.idnum}> <q></q> </div>
             {this.contents[item].quote}
           </div>
           <div className="expla">

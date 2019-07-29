@@ -49,10 +49,10 @@ import forkie_lofi3 from './getcuisine/lofi3.jpg'
 import forkie_lofi4 from './getcuisine/lofi_ml.jpg'
 import forkie_mid from './getcuisine/mid_ml.jpg'
 import forkie_top from './getcuisine/top.png'
-import forkie_phone from './getcuisine/commentphone.gif'
-import forkie_fork from './getcuisine/fork.gif'
-import forkie_cmt from './getcuisine/commenting_recipe.gif'
-import forkie_crt from './getcuisine/create_phone.gif'
+import forkie_phone from './getcuisine/solution1.gif'
+import forkie_fork from './getcuisine/solution2.gif'
+import forkie_cmt from './getcuisine/solution3.gif'
+import forkie_crt from './getcuisine/solution4.gif'
 import forkie_logo from './getcuisine/forkie_logo.svg'
 import forkie_diagram2 from './getcuisine/diagram2.png'
 import forkie_vers from './getcuisine/forkie_diffver.png'
@@ -162,7 +162,11 @@ import buncee3 from './buncee/ff0.jpg'
 import buncee4 from './buncee/gallery.jpg'
 import buncee5 from './buncee/signup.jpg'
 
-
+import herecare_value from './herecare/valueflow.png'
+import herecare_solu from './herecare/solution.png'
+import herecare_alex from './herecare/screen1.png'
+import herecare_rout from './herecare/screen2.png'
+import herecare_solu_screen from './herecare/0.png'
 
 
 function anigenerator() {
@@ -511,8 +515,8 @@ export const projectList = {
             "Role": "User Reserach, UI/UX design, front/back-end development",
             "Tool": " React, HTML, SCSS, Adobe Illustrator, Figma, Sketch",
         },
-        "button": <div><a href="https://jayolee.github.io/forkie/" target="_blank" rel="noopener noreferrer">
-            <div className="button forkie">Play with the React Prototype (Updating)</div></a></div>,
+        "button": <div><a onClick={(ev) => { var proto = document.getElementById("forkieSolu"); window.scroll({ top: proto.offsetTop, left: 0, behavior: 'smooth' })}}>
+            <div className="button forkie">Read the Solution</div></a></div>,
         "Process": <div>
             <div className="processBoxWrap">
                 <div className="proBoxLine forkie" />
@@ -680,11 +684,15 @@ export const projectList = {
             </div>
             <img src={forkie_mid} alt="Information Architecture" onClick={zoomimg} className="zoomable" />
             <div className="imgdes">Mid-fi Prototype</div>
-            <p>For this time, we conducted usability testing also with people who are good at cooking. From the testing, we could get feedback about how to improve the recipe view. </p>
+            <p>For this time, we conducted usability testing using a React prototype. We could observe how participants interact with the app, and could improve the UI and interaction based on the test. Also, we got feedback about how to improve the recipe view from the people who are passionate on cooking.</p>
+            <div style={{ width: "100%", margint: "0 auto", textAlign: "center" }}><a style={{ margin: "0" }} href="https://jayolee.github.io/forkie/" target="_blank" rel="noopener noreferrer">
+                <div className="button forkie" style={{ margin: "0" }}>Play with the React Prototype</div></a></div>
         </div>,
         "Solution": <div>
             
-            <p className="solutionPoint" style={{ marginTop: "30px", maxWidth: "750px" }}>Forkie, a mobile app help people regain passion for cooking</p>
+            <p className="solutionPoint" id = "forkieSolu" style={{ marginTop: "30px", maxWidth: "750px" }}>
+            <img src ={forkie_logo} style = {{maxWidth: "300px", margin: "0 auto 30px"}}/>
+            Forkie, a mobile app help people regain passion for cooking</p>
             <p><b>Sharing recipe is sharing experience.</b> Forkie helps people regain the passion for cooking by fostering the communication with friends. Below is the key features.</p>
             <div className="up_expla_screen forkie">
                 <div className="imgwrap_sc" >
@@ -710,7 +718,7 @@ export const projectList = {
                         <span className ="fork2">Risk-averse</span>&nbsp;&nbsp;
                         <span >Variations</span>
                     </p>
-                    <span className="title forkie">Fork recipes and create various versions (Updating)</span><br />
+                    <span className="title forkie">Fork recipes and create various versions</span><br />
                     A dish can have various versions depending on users' backgrounds and preferences. Forkie allows users to create multiple branches (versions) so other users can choose a version to cook, and even track the original version.
             </p>
             </div>
@@ -722,7 +730,7 @@ export const projectList = {
                 <p className = "ins_title" style={{marginBottom: "0", marginLeft: "0"}}>
                         <span className ="fork1">Context</span>
                     </p>
-                    <span className="title forkie"> Share tips from your experience via crowdsourcing (Updating)</span><br />
+                    <span className="title forkie"> Share tips from your experience via crowdsourcing</span><br />
                     Different people have different tips and ideas regarding a recipe. Leave comments on a recipe to share the tips.
             </p>
             </div>
@@ -739,8 +747,7 @@ export const projectList = {
                     Also, by providing recommendations in a way that doesn't disturb users' typing, users can easily ignore it and keep typing if the suggestion is not what they want.
             </p>
             </div>
-            <div style={{ width: "100%", margint: "0 auto", textAlign: "center" }}><a style={{ margin: "0" }} href="https://jayolee.github.io/forkie/" target="_blank" rel="noopener noreferrer">
-                <div className="button forkie" style={{ margin: "0" }}>Play with the React Prototype</div></a></div>
+          
         </div>,
 
         "Next Steps":
@@ -914,6 +921,92 @@ export const projectList = {
             <div className="imgdes hover">Hover on the image</div>
             <div className="imgdes solution">When a user wants to communicate with other people, he or she will push the button on the side, and will speak. This message will go to everyone as walkie-talkie.</div>
             <div className="control"><img id="deactivate" alt="Deactivate" src={logposrun10} /> </div><div className="imgdes solution">When a user wants to stop getting the location information, he or she can speak <b><i>"Deactivate"</i></b> to stop the function.</div></div>
+    },
+    "herecare": {
+        "projectTitle": "HereCare",
+        "quote": "How might we use technology to assist at-home rehabilitation speech practices for neurodegenerative disease patients",
+        "topimg": <div style={{ width: "640px", maxWidth: "100%", height: "auto", margin: "0 auto" }}><Vimeo video="329284783" /></div>,
+
+        "exlpla": {
+            "Duration": "Jan 2019 ~ Current",
+            "Team": "Ja Young Lee, June Byeon, Annette Hong",
+            "Role": "User Reserach, UI/UX design, Alexa skill prototyping",
+            "Tool": "Adobe XD, Python",
+        },
+        "button": <div>
+        </div>,
+       
+        "Research": <div>
+            <p className="mainT" style={{ marginTop: "30px" }}>Lack of time and resources delay neurodegenerative disease patients to recover from speech accessibility</p>
+            <p>
+            Although the population struggling with cognitive impairment is growing every year, access to treatment remains stagnant due to the limited number of clinicians and physical therapists available for treatment. Additionally, adherence to at-home rehabilitation practices is difficult as patients increasingly lose independence and rely on caregivers or family members to monitor them as their situations worsen over time. 
+            </p>
+            <p className="mainT" style={{ marginTop: "30px" }}>Alexa can be a technological touchpoint to automatize practice for motor and/or phonological aspects</p>
+            <p>From the interviews, we’ve found at-home rehabilitation is inadequately supported. Voice assistants are something users would interact with everyday. Therefore, as an integrative part of the user’s daily routine and personal environment, Alexa has the potential to make at-home speech therapy another component of everyday life.
+            With Alexa, it would be posssible for patients to do daily at-home rehabilitation while collecting the data. Also, the robust tracking of this practice would allow physicians to more actively adjust exercises based on patients’ performance, so the patients’ rehab routines would be able to more actively adapt to their needs. There is also much value in empowering users because they’re often supervised by caregivers and can feel like they’re a burden and end up feeling flustered. So by letting Alexa take over the role that caregivers hold, there’s the potential of alleviating these negative emotions
+            </p>
+
+            
+                <p className="mainT" style={{ marginTop: "30px" }}>Already lots of interest in field about using technology to aid speech rehabilitation</p>
+                <p>
+            In fact, Researchers from UW and UMD published a CHI paper last year on how alexa has been providing “accidental” accessibility. For example, one person noted that their daughter’s speech as noticeably improved through her interactions with ALEXA because interacting with alexa requires the user’s speech to reach a certain threshold of intelligibility.
+            
+            
+
+overall, our expert sources were enthusiastic about the potential they see in automatizing practices that target motor and/or phonological production
+
+
+            </p>
+        </div>,
+        "Solution": <div>
+            <p className="solutionPoint" style={{ margin: "30px auto 0", maxWidth: "100%" }}><span style={{ color: "#3D7AAF", fontWeight: "bold" }}>HereCare,</span> a service providing at-home rehabilitation assistance via multiple touchpoint</p>
+            
+            <img src = {herecare_solu} style ={{maxWidth: "600px"}} alt="Solution" />
+                <div className="imgdes">How it works</div>
+            <p> We envision that HereCare would stand in the middle, facilitating communication between patients and their doctors outside of their appointments. Doctors would set personalized practices through their dashboard, which Alexa will prompt the user to complete at set times of the day. As patients practice with Alexa, their performance data would be recorded, and this data would then be made accessible to doctors via their dashboards. Through the data, doctors are able to look over the data and make adjustments accordingly for the next round of at-home rehab exercises.</p>
+            <div className = "up_expla_screen">
+            <div className = "imgwrap_sc">
+            <img src = {herecare_rout} style ={{maxWidth: "280px"}} className="phonesc" alt="Set Routine" />
+                <div className="imgdes">Set Routine on Alexa</div></div>
+            <p>Patients would use 'Set Routine' function to make the practices prompted in a certain time of the day.</p>
+            </div>
+
+            <div className = "up_expla_screen">
+            <div className = "imgwrap_sc alexa">
+            <img src = {herecare_alex} style ={{maxWidth: "280px"}} className="phonesc" alt="Set Routine" />
+                <div className="imgdes">Alexa Prompting Practices</div></div>
+            <p>Alexa will prompt practices 10 times per a day. However, users can opt out if they feel that they cannot do such amount in a day. Also, by using positive words as feedback ("Great", "Good Job" verses "Nice"), HereCare encorages patients practicing. </p>
+            </div>
+
+            <img src= {herecare_solu_screen } style ={{border: "1px solid rgba(0,0,0,0.5)"}} className = "zoomable" onClick={zoomimg} />
+            <div className="imgdes">Dashboard</div>
+            <p>The practice data would be sent to the dashboard so doctors can track progress before their next appointment and prepare for the meeting and can talk about it with the patient at the appointment. </p>
+            <p className="mainT" style={{ marginTop: "30px" }}>Alexa's technological constraint can be a key to measure speech intelligibility</p>
+            <p>The way Alexa understands the commands is by finding the nearest pronunciation from the given list of words. Which means, it's hard to catch the wrong production of unintended syllables, words, or phrases such as 'bapple' instead of 'apple' using Alexa. This is a technical constraint why we set our target users as apraxia patients. Currently, doctors measure speech intelligibility to see the progress of apraxia, which is a measure of how comprehensible speech is to other people. We set our standard level of speech intelligibility to go on the next level of practice as if Alexa can understand what patients speak.</p>
+
+             <p className="mainT" style={{ marginTop: "30px" }}>Third party skills cannot recieve the record data</p>
+             <p>Currently, Alexa doesn’t provide sound data to third party apps. Therefore, without support, HereCare cannot provide the recorded practice data. Instead, Herecare would provide how Alexa comprehended the practices.</p>
+        </div>,
+       
+
+        "Value": <div> 
+             
+             <img src = {herecare_value} style ={{maxWidth: "600px"}} alt="Solution" />
+                <div className="imgdes">Value Flow</div>
+                <p>We view HereCare taking place as a mediator between the hospital and patient to make the currently segmented experience seamless, effective and personalized. 
+Patients would first provide data, and this data are used to better. While hospitcal may pay herecare, our skill will reinforce this personal treatment for the patients.</p>
+            <p className="mainT" style={{ marginTop: "30px" }}>Collecting data for the field of cognitive pathology</p>
+            <p>According to our expert sources during our interviews and research, we were very much informed of current lack of sufficient research data for researchers on speech pathology. We believe that collecting the data through the system can provide clinicians and researchers access to larger sets of data. With this data, it might be able to even build computational models such as those being created for bilingual aphasia rehabilitation. These models would be capable of predicting the trajectory of recovery for patients of varying degrees of brain damage and disease severity. Additionally, the creation of such a service would also lighten the burden on caregivers, as the automated service would not require supervision. </p>
+           
+            <p className="mainT" style={{ marginTop: "30px" }}>Potential expansion into other areas of treatment</p>
+            <p>
+            Three seprate market reports say healthcare AI market will increase at compound annual grwoth rate of between 47 % - 50% over the next few years. It is a huge and growing market. Also, we believe on long term the aging of population is a big issue that this market is growing. In this growing market, we see HereCare catering also to those with other neurodegenerative diseases such as dementia and alzheimer’s. We also see it being applicable to support language acquisition in children.</p>
+            <p>
+So we believe that this simple, yet powerful skill would create a better supported cycle between doctors and patients with communication disorders. 
+            </p>
+        </div>,
+
+        
     },
     "dote": {
         "projectTitle": "DoteNote",

@@ -11,6 +11,7 @@ $getcuisine: #617D31;
 $up: #E9974C;
 $forkie: #fa6c42;
 $bc : #00bac0;
+$herecare: #3D7AAF;
 
 @font-face {
 	font-family:"lucida grande";
@@ -102,6 +103,9 @@ $bc : #00bac0;
 		&.buncee{
 			color: $bc;
 		}
+		&.herecare{
+			color: $herecare;
+		}
 }
 @mixin bgcolors{
 	&.dote{
@@ -136,6 +140,9 @@ $bc : #00bac0;
 		}
 		&.buncee{
 			background: $bc;
+		}
+		&.herecare{
+			background: $herecare;
 		}
 }
 #player {
@@ -219,6 +226,7 @@ $bc : #00bac0;
 	letter-spacing: .1px;
 	z-index:2;
 	position: relative;
+	
 	.up_expla_screen{
 		@include sizes(95%,null,1100px);
 		margin:150px auto;
@@ -247,6 +255,9 @@ $bc : #00bac0;
 		.imgwrap_sc{
 			@include sizes(224px);
 			margin:0 10px;
+			&.alexa{
+				@include sizes(375px);
+			}
 			.phonesc{
 				@include sizes(100%);
 			}
@@ -356,6 +367,9 @@ $bc : #00bac0;
 			}
 			&.buncee{
 				border: 1px solid $bc
+			}
+			&.herecare{
+				border: 1px solid $herecare;
 			}
 			@media screen and (max-width: 700px){
 				display:none;
@@ -807,6 +821,9 @@ a.member{
 	&.buncee{
 		border-bottom: 2px dashed $bc;
 	}
+	&.herecare{
+		border-bottom: 2px dashed $herecare;
+	}
 }
 .sectitle {
 	text-align: left;
@@ -987,6 +1004,9 @@ a.member{
 		}
 		&.buncee{
 			border: 2px solid $bc;
+		}
+		&.herecare{
+			border: 2px solid $herecare;
 		}
 		@include textcolors;
 	}

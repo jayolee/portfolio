@@ -32,61 +32,7 @@ class Fun extends Component {
         'illustration':['Illustration', "worksbutton workactive"],
         'animation':['Animation', "worksbutton workactive"],
         'development':['Development', "worksbutton workactive"]
-      },
-      worklist:[
-        { "id":"naoshima",
-        "image":naoshima,
-        "class":"development uiux portwrap",
-        "mainClass":"funwork",
-        "types": "UI/UX | Development",
-        "expla":"A website about Naoshima, Japan",
-        "title": "Artwork of NAOSHIMA",
-      },
-      { "id":"momo",
-        "image":momoko,
-        "class":"animation portwrap",
-        "mainClass":"funwork",
-        "types": "Animation (Emoji Stickers)",
-        "expla":"Animation Emoji Stickers",
-        "title": "Happy Momoko",
-      },
-        { "id":"reporter",
-          "image":reporter,
-          "class":"illustration uiux portwrap",
-          "mainClass":"funwork",
-          "types": "UI/UX | Illustration",
-          "expla":"A visual novel game for novice users",
-          "title": "I Am a Reporter",
-        },
-        { "id":"logpos",
-        "image":logpos,
-        "class":"animation portwrap",
-        "mainClass":"funwork",
-        "types": "UX",
-        "expla":"An audio AR solution improving rescue operations",
-        "title": "LOG + POS",
-      },
-        
-      {
-        "id": "dote",
-        "image": dotenote,
-        "class": "ideation uiux portwrap",
-        "mainClass": "funwork",
-        "types": "UI/UX | Ideation",
-        "expla":"Location specific virtual messaging mobile application",
-        "title": "DoteNote",
-      },
-       
-        { "id":"even",
-          "image":even,
-          "class":"uiux portwrap",
-          "mainClass":"funwork",
-          "types": "UI/UX",
-          "expla":"A mobile app that finds the best place to meet",
-          "title": "Even",
-        }
-       
-      ]
+      }
     }
     this.typelist=['uiux', 'development', 'illustration','animation','video'];
   }
