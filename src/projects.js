@@ -3,6 +3,7 @@ import { withRouter } from 'react-router-dom'
 import './App.scss';
 import './projects.scss'
 import { projectList } from './project_list'
+import { sideList } from './subproject_list'
 
 class Projects extends Component {
 
@@ -26,9 +27,9 @@ class Projects extends Component {
       "gssh": "lUaJy9qo6qA",
     }
     this.contents = projectList;
+    this.sideContent = sideList;
     this.width = 0;
   }
-  
   rollup() {
     this.setState({opacity:1})
     setTimeout(function () { this.setState({transform:"translateY(0)"}) }.bind(this), 50)
@@ -42,25 +43,31 @@ class Projects extends Component {
   }
 
   contentgenerator() {
+    let content;
+    if(this.props.category ==="mainwork"){
+        content = this.contents;
+    } else{
+        content = this.sideContent;
+    }
 
     let item = this.props.idnum;
     let element = [];
     let topelement = [];
     let contentelement = [];
-    let explalist = Object.keys(this.contents[item].exlpla);
+    let explalist = Object.keys(content[item].exlpla);
     //topinfo (team, name...)
     for (let i = 0; i < explalist.length; i++) {
       topelement.push(
         <div key={"expla" + i} className="topinfo">
-          <span className={"title " + this.props.idnum} >{explalist[i]}: </span>{this.contents[item].exlpla[explalist[i]]}<br />
+          <span className={"title " + this.props.idnum} >{explalist[i]}: </span>{content[item].exlpla[explalist[i]]}<br />
         </div>
       )
     }
-    let contentlist = Object.keys(this.contents[item]);
+    let contentlist = Object.keys(content[item]);
 
 
     for (let i = 4; i < contentlist.length - 1 ; i++) {
-      if (this.contents[item].button && i === 4) {
+      if (content[item].button && i === 4) {
         i += 1;
       }
       contentelement.push(
@@ -69,7 +76,7 @@ class Projects extends Component {
           <div className={"bar " + this.props.idnum} />
           </div>
           
-          {this.contents[item][contentlist[i]]}
+          {content[item][contentlist[i]]}
         </div>
       )
     }
@@ -81,14 +88,14 @@ class Projects extends Component {
         {contentlist[finalkey]}
         <div className = {"bar " + this.props.idnum} />
         </div>
-        {this.contents[item][contentlist[finalkey]]}
+        {content[item][contentlist[finalkey]]}
       </div>
     )
 
-    if (this.contents[item].button) {
+    if (content[item].button) {
       element.push(<div className="contentbox" key="contentbox" style={{opacity:this.state.opacity, transform:this.state.transform}}> 
         <div className="contentBottom" onMouseOut={this.gotoTopNone.bind(this)}  onMouseOver={this.gotoTopBounce.bind(this)}></div>
-        <div className={"enttitle " + this.props.idnum} >{this.contents[item].projectTitle}
+        <div className={"enttitle " + this.props.idnum} >{content[item].projectTitle}
 
           <div className="xmark" onClick={this.rolldown.bind(this)}>
             <svg width="50" height="50">
@@ -98,14 +105,14 @@ class Projects extends Component {
 
         </div>
         <div className={"maincontent " + this.props.idnum}>
-          {this.contents[item].topimg}
-          <div className="toptitle "  style= {{maxWidth: "800px"}}>
+          {content[item].topimg}
+          <div className="toptitle">
             <div className={"qtmark " + this.props.idnum}> <q></q> </div>
-            {this.contents[item].quote}
+            {content[item].quote}
 
           </div>
           <div className="center">
-            {this.contents[item].button}</div>
+            {content[item].button}</div>
           <div className="expla">
             {topelement}
           </div>
@@ -122,7 +129,7 @@ class Projects extends Component {
       element.push(<div className="contentbox" key="contentbox" style={{opacity:this.state.opacity, transform:this.state.transform}}>
         <div className="contentBottom" onMouseOut={this.gotoTopNone.bind(this)} onMouseOver={this.gotoTopBounce.bind(this)}></div>
         
-        <div className={"enttitle " + this.props.idnum} >{this.contents[item].projectTitle}
+        <div className={"enttitle " + this.props.idnum} >{content[item].projectTitle}
           <div className="xmark"  onClick={this.rolldown.bind(this)}>
             <svg width="50" height="50">
               <path d="M10 10 L40 40 M40 10 L10 40" />
@@ -130,10 +137,10 @@ class Projects extends Component {
           </div>
         </div>
         <div className="maincontent">
-          {this.contents[item].topimg}
+          {content[item].topimg}
           <div className="toptitle "  style= {{maxWidth: "800px"}}>
             <div className={"qtmark " + this.props.idnum}> <q></q> </div>
-            {this.contents[item].quote}
+            {content[item].quote}
           </div>
           <div className="expla">
             {topelement}

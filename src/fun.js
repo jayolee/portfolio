@@ -4,16 +4,6 @@ import './App.scss';
 import Projects from './projects.js'
 import './projects.scss'
 
-import reporter from './images/lights.jpg'
-import logpos from './images/logpos2.jpg'
-import even from './images/even2.png'
-import momoko from './images/momo.png'
-import gssh from './images/gssh.jpg'
-
-import dotenote from './images/dotenote.jpg'
-import naoshima from './images/naoshima.jpg'
-
-
 
 class Fun extends Component {
 

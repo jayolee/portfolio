@@ -7,9 +7,6 @@ import forkie from './topImage/forkie.png'
 import getcuisine from './topImage/getcuisine.png'
 import up_main from './topImage/up.png'
 
-import external from './images/external.svg'
-
-
 import reporter from './topImage/reporter.jpg'
 import logpos from './images/logpos2.jpg'
 import iml from './topImage/iml.jpg'
@@ -18,9 +15,6 @@ import dotenote from './images/dotenote.jpg'
 import naoshima from './topImage/naoshima.jpg'
 import lock from './topImage/lock.png'
 import herecare from './topImage/herecare.png'
-import report from './images/report_main.jpg'
-import momo from './images/momo_main.jpg'
-import log from './images/log_main.jpg'
 import bc from './topImage/bc.png'
 import bcr from './topImage/bcr.png'
 
@@ -43,20 +37,35 @@ class MainProject extends Component {
         'uiux': ['UI', "worksbutton workactive"],
         'development': ['Development', "worksbutton workactive"]
       },
-      worklist: [{
+      worklist: [
+        {
+          "id": "bcr",
+          "image": bcr,
+          "class": "portwrap",
+          "mainClass": "main_work",
+          "expla": "Service for recovering PTSD veterans and first responders",
+          "title": "Boulder Crest",
+        },{
+          "id": "herecare",
+          "image": herecare,
+          "class": "uiux development portwrap",
+          "mainClass": "main_work",
+          "expla": "An Alexa solution assists at-home rehabilitation speech practices for neurodegenerative disease patients",
+          "title": "HereCare",
+        }, {
+          "id": "up",
+          "image": up_main,
+          "class": "uiux development portwrap",
+          "mainClass": "main_work",
+          "expla": "A mobile app that promotes productivity and combat stress",
+          "title": "Up",
+        },{
         "id": "forkie",
         "image": forkie,
         "class": "uiux development portwrap",
         "mainClass": "main_work",
         "expla": "A mobile app help people regain passion for cooking",
         "title": "Forkie",
-      }, {
-        "id": "herecare",
-        "image": herecare,
-        "class": "uiux development portwrap",
-        "mainClass": "main_work",
-        "expla": "An Alexa solution assists at-home rehabilitation speech practices for neurodegenerative disease patients",
-        "title": "HereCare",
       }, 
       {
         "id": "buncee",
@@ -65,21 +74,6 @@ class MainProject extends Component {
         "mainClass": "main_work",
         "expla": "A tool for fostering creativity in school communities (www.buncee.com)",
         "title": "Buncee",
-      }, {
-        "id": "bcr",
-        "image": bcr,
-        "class": "portwrap",
-        "mainClass": "main_work",
-        "expla": "Service for recovering PTSD veterans and first responders",
-        "title": "Boulder Crest x CMU (Ongoing)",
-      },
-      {
-        "id": "up",
-        "image": up_main,
-        "class": "uiux development portwrap",
-        "mainClass": "main_work",
-        "expla": "A mobile app that promotes productivity and combat stress",
-        "title": "Up",
       },
       {
         "id": "iml",
@@ -153,7 +147,6 @@ class MainProject extends Component {
   }
   closehandler() {
     setTimeout(this.setState({ page: 0 }), 300);
-
   }
   starOff() {
     this.props.starOff();
@@ -241,7 +234,7 @@ class MainProject extends Component {
               <img className="longim" alt={this.state.worklist[i].title} src={this.state.worklist[i].image} key={this.state.worklist[i].title + "image"} />
               <div className="discrip">
                 <div>
-                  {this.state.worklist[i].title}  <img src={lock} id="lock" style={{width: "150px"}} /></div>
+                  {this.state.worklist[i].title}  <img src={lock} id="lock" style={{width: "150px"}} alt = "locked"/></div>
                 <div className="expla">
                   {this.state.worklist[i].expla}
                 </div>
@@ -253,26 +246,7 @@ class MainProject extends Component {
             </div>
           </div>
         )
-      }  else if(this.state.worklist[i].id === "bcr"){
-        element.push(<a href="https://jayolee.github.io/BCR/research.html" target="_blank" rel="noopener noreferrer" key={this.state.worklist[i].id + '_link'} >
-        <div id={this.state.worklist[i].id} key={this.state.worklist[i].id} className={this.state.worklist[i].mainClass}  >
-          <div className={this.state.worklist[i].class} key={this.state.worklist[i].id + "wrapper"}>
-            <img className="longim" alt={this.state.worklist[i].title} src={this.state.worklist[i].image} key={this.state.worklist[i].title + "image"} />
-            <div className="discrip">
-              <div>
-                {this.state.worklist[i].title}<img src={external} id="external" /></div>
-              <div className="expla">
-                {this.state.worklist[i].expla}
-              </div>
-            </div>
-          </div>
-          <div className="discripsmaller">
-            {this.state.worklist[i].title}<img src={external} id="external" /><br />
-            <span className="types"> {this.state.worklist[i].expla}</span>
-          </div>
-        </div>
-      </a>)
-      }else{
+      } else{
       element.push(
         <Link to={projectUrl} key={this.state.worklist[i].id + '_link'} >
           <div id={this.state.worklist[i].id} key={this.state.worklist[i].id} className={this.state.worklist[i].mainClass}  >
@@ -325,24 +299,20 @@ class MainProject extends Component {
             </div>
           </Link>
         )
-        routelist.push(
-          // <Route path={projectUrl} key={"routeto_"+this.state.sideWork[i].id} render={props => <Projects key="Projects" idnum={this.state.sideWork[i].id} projecttype="/projects" starOff={this.starOff.bind(this)} starOn = {this.starOn.bind(this)} />} />
-        )
-      
     }
 
-    element = [<div style={{ textAlign: "left" }}>{routelist}</div>, <div style={{ maxWidth: "1160px", margin: "0 auto" }}>{element}</div>];
+    element = [<div style={{ textAlign: "left" }} key ="routelist">{routelist}</div>, <div key="routeContent" style={{ maxWidth: "1160px", margin: "0 auto" }}>{element}</div>];
     return element
   }
   routelist() {
     let element = [];
     for (let i = 0; i < this.state.worklist.length - 1; i++) {
       let projectUrl = process.env.PUBLIC_URL + '/projects/' + this.state.worklist[i].id + '/';
-      element.push(<Route path={projectUrl} key={"routeto_" + this.state.worklist[i].id} render={props => <Projects key="Projects" idnum={this.state.worklist[i].id} projecttype="/projects" starOff={this.starOff.bind(this)} starOn={this.starOn.bind(this)} />} />)
+      element.push(<Route path={projectUrl} key={"routeto_" + this.state.worklist[i].id} render={props => <Projects key="Projects" idnum={this.state.worklist[i].id} projecttype="/projects"  category = "mainwork" starOff={this.starOff.bind(this)} starOn={this.starOn.bind(this)} />} />)
     }
     for (let i = 0; i < this.state.sideWork.length; i++) {
       let projectUrl = process.env.PUBLIC_URL + '/projects/' + this.state.sideWork[i].id + '/';
-      element.push(<Route path={projectUrl} key={"routeto_" + this.state.sideWork[i].id} render={props => <Projects key="Projects" idnum={this.state.sideWork[i].id} projecttype="/projects" starOff={this.starOff.bind(this)} starOn={this.starOn.bind(this)} />} />)
+      element.push(<Route path={projectUrl} key={"routeto_" + this.state.sideWork[i].id} render={props => <Projects key="Projects" idnum={this.state.sideWork[i].id} projecttype="/projects" category = "sidework" starOff={this.starOff.bind(this)} starOn={this.starOn.bind(this)} />} />)
     }
     return element;
   }

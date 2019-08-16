@@ -148,12 +148,12 @@ class App extends Component {
 
 
             <Switch>
-              <Route path={process.env.PUBLIC_URL} exact render={props => <MainProject starOff={this.starOff.bind(this)} starOn={this.starOn.bind(this)} />} />
-              <Route path={process.env.PUBLIC_URL + "/projects/"} render={props => <MainProject starOff={this.starOff.bind(this)} starOn={this.starOn.bind(this)} />} />
-              <Route path={process.env.PUBLIC_URL + "/more/"} render={props => <Fun starOff={this.starOff.bind(this)} starOn={this.starOn.bind(this)} />} />
+              <Route path={process.env.PUBLIC_URL} exact render={props => <MainProject starOff={this.starOff.bind(this)} starOn={this.starOn.bind(this)} key = "mainProject"/>} />
+              <Route path={process.env.PUBLIC_URL + "/projects/"} render={props => <MainProject starOff={this.starOff.bind(this)} starOn={this.starOn.bind(this)}  key = "mainProject"/>} />
+              <Route path={process.env.PUBLIC_URL + "/more/"} render={props => <Fun starOff={this.starOff.bind(this)} starOn={this.starOn.bind(this)}  key = "sideProject"/>} />
               <Route path={process.env.PUBLIC_URL + "/fineart/"} component={FAs} />
               <Route path={process.env.PUBLIC_URL + "/about/"} component={About} />
-              <Route path={process.env.PUBLIC_URL + "/404/"} render={props => <Page404 updateLogo={this.updateLogo.bind(this)} />} />
+              <Route path={process.env.PUBLIC_URL + "/404/"} render={props => <Page404 updateLogo={this.updateLogo.bind(this)}  key = "page404"/>} />
               <Redirect to={process.env.PUBLIC_URL + "/404/"} />
             </Switch>
           </div>

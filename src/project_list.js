@@ -1,41 +1,8 @@
 import React from 'react';
-import YouTube from 'react-youtube';
 import Vimeo from '@u-wave/react-vimeo';
-import Dote from './dote.js'
-import logpos1 from './Logpos/IMG_0658.jpg'
-import logpos2 from './Logpos/interview.jpg'
-import logpos3 from './Logpos/final_design.jpg'
-import logposstory1 from './Logpos/story1.jpg'
-import logposstory2 from './Logpos/story2.jpg'
-import logposrun1 from './Logpos/connectedd.png'
-import logposrun2 from './Logpos/continuous.gif'
-import logposrun3 from './Logpos/continuous.png'
-import logposrun4 from './Logpos/locate_all.gif'
-import logposrun5 from './Logpos/locate_all.png'
-import logposrun6 from './Logpos/locate_b.gif'
-import logposrun7 from './Logpos/locate_b.png'
-import logposrun8 from './Logpos/communicate.gif'
-import logposrun9 from './Logpos/communicate.png'
-import logposrun10 from './Logpos/deactivate.png'
+import { Controller, Scene } from 'react-scrollmagic';
 
-import dote1 from './Dotenote/meeting3.jpg'
-import dote2 from './Dotenote/meeting2.jpg'
-import dote3 from './Dotenote/testing.jpg'
-import dote4 from './Dotenote/notify1.svg'
-import dote5 from './Dotenote/notify2.svg'
-import dote_story from './Dotenote/storyboard.png'
-
-import getcuisine1 from './getcuisine/top.gif'
-import getcuisine3 from './getcuisine/icons.png'
-import getcuisine8 from './getcuisine/report1.svg'
-import getcuisine9 from './getcuisine/report2.svg'
-import getcuision10 from './getcuisine/modelerror.gif'
-import getcuisine11 from './getcuisine/503error.jpg'
-import getcuisinemod1 from './getcuisine/knear.svg'
-import getcuisinemod2 from './getcuisine/svm.svg'
-import getcuisinemod3 from './getcuisine/multi.svg'
 import getcuisine_aff from './getcuisine/affinity.jpg'
-import getcuisineword from './getcuisine/wordbag.svg'
 import forkie_competitive from './getcuisine/competitive.jpg'
 import forkie_oppor from './getcuisine/opportunity.jpg'
 import forkie_story from './getcuisine/forkiestoryboard.jpg'
@@ -61,84 +28,6 @@ import forkie_convo from './getcuisine/forkie_convo.png'
 import forkie_ins1 from './getcuisine/insight1.jpg'
 import forkie_ins2 from './getcuisine/insight2.jpg'
 import forkie_ins3 from './getcuisine/insight3.jpg'
-
-import reporter0 from './reporter/int1.jpg'
-import reporter1 from './reporter/garage.jpg'
-import reporter2 from './reporter/lightssmall.jpg'
-import reporter3 from './reporter/staircase.gif'
-import reporter4 from './reporter/int1.jpg'
-import reporter5 from './reporter/int2.jpg'
-import reporter6 from './reporter/int3.jpg'
-
-import even1 from './even/even1.png'
-import even2 from './even/even2.png'
-import even3 from './even/even3.png'
-import even4 from './even/prototype-even.PNG'
-
-import momo1 from './momoko/momo.gif'
-import momo2 from './momoko/momol.gif'
-import momo3 from './momoko/pointer.svg'
-
-import momo_btn1 from './momoko/avaliable_line.png'
-import momo_btn2 from './momoko/appstore.svg'
-
-import momo4_1 from './momoko/thumb/1.png'
-import momo4_2 from './momoko/ani/1.gif'
-import momo5_1 from './momoko/thumb/2.png'
-import momo5_2 from './momoko/ani/2.gif'
-import momo6_1 from './momoko/thumb/3.png'
-import momo6_2 from './momoko/ani/3.gif'
-import momo7_1 from './momoko/thumb/4.png'
-import momo7_2 from './momoko/ani/4.gif'
-import momo8_1 from './momoko/thumb/5.png'
-import momo8_2 from './momoko/ani/5.gif'
-import momo9_1 from './momoko/thumb/6.png'
-import momo9_2 from './momoko/ani/6.gif'
-import momo10_1 from './momoko/thumb/7.png'
-import momo10_2 from './momoko/ani/7.gif'
-import momo11_1 from './momoko/thumb/8.png'
-import momo11_2 from './momoko/ani/8.gif'
-import momo12_1 from './momoko/thumb/9.png'
-import momo12_2 from './momoko/ani/9.gif'
-import momo13_1 from './momoko/thumb/10.png'
-import momo13_2 from './momoko/ani/10.gif'
-import momo14_1 from './momoko/thumb/11.png'
-import momo14_2 from './momoko/ani/11.gif'
-import momo15_1 from './momoko/thumb/12.png'
-import momo15_2 from './momoko/ani/12.gif'
-import momo16_1 from './momoko/thumb/13.png'
-import momo16_2 from './momoko/ani/13.gif'
-import momo17_1 from './momoko/thumb/14.png'
-import momo17_2 from './momoko/ani/14.gif'
-import momo18_1 from './momoko/thumb/15.png'
-import momo18_2 from './momoko/ani/15.gif'
-import momo19_1 from './momoko/thumb/16.png'
-import momo19_2 from './momoko/ani/16.gif'
-import momo20_1 from './momoko/thumb/17.png'
-import momo20_2 from './momoko/ani/17.gif'
-import momo21_1 from './momoko/thumb/18.png'
-import momo21_2 from './momoko/ani/18.gif'
-import momo22_1 from './momoko/thumb/19.png'
-import momo22_2 from './momoko/ani/19.gif'
-import momo23_1 from './momoko/thumb/20.png'
-import momo23_2 from './momoko/ani/20.gif'
-import momo24_1 from './momoko/thumb/21.png'
-import momo24_2 from './momoko/ani/21.gif'
-import momo25_1 from './momoko/thumb/22.png'
-import momo25_2 from './momoko/ani/22.gif'
-import momo26_1 from './momoko/thumb/23.png'
-import momo26_2 from './momoko/ani/23.gif'
-import momo27_1 from './momoko/thumb/24.png'
-import momo27_2 from './momoko/ani/24.gif'
-
-import naoshima from './naoshima/top.gif'
-import nao_lofi from './naoshima/lo3.jpg'
-import nao_midfi from './naoshima/midfi.jpg'
-import nao_drawing from './naoshima/draw.jpg'
-import nao_sketches from './naoshima/sketches.gif'
-import nao_about from './naoshima/about.gif'
-import nao_detail from './naoshima/detail.jpg'
-import nao_hie from './naoshima/hie.jpg'
 
 import up_animals from './up/animals.jpg'
 import up_proto_blow from './up/blow.jpg'
@@ -169,22 +58,65 @@ import herecare_rout from './herecare/screen2.png'
 import herecare_solu_screen from './herecare/0.png'
 import herecare_solutions from './herecare/solution.jpg'
 
+import bcr_dash_gif from './bcr/dashboardScroll.gif'
+import bcr_top from './bcr/top.png'
+import bcr_assign_gif from './bcr/assignmentScroll.gif'
+import bcr_serviceRoadmap from './bcr/serviceRoadmap.png'
+import bcr_codesign1 from './bcr/codesign1.gif'
+import bcr_codesign2 from './bcr/codesign2.gif'
+import bcr_storybrd1 from './bcr/s1.jpg'
+import bcr_storybrd2 from './bcr/s2.jpg'
+import bcr_storybrd3 from './bcr/s3.jpg'
+import bcr_need1 from './bcr/b1.png'
+import bcr_need2 from './bcr/b2.png'
+import bcr_need3 from './bcr/b3.png'
+import bcr_need4 from './bcr/b4.png'
+import bcr_journey from './bcr/final.jpg'
+import bcr_current1 from './bcr/current1.png'
+import bcr_current2 from './bcr/current2.png'
+import bcr_current3 from './bcr/current3.png'
+import bcr_current4 from './bcr/current4.png'
+import bcr_principle1 from './bcr/principle/DesignPrinciples_1.png'
+import bcr_principle2 from './bcr/principle/DesignPrinciples_2.png'
+import bcr_principle3 from './bcr/principle/DesignPrinciples_3.png'
+import bcr_principle4 from './bcr/principle/DesignPrinciples_4.png'
+import bcr_principle5 from './bcr/principle/DesignPrinciples_5.png'
+import bcr_dashFinal from './bcr/dashboard/dashboards.png'
+import bcr_dash1 from './bcr/dashboard/1.png'
+import bcr_dash2 from './bcr/dashboard/2.png'
+import bcr_dash3 from './bcr/dashboard/3.png'
+import bcr_dash4 from './bcr/dashboard/4.png'
+import bcr_dash5 from './bcr/dashboard/6.png'
+import bcr_dash6 from './bcr/dashboard/7.png'
+import bcr_assignFinal from './bcr/assignment/assignment.png'
+import bcr_assign1 from './bcr/assignment/1.png'
+import bcr_assign2 from './bcr/assignment/2.png'
+import bcr_assign3 from './bcr/assignment/3.png'
+import bcr_assign4 from './bcr/assignment/4.png'
+import bcr_assign5 from './bcr/assignment/5.png'
+import bcr_assign6 from './bcr/assignment/6.png'
+import bcr_assign7 from './bcr/assignment/7.png'
+import bcr_detailFinal from './bcr/assignment/detail/detail.png'
+import bcr_detail1 from './bcr/assignment/detail/detail1.png'
+import bcr_detail2 from './bcr/assignment/detail/detail2.png'
+import bcr_detail3 from './bcr/assignment/detail/detail3.png'
+import bcr_detail4 from './bcr/assignment/detail/detail4.png'
+import bcr_detail5 from './bcr/assignment/detail/detail5.png'
+import bcr_surveyFinal from './bcr/assignment/survey/survey.png'
+import bcr_survey1 from './bcr/assignment/survey/survey1.png'
+import bcr_survey2 from './bcr/assignment/survey/survey2.png'
+import bcr_survey3 from './bcr/assignment/survey/survey3.png'
+import bcr_survey4 from './bcr/assignment/survey/survey4.png'
+import bcr_roadmap_road1 from './bcr/roadmap/road1.png'
+import bcr_roadmap_road2 from './bcr/roadmap/road2.png'
+import bcr_roadmap_road3 from './bcr/roadmap/road3.png'
+import bcr_roadmap_road4 from './bcr/roadmap/road4.png'
+import bcr_roadmap_design1 from './bcr/roadmap/1.png'
+import bcr_roadmap_design2 from './bcr/roadmap/2.png'
+import bcr_roadmap_design3 from './bcr/roadmap/3.png'
+import bcr_roadmap_design4 from './bcr/roadmap/4.png'
+import bcr_roadmap_design5 from './bcr/roadmap/5.png'
 
-function anigenerator() {
-    let element = [];
-    let momothumblist = [momo4_1, momo5_1, momo6_1, momo7_1, momo8_1, momo9_1, momo10_1, momo11_1, momo12_1, momo13_1, momo14_1, momo15_1, momo16_1, momo17_1, momo18_1, momo19_1, momo20_1, momo21_1, momo22_1, momo23_1, momo24_1, momo25_1, momo26_1, momo27_1];
-    let momoanilist = [momo4_2, momo5_2, momo6_2, momo7_2, momo8_2, momo9_2, momo10_2, momo11_2, momo12_2, momo13_2, momo14_2, momo15_2, momo16_2, momo17_2, momo18_2, momo19_2, momo20_2, momo21_2, momo22_2, momo23_2, momo24_2, momo25_2, momo26_2, momo27_2];
-
-    for (let i = 0; i < momothumblist.length; i++) {
-        element.push(
-            <div className="aniwrap" key={"momoAniWrap" + i}>
-                <img className="thumb" src={momothumblist[i]} key={"MomoThumb" + i} alt={"Momoko Thumbnail " + i} />
-                <img className="ani" src={momoanilist[i]} key={"MomoAni" + i} alt={"Momoko Animation " + i} />
-            </div>
-        )
-    }
-    return element;
-}
 
 function zoomimg(e) {
     let classlist = e.target.classList;
@@ -201,14 +133,848 @@ function zoomimg(e) {
         }
     }
 }
-const vidid = {
-    "log": "5Q6vJg-OufI",
-    "dote": "zlp8SnxFN3I",
-    "gssh": "lUaJy9qo6qA",
-}
-const protoRef = React.createRef();
 
+function principleDescrip(i){
+    const designPrinciple = [{
+        img : bcr_principle1,
+        title: "Consider People’s Mindsets",
+        content: [
+        "<p>Choose features that cater to when students are struggling or doing okay.</p><p>Warrior PATHH students experience ups and downs as they navigate the 18-month program. They could be stressed, happy, frustrated, or any other mix of emotions. We need to  design experiences that meet people where they are at. Furthermore, we need to design experiences that do not exacerbate negative emotions but instead equip them with lessons that they need in order to navigate emotions and situations.</p>"]
+    },
+    { img : bcr_principle2,
+        title:"Encourage and Support the Journey",
+        content:[
+            "<p>Minimize friction during navigation.  Utilize shortcuts to resume content.</p> <p>Warrior PATH teaches students that they can embrace struggle by finding new meaning and growth through the natural ups and downs of life. Students can choose to view their life as a journey. We need to find ways to support that journey by helping them understand where they are at, how far they have come, and where they are going on their journey.</p>"
+        ]
+    },
+    {    img : bcr_principle3,
+        title:"Promote Behavior Change",
+        content:[
+            "<p>Use reminders instead of forcing completion.</p><p>Eighteen months is a long time. Completing Warrior PATHH requires shifts in students’ behavior and mindset in order to not only endure the program but also integrate Warrior PATHH’s lessons into their daily lives, even after they finish the program. To help students achieve behavior change, we as designers can’t provide boxes for them to check off, especially for completion’s sake. Instead, we need to help students  develop habits and proactively consider their goals.</p>"
+        ]
+    },{ img : bcr_principle4,
+        title: "Inspire Team Support",
+        content:[
+        "<p>Remind people of their support system. Celebrate victories rather than shame shortcomings.</p><p>For a Warrior PATHH student, their Fire Team should be a constant source of motivation, support, and encouragement throughout their 18-month journey together.  Through our designs, we need to create opportunities to foster community and celebrate each other, not bring each other down.</p>"
+        ]
+    },{ img : bcr_principle5,
+       title:"Privacy",
+       content:["<p>Respect what level of detail should be shared with loved ones.</p><p>During Warrior PATHH, students share emotional and traumatic events from their past with PATHH Guides and their Fire Teams.  They share everything with each other but may not feel comfortable sharing stories, goals,  and assignments from Warrior PATHH with their loved ones. This principle helped guide us of what level of detail to share as we strengthen touchpoints with their loved ones.</p>"
+       ]
+    }];
+    let iconwrapper = document.getElementsByClassName("iconWrapper");
+    for(let [key,value] of Object.entries(iconwrapper)){
+        value.classList.remove("active");
+    }
+
+    document.getElementById("principle" + (i+1)).classList.add("active");
+    document.getElementById("principle_img").src =designPrinciple[i].img;
+    document.getElementById("principle_title").innerHTML =  designPrinciple[i].title;
+    document.getElementById("principle_expla").innerHTML =  designPrinciple[i].content;
+              
+}  
+let content = [
+    {
+        title: "Retreat Modules for Loved Ones",
+        question: "What if sharing lessons from the retreat and disclosing their authentic self with their loved ones didn’t have to be a low point?",
+        description:"Boulder Crest can create and share modules for loved ones that automatically send during and after their loved one attends a Warrior PATHH retreat via their Learning Management System. Each day’s video content can provide loved ones with an overview of what the student is experiencing during the day. When the student returns home from the retreat, they can go through an additional module together that provides opportunities for conversation and connection. Boulder Crest should also give students the choice to opt out."
+    },
+    {
+        title: "Leverage Veteran Nonprofits",
+        question: "What if we could help people stay engaged with the program by increasing connection touchpoints to the Warrior PATHH community?",
+        description:"Boulder Crest already has formed partnerships with various veteran organizations. We see an opportunity for Boulder Crest to use those partnerships to more actively foster community within a regional model. Boulder Crest could host events at these veteran organization locations and invite Warrior PATHH alumni in the area. For nonprofits running Warrior PATHH, Boulder Crest could compile a toolkit for regional partnerships and events."
+    },
+    {
+        title: "Find Warrior PATHH Students Near Me",
+        question: "What if we could help people stay engaged with lessons by increasing connection touchpoints to the Warrior PATHH community?",
+        description:"Boulder Crest could implement a new myPATHH feature to help connect students and alumni who go through Warrior PATHH who live near each other, whether they have gone through the program at Boulder Crest or at another nonprofit."
+    },
+    {
+        title: "Improve Warrior PATHH Onboarding",
+        question: "What if we could streamline the myPATHH onboarding process across Warrior PATHH locations? <br /> What if we could set up students for success in using myPATHH after the retreat, especially if they are not used to Internet technology?",
+        description:"Boulder Crest should optimize in-person and digital touchpoints to improve the myPATHH onboarding experience for students"
+    },
+    {
+        title: "Pathways to Care Through the Application Process",
+        question: "What if we could direct people toward and through the Warrior PATHH program so they are most likely to thrive?",
+        description:"Boulder Crest should establish a protocol for their retreat locations as well as for other nonprofits delivering Warrior PATHH to establish pathways to care based on applicants’ needs.<br />When someone applies to Boulder Crest, a staff member should assess their needs and determine the best next step based on those needs. If the applicant is dealing with substance use disorder, for example, the staff member can refer them to a local treatment facility before they are ready to go through Warrior PATHH. If another nonprofit delivering Warrior PATHH has a unique mission that best serves the applicant’s needs, the staff member can refer the applicant to that nonprofit.<br />We see Gratitude America’s protocol of using a social worker to vet applicants as a valuable approach. Social workers are professionals of understanding the whole person in their environment and utilizing their  knowledge of community resources. Having a social worker managing the vetting process could be recommended and replicated across all nonprofits delivering Warrior PATHH."
+    }
+];
+function roadmap(ev){
+    let width = window.innerWidth;
+    if(width > 670){
+    let explanation = document.getElementById("roadmapExpla");
+    explanation.style.opacity = 1;
+    explanation.style.display="block"
+    let order = ev.target.id.slice(-1) - 1;
+    explanation.firstChild.innerHTML = content[order].title;
+    explanation.lastChild.innerHTML = "<p>" + content[order].question + "</p><p>" + content[order].description + "</p>";
+    let target = ev.target;
+        if(parseInt(target.offsetLeft)+ 660> width){
+            if((parseInt(target.offsetLeft) - 600) < 0){
+                explanation.style.left = parseInt((target.offsetLeft) - 220) + "px";
+                explanation.style.top = (target.offsetTop +80) + "px";
+            } else{
+                explanation.style.left = (target.offsetLeft- 410) + "px";
+                explanation.style.top = "0px";
+            }
+        }else {explanation.style.left = (target.offsetLeft+ 253) + "px";
+        explanation.style.top = "0px";}
+    } else{
+       
+    }
+}
+function roadmapSmall(ev){
+    let width = window.innerWidth;
+    if(width <= 670){
+    let explanation = document.getElementById("roadmapExpla");
+    explanation.style.opacity = 1;
+    explanation.style.display="block"
+    let order = ev.target.id.slice(-1) - 1;
+    explanation.firstChild.innerHTML = content[order].title;
+    explanation.lastChild.innerHTML = "<p>" + content[order].question + "</p><p>" + content[order].description + "</p>";
+    let blkbg = document.getElementById("blkbg");
+    blkbg.style.display = "block";
+    blkbg.style.opacity = 1;
+    explanation.style.top = (window.scrollY - document.getElementsByClassName("roadmapWrapper")[0].offsetTop) + "px";
+    explanation.style.left = "calc(50% - 150px)"
+    }
+}
+function hideExpla(){
+    if(window.innerWidth > 670){
+    let roadmap = document.getElementById("roadmapExpla");
+    roadmap.style.opacity = 0; 
+    window.setTimeout(function(){
+        roadmap.style.display="none"
+    }, 10)
+}
+}
+function smallHideExpla(){
+    let blkbg = document.getElementById("blkbg");
+    let roadmap = document.getElementById("roadmapExpla");
+    roadmap.style.opacity = 0; 
+    blkbg.style.opacity = 0;
+    window.setTimeout(function(){
+        blkbg.style.display="none"
+        roadmap.style.display="none"
+    }, 10)
+}
+function bcrSolutionView(i){
+    let overview = document.getElementById("navigation");
+    let weekly = document.getElementById("weekly");
+    let survey = document.getElementById("survey");
+    let buttons = document.getElementsByClassName("small");
+
+    switch(i){
+        case "overview":
+            overview.classList.add("active");
+            weekly.classList.remove("active");
+            survey.classList.remove("active");
+            buttons[0].classList.add("active");
+            buttons[1].classList.remove("active");
+            buttons[2].classList.remove("active");
+            break;
+        case "weekly":
+            overview.classList.remove("active");
+            weekly.classList.add("active");
+            survey.classList.remove("active");
+            buttons[0].classList.remove("active");
+            buttons[1].classList.add("active");
+            buttons[2].classList.remove("active");
+            break;
+        case "survey":
+            overview.classList.remove("active");
+            weekly.classList.remove("active");
+            survey.classList.add("active");
+            buttons[0].classList.remove("active");
+            buttons[1].classList.remove("active");
+            buttons[2].classList.add("active");
+            break;
+            default:;
+    }
+
+}
 export const projectList = {
+    "bcr": {
+        "projectTitle": "Boulder Crest",
+        "quote": "Improving the service of Boulder Crest for recovering PTS veterans and first responders",
+        "topimg": <img id="bcr" alt="Boulder Crest Solutions" className="topimg" src={bcr_top} />,
+
+        "exlpla": {
+            "Duration": "8 months (Jan 2019 ~ Aug 2019)",
+            "Team": <span>Team Boulder Crest (<a href="https://www.amanda-kennedy-ux.com/" target="_blank" rel="noopener noreferrer">Amanda Kennedy</a>, <a href="https://tylerstern.design/" target="_blank" rel="noopener noreferrer">Tyler Stern,</a> Ja Young Lee, Kevin Seelaus, <a href="http://www.zixuanli.com/" target="_blank" rel="noopener noreferrer">Zixuan Li</a>)</span>,
+            "Role": "Design Technologist, UX Designer",
+            "Tool": "Figma, HTML, CSS, jQuery",
+        },
+        "button": 
+            <div className="button bcr" onClick={(ev) => {
+                let element = document.getElementById("solutionOverview");
+                window.scrollTo({ top: element.offsetTop, behavior: 'smooth' });
+            }}>Read about the solution</div>,
+        "Boulder Crest": <div>
+            <p>Boulder Crest is a nonprofit organization that offers retreats for veterans, active duty service members, first responders, and their families. Many of these individuals have been through combat, and many have experienced Post-Traumatic Stress (PTS) or depression. Their unique, holistic methodology is founded on the principle of Post-Traumatic Growth (PTG). PTG is a framework that recognizes the potential to find deeper meaning and personal strength through trauma and struggle, an alternative to treating PTS simply as a disorder.</p>
+          
+            <p>Boulder Crest’s cornerstone training program is Warrior PATHH. Teams of about six students, called a Fire Team, participate in a regimented seven-day intensive retreat led by PATHH Guides, who are typically alumni of the program. Once students return home from the retreat, they participate in an aftercare program where they integrate the lessons they learned from the retreat via a responsive web app, called myPATHH, and regular video calls with their Fire Team. The Warrior PATHH journey takes 18 months total to complete, but the lessons and techniques aim to impart lifelong resilience.</p>
+
+            <p>Our team of five Masters students was tasked to evaluate myPATHH and the role it plays with regards to Boulder Crest’s services.</p>
+            </div>,
+            "Solution Overview":<div>
+                <p id = "solutionOverview">Boulder Crest has developed a responsive web application called myPATHH during the 18-month aftercare portion of their Warrior PATHH program. Students use the web app to complete assignments, set goals, and watch videos on topics like fitness and meditation to help them integrate the lessons of Warrior PATHH into their daily lives.
+                Our team identified a number of opportunities to redesign sections of myPATHH and implement our design principles while addressing user needs uncovered in our research.
+                </p>
+
+                 <div className="up_expla_screen">
+
+<div className="imgwrap_sc" >
+    <img src={bcr_dash_gif} className="phonesc" alt="Dashboard Redesign" /><div className="imgdes">Dashboard</div></div>
+
+<p> <span className="title bcr">Dashboard</span><br />
+The Dashboard is the first page that Warrior PATHH students see in myPATHH. As a result, the experience with this page sets the tone for the rest of their session on the app. We decided with our client this as the first portion of myPATHH to work on.<br />
+<div className = "button bcr" onClick={(ev)=>{let element = document.getElementById("dashboardRedesign");
+                window.scrollTo({ top: element.offsetTop, behavior: 'smooth' });
+            }}>Read More</div>
+</p>
+
+</div>
+
+  <div className="up_expla_screen">
+<div className="imgwrap_sc" >
+    <img src={bcr_assign_gif} className="phonesc" alt="Assignment Redesign" /><div className="imgdes">Assignment</div></div>
+
+<p> <span className="title bcr">Assignment</span><br />
+The myPATHH assignments section is an integral part of myPATHH where students complete weekly assignments through activities such as reading, writing, and video activities. These activities teach students how to integrate Warrior PATHH lessons into their daily lives. We decided with our client that redesigning this portion of myPATHH would be valuable to the overall Warrior PATHH experience.<br />
+<div className = "button bcr" onClick={(ev)=>{let element = document.getElementById("assignmentRedesign");
+                window.scrollTo({ top: element.offsetTop, behavior: 'smooth' });
+            }}>Read More</div>
+</p>
+
+</div>
+<img src= {bcr_serviceRoadmap} alt = "Service Roadmap" style={{width: "100%", maxWidth:"1200px"}}/>
+<div className="imgdes">Service Roadmap</div>
+<p><span className="title bcr" style={{lineHeight:"3"}}>Service Roadmap</span><br />
+The Warrior PATHH experience is about so much more than technology. Beyond the myPATHH redesign, we created a set of service design recommendations. Boulder Crest students and staff showed us the value of connection across the larger Warrior PATH program. To honor the journey of Boulder Crest and its students, we decided to integrate the concept of journey into our final student-defined deliverable by creating a roadmap of additional recommendations for myPATHH redesigns and organizational service design changes.<br />
+<div className = "button bcr" onClick={(ev)=>{let element = document.getElementById("serviceDesign");
+                window.scrollTo({ top: element.offsetTop, behavior: 'smooth' });
+            }}>Read More</div>
+</p>
+            </div>,
+        "Insights and Needs": <div>
+              <p className="mainT" style={{ marginTop: "10px" }}>Engagement is the key for students during the 18-month follow-up.</p>
+              <p>From our initial research, we got four key insights.</p>
+
+              <p className="ins_title bcr" style={{color: "#A94B56"}}>Diversity</p>
+                <p>Students come from a variety of experiences. Considering the variety of backgrounds and needs could be an opportunity for Boulder Crest to expand their value to the Veteran Community.</p>
+               <p className="ins_title bcr" style={{color: "#97AA96"}}>Community</p>
+                   <p>Students value community as a support system. The sense of interpersonal connection with a team is a crucial part of the Boulder Crest experience. </p>
+                   <p className="ins_title bcr" style={{color: "#78909C"}}>Continuity & Structure</p>
+               <p>Students value the well-structured 7 day program, but there’s a significant discrepancy between the retreat and after care regarding the structure and support available. </p>
+               <p className="ins_title bcr" style={{color: "#253C5A"}}>Transferability</p>
+               <p>Students value the lessons that are useful in day-to-day life.</p>
+
+        <p>In our research, we've learned that students value the current Warrior PATHH program and how effective it has been. However, at the same time, <b>we saw an opportunity to improve engagement for students during the 18-month follow-up.</b></p>
+
+             <p className="mainT" style={{ marginTop: "10px" }}>Staying on the journey is a challenge</p>
+<p>After further research including in-person interview with staff members who had previously gone through the program themselves, we’ve learned that the current program provides precious opportunity for human connection, and a set of useful skills such as meditation and breathing. However, we identified that it's a challenge for students to stay on this journey. Therefore, we updated our research thesis: <b>We see an opportunity to assist students in staying connected to their team & lessons over the 18-month follow-up.</b></p>  
+
+ <p className="mainT" style={{ marginTop: "10px" }}>However, students don't need an emergency button in the moment of need.</p>
+ <div className = "triwrap">
+    <div className = "triinner bcr">
+    <img src= {bcr_storybrd1} alt = "Storyboard" />
+    </div>
+    <div className = "triinner bcr">
+        <img src= {bcr_storybrd2} alt = "Storyboard" />
+    </div>
+    <div className = "triinner bcr">
+        <img src= {bcr_storybrd3} alt = "Storyboard" />
+    </div>
+ </div>
+ <div className = "imgdes">Storyboards of Three Variations of a Scenario</div>
+    <p>
+    Based on our thesis, we came up with ideas of possible needs the students have. We conducted speed dating with storyboards to validate these. Rather than simply refuting or confirming these assumptions, the reaction was always a bit more complicated. What we got was a more nuanced understanding, which will guide our design process moving forward. Below are four perceived needs and potential areas of focus for a solution which we validated through speed dating.
+    </p>
+   
+       
+            <div className = "hoverWrap" id = "wrap1">
+           
+            <div className = "halfwrap insight">
+                <img src= {bcr_need3} style ={{maxWidth: "90px"}} className = "half" alt = "Blended Model of Tech & Real World"/>
+                <div className = "half insightDetail">
+                <b>Blended Model of Tech & Real World</b>
+                    <ul>
+                        <li>Boulder Crest creates a community with a unique shared knowledge that can be hard to share with others</li>
+                        <li>
+                        In-person opportunities to connect are valuable
+                        </li>
+                    </ul>
+                </div>
+               
+                <div className="ox">
+                <Controller>
+                <Scene duration={2000} triggerElement = "#wrap1" classToggle = "oxanimation">
+                                <svg>
+                                    <circle className="st0" cx="40" cy="40" r="36" />
+                                </svg>
+                                </Scene>
+                </Controller>
+                </div>
+               
+            </div>
+        </div>
+       
+    
+    <div className = "hoverWrap" id = "wrap2">
+        <div className = "halfwrap insight">
+            <img src= {bcr_need4} style ={{maxWidth: "90px"}} className = "half" alt = "Blended Model of Tech & Real World"/>
+            <div className = "half insightDetail" >
+        <b>Need Reminders for Regular Practice</b>
+        <ul>
+                    <li> Students need a way to stick with their routine</li>
+                    <li>Extrinsic rewards could be good only as a means toward marking accomplishments, not as the sole motivator</li>
+                    <li>The routine needs to work for an individual's needs</li>
+        </ul>
+        </div>
+        
+        <div className="ox">
+        <Controller>
+                <Scene duration={2000} triggerElement = "#wrap2" classToggle = "oxanimation">
+                            <svg>
+                                <circle className="st0" cx="40" cy="40" r="36" />
+                            </svg>
+                    </Scene>
+            </Controller>
+                        </div>
+       
+        </div>
+        </div>
+    <div className = "hoverWrap" id = "wrap3">
+        <div className = "halfwrap insight">
+            <img src= {bcr_need1} style ={{maxWidth: "90px"}} className = "half" alt = "Blended Model of Tech & Real World"/>
+            <div className = "half insightDetail" >
+            
+            <b>Progress Tracking</b>
+            <ul>
+                    <li>  Recalling memories from the retreat is valuable, especially if they are visual, personal, and specific</li>
+                    <li> It's best to recall your own first-hand subjective experience, keeping respect for the privacy and different interpretations of others</li>
+                </ul>
+            </div>
+            <div className="ox">
+            <Controller>
+                <Scene duration={2000} triggerElement = "#wrap3" classToggle = "oxanimation">
+                            <svg>
+                                <circle className="st0" cx="40" cy="40" r="36" />
+                            </svg>
+                    </Scene>
+            </Controller>
+                        </div>
+        </div>
+        </div>
+        
+    <div className = "hoverWrap" id = "wrap4">
+        <div className = "halfwrap insight">
+        <Controller>
+                <Scene duration={2000} triggerElement = "#wrap4" classToggle = "active">
+            <img src= {bcr_need2} style ={{maxWidth: "90px"}} className = "half" alt = "Blended Model of Tech & Real World"/>
+            </Scene>
+        </Controller>
+        <Controller>
+                <Scene duration={2000} triggerElement = "#wrap4" classToggle = "active">
+                    <div className = "half  insightDetail" >
+                        <b>Support in Moment of Need</b>
+                        <ul>
+                            <li>  Not needed <b>IF</b> team has a strong relationship with open communication</li>
+                        </ul>
+                    </div>
+        </Scene>
+        </Controller>
+        <div className="ox">
+        <Controller>
+                <Scene duration={2000} triggerElement = "#wrap4" classToggle = "oxanimation">
+                            <svg className="ox_x">
+                                <line className="st0" x1="10" y1="10" x2="72" y2="72" />
+                                <line id="second" className="st0" x1="10" y1="72" x2="72" y2="10" />
+                            </svg>
+                </Scene>
+        </Controller>
+            </div>
+        </div>
+    </div>
+<p>Based on additional interviews and speed dating, we refined our key insights:</p>
+<p className="ins_title bcr" style={{color: "#A94B56"}}>Team Dynamics</p>
+<p>
+An open and supportive Fire Team unit helps set up trainees for success, so Boulder Crest should focus on fostering and maintaining this dynamic.
+</p>
+<p className="ins_title bcr" style={{color: "#97AA96"}}>Journey</p>
+<p>
+Boulder Crest's program takes a long time (7-days + 18-months) and goes through several stages. Therefore, it is important to both minimize abrupt changes in the level of support and keep a perspective of the larger journey.</p>
+<p className="ins_title bcr" style={{color: "#78909C"}}>Customization</p>
+<p>
+In order to set themselves up for success while struggling well, participants need to pace themselves through the curriculum and find a few key methods that resonate with them.
+</p>
+<p className="ins_title bcr" style={{color: "#E0C987"}}>Content
+</p>
+<p>
+To minimize stress and increase utility, clear navigation, organization, and searchability is more important than the amount of diversity of information available through myPATHH.
+</p>
+<p className="ins_title bcr" style={{color: "#253C5A"}}>Family
+</p>
+<p>
+Trainees need to be able to set expectations and share their journey and new perspectives with their everyday support networks, especially their family.
+    </p>
+
+<p className="mainT" style={{ marginTop: "10px" }}>The concept of journey is integral to Boulder Crest’s philosophy</p>
+    <p>As Boulder Crest students chart a path through life, they grow through the ups and downs. Boulder Crest as an organization is also just starting their own journey as they look toward expanding to ten locations over the next few years. Based on what we learned through the research, we created a student journey map overlaying a service blueprint of touchpoints between students and the organization throughout the duration of Warrior PATHH for our future design decisions. </p>
+    <img src= {bcr_journey} style={{width: "100%", maxWidth:"1500px"}} alt= "Service Blueprint with Student Journey"/>
+    <p className="mainT" style={{ marginTop: "10px" }}>
+        myPATHH redesign and service design opportunities are two key components of our solutions.
+    </p>
+    <p>
+These two key components work like gears, which means if you turn this gear, which intrinsically also manipulates other parts of this system.  Due to the limited time of this project and the resources Boulder Crest has as a non-profit organization, we made a decision that can impact the organization sooner. However, at the same time, we decided to provide a future roadmap that the organization can follow as they grow up. </p>
+<p>We chose myPATHH Redesign as a solution because it is one of the only touchpoints students have after 7-day retreats. Also, myPATHH is created as a tool that connects students to lessons and their support system. We saw a potential this can be a touchpoint that can serve our thesis. At the same time, we came up with service design ideas that can potentially support the key insights we got from our research.</p>
+        </div>,
+
+        "myPATHH Redesign": <div>
+            
+            <p className="mainT" style={{ marginTop: "10px" }}>Providing a seamless transition to a new design is the key.</p>
+            <p>The first version of myPATHH was born out of wireframes and design specs created by Accenture for Boulder Crest and developed by a software engineering team called Shoulder 2 Shoulder. When we kickstarted the myPATHH redesigns, our first step was to retrieve these design specs from our client so that we could establish a design system of fonts and colors to work with. These standards would ensure a smoother transition when we ultimately handed our work over to Shoulder 2 Shoulder to develop.</p>
+            <p className="mainT" style={{ marginTop: "10px" }}>
+                Due to the limited time of this project, the materials are created considering future implementation process. 
+            </p>
+            <p>
+                Due to the limited time of this project and the resources our client has as a non-profit organization, we created multiple deliverables for the redesign. First, we created an interactive prototype using code in addition to the Figma and Sketch file. This prototype would be a tool for Shoulder 2 Shoulder team to learn about the interactions and how it works as a responsive web app in the future when they implement the design.
+            </p>
+            <p>
+                Secondly, we handed off the success metrics so they can validate the new design as the app gets more users. In addition to our design principles, this success metrics would be a standard for the organization to make further changes on the app.
+            </p>        
+           <p className="mainT" style={{ marginTop: "10px" }}>What do students value the most?</p>
+           <p>Instead of starting out by developing a low-fidelity prototype of a new version of the dashboard, we decided to involve Boulder Crest students in the design process.
+After recruiting three Warrior PATHH alumni for 30-minute research sessions, we walked each participant through an artboard that we had set up in Figma containing various high-level feature categories for the myPATHH dashboard: Welcome, Team, Assignment Progress, Goals, Reminders, and Recommended Content.
+
+During the interview, we asked our participants to construct their ideal Dashboard using various modules within each category.
+
+While it was helpful to understand which ones were useful or not, it was ultimately valuable for us to understand the “why” — the reasoning behind their selections. These insights directly established our Design Principles.</p>
+   
+<div className = "halfwrap" style={{maxWidth: "750px"}}>
+            <img src= {bcr_codesign1} alt = "Co-design Session" className="half" />
+            <img src= {bcr_codesign2} alt = "Co-design Session" className="half " />
+            <div className = "imgdes">Co-design Session</div>
+           </div>
+
+        <p className="mainT" style={{ marginTop: "10px" }}>North star of our design–design principles</p>
+        <p>We developed a set of design principles after our initial myPATHH dashboard co-design session—which we will dive deeper into below— that would guide us from that point forward, from creating the final prototypes of the myPATHH dashboard and assignments section to developing the larger Warrior PATHH roadmap.</p>
+        <div className = "designPrinciple">
+            <div className = "iconRow">
+                <div className = "iconWrapper active" id = "principle1" onClick={(ev)=>{principleDescrip(0); ev.target.classList.add("active")}}>
+                    <img src = {bcr_principle1} alt = "Design Principle 1" />
+                </div>
+                <div className = "iconWrapper" id = "principle2" onClick={(ev)=>{principleDescrip(1); ev.target.classList.add("active")}}>
+                    <img src = {bcr_principle2}  alt = "Design Principle 1"/>
+                    </div>
+                <div className = "iconWrapper" id = "principle3" onClick={(ev)=>principleDescrip(2)}>
+                    <img src = {bcr_principle3}  alt = "Design Principle 1"/>
+                    </div>
+                <div className = "iconWrapper" id = "principle4" onClick={(ev)=>principleDescrip(3)}>
+                    <img src = {bcr_principle4}  alt = "Design Principle 1"/>
+                    </div>
+                <div className = "iconWrapper" id = "principle5" onClick={(ev)=>principleDescrip(4)}>
+                    <img src = {bcr_principle5}  alt = "Design Principle 1"/>
+                </div>
+            </div>
+            <div className = "descrip" id = "principle_descrip">
+            <img src={bcr_principle1} id = "principle_img" alt = "Design Principle" />
+                <div>
+                        <div className="title" id = "principle_title">
+                            Consider People’s Mindsets
+                        </div>
+                        <div className="expla" id = "principle_expla">
+                            <p>
+                                Choose features that cater to when students are struggling or doing okay.</p>
+                            <p>
+                                Warrior PATHH students experience ups and downs as they navigate the 18-month program.
+                                They could be stressed, happy, frustrated, or any other mix of emotions. We need to
+                                design experiences that meet people where they are at. Furthermore, we need to design
+                                experiences that do not exacerbate negative emotions but instead equip them with
+                                lessons that they need in order to navigate emotions and situations. </p>
+                        </div>
+                </div>
+            </div>
+        </div>
+        <p className="mainT" id = "dashboardRedesign">Dashboard Redesign</p>
+        <img alt = "Current myPATHH" className="half" src = {bcr_current2} style={{maxWidth: "300px"}} />
+            <div className = "imgdes">Current Dashboard</div>
+        <p>We chose the dashboard because it is the first page students engage with when they enter the myPATHH app. Also, our team and the client saw the potential improvement from the page.</p>
+    <p>Our final designs for the dashboard incorporate many of our design principles. We created shortcuts to critical components of the aftercare program such as students’ current assignments and links to their Fire Team’s video call. We also wanted students to feel supported on their journey from the moment they opened the application. Daily quotes and visual reminders of their Fire Team accomplish this.</p>
+    <p className="insights" >Final Design</p>
+    <a href="https://jayolee.github.io/bcr_prototype/dashboard.html" rel="noopener noreferrer" target="_blank">
+        <div className = "button bcr">Open Dashboard Prototype</div>
+    </a>
+    <div className = "redesign_solution active">
+    <div className="dashboardStack number dashboard">
+            <img src={bcr_dashFinal} className = "dashfinal" alt = "Final Deshboard Design" />
+        <div className = "dashboardWrapper"> 
+            <img className="solution_dash_stack deactive" alt = "Header" src={bcr_dash1} />
+        </div>
+        <div className = "dashboardWrapper" style ={{height: "144.36px"}}>
+            <div className="number">1</div>
+            <img className="solution_dash_stack" src={bcr_dash2} alt = "Daily Quote"/>
+            <div className="explanation" id="dash0">
+                                <img src={bcr_principle1} alt = "Icon" />
+                                <div className="descrip">
+                                    <div className="principle">
+                                        Consider People’s Mindsets
+                                    </div>
+                                    <div className="title">
+                                        Daily quote
+                                    </div>
+                                </div>
+                            </div>
+        </div>
+        <div className = "dashboardWrapper" style ={{height: "95.45px"}}>
+            <div className="number">2</div> 
+            <img className="solution_dash_stack" src={bcr_dash3} href="dash1" alt = "Shortcut to Current Assignment"/>
+            <div className="explanation" id="dash1">
+                <div className = "principleWrap">
+                                <img src={bcr_principle2} alt = "Icon"/>
+                                <img src={bcr_principle3} alt = "Icon"/>
+                        </div>
+                                <div className="descrip">
+                                    <div className="principle">
+                                        Encourage and support journey<br />Promote Behavior Change
+                                    </div>
+                                    <div className="title">
+                                        Shortcut to current assignment
+                                    </div>
+                                </div>
+                            </div>
+        </div>
+        <div className = "dashboardWrapper" style ={{height: "485.97px"}}>
+            <div className="number">3</div>
+            <img className="solution_dash_stack" src={bcr_dash4} href="dash2" alt = "Goals"/>
+            <div className="explanation" id="dash2">
+                                <img src={bcr_principle3} alt = "Icon"/>
+                                <div className="descrip">
+                                    <div className="principle">
+                                        Promote Behavior Change
+                                    </div>
+                                    <div className="title">
+                                        Soft reminders
+                                    </div>
+                                </div>
+                            </div>
+        </div>                 
+        <div className = "dashboardWrapper" style ={{height: "475.14px"}}>
+            <div className="number">4</div>
+            <img className="solution_dash_stack" src={bcr_dash5} href="dash3" alt = "Team"/>
+            <div className="explaWrapper dashboard">
+                            <div className="explanation" id="dash3">
+                                <img src={bcr_principle4} alt = "Icon"/>
+                                <div className="descrip">
+                                    <div className="principle">
+                                        Inspire Team Support
+                                    </div>
+                                    <div className="title">
+                                        Team
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+        </div>                       
+        <div className = "dashboardWrapper">   
+            <img className="solution_dash_stack deactive" src={bcr_dash6} alt = "Tab Bar"/>
+        </div>                             
+    </div>
+</div>
+<p className="insights" >Success Metrics</p>
+    <p className="insight_des" >
+    <p className="insights" style={{fontSize:"17px"}}>Video Call Attendance</p>
+    <p className="insights" style={{fontSize:"17px", fontWeight: "400", marginTop: "0"}}>
+Joining the regular phase or team video calls are 100% voluntary; however, it's where students can share what they are up to. Therefore, measuring the attendance rate is a way to see how much students get engaged with the 18-month program. </p>
+    <p className="insight_des" >
+        <ol><li>Per Call</li>
+        <li>Over Time</li></ol>
+    </p>
+
+    <p className="insights" style={{fontSize:"17px"}}>
+    Shortcut Usage</p>
+    <p className="insights" style={{fontSize:"17px", fontWeight: "400", marginTop: "0"}}>
+    We placed shortcuts on the dashboard to support student's journey. By measuring how much students use shortcuts, we can validate our theory.</p>
+    <p className="insight_des" >
+        <ol>
+        <li>Video Calls</li>
+        <li>Assignments</li>
+        </ol>
+    </p>
+    </p>
+
+<p className="mainT" id = "assignmentRedesign">Assignment Page Redesign</p>
+
+<div className = "triwrap" style={{maxWidth: "1100px"}}>
+    <div className = "triinner">
+            <img alt = "Current myPATHH" className="half"  src = {bcr_current1} style={{maxWidth: "300px"}}/>
+        </div>
+        <div className = "triinner">
+            <img alt = "Current myPATHH" className="half"  src = {bcr_current3} style={{maxWidth: "300px"}}/>
+            </div>
+        <div className = "triinner">
+            <img alt = "Current myPATHH" className="half"  src = {bcr_current4} style={{maxWidth: "300px"}}/>
+        </div>
+     </div>
+     <div className = "imgdes">Current Version of myPATHH (Overview, Weekly Assignment, Survey)
+     </div>
+<p>We chose the assignment page because it is the page which students constantly engage with throughout the 18-month program. Also, our team saw the room for information architecture improvement.</p>
+    <p>Our final designs for the assignments section focused on visualizing information. Large modules and a prominent timeline allow for easy navigation without losing track of students’ current position. Furthermore, we reformatted assignment pages to encourage readability. A checklist at the top of each assignment page punctuates our redesign by concisely stating what students need to accomplish.</p>
+<p>
+Another significant change we made through our design is that the organization can utilize the input data from students. The current version of myPATHH gets all answers in one input box. However, by dividing the boxes by questions, we not only improved the usability but made it possible for the organization to track the input by items.</p>
+     <p className="insights" >Final Design</p>
+    <a href="https://jayolee.github.io/bcr_prototype/index.html" rel="noopener noreferrer" target="_blank"><div className = "button bcr">Open Assignment Prototype</div></a>
+    <a href="https://jayolee.github.io/bcr_prototype/survey.html" rel="noopener noreferrer" target="_blank">
+    <div className = "button bcr" style={{margin:"0 8px"}}>Open Survey Prototype</div></a>
+    <div className = "redesign_btnWrap">
+    <div className = "button small active" onClick = {(ev) => {bcrSolutionView("overview")}}> Navigation</div>
+    <div className = "button small"  onClick = {(ev) => {bcrSolutionView("weekly")}}>Weekly Assignment</div>
+    <div className = "button small" onClick = {(ev) => {bcrSolutionView("survey")}}>Survey</div>
+    </div>
+<div className = "redesign_solution active" id = "navigation">
+    <div className="dashboardStack number assignment">
+            <img src={bcr_assignFinal} className = "assignfinal" alt = "Final Assignment Overview Design"/>
+        <div className = "dashboardWrapper"> 
+            <img className="solution_dash_stack deactive" src={bcr_assign1} alt = "Header"/>
+        </div>
+        <div className = "dashboardWrapper" style ={{height: "92.47px"}}>
+            <div className="number">1</div>
+            <img className="solution_dash_stack" src={bcr_assign2} alt = "Shortcut to current assignment"/>
+            <div className="explanation" id="overview0">
+                <div className = "principleWrap">   
+                                <img src={bcr_principle2} alt = "Icon"/>
+                                <img src={bcr_principle3} alt = "Icon"/>
+                </div>
+                                <div className="descrip">
+                                    <div className="principle">
+                                        Encourage and support journey<br />Promote Behavior Change
+                                    </div>
+                                    <div className="title">
+                                        Shortcut to current assignment
+                                    </div>
+                                </div>
+                            </div>
+        </div>
+        <div className = "dashboardWrapper" style ={{height: "169.75px"}}>
+            <div className="number">2</div> 
+            <img className="solution_dash_stack" src={bcr_assign3} href="dash1" alt = "Progress Bar"/>
+            <div className="explanation" id="overview1">
+                                <img src={bcr_principle2} alt = "Icon"/>
+                                <div className="descrip">
+                                    <div className="principle">
+                                        Encourage and support journey
+                                    </div>
+                                    <div className="title">
+                                    Prominent Progress Bar
+                                    </div>
+                                </div>
+                            </div>
+        </div>
+        <div className = "dashboardWrapper" style ={{height: "443px"}}>
+            <div className="number">3</div>
+            <img className="solution_dash_stack" src={bcr_assign4} alt = "List of Assignments" />
+            <div className="explanation" id="overview2">
+            <img src={bcr_principle2} alt = "Icon"/>
+                                <div className="descrip">
+                                    <div className="principle">
+                                        Encourage and support journey
+                                    </div>
+                                    <div className="title">
+                                    Provide only required amount of information
+                                    </div>
+                                </div>
+                            </div>
+        </div>                 
+        <div className = "dashboardWrapper" style ={{height: "80px"}}>
+            <div className="number">4</div>
+            <img className="solution_dash_stack" src={bcr_assign5} alt = "Celebration Message"/>
+            <div className="explaWrapper dashboard">
+                            <div className="explanation" id="overview3">
+                            <img src={bcr_principle2} alt = "Icon"/>
+                                <div className="descrip">
+                                    <div className="principle">
+                                        Encourage and support journey
+                                    </div>
+                                    <div className="title">
+                                    Celebration message
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+        </div>     
+        <div className = "dashboardWrapper" style ={{height: "92.84px"}}>
+            <div className="number">5</div>
+            <img className="solution_dash_stack" src={bcr_assign6} alt = "Next Module"/>
+            <div className="explaWrapper dashboard">
+                            <div className="explanation" id="overview4">
+                            <img src={bcr_principle3} alt = "Icon"/>
+                                <div className="descrip">
+                                    <div className="principle">
+                                        Promote Behavior Change
+                                    </div>
+                                    <div className="title">
+                                    Shaded “Next Module”
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+        </div>                      
+        <div className = "dashboardWrapper">   
+            <img className="solution_dash_stack deactive" src={bcr_assign7}alt = "Tab Bar"/>
+        </div>                             
+    </div>
+</div>
+
+<div className = "redesign_solution" id = "weekly">
+    <div className="dashboardStack number assignment">
+            <img src={bcr_detailFinal} className = "detailfinal" alt = "Final Weekly Assignment Design"/>
+        <div className = "dashboardWrapper"> 
+            <img className="solution_dash_stack deactive" src={bcr_detail1} alt = "Header"/>
+        </div>
+        <div className = "dashboardWrapper" style ={{height: "202.98px"}}>
+            <div className="number">1</div>
+            <img className="solution_dash_stack" src={bcr_detail2} alt = "Checklist"/>
+            <div className="explanation" id="assign0">
+                                <img src={bcr_principle2} alt = "Icon"/>
+                                <div className="descrip">
+                                    <div className="principle">
+                                        Encourage and support journey
+                                    </div>
+                                    <div className="title">
+                                        Checklists
+                                    </div>
+                                </div>
+                            </div>
+        </div>
+        <div className = "dashboardWrapper" style ={{height: "591px"}}>
+            <div className="number">2</div> 
+            <img className="solution_dash_stack" src={bcr_detail3} href="dash1" alt = "Contents"/>
+            <div className="explanation" id="assign1">
+                <div className = "principleWrap">
+                                 <img src={bcr_principle2} alt = "Icon"/>
+                                <img src={bcr_principle3} alt = "Icon"/>
+                </div>
+                                <div className="descrip">
+                                    <div className="principle">
+                                    Encourage and support journey<br />Promote Behavior Change
+                                    </div>
+                                    <div className="title">
+                                    Divided Items and Easy-to-Edit Assignments
+                                    </div>
+                                </div>
+                            </div>
+        </div>
+        <div className = "dashboardWrapper" style ={{height: "155.67px"}}>
+            <div className="number">3</div>
+            <img className="solution_dash_stack" src={bcr_detail4}  alt = " Collapsed Chapters"/>
+            <div className="explanation" id="assign2">
+                                <img src={bcr_principle2} alt = "Icon"/>
+                                <div className="descrip">
+                                    <div className="principle">
+                                    Encourage and support journey
+                                    </div>
+                                    <div className="title">
+                                    Collapsed Chapters
+                                    </div>
+                                </div>
+                            </div>
+        </div>                 
+        <div className = "dashboardWrapper" >
+            <img className="solution_dash_stack deactive" src={bcr_detail5}alt = "Tab Bar" />
+        </div>     
+                            
+    </div>
+</div>
+
+<div className = "redesign_solution" id = "survey">
+    <div className="dashboardStack number assignment">
+            <img src={bcr_surveyFinal} className = "surveyfinal" alt = "Final Survey Design" />
+        <div className = "dashboardWrapper"> 
+            <img className="solution_dash_stack deactive" src={bcr_survey1} alt = "Header" />
+        </div>
+        <div className = "dashboardWrapper" style ={{height: "105.64px"}}>
+            <div className="number">1</div>
+            <img className="solution_dash_stack" src={bcr_survey2} alt = "Checklist" />
+            <div className="explanation" id="survey1">
+                                <img src={bcr_principle2} alt = "Icon"/>
+                                <div className="descrip">
+                                    <div className="principle">
+                                        Encourage and support journey
+                                    </div>
+                                    <div className="title">
+                                        Checklist
+                                    </div>
+                                </div>
+                            </div>
+        </div>
+        <div className = "dashboardWrapper" style ={{height: "381.81px"}}>
+            <div className="number">2</div> 
+            <img className="solution_dash_stack" src={bcr_survey3} href="dash1" alt = "Contents"/>
+            <div className="explanation" id="survey2">
+                                <img src={bcr_principle2} alt = "Icon"/>
+                                <div className="descrip">
+                                    <div className="principle">
+                                        Encourage and support journey
+                                    </div>
+                                    <div className="title">
+                                    Scroll Animation and Focusing Next Question
+                                    </div>
+                                </div>
+                            </div>
+        </div>                
+        <div className = "dashboardWrapper">   
+            <img className="solution_dash_stack deactive" src={bcr_survey4}alt = "Tab Bar"/>
+        </div>                             
+    </div>
+</div>
+<p className="insight_des" >
+    <p className="insights" style={{fontSize:"17px"}}>Average Time Spent Watching Assigned Videos</p>
+    <p className="insights" style={{fontSize:"17px", fontWeight: "400", marginTop: "0"}}>
+    The weekly assignments include watching videos and make reflections except for the first week. Therefore, measuring the average time spent watching assigned videos can be a way to see the engagement pattern of students within the 18-month program. </p>
+
+    <p className="insights" style={{fontSize:"17px"}}>
+    Completion Rate of Assignments</p>
+    <p className="insights" style={{fontSize:"17px", fontWeight: "400", marginTop: "0"}}>
+    The new design has a checklist, which is 100% voluntary; however, it can be a tool to track the pattern of students finishing assignments.</p>
+    </p>
+        </div>,
+        "Service Design": <div>
+            <p className="mainT" id = "serviceDesign">Service Roadmap</p>
+<p>
+The culmination of our service design exploration is the roadmap of future projects, all of which we believe have the potential to enhance the student experience. Although we have chosen to depict these recommendations as steps along a journey, this should not be interpreted as a literal step-by step process. The order in which we have chosen to depict these is not intended to imply a linear process; these projects should be pursued in the order that makes the most sense for Boulder Crest. Each individual project is further explained in the following pages, along with our rationale, a possible implementation plan, and foreseeable challenges.
+
+</p>
+<div className = "roadmapWrapper">
+<div className = "imgwrapper">
+    <img src = {bcr_roadmap_road1} className = "road" id = "road1" alt = "Road" />
+    <img src = {bcr_roadmap_road2} className = "road" id = "road2"  alt = "Road" />
+    <img src = {bcr_roadmap_road3} className = "road" id = "road3"  alt = "Road" />
+    <img src = {bcr_roadmap_road4} className = "road" id = "road4"  alt = "Road" />
+    <img src = {bcr_roadmap_design1} className = "design" id = "design1" onMouseOver ={(ev)=>roadmap(ev)} onMouseLeave={hideExpla}  alt = "Retreat Modules for Loved Ones" onClick ={(ev)=>roadmapSmall(ev)}  />
+    <img src = {bcr_roadmap_design2} className = "design" id = "design2" onMouseOver ={(ev)=>roadmap(ev)} onMouseLeave={hideExpla} alt = "Leverage Veteran Nonprofits" onClick ={(ev)=>roadmapSmall(ev)} />
+    <img src = {bcr_roadmap_design3} className = "design" id = "design3" onMouseOver ={(ev)=>roadmap(ev)} onMouseLeave={hideExpla} alt = "Find Warrior PATHH Students Near Me" onClick ={(ev)=>roadmapSmall(ev)} />
+    <img src = {bcr_roadmap_design4} className = "design" id = "design4" onMouseOver ={(ev)=>roadmap(ev)} onMouseLeave={hideExpla} alt = "Improve Warrior PATHH Onboarding" onClick ={(ev)=>roadmapSmall(ev)} />
+    <img src = {bcr_roadmap_design5} className = "design" id = "design5" onMouseOver ={(ev)=>roadmap(ev)} onMouseLeave={hideExpla} alt = "Pathways to Care Through the Application Process" onClick ={(ev)=>roadmapSmall(ev)} />
+    </div>
+    <div id ="blkbg"  onClick = {smallHideExpla}/>
+    <div className = "expla" id = "roadmapExpla" onClick = {smallHideExpla}>
+        <div className = "title">
+        Retreat Modules for Loved Ones
+        </div>
+        <div className = "content">
+        <p>
+        <i>What if sharing lessons from the retreat and disclosing their authentic self with their loved ones didn’t have to be a low point?</i></p>
+        <p>
+        Boulder Crest can create and share modules for loved ones that automatically send during and after their loved one attends a Warrior PATHH retreat via their Learning Management System. Each day’s video content can provide loved ones with an overview of what the student is experiencing during the day. When the student returns home from the retreat, they can go through an additional module together that provides opportunities for conversation and connection. Boulder Crest should also give students the choice to opt out.
+        </p>
+        </div>
+    </div>
+</div>
+
+        </div>,
+    },
     "up": {
         "projectTitle": "Up",
         "quote": "How might we use ubiquitous devices to help (CMU) students?",
@@ -381,130 +1147,7 @@ export const projectList = {
                 At current stage of design, user are limited to saving virtual animals, which may not be as rewarding as contributing to saving animals in the real world. Therefore, we look forward to having a sponsorship partner with wildlife organizations for future implementations.</p>
         </div>,
     },
-    "getcuisine": {
-        "projectTitle": "Get Cuisine",
-        "quote": "How might Machine Learning can help people?",
-        "topimg": <div style={{ width: "640px", maxWidth: "100%", height: "auto", margin: "0 auto" }}><Vimeo video="315035206" /></div>,
-
-        "exlpla": {
-            "Duration": "Dec 2018 ~ Current",
-            "Team": "Ja Young Lee, June Byeon (from the second round)",
-            "Role": "User Reserach, UI/UX design, front, back-end development",
-            "Tool": "Python Flask, jQuery, HTML, CSS, Adobe Illustrator",
-        },
-        "button": <div><a href="http://getcuisine.herokuapp.com" target="_blank" rel="noopener noreferrer">
-            <div className="button getcuisine">Go to the Website</div></a>
-            <div style={{ transform: "translateY(-26px)" }}>*Initial loading is very slow</div>
-        </div>,
-        "Process": <div>
-            <div className="processBoxWrap">
-                <div className="proBoxLine getcuisine" />
-                <div className="proBoxOut">
-                    <div className="processBox getcuisine">Ideate</div>
-                    <div className="processExpla">Matchmaking</div>
-                </div>
-                <div className="proBoxOut">
-                    <div className="processBox getcuisine">Research</div>
-                    <div className="processExpla">Descriptive Research</div>
-                    <div className="processExpla">Survey</div>
-                </div>
-                <div className="proBoxOut">
-                    <div className="processBox getcuisine">Iterate</div>
-                    <div className="processExpla">Hi-fi Prototype</div>
-                    <div className="processExpla">Think-aloud</div>
-                </div>
-                <div className="proBoxOut">
-                    <div className="processBox getcuisine fin">Finalize</div>
-                    <div className="processExpla">Deployment</div>
-                </div>
-            </div>
-
-        </div>,
-        "Ideation": <div>
-            <p className="mainT" style={{ marginTop: "30px" }}>How might we help people using Machine Learning?</p>
-            <p>While the matchmaking process identifying possible activities and domains to which we can apply Machine Learning (ML) model, one of the dataset from Kaggle (<a href="https://www.kaggle.com/c/whats-cooking" target="_blank" rel="noopener noreferrer">cuisines and ingredients</a>) inspired me. It brought my experience having small amounts of ingredients which are leftovers after cooking. It’s often challenging to deal with these leftovers. Therefore, I redefined the problem space as below.
-                </p>
-            <p className="mainPoint" style={{ marginBottom: "0" }}>
-                <span style={{ boxShadow: "inset 0 -1.5px white, inset 0 -3px #617D31, inset 0 -4.5px white, inset 0 -6px #617D31" }} >How might Machine Learning help people clean out the fridge?</span></p>
-        </div>,
-        "Platform Research": <div>
-            <p className="mainT" style={{ marginTop: "30px" }}>People don't use Alexa to search for recipes</p>
-            <p> Originally, I planned to create an Amazon Alexa Skill because I believed it would be handy to provide recipe via conversational user interface. <b>However, although 41.4% of people place their smart speakers in the kitchen, only 26.5% of people use the speakers to look for recipes monthly, and only 5.1% people use it daily.</b> This is a comparably low comparing to other popular functions such as listening music (76.2% of monthly use, 41.9% of daily use) or checking the weather (69.1% of monthly use, 41.4% of daily use). <a href=" https://voicebot.ai/2018/03/21/data-breakdown-consumers-use-smart-speakers-today/" target="_blank" rel="noopener noreferrer">(Source)</a> Therefore, I chose website as a platform which can also provide visual interaction to users.</p>
-            <div className="halfwrap" style={{ marginTop: "0" }}>
-                <img src={getcuisine8} alt="Where do people put their smart speakers?" className="half" style={{ maxWidth: "500px", marginTop: "0" }} />
-                <img src={getcuisine9} alt="Smart Speaker Use Case Frequency Jan 2018" className="half" style={{ maxWidth: "500px", marginTop: "0" }} /><div className="imgdes">
-                    <a href=" https://voicebot.ai/2018/03/21/data-breakdown-consumers-use-smart-speakers-today/" target="_blank" rel="noopener noreferrer">(Source of the graphs above)</a>
-                </div>
-            </div>
-        </div>,
-        "ML Model": <div>
-            <p>
-                I built pipelines of three algorithms: K-Nearest Neighbors (K-NN), Support Vector Machine, Multinomial Naive Bayesian from Scikit-learn with CountVectorizer and TfidfTransformer. Among three models, I decided to use K-NN model because it returned highest accuracy from K-fold Cross-validation (K = 5).</p>
-            <img src={getcuisineword} alt="Pipeline Structure" />
-            <div className="imgdes">Pipeline Structure</div>
-            <div className="triwrap getcuisine" style={{ marginTop: "60px" }}>
-                <div className="triinner" style={{ border: "4px solid rgba(97,125,49,0.5)", padding: "5px 15px 5px 0", borderRadius: "10px" }}>
-                    <img src={getcuisinemod1} alt="K-NN Model" className="half" />
-                    <div className="imgdes">K-NN Model<br />Accuracy: 0.73</div>
-                </div>
-                <div className="triinner">
-                    <img src={getcuisinemod2} alt="SVM Model" className="half" />
-                    <div className="imgdes">SVM Model<br />Accuracy: 0.06</div>
-                </div>
-                <div className="triinner">
-                    <img src={getcuisinemod3} alt="Multinomial Naive Bayesian Model" className="half" />
-                    <div className="imgdes">Multinomial NB Model<br />Accuracy: 0.63</div>
-                </div>
-            </div>
-        </div>,
-
-        "Challenges": <div> <p className="challenges" style={{ marginTop: "30px" }}>Lack of the open source recipe dataset</p>
-            <p>
-                I could not find and open source recipe dataset, so I used <a href="https://www.kaggle.com/c/whats-cooking" target="_blank" rel="noopener noreferrer">cuisines and ingredients dataset</a>. As a result, the functionality of the website is limited to provide only suitable cuisines instead of recipes. It requires additional efforts for users to look for a dish and a recipe to cook. Therefore, I added a function sending users to Google Search of recipes with the predicted cuisine and given ingredients.</p>
-            <p className="challenges">Optimizing the site</p>
-            <p>
-                The biggest issue of using ML is that it is hard to optimize the website for shorter loadings. I tried to optimize the files as much as possible; however, the initial response time is still long due to Heroku's policy (If the app has no traffic for 30 mins, it goes to sleep).
-        </p>
-            <p className="challenges">Debugging server error</p>
-            <p>
-                This was the first time I managed the server side. It kept returning 500 error from the ajax call, and I could not figure out the reason. By deleting the code line by line, I figured out this happened because I passed Null value to the server to run the model. Later, I learned that I need to make a server return the error indicating the type for the sake of debugging.
-        <img src={getcuisine11} alt="500 error" style={{ maxWidth: "500px" }} /><div className="imgdes">500 Error... What Does It Mean?</div>
-            </p>
-            <p className="challenges">Managing the data format to run the ML model</p>
-            <p>
-                The training data I used didn't have colum headers, and the data I passed from the inputs (JSON -> Pandas Dataframe) had column headers. As a result, it only returned French Cuisine (error). I added a line of code to get rid of the column headers to fix the error.
-        <img src={getcuision10} className="imgBorder" style={{ maxWidth: "500px" }} alt="Model Returning Error" /><div className="imgdes">ML Model Only Returning French Cuisine<br />(Curry Paste + Tamarind Paste + Chicken Breasts = French Food?)
-        </div>
-                <p>Also, I added an autocomplete function to the search bar using jQuery Autocomplete API because I wanted users to type ingredients in the same format as the train data.</p>
-
-
-            </p>
-        </div>,
-
-        "Initial Solution": <div>
-
-            <div style={{ width: "640px", maxWidth: "100%", height: "auto", margin: "0 auto" }}><Vimeo video="315035206" /></div>
-            <p className="solutionPoint" style={{ margin: "30px auto 0", maxWidth: "100%" }}><span style={{ color: "#617D31", fontWeight: "bold" }}>Get Cuisine,</span><br />a ML powered website to help clean out the fridge</p>
-            <div style={{ textAlign: "center" }}>
-                <a href="http://getcuisine.herokuapp.com" target="_blank" rel="noopener noreferrer">
-                    <div className="button getcuisine">Go to the Website</div></a>
-                <div style={{ transform: "translateY(-26px)" }}>*Initial loading is very slow</div>
-            </div>
-            <p className="mainT" style={{ marginTop: "30px" }}>"Curiosity" can be a value of this website</p>
-            <p className="addmargin">One of the concerns about this project is that the data this website provides can easily be obtained from other websites. Also, what people need is recipes, not a cuisine type for search. However, I got feedback that once knowing that this website is using ML, people become curious to see the result and get interested. Therefore, I focused on providing 'fun' and fulfilling 'curiosity.'</p>
-
-            <img src={getcuisine3} alt="Cuisine Icons" onClick={zoomimg} className="zoomable" /><div className='imgdes'>Cuisine Icons</div>
-            <img className="zoomable" src={getcuisine1} onClick={zoomimg} alt="final design" />
-            <div className='imgdes'>Final Design</div>
-        </div>,
-        "Next Steps": <div>
-            <p className="mainT" style={{ marginTop: "30px" }}>The solution didn't solve the problem</p>
-            <p>Does this website fulfill the initial goal of "helping people clean out the fridge"? The answer was <b>NO.</b> The website was more about exploring the development of a ML powered website. Therefore, I started the second round of design. The final solution we got was <span style={{ color: "#fa6c42", fontWeight: "bold" }}>"Forkie."</span></p>
-            <div style={{ width: "100%", textAlign: "center", margin: "0" }}>
-                <a href="https://jayolee.github.io/portfolio/projects/forkie/" rel="noopener noreferrer" ><div className="button forkie" style={{ margin: "0" }}>Read About Forkie</div></a>
-            </div>
-        </div>
-    },
+    
     "forkie": {
         "projectTitle": "Forkie",
         "quote": <span>How might we reduce the food waste?</span>,
@@ -692,7 +1335,7 @@ export const projectList = {
         "Solution": <div>
             
             <p className="solutionPoint" id = "forkieSolu" style={{ marginTop: "30px", maxWidth: "750px" }}>
-            <img src ={forkie_logo} style = {{maxWidth: "300px", margin: "0 auto 30px"}}/>
+            <img src ={forkie_logo} style = {{maxWidth: "300px", margin: "0 auto 30px"}} alt ="logo" />
             Forkie, a mobile app help people regain passion for cooking</p>
             <p><b>Sharing recipe is sharing experience.</b> Forkie helps people regain the passion for cooking by fostering the communication with friends. Below is the key features.</p>
             <div className="up_expla_screen forkie">
@@ -814,7 +1457,7 @@ export const projectList = {
         "Sign Up Page": <div style={{ display: "flex", justifyContent: "space-around", maxWidth: "1000px", margin: "0 auto", alignItems: "center", flexWrap: "wrap" }}>
 
             <div style={{ width: "360px" }}>
-                <img src={buncee5} style={{ boxShadow: "0 0 10px rgba(0,0,0,0.2)", padding: "16px 0 14px 20px" }} />
+                <img src={buncee5} style={{ boxShadow: "0 0 10px rgba(0,0,0,0.2)", padding: "16px 0 14px 20px" }} alt ="Screenshot of Buncee Features" />
             </div>
             <div>
                 <p style={{ margin: "10px 0" }}><b>Role:</b> Web design, prototyping using InVision, Adobe After Effects</p>
@@ -829,7 +1472,7 @@ export const projectList = {
         </div>,
         "Buncee Emotion iOS Sticker Pack": <div style={{ display: "flex", justifyContent: "space-between", maxWidth: "850px", margin: "0 auto", alignItems: "center", flexWrap: "wrap" }}>
             <div style={{ width: "350px" }}>
-                <img src={buncee2} style={{ maxWidth: "280px", boxShadow: "0 0 10px rgba(0,0,0,0.2)" }} />
+                <img src={buncee2} style={{ maxWidth: "280px", boxShadow: "0 0 10px rgba(0,0,0,0.2)" }} alt ="Screenshot of Buncee iOS Message"/>
             </div>
             <div style={{ width: "100%", maxWidth: "450px", marginLeft: "30px", textAlign: "center" }}>
                 <p style={{ margin: "10px 0" }}><b>Role:</b> Creating Animation stickers</p>
@@ -841,7 +1484,7 @@ export const projectList = {
         </div>,
         "Buncee iOS App": <div>
 
-            <img src={buncee1} style={{ size: "100%", maxWidth: "1200px" }} />
+            <img src={buncee1} style={{ size: "100%", maxWidth: "1200px" }} alt ="Screenshots of Buncee iOS App"/>
             <div style={{ width: "100%", textAlign: "center" }}><a href="https://itunes.apple.com/us/app/buncee-creative-presentation/id1093956684?mt=8" target="_blank" rel="noopener noreferrer">
                 <div className="button buncee">Open the Appstore</div></a></div>
             <div style={{ maxWidth: "550px", margin: "0 auto" }}>
@@ -849,79 +1492,6 @@ export const projectList = {
                 <p style={{ margin: "10px auto", fontSize: "18px", fontWeight: "bold" }}>An iOS app for Buncee canvas.</p></div>
         </div>
 
-    },
-    "logpos": {
-        "projectTitle": "LOG + POS",
-        "quote": <span>How can we improve the communication at rescue operations using audio AR?<br /><br /></span>,
-        "topimg": <YouTube
-            videoId={vidid.log}
-            id="player"
-        />,
-        "exlpla": {
-            " ": <i>This is a project for a Bose Challenge at CMU.</i>,
-            "Duration": <span>14 days - <b>Bose Challenge at CMU</b> (Oct 19th ~ Nov 1st)</span>,
-            "Team": <span>Aniruddh Iyer, <a className="member" href="http://www.hyunwoopaik.com/" target="_blank" rel="noopener noreferrer">Hyun Woo Paik,</a> Ja Young Lee, Se One Park, <a className="member" href="https://wwchung.github.io/SSUI-Portfolio/index.html" target="_blank" rel="noopener noreferrer">Won-Woo Chung</a></span>,
-            "Role": "ideation, video directing/editing",
-            "Tool": "Maya, After Effects, Illustrator",
-        },
-        "Process": <div className="processBoxWrap">
-            <div className="proBoxLine logpos" />
-            <div className="proBoxOut">
-                <div className="processBox logpos">Ideate</div>
-                <div className="processExpla">Matchmaking</div>
-            </div>
-
-            <div className="proBoxOut">
-                <div className="processBox logpos">Research</div>
-                <div className="processExpla">Interview</div>
-            </div>
-            <div className="proBoxOut">
-                <div className="processBox logpos">Design</div>
-                <div className="processExpla">Device design</div>
-                <div className="processExpla">UI design</div>
-            </div>
-            <div className="proBoxOut">
-                <div className="processBox logpos">Finalize</div>
-                <div className="processExpla">Video</div>
-            </div>
-        </div>,
-        "Ideation": <div> <p className="mainT" style={{ marginTop: "30px" }}>Audio AR for circumstances with communication difficulties</p>
-            <p> The prompt of Bose Challenge was <i><b>“How might we use sound-based augmented reality to improve our lives?”</b></i> Among the idea we had, we decided to focus on improving cooperation situations which require team members’ communications about their locations and status. More specifically, we narrowed down our target as firefighters, about their rescue operations in extreme situations.</p> <p>Our assumption here is that under the urgent circumstances of limited vision and hearing, it is difficult to communicate accurate location information via speaking. Therefore, we designed a way to communicate each other automatically generated location data based on their GPS with minimum hand control. </p><img src={logpos1} alt="Ideation Meeting" className="zoomable" onClick={zoomimg} /><div className='imgdes'>Ideation Meeting, Sketch by Young</div> </div>,
-        "User Research": <div>
-            <p className="mainT" style={{ marginTop: "30px" }}>Why do firefighters need an audio AR solution?</p>
-            <p> With our initial ideation, we conducted a phone interview with a firefighter. He confirmed that our idea will be helpful, and gave us the problems about the current system has.</p><img src={logpos2} alt="Phone Interview" /><div className='imgdes'>Phone Interview</div><p>According to the firefighter, there is a system providing location information using sound and blinking lights after a firefighter being motionless for 30 seconds (Watch the video for additional information). However, the issue is that the location information is verbally communicated, so the information rescue team has might not be the latest information. Also, the light and sound signals can be hindered by the fire and the smoke. Our solution solves this problem by providing real-time information directly to the firefighters through the device.</p></div>,
-
-        "Challenges": <div><p className="challenges">How can we get the accurate indoor location data?</p>
-            <p>To get accurate location data, we designed our device to use the bluetooth devices for better location accuracy.</p>
-
-            <p className='challenges'>Social Constraints</p><p>According to the interview, there are two social constraints:<br />1. Firefighters sometimes rely on their ears to determine the temprature. Therefore, there should not be a thing cover their ears.<br />2. Firefighters resist change, especially if it is going to be hard to put on. We designed an audio AR device satisfying these challenges.
-            </p>
-            <img src={logpos3} alt="Device Design" className="zoomable" onClick={zoomimg} /><div className='imgdes'>Device Desiged by <a href='http://www.hyunwoopaik.com' target='_blank' rel="noopener noreferrer">Hyun Woo Paik</a></div></div>,
-
-        "Final Design": <div><p>We created a video explaining our idea. We made a scenario conveying how our design can be applied to the target situations. I created a storyboard to communicate with the team.</p>
-            <div className="halfwrap">
-                <img className="half zoomable" onClick={zoomimg} src={logposstory1} alt="Storyboard 1" />
-                <img className="half zoomable" onClick={zoomimg} src={logposstory2} alt="Storyboard 2" />
-                <div className="imgdes">Video Storyboard by Young</div>
-            </div>
-            <p>The device can be controlled with verbal and head motions.</p>
-            <div className="control">
-                <img id="connected" src={logposrun1} alt="Control: Connect" /></div>
-            <div className="imgdes solution">Team members connect the devices before getting into the operation.</div>
-            <div className="control" style={{ width: "230px" }}>
-                <img className="anim continuImg" alt="Control: Getting Messages 1" src={logposrun2} />
-                <img className="continuImg" src={logposrun3} alt="Control: Getting Messages 2" /></div><div className="imgdes hover">Hover on the image</div>
-            <div className="imgdes solution">Users will continuously get the messages from others as walkie-talkie</div>
-            <div className="control"><img className="anim" src={logposrun4} alt="Control: Locate All 1" /><img src={logposrun5} alt="Control: Locate All 2" /></div>
-            <div className="imgdes hover">Hover on the image</div>
-            <div className="imgdes solution">With a verbal control of <b><i>"Locate All,"</i></b> a user will continuously get the location information of everyone based on his or her head direction. </div>
-            <div className="control"><img className="anim" src={logposrun6} alt="Control: Locate ['name'] 1" /> <img src={logposrun7} alt="Control: Locate ['name'] 2" /></div>
-            <div className="imgdes hover">Hover on the image</div>
-            <div className="imgdes solution">With a verbal control of <b><i>"Locate [Name],"</i></b> a user will get a specific person's location based on his or her head direction.</div>
-            <div className="control"><img className="anim" src={logposrun8} alt="Communication 1" /><img src={logposrun9} alt="Communication 2" /></div>
-            <div className="imgdes hover">Hover on the image</div>
-            <div className="imgdes solution">When a user wants to communicate with other people, he or she will push the button on the side, and will speak. This message will go to everyone as walkie-talkie.</div>
-            <div className="control"><img id="deactivate" alt="Deactivate" src={logposrun10} /> </div><div className="imgdes solution">When a user wants to stop getting the location information, he or she can speak <b><i>"Deactivate"</i></b> to stop the function.</div></div>
     },
     "herecare": {
         "projectTitle": "HereCare",
@@ -960,7 +1530,7 @@ overall, our expert sources were enthusiastic about the potential they see in au
             </p>
         </div>,
         "Solution": <div>
-            <img src = {herecare_solutions} className = "zoomable" onClick={zoomimg}  />
+            <img src = {herecare_solutions} className = "zoomable" onClick={zoomimg}  alt ="Herecare Solutions"/>
             <p className="solutionPoint" style={{ margin: "30px auto 0", maxWidth: "100%" }}><span style={{ color: "#3D7AAF", fontWeight: "bold" }}>HereCare,</span> a service providing at-home rehabilitation assistance via multiple touchpoint</p>
             
             <img src = {herecare_solu} style ={{maxWidth: "600px"}} alt="Solution" />
@@ -980,7 +1550,7 @@ overall, our expert sources were enthusiastic about the potential they see in au
             <p>Alexa will prompt practices 10 times per a day. However, users can opt out if they feel that they cannot do such amount in a day. Also, by using positive words as feedback ("Great", "Good Job" verses "Nice"), HereCare encorages patients practicing. </p>
             </div>
 
-            <img src= {herecare_solu_screen } style ={{border: "1px solid rgba(0,0,0,0.5)"}} className = "zoomable" onClick={zoomimg} />
+            <img src= {herecare_solu_screen } style ={{border: "1px solid rgba(0,0,0,0.5)"}} alt ="Dashboard" className = "zoomable" onClick={zoomimg} />
             <div className="imgdes">Dashboard</div>
             <p>The practice data would be sent to the dashboard so doctors can track progress before their next appointment and prepare for the meeting and can talk about it with the patient at the appointment. </p>
             <p className="mainT" style={{ marginTop: "30px" }}>Alexa's technological constraint can be a key to measure speech intelligibility</p>
@@ -1009,290 +1579,5 @@ So we believe that this simple, yet powerful skill would create a better support
         </div>,
 
         
-    },
-    "dote": {
-        "projectTitle": "DoteNote",
-        "quote": "What if we can leave a virtual message at a specific location?",
-        "topimg": <YouTube
-            videoId={vidid.dote}
-            id="player"
-        />,
-        "exlpla": {
-            " ": <span style={{ fontStyle: "italic" }} >This is a project for a hackathon held at CMU (HackCMU 2018) which got <b>3rd Place.</b></span>,
-            "Duration": <span>24 hours - <b>HackCMU 2018</b> (Sep 21st ~ 22nd)</span>,
-            "Team": <span>DoteNote (Aniruddh Iyer, <a className="member" href="http://www.hyunwoopaik.com/" target="_blank" rel="noopener noreferrer">Hyun Woo Paik,</a> Ja Young Lee, <a className="member" href="https://wwchung.github.io/SSUI-Portfolio/index.html" target="_blank" rel="noopener noreferrer">Won-Woo Chung</a>)</span>,
-            "Role": "ideation, UI/UX design, video directing/editing",
-            "Tool": "Adobe XD, After Effects, Illustrator",
-        },
-        "button": <a onClick={(ev) => { var proto = document.getElementById("doteproto"); window.scroll({ top: proto.offsetTop, left: 0, behavior: 'smooth' }) }}>
-            <div className="button dote">Play with the Prototype</div></a>,
-        "Process": <div className="processBoxWrap">
-            <div className="proBoxLine dote" />
-            <div className="proBoxOut">
-                <div className="processBox dote">Ideate</div>
-            </div>
-
-            <div className="proBoxOut">
-                <div className="processBox dote">Iterate</div>
-                <div className="processExpla">Hi-fi Prototype</div>
-            </div>
-            <div className="proBoxOut">
-                <div className="processBox dote fin">Finalize</div>
-                <div className="processExpla">Video</div>
-            </div>
-        </div>,
-        "Ideation": <div>
-            <p className="mainT" style={{ marginTop: "30px" }}>What if we can leave our lovers a virtual message at a specific location?</p>
-            <p> Our idea started from this one sentence.
-            Using AR technology, we focused on messaging emotions related to locations.
-                With DoteNote, users can leave 3D messages at specific locations.</p>
-            <div className="halfwrap">
-                <img className="half zoomable" onClick={zoomimg} src={dote1} alt="Ideation Meeting 1" />
-                <img className="half zoomable" onClick={zoomimg} src={dote2} alt="Ideation Meeting 2" />
-                <div className="imgdes">Ideation Meeting</div>
-            </div>
-        </div>,
-        "Challenges": <div>
-            <img src={dote3} alt="AR Testting" className="zoomable" onClick={zoomimg} />
-            <div className="imgdes">AR Testing</div>
-            <p className="challenges">How can we deal with the accuracy of GPS?</p>
-            <p>Due to the low accuracy of GPS, we faced following challenges:
-              users cannot leave messages to a certain direction and position. If so, how can prompt the new message notifications efficiently? In other words, how users can find messages without getting wandering while keeping the message as a surprise?</p>
-
-            <p>To solve this questions, we had two sub-questions. First, in what distance do we want to push the notifications? Second, from the point they get notifications, how can we direct them to the message?<br /><br />
-
-                As a solution, we decided to push the notification approximately within a block. </p>
-
-            <div>
-                <img className="solu_dote" src={dote4} alt="Solution 1" />
-                <div className="imgdes solution">If a user is on the same side of the street, they can see the message by looking around.</div></div>
-
-            <div>
-                <img className="solu_dote" src={dote5} alt="Solution 2" />
-                <div className="imgdes solution">If a user approaches from around the corner, they can know to which direction they need to move because the notification comes up when they enter the range.<br />If they enter the block from the side where the message is located, they get the notification before they enter the street.</div>
-            </div></div>,
-
-        "Final Design": <div>
-            <div className="screens" id="doteproto">
-                <Dote style={{ contain: "content" }} ref={protoRef} /></div></div>,
-        "Video":
-            <div>
-                <img src={dote_story} alt="storyboard" className="zoomable" onClick={zoomimg} />
-                <div className="imgdes">Video Storyboard by Young</div>
-                <p className="mainT">Lyrical mood is the key</p>
-                <p>We created a video to explain our solution. Since our design is targeting lovers and emotional communication, I focused on creating a lyrical mood. To organize my ideas and communicate with other team members, I created a storyboard using Adobe Illustrator.</p>
-            </div>,
-        "Further Questions":
-            <div>
-                <p className="mainT" style={{ marginTop: "30px" }}>How about indoor use cases?</p>
-                <p>We considered of outdoor possible cases. However, indoor use cases are more challenging. For example, how can we deal with the indoor messages on different floors? We expect that we can use bluetooth to get more accurate positions; however, further research is required. </p>
-                <p className="mainT" style={{ marginTop: "30px" }}>Does the solution fulfill the goal?</p>
-                <p>Since this was a hackathon project which was made within 24 hours, we don't have enough user research to prove the solution achieved the goal. Further research about location-related emotions (ex. does certain time or direction matters) and the way people communicate their feelings is required to validate our idea.</p>
-            </div>,
-    },
-    "reporter": {
-        "projectTitle": "I am a Reporter",
-        "quote": "How to make the UI of a visual novel easy enough for novice users?",
-        "topimg": <img id="reporter" className="topimg" alt="Game Main Screen" src={reporter0} />,
-        "button": <a href="https://goo.gl/B7sXrV" target="_blank" rel="noopener noreferrer">
-            <div className="button reporter">Go to Invision Prototype</div>
-        </a>,
-        "exlpla": {
-            "Duration": "4 months (Aug 2016 ~ Dec 2016)",
-            "Team": "1 developer, 1 writer, 1 designer (Ja Young Lee)",
-            "Role": "UI/UX design, concept design, illustration",
-            "Tool": "InVision, Adobe XD, Photoshop, Illustrator, HTML/CSS/Javascript",
-        },
-        "I am a Reporter?": <div>
-            <p> I am a Reporter is a visual novel game targeting wide range of people in 20s ~ 30s.<br />
-            </p></div>,
-        "Challenges": <div>
-            <div className="title reporter">Concept Design Challenge:</div>
-            <p>How can we design the overall concept to be accepted by wide range of people? Many visual novel games use drawing style of cell-animation, which some people feel childish. </p>
-            <div className="solution"><p><li>As a solution, we chose realistic illustration style.</li></p></div>
-            <div className="onethird">
-                <img src={reporter1} alt="Illustration 1" className="zoomable" onClick={zoomimg} />
-                <img src={reporter2} alt="Illustration 2" className="zoomable" onClick={zoomimg} />
-                <img src={reporter3} alt="Illustration 3" className="zoomable" onClick={zoomimg} />
-            </div>
-            <div className="title reporter">UI Challenge:</div>
-            <p>How can we make the interface intuitive enough for people who have not played visual novel game can easily play?</p>
-            <p>
-                Visual novel is a game genre popular in Japan, which is using static images with text-based story. As its name, the genre uses
-                static screens which is not familiar with game players of other genres. Our story was targeting diverse users expected not to
-                play visual novels, so  our biggest challenge was to make the UI intuitive to novice users of the visual novel.
-                    </p>
-
-            <div className="solution"><p><li>As a solution, we decided to use elements commonly used in the web design.</li></p></div>
-        </div>,
-
-        "Interface": <div className="onethird">
-            <img src={reporter4} alt="Screen 1" className="zoomable" onClick={zoomimg} />
-            <img src={reporter5} alt="Screen 2" className="zoomable" onClick={zoomimg} />
-            <img src={reporter6} alt="Screen 3" className="zoomable" onClick={zoomimg} />
-            <a href="https://goo.gl/B7sXrV" target="_blank" rel="noopener noreferrer">
-                <div className="button reporter">Go to Invision Prototype</div>
-            </a>
-        </div>,
-    },
-    "even": {
-        "projectTitle": "Even",
-        "quote": "Where is the best place to meet?",
-        "topimg": " ",
-        "exlpla": {
-            "Duration": "1 months (Jan 2014)",
-            "Team": "1 developer, 1 designer (Ja Young Lee)",
-            "Role": "prototyping, branding, UI improvement",
-            "Tool": "Adobe Illustrator",
-        },
-        "Even?": <div>
-            <p> Even is an Android application that helps users find the best place to meet between their location. It calculates the
-  mid point based on the time it takes for each person to get to the point. I was the lead designer who improved the interface
-  of the application.
-                </p></div>,
-        "Design Changes": <div className="center" style={{ maxWidth: "1100px", margin: "60px auto 0" }}>
-            <div className="evensc before"> <img src={even1} alt="Screen Before" />
-                <div className="ori">Original</div>
-            </div>
-            <div className="evensc after"> <img src={even2} alt="Screen After 1" /> <img src={even3} alt="Screen After 2" />
-                <div className="impro">Improved</div>
-            </div>
-
-        </div>,
-
-        "Prototype": <div>
-            <img className="half" src={even4} alt="Prototype" />
-        </div>,
-        "Process": <div>
-            <div className="center">
-                <div className="evenwrapper inpfld"> <img src={even1} alt="Screen Before - Input Field" />
-                    <div className="spot blu" />
-                </div>
-                <div className="evenwrapper inpfld"> <img src={even2} alt="Screen After - Input Field" />
-                    <div className="spot red" />
-                </div>
-            </div>
-            <br />
-            <li className="animdes"> Stacked the input fields</li>
-            <li className="animdes">Replaced the transportation toggles with simple icons</li>
-            <li className="animdes">Deleted the ‘Edit’ option to make the field interactive.</li>
-            <p>There was too much text in the original box, and the 'Enter a spot' text in the middle looked like an input field but was not. Therefore, I got rid of the 'Edit' button and made the box itself an input field with an example address so people would know that it is an input field.</p>
-            <p> Initially, the boxes were next to each other because they had the same priority level. However, from the user's perspective, the function can also be considered as finding a middle point from Spot A to B. Additionally, the boxes were too small to type in an address. Thus, I stacked two boxes on top of each other to gain more space which also makes the addresses easier to read.</p>
-            <p> In addition, I changed the toggle buttons to simple icons, because a toggle button is more efficient for the ON/OFF option. By making different transportation options default, users will know that there are different types to choose from.</p>
-            <div className="center">
-                <div className="evenwrapper maparea"> <img src={even1} alt="Screen Before - Map" />
-                    <div className="spot blu" />
-                </div>
-                <div className="evenwrapper maparea"> <img src={even2} alt="Screen After - Map" />
-                    <div className="spot red" />
-                </div>
-            </div>
-            <br />
-            <li className="animdes">Expanded the map area</li>
-            <li className="animdes">Differentiated the action types</li>
-            <p>Next, I expanded the map area: the white space around the map area was decreased, which makes the area seem unlimited. This also works well with the zoom function.</p>
-            <div className="center">
-                <div className="evenwrapper bicons"> <img src={even1} alt="Screen Before - Checkbox" />
-                    <div className="spot blu" />
-                </div>
-                <div className="evenwrapper bicons"> <img src={even2} alt="Screen After - Checkbox" />
-                    <div className="spot red" />
-                </div>
-            </div>
-            <br />
-            <li className="animdes">Replaced the checkboxes with icons</li>
-            <p>Finally, I replaced the place option checkboxes to icons. The location types are distinctly different, so using icons is more intuitive and gives more spaces between the icons, which allows easier access.</p>
-        </div>
-    },
-    "momo": {
-        "projectTitle": "Happy Momoko",
-        "quote": "24 Animation Emojis for iOS and Line Messengers",
-        "topimg": <div className="screens center">
-            <img src={momo1} className="momoscreen" alt="Momoko - iOS" />
-            <img src={momo2} className="momoscreen" alt="Momoko - LINE" /> <br />
-            <a href="https://itunes.apple.com/ca/app/happy-momoko/id1207545553?mt=8" target="_blank" rel="noopener noreferrer">
-                <img src={momo_btn2} className="storebtn" id="appstore" alt="App Store Button" />
-            </a>
-            <a href="https://store.line.me/stickershop/product/1387989/en" target="_blank" rel="noopener noreferrer">
-                <img src={momo_btn1} className="storebtn" id="linestore" alt="Line Store Button" />
-            </a>
-        </div>,
-        "exlpla": {
-            "Duration": "3 weeks (Jan 2017)",
-            "Team": "Ja Young Lee",
-            "Role": "Character Deisgn, Animation",
-            "Tool": "Adobe Illustrator, Photoshop",
-        },
-        "Emojis":
-            <div>
-                <div className="imgdes">
-                    <span className="mobileonly">Click</span><span className="forall">Hover mouse on</span> thumbnails below to see the animations.
-              </div>
-                <div className="animation_wrap">
-                    <img src={momo3} id="pointers" alt="Pointer Animation" />
-                    <p>
-                        {anigenerator()}
-                    </p>
-                </div>
-            </div>
-    },
-    "gssh": {
-        "projectTitle": "GSSH - Class of 2011",
-        "quote": "GSSH - Class of 2011, from 2008 to 2017",
-        "topimg": <YouTube
-            videoId={vidid.gssh}                  // defaults -> null
-            id="player"                       // defaults -> null
-        />,
-        "exlpla": {
-        },
-        "About the video...":
-            <div>
-                <p>This is a video I created for the 10th anniversary of my high school, Gyeongsan Science High School (G.S.S.H.). The music in the beginning is my classmate's recent piano play. It shows our school year memories and how we have grown up. The background music was the school's morning alarm music: Heal the World.</p>
-            </div>
-    },
-    "naoshima": {
-        "projectTitle": "Artwork of Naoshima",
-        "quote": "How might we introduce a travel location via single page web application?",
-        "topimg": <img id='naoshima' className="topimg" src={naoshima} alt="Naoshima" />,
-        "button": <a href="https://jayolee.github.io/Travel-app/" target="_blank" rel="noopener noreferrer">
-            <div className="button naoshima">Go to the Website</div>
-        </a>,
-        "exlpla": {
-            "Duration": "1 month (Sep 2018)",
-            "Team": "Ja Young Lee",
-            "Role": "illustration, UI/UX design, development",
-            "Tool": "Paper (iPad), React, Adobe Photoshop",
-        },
-        "Ideation": <div>
-            <p className="mainT" style={{ marginTop: "30px" }}>Why Naoshima?</p>
-            <p>For a React web application project for <i>Software Structures for User Interfaces</i> class at CMU in Fall 2018, I chose Naoshima, Japan as the travel location I will introduce.
-                Naoshima is the place I visited in summer 2018. It is an island full of artworks.</p>
-            <p> Unlike other travel locations, because Naoshima is a small island with very little public transportation, it is important to know the locations of each key travel spots to make a plan. The pros of single page web app is that by making the layer salient, users can easily get the hierarchy of the information.</p>
-            <img src={nao_hie} alt="App structure" />
-            <div className="imgdes">App Structure</div></div>,
-        "Design": <div>
-            <div className="halfwrap">
-                <img src={nao_lofi} alt="Lo-fi Prototype" className="half zoomable" onClick={zoomimg} />
-                <img src={nao_midfi} alt="Mid-fi Prototype" className="half zoomable" onClick={zoomimg} />
-                <div className="imgdes">Lo-fi and Mid-fi Prototypes</div>
-            </div>
-            <p>To give a feeling of staying on one page but looking at different aspects of the website, I designed all pages appearing as layers above the home page.</p>
-
-            <img src={nao_about} className="imgBorder" alt="About Page Interaction" />
-            <div className="imgdes">About Page Interaction</div>
-            <p>I also utilized page transition animations to make the layer structure salient.</p></div>,
-
-        "Illustrations": <div>
-            <div className="halfwrap">
-                <img src={nao_sketches} alt="Illustrations" className="half zoomable" onClick={zoomimg} />
-                <img src={nao_drawing} alt="Drawing on iPad" className="half zoomable" onClick={zoomimg} />
-                <div className='imgdes'>Hand-Drawn Digital Illustrations on iPad Paper</div>
-            </div>
-            <p>Naoshima is the island with many famous artworks, so I wanted to provide the artistic feeling. Therefore, I created hand-drawn digital illustrations.</p>
-        </div>,
-
-        "Image Source": <div>
-            <img src={nao_detail} alt="Source Button on Detail Page" className="zoomable" onClick={zoomimg} /><div className='imgdes'>Image Source Button on the Detail Pages</div>
-            <p>I used images from external sources to explain the locations. Although all are copyright free images, to provide credit, I added buttons to images sources on each detail page of photos.</p></div>,
     },
 }
