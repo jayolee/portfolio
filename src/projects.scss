@@ -504,6 +504,31 @@ $bcr: #1E3E4C;
 		margin:0 auto;
 		text-align: left;
 	}
+	.quadWrap{
+		@include sizes(100%, null, 1000px);
+		display: flex;
+		margin:0 auto;
+		justify-content: space-around;
+		align-items: center;
+		
+		&.bcr{
+			font-size: 15px;
+			text-align: left;
+			div{
+				@include sizes(25%, null, 200px);
+				margin: 0 16px;
+			}
+			img{
+				width: 80px;
+				margin: 0 8px 8px;
+			}
+			.title{
+				font-weight: bold;
+				margin-bottom: 8px;
+				font-size: 16px;
+			}
+		}
+	}
 	.triwrap{
 		@include sizes(100%,null,1100px);
 		display: flex;
@@ -742,7 +767,7 @@ $bcr: #1E3E4C;
 	
 	font: {
 		family: 'Titillium Web';
-		size: 17px;
+		size: 16px;
 		weight: 400;
 	}
 	.designPrinciple{
@@ -799,15 +824,17 @@ $bcr: #1E3E4C;
 		margin: 32px auto 24px;
 	}
 	.button.small{
-		border: 1px solid $bcr;
+		border: none;
 		color: $bcr;
-		padding: 8px 24px;
-		margin:0 8px;
+		padding: 8px 12px;
+		margin:0 4px;
 		box-shadow: none;
 		font-size: 14px;
+		border-radius: 0;
+		font-weight: 500;
 		&.active, &:hover{
-			background: $bcr;
-			color: #fff;
+			border-bottom: 4px solid $bcr;
+			font-weight: 700;
 			transform:none;
 		}
 	}
@@ -823,7 +850,7 @@ $bcr: #1E3E4C;
 		
 		.dashfinal, .assignfinal, .detailfinal, .surveyfinal{
 			position: absolute;
-			left: 73px;
+			left: 36px;
 			top: -27px;
 			width: 280px;
 		}
@@ -841,9 +868,8 @@ $bcr: #1E3E4C;
 		}
 		.dashboardWrapper{
 			width: 666px;
-			margin-left: 40px;
+			margin-left: 4px;
 			display: flex;
-			justify-content: space-between;
 			.number{
 				text-align: center;
 				color: #fff;
@@ -863,7 +889,7 @@ $bcr: #1E3E4C;
 				position: relative;
 				width: 100%;
 				max-width: 280px;
-				margin: 0;
+				margin: 0 6px;
 				padding:0;
 				opacity: 0;
 				transition: .3s;
@@ -874,7 +900,7 @@ $bcr: #1E3E4C;
 			}
 			.explanation{
 				width: 330px;
-				margin-left: 16px;
+				margin-left: 8px;
 				background: #fff;
 				border-radius: 16px;
 				box-shadow: 0px 0px 16px rgba(37, 61, 90, 0.25);
@@ -885,6 +911,8 @@ $bcr: #1E3E4C;
 				flex-direction: column;
 				align-items: flex-start;
 				justify-content: center;
+				line-height:1.5;
+
 				.principleWrap{
 					display: flex;
 					flex-direction: row;
@@ -895,48 +923,27 @@ $bcr: #1E3E4C;
 				img{
 					width: 60px;
 					align-self: flex-start;
-					margin: 0 0 8px;
+					margin: 0 0 12px;
 					display: inline-block;
 				}
 				&#dash0{
 					height: 160px;
 				}
-				&#dash1{
+				&#dash1, &#survey2{
 					height:220px;
-				}
-				&#dash2{
-					height:193px;
 				}
 				&#dash3{
 					height:205px;
 				}
-				&#assign0{
-					height: 190px;
-				}
 				&#assign1{
 					height: 240px;
 				}
-				&#assign2{
+				&#dash2, &#assign0, &#assign2, &#overview0, &#overview2, &#survey1{
 					height: 190px;
-				}
-				&#overview0{
-					height: 190px;
-				}
-				&#overview1{
-					height: 165.75px;
-				}
-				&#overview2{
-					height: 190px;
-				}
-				&#overview3{
-					height: 443.14px;
 				}
 				
-				&#survey1{
-					height: 190px;
-				}
-				&#survey2{
-					height: 216px;
+				&#overview1, &#overview3,&#overview4{
+					height: 165.75px;
 				}
 				
 				.descrip{
@@ -948,19 +955,24 @@ $bcr: #1E3E4C;
 					}
 					.title{
 						text-align: left;
-						margin: 0;
+						margin: 4px 0;
 						font-size: 16px;
 						font-weight: bold;
+					
 					}
 					
 				}
-			  @media screen and (max-width: 650px){
-				  transform:translateX(-300px) translateY(-150px);
-				max-width: 300px;
-				position: absolute;
-				left: 0;
-				display: none;
-				margin-top: 0 !important;
+			@media screen and (max-width: 690px){
+				width: calc(100vw - 350px);
+			}
+			  @media screen and (max-width: 600px){
+				max-width: 100%;
+				display: flex;
+				margin-top: 0;
+				width: 280px !important;
+				margin-left: -240px;
+				margin-top: 100px;
+				z-index: 999;
 			  }
 				
 			}
@@ -1148,6 +1160,10 @@ $bcr: #1E3E4C;
 			transition: .3s;
 			left: calc(11% + 273px);
 			top: 100px;
+			@media screen and(max-width: 920px){
+				top: 150px;
+				left:calc(100% - 200px);
+			}
 			.title{
 				margin-bottom: 8px;
 			}

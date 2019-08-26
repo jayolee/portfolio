@@ -82,20 +82,7 @@ import bcr_principle3 from './bcr/principle/DesignPrinciples_3.png'
 import bcr_principle4 from './bcr/principle/DesignPrinciples_4.png'
 import bcr_principle5 from './bcr/principle/DesignPrinciples_5.png'
 import bcr_dashFinal from './bcr/dashboard/dashboards.png'
-import bcr_dash1 from './bcr/dashboard/1.png'
-import bcr_dash2 from './bcr/dashboard/2.png'
-import bcr_dash3 from './bcr/dashboard/3.png'
-import bcr_dash4 from './bcr/dashboard/4.png'
-import bcr_dash5 from './bcr/dashboard/6.png'
-import bcr_dash6 from './bcr/dashboard/7.png'
 import bcr_assignFinal from './bcr/assignment/assignment.png'
-import bcr_assign1 from './bcr/assignment/1.png'
-import bcr_assign2 from './bcr/assignment/2.png'
-import bcr_assign3 from './bcr/assignment/3.png'
-import bcr_assign4 from './bcr/assignment/4.png'
-import bcr_assign5 from './bcr/assignment/5.png'
-import bcr_assign6 from './bcr/assignment/6.png'
-import bcr_assign7 from './bcr/assignment/7.png'
 import bcr_detailFinal from './bcr/assignment/detail/detail.png'
 import bcr_detail1 from './bcr/assignment/detail/detail1.png'
 import bcr_detail2 from './bcr/assignment/detail/detail2.png'
@@ -111,12 +98,23 @@ import bcr_roadmap_road1 from './bcr/roadmap/road1.png'
 import bcr_roadmap_road2 from './bcr/roadmap/road2.png'
 import bcr_roadmap_road3 from './bcr/roadmap/road3.png'
 import bcr_roadmap_road4 from './bcr/roadmap/road4.png'
-import bcr_roadmap_design1 from './bcr/roadmap/1.png'
-import bcr_roadmap_design2 from './bcr/roadmap/2.png'
-import bcr_roadmap_design3 from './bcr/roadmap/3.png'
-import bcr_roadmap_design4 from './bcr/roadmap/4.png'
-import bcr_roadmap_design5 from './bcr/roadmap/5.png'
 
+const bcr_research = [];
+for (let i = 0; i < 4; i++) {
+  bcr_research[i] = require('./bcr/research' + (i + 1) + '.png')
+}
+const bcr_assign = [];
+for (let i = 0; i < 7; i++) {
+  bcr_assign[i] = require('./bcr/assignment/' + (i + 1) + '.png')
+}
+const bcr_dash = [];
+for (let i = 0; i < 6; i++) {
+  bcr_dash[i] = require('./bcr/dashboard/' + (i + 1) + '.png')
+}
+const bcr_roadmap_design = [];
+for (let i = 0; i < 5; i++) {
+  bcr_roadmap_design[i] = require('./bcr/roadmap/' + (i + 1) + '.png')
+}
 
 function zoomimg(e) {
     let classlist = e.target.classList;
@@ -173,7 +171,7 @@ function principleDescrip(i){
     document.getElementById("principle_expla").innerHTML =  designPrinciple[i].content;
               
 }  
-let content = [
+const content = [
     {
         title: "Retreat Modules for Loved Ones",
         question: "What if sharing lessons from the retreat and disclosing their authentic self with their loved ones didn’t have to be a low point?",
@@ -211,6 +209,7 @@ function roadmap(ev){
     explanation.lastChild.innerHTML = "<p>" + content[order].question + "</p><p>" + content[order].description + "</p>";
     let target = ev.target;
         if(parseInt(target.offsetLeft)+ 660> width){
+            //if explanation box cannot be on the next
             if((parseInt(target.offsetLeft) - 600) < 0){
                 explanation.style.left = parseInt((target.offsetLeft) - 220) + "px";
                 explanation.style.top = (target.offsetTop +80) + "px";
@@ -218,11 +217,9 @@ function roadmap(ev){
                 explanation.style.left = (target.offsetLeft- 410) + "px";
                 explanation.style.top = "0px";
             }
-        }else {explanation.style.left = (target.offsetLeft+ 253) + "px";
-        explanation.style.top = "0px";}
-    } else{
-       
-    }
+        }else {explanation.style.left = (target.offsetLeft+ 200) + "px";
+        explanation.style.top = (target.offsetTop +100) + "px"}
+    } 
 }
 function roadmapSmall(ev){
     let width = window.innerWidth;
@@ -316,7 +313,7 @@ export const projectList = {
           
             <p>Boulder Crest’s cornerstone training program is Warrior PATHH. Teams of about six students, called a Fire Team, participate in a regimented seven-day intensive retreat led by PATHH Guides, who are typically alumni of the program. Once students return home from the retreat, they participate in an aftercare program where they integrate the lessons they learned from the retreat via a responsive web app, called myPATHH, and regular video calls with their Fire Team. The Warrior PATHH journey takes 18 months total to complete, but the lessons and techniques aim to impart lifelong resilience.</p>
 
-            <p>Our team of five Masters students was tasked to evaluate myPATHH and the role it plays with regards to Boulder Crest’s services.</p>
+            <p>We evaluated myPATHH and the role it plays with regards to Boulder Crest’s services.</p>
             </div>,
             "Solution Overview":<div>
                 <p id = "solutionOverview">Boulder Crest has developed a responsive web application called myPATHH during the 18-month aftercare portion of their Warrior PATHH program. Students use the web app to complete assignments, set goals, and watch videos on topics like fitness and meditation to help them integrate the lessons of Warrior PATHH into their daily lives.
@@ -360,10 +357,43 @@ The Warrior PATHH experience is about so much more than technology. Beyond the m
             </div>,
         "Insights and Needs": <div>
               <p className="mainT" style={{ marginTop: "10px" }}>Engagement is the key for students during the 18-month follow-up.</p>
-              <p>From our initial research, we got four key insights.</p>
+              <p>From the initial kickoff, our client mentioned that the target users' community has distinctive characteristics. To understand our target users, we conducted following research.</p>
+              <div className = "quadWrap bcr">
+                <div>
+                  <img src ={bcr_research[0]} />
+                    <p className = "title">Secondary Research</p>
+                    <p>- Background Research<br />
+                        - App Solutions<br />
+                        - Analogous Domains</p>
+                </div>
+                <div>
+                  <img src ={bcr_research[1]} />
+                  <p className = "title">Boulder Crest Materials</p>
+                  <p>- Struggle Well<br />
+                    - Student Guide<br />
+                    - myPATHH</p>
+                </div>
+                <div>
+                  <img src ={bcr_research[2]} />
+                  <p className = "title">Survey Responses</p>
+                  <p>-Qualitative Analysis<br />
+                    - Affinity Diagramming
+                </p>
+                </div>
+                <div>
+                  <img src ={bcr_research[3]} />
+                  <p className = "title">
+                      Interviews
+                  </p>
+                  <p>
+                  - Semi-Structured Affinity Diagramming
+                  </p>
+                  </div>
+                </div>
+            <p> From our initial research, we got four key insights about our users.</p>
 
               <p className="ins_title bcr" style={{color: "#A94B56"}}>Diversity</p>
-                <p>Students come from a variety of experiences. Considering the variety of backgrounds and needs could be an opportunity for Boulder Crest to expand their value to the Veteran Community.</p>
+                <p>Boulder Crest Students come from a variety of experiences. Considering the variety of backgrounds and needs could be an opportunity for Boulder Crest to expand their value to the Veteran Community.</p>
                <p className="ins_title bcr" style={{color: "#97AA96"}}>Community</p>
                    <p>Students value community as a support system. The sense of interpersonal connection with a team is a crucial part of the Boulder Crest experience. </p>
                    <p className="ins_title bcr" style={{color: "#78909C"}}>Continuity & Structure</p>
@@ -611,11 +641,11 @@ While it was helpful to understand which ones were useful or not, it was ultimat
     <div className="dashboardStack number dashboard">
             <img src={bcr_dashFinal} className = "dashfinal" alt = "Final Deshboard Design" />
         <div className = "dashboardWrapper"> 
-            <img className="solution_dash_stack deactive" alt = "Header" src={bcr_dash1} />
+            <img className="solution_dash_stack deactive" alt = "Header" src={bcr_dash[0]} />
         </div>
         <div className = "dashboardWrapper" style ={{height: "144.36px"}}>
             <div className="number">1</div>
-            <img className="solution_dash_stack" src={bcr_dash2} alt = "Daily Quote"/>
+            <img className="solution_dash_stack" src={bcr_dash[1]} alt = "Daily Quote"/>
             <div className="explanation" id="dash0">
                                 <img src={bcr_principle1} alt = "Icon" />
                                 <div className="descrip">
@@ -630,7 +660,7 @@ While it was helpful to understand which ones were useful or not, it was ultimat
         </div>
         <div className = "dashboardWrapper" style ={{height: "95.45px"}}>
             <div className="number">2</div> 
-            <img className="solution_dash_stack" src={bcr_dash3} href="dash1" alt = "Shortcut to Current Assignment"/>
+            <img className="solution_dash_stack" src={bcr_dash[2]} href="dash1" alt = "Shortcut to Current Assignment"/>
             <div className="explanation" id="dash1">
                 <div className = "principleWrap">
                                 <img src={bcr_principle2} alt = "Icon"/>
@@ -648,7 +678,7 @@ While it was helpful to understand which ones were useful or not, it was ultimat
         </div>
         <div className = "dashboardWrapper" style ={{height: "485.97px"}}>
             <div className="number">3</div>
-            <img className="solution_dash_stack" src={bcr_dash4} href="dash2" alt = "Goals"/>
+            <img className="solution_dash_stack" src={bcr_dash[3]} href="dash2" alt = "Goals"/>
             <div className="explanation" id="dash2">
                                 <img src={bcr_principle3} alt = "Icon"/>
                                 <div className="descrip">
@@ -663,7 +693,7 @@ While it was helpful to understand which ones were useful or not, it was ultimat
         </div>                 
         <div className = "dashboardWrapper" style ={{height: "475.14px"}}>
             <div className="number">4</div>
-            <img className="solution_dash_stack" src={bcr_dash5} href="dash3" alt = "Team"/>
+            <img className="solution_dash_stack" src={bcr_dash[4]} href="dash3" alt = "Team"/>
             <div className="explaWrapper dashboard">
                             <div className="explanation" id="dash3">
                                 <img src={bcr_principle4} alt = "Icon"/>
@@ -679,7 +709,7 @@ While it was helpful to understand which ones were useful or not, it was ultimat
                         </div>
         </div>                       
         <div className = "dashboardWrapper">   
-            <img className="solution_dash_stack deactive" src={bcr_dash6} alt = "Tab Bar"/>
+            <img className="solution_dash_stack deactive" src={bcr_dash[5]} alt = "Tab Bar"/>
         </div>                             
     </div>
 </div>
@@ -737,11 +767,11 @@ Another significant change we made through our design is that the organization c
     <div className="dashboardStack number assignment">
             <img src={bcr_assignFinal} className = "assignfinal" alt = "Final Assignment Overview Design"/>
         <div className = "dashboardWrapper"> 
-            <img className="solution_dash_stack deactive" src={bcr_assign1} alt = "Header"/>
+            <img className="solution_dash_stack deactive" src={bcr_assign[0]} alt = "Header"/>
         </div>
         <div className = "dashboardWrapper" style ={{height: "92.47px"}}>
             <div className="number">1</div>
-            <img className="solution_dash_stack" src={bcr_assign2} alt = "Shortcut to current assignment"/>
+            <img className="solution_dash_stack" src={bcr_assign[1]} alt = "Shortcut to current assignment"/>
             <div className="explanation" id="overview0">
                 <div className = "principleWrap">   
                                 <img src={bcr_principle2} alt = "Icon"/>
@@ -759,7 +789,7 @@ Another significant change we made through our design is that the organization c
         </div>
         <div className = "dashboardWrapper" style ={{height: "169.75px"}}>
             <div className="number">2</div> 
-            <img className="solution_dash_stack" src={bcr_assign3} href="dash1" alt = "Progress Bar"/>
+            <img className="solution_dash_stack" src={bcr_assign[2]} href="dash1" alt = "Progress Bar"/>
             <div className="explanation" id="overview1">
                                 <img src={bcr_principle2} alt = "Icon"/>
                                 <div className="descrip">
@@ -774,7 +804,7 @@ Another significant change we made through our design is that the organization c
         </div>
         <div className = "dashboardWrapper" style ={{height: "443px"}}>
             <div className="number">3</div>
-            <img className="solution_dash_stack" src={bcr_assign4} alt = "List of Assignments" />
+            <img className="solution_dash_stack" src={bcr_assign[3]} alt = "List of Assignments" />
             <div className="explanation" id="overview2">
             <img src={bcr_principle2} alt = "Icon"/>
                                 <div className="descrip">
@@ -789,8 +819,7 @@ Another significant change we made through our design is that the organization c
         </div>                 
         <div className = "dashboardWrapper" style ={{height: "80px"}}>
             <div className="number">4</div>
-            <img className="solution_dash_stack" src={bcr_assign5} alt = "Celebration Message"/>
-            <div className="explaWrapper dashboard">
+            <img className="solution_dash_stack" src={bcr_assign[4]} alt = "Celebration Message"/>
                             <div className="explanation" id="overview3">
                             <img src={bcr_principle2} alt = "Icon"/>
                                 <div className="descrip">
@@ -802,12 +831,10 @@ Another significant change we made through our design is that the organization c
                                     </div>
                                 </div>
                             </div>
-                        </div>
         </div>     
         <div className = "dashboardWrapper" style ={{height: "92.84px"}}>
             <div className="number">5</div>
-            <img className="solution_dash_stack" src={bcr_assign6} alt = "Next Module"/>
-            <div className="explaWrapper dashboard">
+            <img className="solution_dash_stack" src={bcr_assign[5]} alt = "Next Module"/>
                             <div className="explanation" id="overview4">
                             <img src={bcr_principle3} alt = "Icon"/>
                                 <div className="descrip">
@@ -819,10 +846,9 @@ Another significant change we made through our design is that the organization c
                                     </div>
                                 </div>
                             </div>
-                        </div>
         </div>                      
         <div className = "dashboardWrapper">   
-            <img className="solution_dash_stack deactive" src={bcr_assign7}alt = "Tab Bar"/>
+            <img className="solution_dash_stack deactive" src={bcr_assign[6]}alt = "Tab Bar"/>
         </div>                             
     </div>
 </div>
@@ -952,11 +978,11 @@ The culmination of our service design exploration is the roadmap of future proje
     <img src = {bcr_roadmap_road2} className = "road" id = "road2"  alt = "Road" />
     <img src = {bcr_roadmap_road3} className = "road" id = "road3"  alt = "Road" />
     <img src = {bcr_roadmap_road4} className = "road" id = "road4"  alt = "Road" />
-    <img src = {bcr_roadmap_design1} className = "design" id = "design1" onMouseOver ={(ev)=>roadmap(ev)} onMouseLeave={hideExpla}  alt = "Retreat Modules for Loved Ones" onClick ={(ev)=>roadmapSmall(ev)}  />
-    <img src = {bcr_roadmap_design2} className = "design" id = "design2" onMouseOver ={(ev)=>roadmap(ev)} onMouseLeave={hideExpla} alt = "Leverage Veteran Nonprofits" onClick ={(ev)=>roadmapSmall(ev)} />
-    <img src = {bcr_roadmap_design3} className = "design" id = "design3" onMouseOver ={(ev)=>roadmap(ev)} onMouseLeave={hideExpla} alt = "Find Warrior PATHH Students Near Me" onClick ={(ev)=>roadmapSmall(ev)} />
-    <img src = {bcr_roadmap_design4} className = "design" id = "design4" onMouseOver ={(ev)=>roadmap(ev)} onMouseLeave={hideExpla} alt = "Improve Warrior PATHH Onboarding" onClick ={(ev)=>roadmapSmall(ev)} />
-    <img src = {bcr_roadmap_design5} className = "design" id = "design5" onMouseOver ={(ev)=>roadmap(ev)} onMouseLeave={hideExpla} alt = "Pathways to Care Through the Application Process" onClick ={(ev)=>roadmapSmall(ev)} />
+    <img src = {bcr_roadmap_design[0]} className = "design" id = "design1" onMouseOver ={(ev)=>roadmap(ev)} onMouseLeave={hideExpla}  alt = "Retreat Modules for Loved Ones" onClick ={(ev)=>roadmapSmall(ev)}  />
+    <img src = {bcr_roadmap_design[1]} className = "design" id = "design2" onMouseOver ={(ev)=>roadmap(ev)} onMouseLeave={hideExpla} alt = "Leverage Veteran Nonprofits" onClick ={(ev)=>roadmapSmall(ev)} />
+    <img src = {bcr_roadmap_design[2]} className = "design" id = "design3" onMouseOver ={(ev)=>roadmap(ev)} onMouseLeave={hideExpla} alt = "Find Warrior PATHH Students Near Me" onClick ={(ev)=>roadmapSmall(ev)} />
+    <img src = {bcr_roadmap_design[3]} className = "design" id = "design4" onMouseOver ={(ev)=>roadmap(ev)} onMouseLeave={hideExpla} alt = "Improve Warrior PATHH Onboarding" onClick ={(ev)=>roadmapSmall(ev)} />
+    <img src = {bcr_roadmap_design[4]} className = "design" id = "design5" onMouseOver ={(ev)=>roadmap(ev)} onMouseLeave={hideExpla} alt = "Pathways to Care Through the Application Process" onClick ={(ev)=>roadmapSmall(ev)} />
     </div>
     <div id ="blkbg"  onClick = {smallHideExpla}/>
     <div className = "expla" id = "roadmapExpla" onClick = {smallHideExpla}>
