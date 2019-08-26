@@ -1162,7 +1162,8 @@ $bcr: #1E3E4C;
 			top: 100px;
 			@media screen and(max-width: 920px){
 				top: 150px;
-				left:calc(100% - 200px);
+				left:50%;
+				@include transform(translateX(-50%));
 			}
 			.title{
 				margin-bottom: 8px;

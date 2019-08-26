@@ -206,7 +206,7 @@ function roadmap(ev){
     explanation.style.display="block"
     let order = ev.target.id.slice(-1) - 1;
     explanation.firstChild.innerHTML = content[order].title;
-    explanation.lastChild.innerHTML = "<p>" + content[order].question + "</p><p>" + content[order].description + "</p>";
+    explanation.lastChild.innerHTML = "<p><i>" + content[order].question + "</i></p><p>" + content[order].description + "</p>";
     let target = ev.target;
         if(parseInt(target.offsetLeft)+ 660> width){
             //if explanation box cannot be on the next
@@ -229,7 +229,7 @@ function roadmapSmall(ev){
     explanation.style.display="block"
     let order = ev.target.id.slice(-1) - 1;
     explanation.firstChild.innerHTML = content[order].title;
-    explanation.lastChild.innerHTML = "<p>" + content[order].question + "</p><p>" + content[order].description + "</p>";
+    explanation.lastChild.innerHTML = "<p><i>" + content[order].question + "</i></p><p>" + content[order].description + "</p>";
     let blkbg = document.getElementById("blkbg");
     blkbg.style.display = "block";
     blkbg.style.opacity = 1;
@@ -393,7 +393,7 @@ The Warrior PATHH experience is about so much more than technology. Beyond the m
             <p> From our initial research, we got four key insights about our users.</p>
 
               <p className="ins_title bcr" style={{color: "#A94B56"}}>Diversity</p>
-                <p>Boulder Crest Students come from a variety of experiences. Considering the variety of backgrounds and needs could be an opportunity for Boulder Crest to expand their value to the Veteran Community.</p>
+                <p>Boulder Crest students come from a variety of experiences. Considering the variety of backgrounds and needs could be an opportunity for Boulder Crest to expand their value to the Veteran Community.</p>
                <p className="ins_title bcr" style={{color: "#97AA96"}}>Community</p>
                    <p>Students value community as a support system. The sense of interpersonal connection with a team is a crucial part of the Boulder Crest experience. </p>
                    <p className="ins_title bcr" style={{color: "#78909C"}}>Continuity & Structure</p>
