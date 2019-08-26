@@ -1,15 +1,15 @@
 self.__precacheManifest = [
   {
-    "revision": "2bee3531ca45c22d1f6cfdaf31ba1175",
-    "url": "/portfolio/static/media/notify2.2bee3531.svg"
+    "revision": "a868e8006ecdf1ad6c00c8e1fec3b2a6",
+    "url": "/portfolio/static/media/momo.a868e800.gif"
   },
   {
-    "revision": "1bc25b062111a17b600e",
-    "url": "/portfolio/static/css/main.efd7641a.chunk.css"
+    "revision": "9d083dd49105571975dc",
+    "url": "/portfolio/static/css/main.a29cecfd.chunk.css"
   },
   {
-    "revision": "70b12db08e2bb72e7502",
-    "url": "/portfolio/static/js/1.70b12db0.chunk.js"
+    "revision": "7f8495b2511538b818e7",
+    "url": "/portfolio/static/js/1.7f8495b2.chunk.js"
   },
   {
     "revision": "ee2a100325fd284f0097",
@@ -38,6 +38,66 @@ self.__precacheManifest = [
   {
     "revision": "35d1e9e93b4f8d7c50dcb79fe650cb38",
     "url": "/portfolio/static/media/image2-4.35d1e9e9.jpg"
+  },
+  {
+    "revision": "fb6a40f18dc5685e1c45eaaa5b6f4d38",
+    "url": "/portfolio/static/media/dashboards.fb6a40f1.png"
+  },
+  {
+    "revision": "c980203b9a4375030d8cced98f3a9459",
+    "url": "/portfolio/static/media/assignment.c980203b.png"
+  },
+  {
+    "revision": "61e3b32fc66b50959960ba3690bd19ff",
+    "url": "/portfolio/static/media/detail.61e3b32f.png"
+  },
+  {
+    "revision": "7db21c20521cb2eba8cbc4bdfc2a7d65",
+    "url": "/portfolio/static/media/detail1.7db21c20.png"
+  },
+  {
+    "revision": "3c81ffc9c33987e6ecc0b0cffa73a906",
+    "url": "/portfolio/static/media/detail2.3c81ffc9.png"
+  },
+  {
+    "revision": "408e7fe2aa9006b757a2756c42130620",
+    "url": "/portfolio/static/media/detail3.408e7fe2.png"
+  },
+  {
+    "revision": "527061982b576b984d3bab26031dd8b8",
+    "url": "/portfolio/static/media/detail4.52706198.png"
+  },
+  {
+    "revision": "20a2621846cb0910029e10e4d95b91ec",
+    "url": "/portfolio/static/media/detail5.20a26218.png"
+  },
+  {
+    "revision": "e5adfddd8a974cd1e802cc3a432e287e",
+    "url": "/portfolio/static/media/survey.e5adfddd.png"
+  },
+  {
+    "revision": "ac731e27268ab12ea0a8f5eccd507cc9",
+    "url": "/portfolio/static/media/survey1.ac731e27.png"
+  },
+  {
+    "revision": "89c546422f8731fd49b31592537951ee",
+    "url": "/portfolio/static/media/survey2.89c54642.png"
+  },
+  {
+    "revision": "72e511f2347955611c6d6b181fcffb4c",
+    "url": "/portfolio/static/media/survey3.72e511f2.png"
+  },
+  {
+    "revision": "ab72d87fded1d82c6a1ec071582c6c99",
+    "url": "/portfolio/static/media/survey4.ab72d87f.png"
+  },
+  {
+    "revision": "b9b395430da278379a3e677ec4fa6f86",
+    "url": "/portfolio/static/media/road1.b9b39543.png"
+  },
+  {
+    "revision": "ce35a502ad95e5e7c3562e7ee85c7170",
+    "url": "/portfolio/static/media/road4.ce35a502.png"
   },
   {
     "revision": "4e9b5039d191ed2a22db142d83e6eded",
@@ -320,126 +380,6 @@ self.__precacheManifest = [
     "url": "/portfolio/static/media/current4.0eb73342.png"
   },
   {
-    "revision": "fb6a40f18dc5685e1c45eaaa5b6f4d38",
-    "url": "/portfolio/static/media/dashboards.fb6a40f1.png"
-  },
-  {
-    "revision": "58acd02b22a41f6917737640743a8913",
-    "url": "/portfolio/static/media/2.58acd02b.png"
-  },
-  {
-    "revision": "934baa64e68b62387b8aa2cef8b6a2d5",
-    "url": "/portfolio/static/media/3.934baa64.png"
-  },
-  {
-    "revision": "69a3654a12bdb6176312c8e402ee5cfc",
-    "url": "/portfolio/static/media/4.69a3654a.png"
-  },
-  {
-    "revision": "4592435c4f015a7358fc111529bf8951",
-    "url": "/portfolio/static/media/6.4592435c.png"
-  },
-  {
-    "revision": "78b832b62ce5d565a85d895f919349a5",
-    "url": "/portfolio/static/media/7.78b832b6.png"
-  },
-  {
-    "revision": "c980203b9a4375030d8cced98f3a9459",
-    "url": "/portfolio/static/media/assignment.c980203b.png"
-  },
-  {
-    "revision": "13bb8d815ec358af45c05c25cc01240c",
-    "url": "/portfolio/static/media/2.13bb8d81.png"
-  },
-  {
-    "revision": "e49bca78048a1b687ecc6566a5c80c17",
-    "url": "/portfolio/static/media/3.e49bca78.png"
-  },
-  {
-    "revision": "a38dcf82667fdb1e1891627e0a763b5c",
-    "url": "/portfolio/static/media/4.a38dcf82.png"
-  },
-  {
-    "revision": "784ed864aab134869c4df24bc8bebce6",
-    "url": "/portfolio/static/media/6.784ed864.png"
-  },
-  {
-    "revision": "030354d33837d4f558dd59c5a518d4cf",
-    "url": "/portfolio/static/media/7.030354d3.png"
-  },
-  {
-    "revision": "61e3b32fc66b50959960ba3690bd19ff",
-    "url": "/portfolio/static/media/detail.61e3b32f.png"
-  },
-  {
-    "revision": "7db21c20521cb2eba8cbc4bdfc2a7d65",
-    "url": "/portfolio/static/media/detail1.7db21c20.png"
-  },
-  {
-    "revision": "3c81ffc9c33987e6ecc0b0cffa73a906",
-    "url": "/portfolio/static/media/detail2.3c81ffc9.png"
-  },
-  {
-    "revision": "408e7fe2aa9006b757a2756c42130620",
-    "url": "/portfolio/static/media/detail3.408e7fe2.png"
-  },
-  {
-    "revision": "527061982b576b984d3bab26031dd8b8",
-    "url": "/portfolio/static/media/detail4.52706198.png"
-  },
-  {
-    "revision": "20a2621846cb0910029e10e4d95b91ec",
-    "url": "/portfolio/static/media/detail5.20a26218.png"
-  },
-  {
-    "revision": "e5adfddd8a974cd1e802cc3a432e287e",
-    "url": "/portfolio/static/media/survey.e5adfddd.png"
-  },
-  {
-    "revision": "ac731e27268ab12ea0a8f5eccd507cc9",
-    "url": "/portfolio/static/media/survey1.ac731e27.png"
-  },
-  {
-    "revision": "89c546422f8731fd49b31592537951ee",
-    "url": "/portfolio/static/media/survey2.89c54642.png"
-  },
-  {
-    "revision": "72e511f2347955611c6d6b181fcffb4c",
-    "url": "/portfolio/static/media/survey3.72e511f2.png"
-  },
-  {
-    "revision": "ab72d87fded1d82c6a1ec071582c6c99",
-    "url": "/portfolio/static/media/survey4.ab72d87f.png"
-  },
-  {
-    "revision": "b9b395430da278379a3e677ec4fa6f86",
-    "url": "/portfolio/static/media/road1.b9b39543.png"
-  },
-  {
-    "revision": "ce35a502ad95e5e7c3562e7ee85c7170",
-    "url": "/portfolio/static/media/road4.ce35a502.png"
-  },
-  {
-    "revision": "262763ea7474f58a72a72713f591de4e",
-    "url": "/portfolio/static/media/1.262763ea.png"
-  },
-  {
-    "revision": "702bf7c232b8f104f86a6e8d401cac0c",
-    "url": "/portfolio/static/media/2.702bf7c2.png"
-  },
-  {
-    "revision": "99f7effb87eec700dfda722546b15b8a",
-    "url": "/portfolio/static/media/3.99f7effb.png"
-  },
-  {
-    "revision": "efac3829ba87b1a6d127400dfc1ac2f3",
-    "url": "/portfolio/static/media/4.efac3829.png"
-  },
-  {
-    "revision": "1c9de5e640ce098b500d7d4999a915fb",
-    "url": "/portfolio/static/media/5.1c9de5e6.png"
-  },
-  {
     "revision": "3c4a20c23aa62e0584bb1b15e2a880cd",
     "url": "/portfolio/static/media/screen1.3c4a20c2.jpg"
   },
@@ -548,8 +488,8 @@ self.__precacheManifest = [
     "url": "/portfolio/static/media/notify1.8bdaa6bd.svg"
   },
   {
-    "revision": "1bc25b062111a17b600e",
-    "url": "/portfolio/static/js/main.1bc25b06.chunk.js"
+    "revision": "2bee3531ca45c22d1f6cfdaf31ba1175",
+    "url": "/portfolio/static/media/notify2.2bee3531.svg"
   },
   {
     "revision": "0a936e63a04dc578906f9258c8f1203e",
@@ -616,8 +556,8 @@ self.__precacheManifest = [
     "url": "/portfolio/static/media/int3.c60970a4.jpg"
   },
   {
-    "revision": "a868e8006ecdf1ad6c00c8e1fec3b2a6",
-    "url": "/portfolio/static/media/momo.a868e800.gif"
+    "revision": "9d083dd49105571975dc",
+    "url": "/portfolio/static/js/main.9d083dd4.chunk.js"
   },
   {
     "revision": "a66e39d86b7bc6d3a083370a612f4603",
@@ -1096,7 +1036,79 @@ self.__precacheManifest = [
     "url": "/portfolio/static/media/out2.315b8222.png"
   },
   {
-    "revision": "d261bbe75c3aa00334702a15dcd91d3a",
+    "revision": "7d59390d471fb1a4360bc4128007fad3",
+    "url": "/portfolio/static/media/research1.7d59390d.png"
+  },
+  {
+    "revision": "ff2712f12362051472dfd082e05b62e3",
+    "url": "/portfolio/static/media/research2.ff2712f1.png"
+  },
+  {
+    "revision": "d1ff22729007aa49e2a1ee15ecc02535",
+    "url": "/portfolio/static/media/research4.d1ff2272.png"
+  },
+  {
+    "revision": "13bb8d815ec358af45c05c25cc01240c",
+    "url": "/portfolio/static/media/2.13bb8d81.png"
+  },
+  {
+    "revision": "e49bca78048a1b687ecc6566a5c80c17",
+    "url": "/portfolio/static/media/3.e49bca78.png"
+  },
+  {
+    "revision": "a38dcf82667fdb1e1891627e0a763b5c",
+    "url": "/portfolio/static/media/4.a38dcf82.png"
+  },
+  {
+    "revision": "784ed864aab134869c4df24bc8bebce6",
+    "url": "/portfolio/static/media/6.784ed864.png"
+  },
+  {
+    "revision": "030354d33837d4f558dd59c5a518d4cf",
+    "url": "/portfolio/static/media/7.030354d3.png"
+  },
+  {
+    "revision": "58acd02b22a41f6917737640743a8913",
+    "url": "/portfolio/static/media/2.58acd02b.png"
+  },
+  {
+    "revision": "934baa64e68b62387b8aa2cef8b6a2d5",
+    "url": "/portfolio/static/media/3.934baa64.png"
+  },
+  {
+    "revision": "69a3654a12bdb6176312c8e402ee5cfc",
+    "url": "/portfolio/static/media/4.69a3654a.png"
+  },
+  {
+    "revision": "4592435c4f015a7358fc111529bf8951",
+    "url": "/portfolio/static/media/5.4592435c.png"
+  },
+  {
+    "revision": "78b832b62ce5d565a85d895f919349a5",
+    "url": "/portfolio/static/media/6.78b832b6.png"
+  },
+  {
+    "revision": "262763ea7474f58a72a72713f591de4e",
+    "url": "/portfolio/static/media/1.262763ea.png"
+  },
+  {
+    "revision": "702bf7c232b8f104f86a6e8d401cac0c",
+    "url": "/portfolio/static/media/2.702bf7c2.png"
+  },
+  {
+    "revision": "99f7effb87eec700dfda722546b15b8a",
+    "url": "/portfolio/static/media/3.99f7effb.png"
+  },
+  {
+    "revision": "efac3829ba87b1a6d127400dfc1ac2f3",
+    "url": "/portfolio/static/media/4.efac3829.png"
+  },
+  {
+    "revision": "1c9de5e640ce098b500d7d4999a915fb",
+    "url": "/portfolio/static/media/5.1c9de5e6.png"
+  },
+  {
+    "revision": "733733e58c8f5491d72446c9bd88a223",
     "url": "/portfolio/index.html"
   }
 ];
