@@ -154,7 +154,7 @@ export const sideList = {
         "topimg": <div style={{ width: "640px", maxWidth: "100%", height: "auto", margin: "0 auto" }}><Vimeo video="315035206" /></div>,
 
         "exlpla": {
-            "Duration": "Dec 2018 ~ Current",
+            "Duration": "Dec 2018 ~ Jan 2019",
             "Team": "Ja Young Lee, June Byeon (from the second round)",
             "Role": "User Reserach, UI/UX design, front, back-end development",
             "Tool": "Python Flask, jQuery, HTML, CSS, Adobe Illustrator",
