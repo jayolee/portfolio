@@ -28,7 +28,7 @@ closing(){
 renderImg(){
   return (
     <div>
-    <img className="detailImg" alt={this.props.imglist[this.state.currentOrder].name} src={this.props.imglist[this.state.currentOrder].image} />
+    <img className= {"detailImg " + (this.props.imglist[this.state.currentOrder].dimension === 0 ? "long" : "high") + (this.props.imglist[this.state.currentOrder].others === "watercolor" ? " watercolor" : "")} alt={this.props.imglist[this.state.currentOrder].name} src={this.props.imglist[this.state.currentOrder].image} />
     <div className="title">{this.props.imglist[this.state.currentOrder].name}</div>
     <div className="descrip">{this.props.imglist[this.state.currentOrder].info}</div>
     </div>

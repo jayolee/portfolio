@@ -29,7 +29,7 @@ class Toptitle extends Component {
               <div>
                 {/* <img src={logo} id="ylogo" alt="logo"/> */}
                <div key="title" style={{display:this.titleStyle[this.pagenum[this.state.page]]}}>
-                      <div className="titles">Hi! I am Ja <span style={{color:"#0b6ff5", fontWeight: "bold"}}>Young</span> Lee,<br /><span style={{ fontSize: "18px"}}>a product designer who loves front-end development</span></div>
+                      <div className="titles">Hi! I am <span style={{color:"#0b6ff5", fontWeight: "bold"}}>Young</span>,<br /><span style={{ fontSize: "18px"}}>a UX designer, developer and an artist</span></div>
                       <a href="http://goo.gl/j91z25" target="_blank" rel="noopener noreferrer" style={{ margin: "10px" }}>
                         <div className="icons" id="resu"><img src={res_blk} alt="Resume_hover" /><img src={res_grey} alt="Resume" /></div>
                       </a>

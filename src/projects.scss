@@ -1786,7 +1786,12 @@ $imgshadow: 0 0 14px rgba(0,0,0,0.2);
 }
 
 .detailImg{
-	@include sizes(100%,null,500px);
+	&.long{
+		@include sizes(100%,null,600px);
+		&.watercolor{@include sizes(100%,null,500px)}
+	};
+	&.high{@include sizes(100%,null,400px)};
+	
 	margin:10px auto 20px;
 }
 .icon{

@@ -3,6 +3,7 @@ import './App.scss';
 import './projects.scss'
 
 import myphoto from './images/photo_me.jpg'
+import peach from './images/peach.svg'
 
 class About extends Component {
 
@@ -17,7 +18,7 @@ class About extends Component {
 
     return (
         <div className="tpotitle">
-            <img className="myphoto" src={myphoto} alt="Me" />
+           
             <div className="iconwrap">
             {/* <span className="title">YOUNG</span><br />
             Experience Designer<br /><br /> */}
@@ -30,12 +31,12 @@ class About extends Component {
             <a href="https://github.com/jayolee" target="_blank" rel="noopener noreferrer">
             <div className="icons" id="git"><img src={git_blk} alt="Github_hover"/><img src={git_grey} alt="Github"/></div>
             </a> */}
-            <div className="bio">
+            <div className="bio" style = {{background: "rgba(255,255,255,.5)"}}>
             <div>
-            <span className="hello">Hello, I am Young.</span><br /> <p>I am a designer and developer who loves to code to implement my designs.</p>
+            <img src={peach} style = {{width: "80px", display:"block", margin:"0 auto 12px", strokeLinecap:"round" }}   alt="Me" />
+            <span className="hello">Hello, I am Young.</span><br /> <p>I am a designer, developer, and an artist who loves to implement my ideas into usable products/services. I use various multimedia skills with coding as my mediums.</p>
 <p>As a person has a Fine Art background and visual design experiences, my strength resides having keen eyes on details. Also, as a designer who spent most of the times with people who are not in the field, it is my strength working with and taking account of diverse perspectives. </p><p>
   With UX design experience at an EdTech Startup whose product changed the way of education, I have an interest in learning new technologies and design a digital solution to improve the everyday life while considering the shortcomings of the technology. Also, while working on a product targeted people who are not tech-savvy, I got interested in creating intuitive interactions.</p> 
-<p>My Fine Art experience made me a creator loves to implement my ideas into usable products/services. I use codes with various multimedia skills as mediums.</p>
             </div>
             </div>
             </div>
