@@ -1787,7 +1787,7 @@ $imgshadow: 0 0 14px rgba(0,0,0,0.2);
 
 .detailImg{
 	&.long{
-		@include sizes(100%,null,600px);
+		@include sizes(100%,null,700px);
 		&.watercolor{@include sizes(100%,null,500px)}
 	};
 	&.high{@include sizes(100%,null,400px)};

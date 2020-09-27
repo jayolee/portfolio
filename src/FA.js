@@ -26,6 +26,7 @@ import paint18 from './FA/images/image4-4.jpg'
 import paint19 from './FA/images/image4-5.jpg'
 import paint20 from './FA/images/image5.jpg'
 import paint21 from './FA/images/image6.jpg'
+import paint22 from './FA/images/swamp.jpg'
 
 import draw1 from './FA/images/draw5-1.jpg'
 import draw2 from './FA/images/draw5-2.jpg'
@@ -58,22 +59,11 @@ class FAs extends Component {
 
 
 		this.gallery_paint = [{
-
-			name: "Late Afternoon (2020)",
-			info: '8"x5.5.", Watercolor on paper',
-			image: paint20,
+			name: "Swamp (2020)",
+			info: '36"x24", Acrylic on canvas',
+			image: paint22,
 			order: "first",
-			others: "watercolor",
 			dimension: 0,
-
-		}, {
-
-			name: "New Beginning (2020)",
-			info: '7"x7", Watercolor on paper',
-			image: paint21,
-			others: "watercolor",
-			dimension: 0,
-
 		},{
 			name: "New Beginning (2020)",
 			info: '24"x30", Acrylic on canvas',
@@ -117,14 +107,14 @@ class FAs extends Component {
 
 		},
 		{
-			name: "Waiting for Spring (2013) - sold",
+			name: "Waiting for Spring (2013)",
 			info: '32"x18", Oil and acrylic on canvas',
 			image: paint9,
 			dimension: 0,
 
 		},
 		{
-			name: "Warm Solitude (2013) - sold",
+			name: "Warm Solitude (2013)",
 			info: '30"x24", Oil and acrylic on canvas',
 			image: paint13,
 			dimension: 0,
@@ -152,7 +142,7 @@ class FAs extends Component {
 
 		},
 		{
-			name: "Embracing (2013) - sold",
+			name: "Embracing (2013)",
 			info: '36"x24", Oil on canvas',
 			image: paint12,
 			dimension: 1
@@ -165,13 +155,13 @@ class FAs extends Component {
 			dimension: 0,
 
 		},
-		{
-			name: "Summer, in the House (2013)",
-			info: '24"x16", Oil on panel',
-			image: paint2,
-			dimension: 0,
+		// {
+		// 	name: "Summer, in the House (2013)",
+		// 	info: '24"x16", Oil on panel',
+		// 	image: paint2,
+		// 	dimension: 0,
 
-		},
+		// },
 		{
 			name: "The Night (2013)",
 			info: '24"x18", Oil on canvas',
@@ -187,7 +177,7 @@ class FAs extends Component {
 
 		},
 		{
-			name: "Closing of the Day (2015) - sold",
+			name: "Closing of the Day (2015)",
 			info: '11"x14", Oil on canvas',
 			image: paint15,
 			dimension: 1
@@ -208,7 +198,22 @@ class FAs extends Component {
 			order: "last",
 		}
 		];
-		this.gallery_draw = [
+		this.gallery_draw = [{
+			name: "Late Afternoon (2020)",
+			info: '8"x5.5", Watercolor on paper',
+			image: paint20,
+			others: "watercolor",
+			dimension: 0,
+
+		}, {
+
+			name: "New Beginning (2020)",
+			info: '7"x7", Watercolor on paper',
+			image: paint21,
+			others: "watercolor",
+			dimension: 0,
+
+		},
 			{
 				name: "The Way Home ",
 				info: '7.5"x7" Collage',
@@ -227,12 +232,14 @@ class FAs extends Component {
 				name: "Snow Day I",
 				info: '6.5"x5" Collage',
 				image: draw5,
+				others: "watercolor",
 				dimension: 0
 			},
 			{
 				name: "Snow Day II",
 				info: '7"x3.5" Collage',
 				image: draw7,
+				others: "watercolor",
 				dimension: 0
 			},
 			{
