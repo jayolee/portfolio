@@ -4,16 +4,16 @@ self.__precacheManifest = [
     "url": "/portfolio/static/media/pointer.175257fc.svg"
   },
   {
-    "revision": "300dbb895fdca83caadf",
-    "url": "/portfolio/static/css/main.3a054bab.chunk.css"
+    "revision": "311fe21fc5cedb77ad5b",
+    "url": "/portfolio/static/css/main.42cd207b.chunk.css"
   },
   {
     "revision": "53ebc025fca807d4dbea",
     "url": "/portfolio/static/js/runtime~main.f308c8e6.js"
   },
   {
-    "revision": "9d4c938d4c86205ac0f0",
-    "url": "/portfolio/static/js/2.1cc9ef10.chunk.js"
+    "revision": "523375694433041004bc",
+    "url": "/portfolio/static/js/2.c0beb725.chunk.js"
   },
   {
     "revision": "cad8b28e458a14ce36387ed32a6a6910",
@@ -564,8 +564,8 @@ self.__precacheManifest = [
     "url": "/portfolio/static/media/momol.a66e39d8.gif"
   },
   {
-    "revision": "300dbb895fdca83caadf",
-    "url": "/portfolio/static/js/main.9bea3967.chunk.js"
+    "revision": "311fe21fc5cedb77ad5b",
+    "url": "/portfolio/static/js/main.b62936a5.chunk.js"
   },
   {
     "revision": "6d12fb735de3dfb5e5c482a951d6d364",
@@ -860,10 +860,6 @@ self.__precacheManifest = [
     "url": "/portfolio/static/media/image1-1.cb31803a.jpg"
   },
   {
-    "revision": "1e2e7f6cd74a183bfd00656f862c2cb2",
-    "url": "/portfolio/static/media/image1-2.1e2e7f6c.jpg"
-  },
-  {
     "revision": "06ccab44ec65c9794f9ac36f040cc6df",
     "url": "/portfolio/static/media/image1-3.06ccab44.jpg"
   },
@@ -934,6 +930,10 @@ self.__precacheManifest = [
   {
     "revision": "aac6e10dc556248b7570c1a89b819dc0",
     "url": "/portfolio/static/media/image6.aac6e10d.jpg"
+  },
+  {
+    "revision": "ad21b3e3713673141fb9b06f9072d093",
+    "url": "/portfolio/static/media/swamp.ad21b3e3.jpg"
   },
   {
     "revision": "e132374d39e0fc731cbde7c79e579afe",
@@ -1120,11 +1120,15 @@ self.__precacheManifest = [
     "url": "/portfolio/static/media/5.1c9de5e6.png"
   },
   {
+    "revision": "1e2e7f6cd74a183bfd00656f862c2cb2",
+    "url": "/portfolio/static/media/image1-2.1e2e7f6c.jpg"
+  },
+  {
     "revision": "dfe02542c0c4ca28d9939f0f36f69645",
     "url": "/portfolio/static/media/photo_me.dfe02542.jpg"
   },
   {
-    "revision": "31283a737413d8a98d59c3508be1fc6a",
+    "revision": "0f8e9086ab2968b880803a41460e3ee0",
     "url": "/portfolio/index.html"
   }
 ];
